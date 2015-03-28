@@ -1,0 +1,14 @@
+#main
+  %h4= flash[:notice] if flash[:notice] 
+  %h3 All Recipes
+  %table.recipes_table
+    %tr.recipes_header
+      %th= link_to "Name", recipes_path(:query => "name")
+      %th Image
+      %th= link_to "Cooking Time", recipes_path(:query => "cooking_time")
+    -@recipes.each do |r|
+      %tr.recipe_row
+        %td.recipe_name= link_to r.name, recipe_path(r.id)
+        %td= image_tag(r.image.url(:thumb))
+        %td= r.cooking_time
+  = link_to "Create a new recipe", new_recipe_path

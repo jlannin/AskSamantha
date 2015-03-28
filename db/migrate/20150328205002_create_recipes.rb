@@ -3,7 +3,7 @@ class CreateRecipes < ActiveRecord::Migration
     create_table :recipes do |t|
       t.string :name
       t.text :direction
-      t.float :time
+      t.float :cooking_time
 
       t.timestamps null: false
     end
