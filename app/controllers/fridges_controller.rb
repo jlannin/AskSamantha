@@ -1,0 +1,2 @@
+class FridgesController < ApplicationController
+end
