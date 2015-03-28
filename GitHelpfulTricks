@@ -1,5 +1,9 @@
+
+To commit to github, must do these three steps:
 "git add ."      =>  This will add all new files to be commited (for untracked files)
 "git commit -a"  =>  Prepare all files for commitment (a message is necessary)
 "git push -u origin master"  =>  Push the commit to github.com
+
+To pull from github:
 "git pull"   => pull any changes from github  DO THIS BEFORE ANY EDITS!!!
 
