@@ -5,6 +5,7 @@ def index
     if params[:query] == nil
       @recipes = Recipe.sorted_by("name")
     else
+      session[:query] = params[:query]
       @recipes = Recipe.sorted_by(params[:query])
     end
 end
