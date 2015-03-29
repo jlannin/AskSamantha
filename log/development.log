@@ -731,3 +731,1289 @@ Migrating to AddAttachmentImageToRecipes (20150328212550)
   [1m[35mIngredient Load (0.2ms)[0m  SELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = ? LIMIT 1  [["id", 1]]
   [1m[36mIngredient Load (0.2ms)[0m  [1mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = ? LIMIT 1[0m  [["id", 1]]
   [1m[35mRecipe Load (0.2ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 5]]
+  [1m[36m (25.6ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (4.8ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateFridges (20150328204821)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "fridges" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150328204821"]]
+  [1m[35m (6.7ms)[0m  commit transaction
+Migrating to CreateFoods (20150328204835)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "foods" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "fridge_id" integer, "quantity" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150328204835"]]
+  [1m[35m (5.6ms)[0m  commit transaction
+Migrating to CreateIngredients (20150328204855)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "ingredients" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "recipe_id" integer, "quantity" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150328204855"]]
+  [1m[35m (5.3ms)[0m  commit transaction
+Migrating to CreateRecipes (20150328205002)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "recipes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "directions" text, "cooking_time" float, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (2.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150328205002"]]
+  [1m[35m (6.7ms)[0m  commit transaction
+Migrating to AddAttachmentImageToRecipes (20150328212550)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "recipes" ADD "image_file_name" varchar
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "recipes" ADD "image_content_type" varchar[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "recipes" ADD "image_file_size" integer
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "recipes" ADD "image_updated_at" datetime[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150328212550"]]
+  [1m[36m (4.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-29 02:11:05 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes"  ORDER BY "recipes"."cooking_time" ASC
+  Rendered recipes/index.html.haml within layouts/application (29.6ms)
+Completed 200 OK in 371ms (Views: 362.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/foods-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:11:06 -0400
+
+
+Started GET "/assets/fridges-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:11:06 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-29 02:11:06 -0400
+
+
+Started GET "/assets/ingredients-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:11:06 -0400
+
+
+Started GET "/assets/application-5266d2988799ecc8fe6e81eaab412e7d.css?body=1" for 127.0.0.1 at 2015-03-29 02:11:06 -0400
+
+
+Started GET "/assets/recipes-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:11:06 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-29 02:11:06 -0400
+
+
+Started GET "/assets/foods-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:11:06 -0400
+
+
+Started GET "/assets/fridges-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:11:06 -0400
+
+
+Started GET "/assets/ingredients-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:11:06 -0400
+
+
+Started GET "/assets/recipes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:11:06 -0400
+
+
+Started GET "/assets/application-67b1374e10049eab87d7b078c44a9e94.js?body=1" for 127.0.0.1 at 2015-03-29 02:11:06 -0400
+  [1m[36m (8.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (9.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateFridges (20150328204821)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "fridges" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150328204821"]]
+  [1m[35m (7.7ms)[0m  commit transaction
+Migrating to CreateFoods (20150328204835)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "foods" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "fridge_id" integer, "quantity" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150328204835"]]
+  [1m[35m (6.1ms)[0m  commit transaction
+Migrating to CreateIngredients (20150328204855)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "ingredients" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "recipe_id" integer, "quantity" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150328204855"]]
+  [1m[35m (11.4ms)[0m  commit transaction
+Migrating to CreateRecipes (20150328205002)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "recipes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "directions" text, "cooking_time" float, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150328205002"]]
+  [1m[35m (5.3ms)[0m  commit transaction
+Migrating to AddAttachmentImageToRecipes (20150328212550)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "recipes" ADD "image_file_name" varchar
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "recipes" ADD "image_content_type" varchar[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "recipes" ADD "image_file_size" integer
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "recipes" ADD "image_updated_at" datetime[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150328212550"]]
+  [1m[36m (8.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (13.4ms)[0m  DELETE FROM "recipes"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "recipes" ("name", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Dark Chocolate Peanut Butter Cups"], ["cooking_time", 30.0], ["created_at", "2015-03-29 06:12:07.269805"], ["updated_at", "2015-03-29 06:12:07.269805"]]
+  [1m[36m (4.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "recipes" ("name", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Buffalo Tenders"], ["cooking_time", 10.0], ["created_at", "2015-03-29 06:12:07.279286"], ["updated_at", "2015-03-29 06:12:07.279286"]]
+  [1m[35m (5.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "recipes" ("name", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Cereal"], ["cooking_time", 5.0], ["created_at", "2015-03-29 06:12:07.287729"], ["updated_at", "2015-03-29 06:12:07.287729"]]
+  [1m[36m (5.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "recipes" ("name", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Toast"], ["cooking_time", 3.0], ["created_at", "2015-03-29 06:12:07.295406"], ["updated_at", "2015-03-29 06:12:07.295406"]]
+  [1m[35m (6.3ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "recipes" ("name", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Toast with Jam"], ["cooking_time", 43.0], ["created_at", "2015-03-29 06:12:07.311755"], ["updated_at", "2015-03-29 06:12:07.311755"]]
+  [1m[36m (5.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Toast"], ["quantity", 1], ["recipe_id", 5], ["created_at", "2015-03-29 06:12:07.345062"], ["updated_at", "2015-03-29 06:12:07.345062"]]
+  [1m[36m (6.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Jam"], ["quantity", 1], ["recipe_id", 5], ["created_at", "2015-03-29 06:12:07.356500"], ["updated_at", "2015-03-29 06:12:07.356500"]]
+  [1m[36m (6.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Dark Chocolate (Ew)"], ["quantity", 10], ["recipe_id", 1], ["created_at", "2015-03-29 06:12:07.368022"], ["updated_at", "2015-03-29 06:12:07.368022"]]
+  [1m[36m (4.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Peanuts"], ["quantity", 10], ["recipe_id", 1], ["created_at", "2015-03-29 06:12:07.376402"], ["updated_at", "2015-03-29 06:12:07.376402"]]
+  [1m[36m (5.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Butter"], ["quantity", 10], ["recipe_id", 1], ["created_at", "2015-03-29 06:12:07.384625"], ["updated_at", "2015-03-29 06:12:07.384625"]]
+  [1m[36m (6.3ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-29 02:12:44 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.4ms)[0m  [1mSELECT "recipes".* FROM "recipes"  ORDER BY "recipes"."cooking_time" ASC[0m
+  Rendered recipes/index.html.haml within layouts/application (16.8ms)
+Completed 200 OK in 100ms (Views: 90.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/foods-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:12:44 -0400
+
+
+Started GET "/assets/fridges-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:12:44 -0400
+
+
+Started GET "/assets/ingredients-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:12:44 -0400
+
+
+Started GET "/assets/recipes-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:12:44 -0400
+
+
+Started GET "/assets/application-5266d2988799ecc8fe6e81eaab412e7d.css?body=1" for 127.0.0.1 at 2015-03-29 02:12:44 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-29 02:12:44 -0400
+
+
+Started GET "/assets/foods-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:12:44 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-29 02:12:44 -0400
+
+
+Started GET "/assets/fridges-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:12:44 -0400
+
+
+Started GET "/assets/ingredients-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:12:44 -0400
+
+
+Started GET "/assets/recipes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:12:44 -0400
+
+
+Started GET "/assets/application-67b1374e10049eab87d7b078c44a9e94.js?body=1" for 127.0.0.1 at 2015-03-29 02:12:44 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-29 02:15:07 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.6ms)[0m  SELECT "recipes".* FROM "recipes"  ORDER BY "recipes"."name" ASC
+  Rendered recipes/index.html.haml within layouts/application (22.6ms)
+Completed 200 OK in 132ms (Views: 124.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/foods-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:15:07 -0400
+
+
+Started GET "/assets/ingredients-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:15:07 -0400
+
+
+Started GET "/assets/fridges-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:15:07 -0400
+
+
+Started GET "/assets/recipes-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:15:07 -0400
+
+
+Started GET "/assets/application-5266d2988799ecc8fe6e81eaab412e7d.css?body=1" for 127.0.0.1 at 2015-03-29 02:15:07 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-29 02:15:07 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-29 02:15:07 -0400
+
+
+Started GET "/assets/recipes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:15:07 -0400
+
+
+Started GET "/assets/fridges-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:15:07 -0400
+
+
+Started GET "/assets/ingredients-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:15:07 -0400
+
+
+Started GET "/assets/foods-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:15:07 -0400
+
+
+Started GET "/assets/application-67b1374e10049eab87d7b078c44a9e94.js?body=1" for 127.0.0.1 at 2015-03-29 02:15:07 -0400
+
+
+Started GET "/recipes/2" for 127.0.0.1 at 2015-03-29 02:15:13 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendered recipes/show.html.haml within layouts/application (18.5ms)
+Completed 500 Internal Server Error in 21ms
+
+ActionView::Template::Error (Inconsistent indentation: 7 spaces used for indentation, but the rest of the document was indented using 2 spaces.):
+    3:   %h3= "Recipe Details For #{@recipe.name}"
+    4:   %table.recipes_table
+    5:     %tr.recipes_header
+    6:        %th Image
+    7:        %th Cooking Time
+    8:     %tr
+    9:       %td= image_tag(@recipe.image.url(:medium))
+  app/views/recipes/show.html.haml:6
+
+
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.7ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (49.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (29.2ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (69.1ms)
+
+
+Started GET "/recipes/2" for 127.0.0.1 at 2015-03-29 02:15:49 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendered recipes/show.html.haml within layouts/application (7.0ms)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: #main
+    2:   %h4= flash[:notice] if flash[:notice] 
+    3:   %h3= "Recipe Details For #{@recipe.name}"
+    4:   %table.recipes_table
+    5:     %tr.recipes_header
+    6:       %th Image
+  app/views/recipes/show.html.haml:3:in `_app_views_recipes_show_html_haml__456430934__625290968'
+
+
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.7ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (39.8ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (26.9ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (55.2ms)
+
+
+Started GET "/recipes/2" for 127.0.0.1 at 2015-03-29 02:17:02 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered recipes/show.html.haml within layouts/application (272.6ms)
+Completed 200 OK in 375ms (Views: 350.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/foods-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:17:02 -0400
+
+
+Started GET "/assets/fridges-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:17:02 -0400
+
+
+Started GET "/assets/ingredients-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:17:02 -0400
+
+
+Started GET "/assets/recipes-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:17:02 -0400
+
+
+Started GET "/assets/application-5266d2988799ecc8fe6e81eaab412e7d.css?body=1" for 127.0.0.1 at 2015-03-29 02:17:02 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-29 02:17:02 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-29 02:17:02 -0400
+
+
+Started GET "/assets/fridges-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:17:02 -0400
+
+
+Started GET "/assets/foods-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:17:02 -0400
+
+
+Started GET "/assets/ingredients-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:17:02 -0400
+
+
+Started GET "/assets/recipes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:17:02 -0400
+
+
+Started GET "/assets/application-67b1374e10049eab87d7b078c44a9e94.js?body=1" for 127.0.0.1 at 2015-03-29 02:17:03 -0400
+
+
+Started GET "/recipes/2" for 127.0.0.1 at 2015-03-29 02:18:43 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered recipes/show.html.haml within layouts/application (4.9ms)
+Completed 200 OK in 79ms (Views: 78.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/foods-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:18:43 -0400
+
+
+Started GET "/assets/ingredients-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:18:43 -0400
+
+
+Started GET "/assets/fridges-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:18:43 -0400
+
+
+Started GET "/assets/recipes-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:18:43 -0400
+
+
+Started GET "/assets/application-5266d2988799ecc8fe6e81eaab412e7d.css?body=1" for 127.0.0.1 at 2015-03-29 02:18:43 -0400
+
+
+Started GET "/assets/fridges-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:18:43 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-29 02:18:43 -0400
+
+
+Started GET "/assets/foods-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:18:43 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-29 02:18:43 -0400
+
+
+Started GET "/assets/ingredients-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:18:43 -0400
+
+
+Started GET "/assets/recipes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:18:43 -0400
+
+
+Started GET "/assets/application-67b1374e10049eab87d7b078c44a9e94.js?body=1" for 127.0.0.1 at 2015-03-29 02:18:43 -0400
+
+
+Started GET "/recipes/2" for 127.0.0.1 at 2015-03-29 02:20:34 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered recipes/show.html.haml within layouts/application (8.1ms)
+Completed 200 OK in 90ms (Views: 89.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/foods-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:20:34 -0400
+
+
+Started GET "/assets/ingredients-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:20:34 -0400
+
+
+Started GET "/assets/fridges-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:20:34 -0400
+
+
+Started GET "/assets/recipes-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:20:34 -0400
+
+
+Started GET "/assets/application-5266d2988799ecc8fe6e81eaab412e7d.css?body=1" for 127.0.0.1 at 2015-03-29 02:20:34 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-29 02:20:35 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-29 02:20:35 -0400
+
+
+Started GET "/assets/foods-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:20:35 -0400
+
+
+Started GET "/assets/recipes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:20:35 -0400
+
+
+Started GET "/assets/ingredients-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:20:35 -0400
+
+
+Started GET "/assets/fridges-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:20:35 -0400
+
+
+Started GET "/assets/application-67b1374e10049eab87d7b078c44a9e94.js?body=1" for 127.0.0.1 at 2015-03-29 02:20:35 -0400
+
+
+Started GET "/recipes/2" for 127.0.0.1 at 2015-03-29 02:22:26 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered recipes/show.html.haml within layouts/application (5.2ms)
+Completed 200 OK in 87ms (Views: 83.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/foods-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:22:26 -0400
+
+
+Started GET "/assets/fridges-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:22:26 -0400
+
+
+Started GET "/assets/ingredients-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:22:26 -0400
+
+
+Started GET "/assets/recipes-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:22:26 -0400
+
+
+Started GET "/assets/application-5266d2988799ecc8fe6e81eaab412e7d.css?body=1" for 127.0.0.1 at 2015-03-29 02:22:26 -0400
+
+
+Started GET "/assets/fridges-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:22:26 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-29 02:22:26 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-29 02:22:26 -0400
+
+
+Started GET "/assets/foods-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:22:26 -0400
+
+
+Started GET "/assets/ingredients-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:22:26 -0400
+
+
+Started GET "/assets/recipes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:22:26 -0400
+
+
+Started GET "/assets/application-67b1374e10049eab87d7b078c44a9e94.js?body=1" for 127.0.0.1 at 2015-03-29 02:22:26 -0400
+
+
+Started GET "/recipes/2" for 127.0.0.1 at 2015-03-29 02:25:31 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered recipes/show.html.haml within layouts/application (2.1ms)
+Completed 200 OK in 76ms (Views: 74.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/foods-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:25:31 -0400
+
+
+Started GET "/assets/fridges-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:25:31 -0400
+
+
+Started GET "/assets/ingredients-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:25:31 -0400
+
+
+Started GET "/assets/recipes-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:25:31 -0400
+
+
+Started GET "/assets/application-5266d2988799ecc8fe6e81eaab412e7d.css?body=1" for 127.0.0.1 at 2015-03-29 02:25:31 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-29 02:25:31 -0400
+
+
+Started GET "/assets/ingredients-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:25:31 -0400
+
+
+Started GET "/assets/fridges-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:25:31 -0400
+
+
+Started GET "/assets/foods-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:25:31 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-29 02:25:31 -0400
+
+
+Started GET "/assets/recipes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:25:31 -0400
+
+
+Started GET "/assets/application-67b1374e10049eab87d7b078c44a9e94.js?body=1" for 127.0.0.1 at 2015-03-29 02:25:31 -0400
+
+
+Started GET "/recipes/2" for 127.0.0.1 at 2015-03-29 02:25:34 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered recipes/show.html.haml within layouts/application (8.0ms)
+Completed 200 OK in 85ms (Views: 84.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/foods-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:25:34 -0400
+
+
+Started GET "/assets/fridges-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:25:34 -0400
+
+
+Started GET "/assets/ingredients-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:25:34 -0400
+
+
+Started GET "/assets/recipes-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:25:34 -0400
+
+
+Started GET "/assets/application-5266d2988799ecc8fe6e81eaab412e7d.css?body=1" for 127.0.0.1 at 2015-03-29 02:25:34 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-29 02:25:34 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-29 02:25:34 -0400
+
+
+Started GET "/assets/foods-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:25:34 -0400
+
+
+Started GET "/assets/ingredients-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:25:34 -0400
+
+
+Started GET "/assets/recipes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:25:34 -0400
+
+
+Started GET "/assets/fridges-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:25:34 -0400
+
+
+Started GET "/assets/application-67b1374e10049eab87d7b078c44a9e94.js?body=1" for 127.0.0.1 at 2015-03-29 02:25:34 -0400
+  [1m[36m (11.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (4.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateFridges (20150328204821)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "fridges" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150328204821"]]
+  [1m[35m (12.0ms)[0m  commit transaction
+Migrating to CreateFoods (20150328204835)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "foods" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "fridge_id" integer, "quantity" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150328204835"]]
+  [1m[35m (8.5ms)[0m  commit transaction
+Migrating to CreateIngredients (20150328204855)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "ingredients" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "recipe_id" integer, "quantity" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150328204855"]]
+  [1m[35m (6.7ms)[0m  commit transaction
+Migrating to CreateRecipes (20150328205002)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  CREATE TABLE "recipes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "directions" text, "cooking_time" float, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150328205002"]]
+  [1m[35m (6.7ms)[0m  commit transaction
+Migrating to AddAttachmentImageToRecipes (20150328212550)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "recipes" ADD "image_file_name" varchar
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "recipes" ADD "image_content_type" varchar[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "recipes" ADD "image_file_size" integer
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "recipes" ADD "image_updated_at" datetime[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150328212550"]]
+  [1m[36m (9.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (12.4ms)[0m  DELETE FROM "recipes"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "recipes" ("name", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Dark Chocolate Peanut Butter Cups"], ["cooking_time", 30.0], ["created_at", "2015-03-29 06:25:54.731226"], ["updated_at", "2015-03-29 06:25:54.731226"]]
+  [1m[36m (5.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Buffalo Tenders"], ["directions", "First find a buffalo"], ["cooking_time", 10.0], ["created_at", "2015-03-29 06:25:54.742124"], ["updated_at", "2015-03-29 06:25:54.742124"]]
+  [1m[35m (5.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Cereal"], ["directions", "Milk then cereal"], ["cooking_time", 5.0], ["created_at", "2015-03-29 06:25:54.750126"], ["updated_at", "2015-03-29 06:25:54.750126"]]
+  [1m[36m (5.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Toast"], ["directions", "Bread into toaster"], ["cooking_time", 3.0], ["created_at", "2015-03-29 06:25:54.758690"], ["updated_at", "2015-03-29 06:25:54.758690"]]
+  [1m[35m (5.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Toast with Jam"], ["directions", "Put the jam on the toast"], ["cooking_time", 43.0], ["created_at", "2015-03-29 06:25:54.771880"], ["updated_at", "2015-03-29 06:25:54.771880"]]
+  [1m[36m (5.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Toast"], ["quantity", 1], ["recipe_id", 5], ["created_at", "2015-03-29 06:25:54.801810"], ["updated_at", "2015-03-29 06:25:54.801810"]]
+  [1m[36m (7.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Jam"], ["quantity", 1], ["recipe_id", 5], ["created_at", "2015-03-29 06:25:54.813971"], ["updated_at", "2015-03-29 06:25:54.813971"]]
+  [1m[36m (6.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Dark Chocolate (Ew)"], ["quantity", 10], ["recipe_id", 1], ["created_at", "2015-03-29 06:25:54.824163"], ["updated_at", "2015-03-29 06:25:54.824163"]]
+  [1m[36m (4.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Peanuts"], ["quantity", 10], ["recipe_id", 1], ["created_at", "2015-03-29 06:25:54.831650"], ["updated_at", "2015-03-29 06:25:54.831650"]]
+  [1m[36m (4.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Butter"], ["quantity", 10], ["recipe_id", 1], ["created_at", "2015-03-29 06:25:54.839471"], ["updated_at", "2015-03-29 06:25:54.839471"]]
+  [1m[36m (5.7ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/recipes/2" for 127.0.0.1 at 2015-03-29 02:25:57 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered recipes/show.html.haml within layouts/application (1.7ms)
+Completed 200 OK in 108ms (Views: 90.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/foods-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:25:57 -0400
+
+
+Started GET "/assets/fridges-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:25:57 -0400
+
+
+Started GET "/assets/ingredients-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:25:57 -0400
+
+
+Started GET "/assets/recipes-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:25:57 -0400
+
+
+Started GET "/assets/application-5266d2988799ecc8fe6e81eaab412e7d.css?body=1" for 127.0.0.1 at 2015-03-29 02:25:57 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-29 02:25:57 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-29 02:25:57 -0400
+
+
+Started GET "/assets/foods-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:25:57 -0400
+
+
+Started GET "/assets/fridges-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:25:57 -0400
+
+
+Started GET "/assets/ingredients-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:25:57 -0400
+
+
+Started GET "/assets/recipes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:25:57 -0400
+
+
+Started GET "/assets/application-67b1374e10049eab87d7b078c44a9e94.js?body=1" for 127.0.0.1 at 2015-03-29 02:25:57 -0400
+
+
+Started GET "/recipes/2" for 127.0.0.1 at 2015-03-29 02:30:45 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mRecipe Load (1.8ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 2]]
+  Rendered recipes/show.html.haml within layouts/application (27.8ms)
+Completed 200 OK in 112ms (Views: 108.0ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/foods-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:30:45 -0400
+
+
+Started GET "/assets/fridges-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:30:46 -0400
+
+
+Started GET "/assets/ingredients-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:30:46 -0400
+
+
+Started GET "/assets/recipes-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:30:46 -0400
+
+
+Started GET "/assets/application-5266d2988799ecc8fe6e81eaab412e7d.css?body=1" for 127.0.0.1 at 2015-03-29 02:30:46 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-29 02:30:46 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-29 02:30:46 -0400
+
+
+Started GET "/assets/fridges-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:30:46 -0400
+
+
+Started GET "/assets/foods-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:30:46 -0400
+
+
+Started GET "/assets/ingredients-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:30:46 -0400
+
+
+Started GET "/assets/recipes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:30:46 -0400
+
+
+Started GET "/assets/application-67b1374e10049eab87d7b078c44a9e94.js?body=1" for 127.0.0.1 at 2015-03-29 02:30:46 -0400
+
+
+Started GET "/recipes/2" for 127.0.0.1 at 2015-03-29 02:30:49 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 2]]
+  Rendered recipes/show.html.haml within layouts/application (13.7ms)
+Completed 200 OK in 103ms (Views: 98.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/foods-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:30:49 -0400
+
+
+Started GET "/assets/fridges-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:30:49 -0400
+
+
+Started GET "/assets/ingredients-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:30:49 -0400
+
+
+Started GET "/assets/recipes-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:30:49 -0400
+
+
+Started GET "/assets/application-5266d2988799ecc8fe6e81eaab412e7d.css?body=1" for 127.0.0.1 at 2015-03-29 02:30:49 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-29 02:30:49 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-29 02:30:49 -0400
+
+
+Started GET "/assets/foods-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:30:49 -0400
+
+
+Started GET "/assets/fridges-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:30:49 -0400
+
+
+Started GET "/assets/ingredients-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:30:49 -0400
+
+
+Started GET "/assets/recipes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:30:49 -0400
+
+
+Started GET "/assets/application-67b1374e10049eab87d7b078c44a9e94.js?body=1" for 127.0.0.1 at 2015-03-29 02:30:49 -0400
+
+
+Started GET "/recipes/2" for 127.0.0.1 at 2015-03-29 02:30:50 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mIngredient Load (0.1ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 2]]
+  Rendered recipes/show.html.haml within layouts/application (9.4ms)
+Completed 200 OK in 83ms (Views: 82.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/foods-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:30:50 -0400
+
+
+Started GET "/assets/ingredients-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:30:50 -0400
+
+
+Started GET "/assets/fridges-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:30:50 -0400
+
+
+Started GET "/assets/recipes-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:30:50 -0400
+
+
+Started GET "/assets/application-5266d2988799ecc8fe6e81eaab412e7d.css?body=1" for 127.0.0.1 at 2015-03-29 02:30:50 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-29 02:30:50 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-29 02:30:50 -0400
+
+
+Started GET "/assets/foods-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:30:50 -0400
+
+
+Started GET "/assets/fridges-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:30:50 -0400
+
+
+Started GET "/assets/ingredients-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:30:50 -0400
+
+
+Started GET "/assets/recipes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:30:50 -0400
+
+
+Started GET "/assets/application-67b1374e10049eab87d7b078c44a9e94.js?body=1" for 127.0.0.1 at 2015-03-29 02:30:50 -0400
+
+
+Started GET "/recipes/2" for 127.0.0.1 at 2015-03-29 02:31:44 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mIngredient Load (0.1ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 2]]
+  Rendered recipes/show.html.haml within layouts/application (7.0ms)
+Completed 200 OK in 88ms (Views: 86.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/foods-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:31:44 -0400
+
+
+Started GET "/assets/fridges-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:31:44 -0400
+
+
+Started GET "/assets/ingredients-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:31:44 -0400
+
+
+Started GET "/assets/recipes-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:31:44 -0400
+
+
+Started GET "/assets/application-5266d2988799ecc8fe6e81eaab412e7d.css?body=1" for 127.0.0.1 at 2015-03-29 02:31:44 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-29 02:31:44 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-29 02:31:44 -0400
+
+
+Started GET "/assets/foods-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:31:44 -0400
+
+
+Started GET "/assets/fridges-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:31:44 -0400
+
+
+Started GET "/assets/ingredients-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:31:44 -0400
+
+
+Started GET "/assets/recipes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:31:44 -0400
+
+
+Started GET "/assets/application-67b1374e10049eab87d7b078c44a9e94.js?body=1" for 127.0.0.1 at 2015-03-29 02:31:44 -0400
+
+
+Started GET "/recipes/2" for 127.0.0.1 at 2015-03-29 02:33:08 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 2]]
+  Rendered recipes/show.html.haml within layouts/application (12.8ms)
+Completed 200 OK in 91ms (Views: 90.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/foods-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:33:08 -0400
+
+
+Started GET "/assets/ingredients-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:33:08 -0400
+
+
+Started GET "/assets/fridges-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:33:09 -0400
+
+
+Started GET "/assets/recipes-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:33:09 -0400
+
+
+Started GET "/assets/application-5266d2988799ecc8fe6e81eaab412e7d.css?body=1" for 127.0.0.1 at 2015-03-29 02:33:09 -0400
+
+
+Started GET "/assets/fridges-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:33:09 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-29 02:33:09 -0400
+
+
+Started GET "/assets/foods-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:33:09 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-29 02:33:09 -0400
+
+
+Started GET "/assets/ingredients-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:33:09 -0400
+
+
+Started GET "/assets/recipes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:33:09 -0400
+
+
+Started GET "/assets/application-67b1374e10049eab87d7b078c44a9e94.js?body=1" for 127.0.0.1 at 2015-03-29 02:33:09 -0400
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2015-03-29 02:33:24 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  Rendered recipes/show.html.haml within layouts/application (34.4ms)
+Completed 200 OK in 110ms (Views: 108.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/foods-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:33:25 -0400
+
+
+Started GET "/assets/ingredients-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:33:25 -0400
+
+
+Started GET "/assets/fridges-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:33:25 -0400
+
+
+Started GET "/assets/recipes-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:33:25 -0400
+
+
+Started GET "/assets/application-5266d2988799ecc8fe6e81eaab412e7d.css?body=1" for 127.0.0.1 at 2015-03-29 02:33:25 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-29 02:33:25 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-29 02:33:25 -0400
+
+
+Started GET "/assets/foods-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:33:25 -0400
+
+
+Started GET "/assets/fridges-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:33:25 -0400
+
+
+Started GET "/assets/ingredients-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:33:25 -0400
+
+
+Started GET "/assets/recipes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:33:25 -0400
+
+
+Started GET "/assets/application-67b1374e10049eab87d7b078c44a9e94.js?body=1" for 127.0.0.1 at 2015-03-29 02:33:25 -0400
+
+
+Started GET "/recipes/5" for 127.0.0.1 at 2015-03-29 02:33:41 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mIngredient Load (0.1ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 5]]
+  Rendered recipes/show.html.haml within layouts/application (3.4ms)
+Completed 200 OK in 80ms (Views: 76.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/foods-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:33:42 -0400
+
+
+Started GET "/assets/fridges-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:33:42 -0400
+
+
+Started GET "/assets/ingredients-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:33:42 -0400
+
+
+Started GET "/assets/recipes-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:33:42 -0400
+
+
+Started GET "/assets/application-5266d2988799ecc8fe6e81eaab412e7d.css?body=1" for 127.0.0.1 at 2015-03-29 02:33:42 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-29 02:33:42 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-29 02:33:42 -0400
+
+
+Started GET "/assets/foods-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:33:42 -0400
+
+
+Started GET "/assets/fridges-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:33:42 -0400
+
+
+Started GET "/assets/ingredients-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:33:42 -0400
+
+
+Started GET "/assets/recipes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:33:42 -0400
+
+
+Started GET "/assets/application-67b1374e10049eab87d7b078c44a9e94.js?body=1" for 127.0.0.1 at 2015-03-29 02:33:42 -0400
+
+
+Started GET "/recipes/5" for 127.0.0.1 at 2015-03-29 02:34:12 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mIngredient Load (0.1ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 5]]
+  Rendered recipes/show.html.haml within layouts/application (9.9ms)
+Completed 200 OK in 101ms (Views: 99.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/foods-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:34:12 -0400
+
+
+Started GET "/assets/fridges-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:34:12 -0400
+
+
+Started GET "/assets/ingredients-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:34:12 -0400
+
+
+Started GET "/assets/recipes-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:34:12 -0400
+
+
+Started GET "/assets/application-5266d2988799ecc8fe6e81eaab412e7d.css?body=1" for 127.0.0.1 at 2015-03-29 02:34:12 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-29 02:34:12 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-29 02:34:12 -0400
+
+
+Started GET "/assets/foods-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:34:12 -0400
+
+
+Started GET "/assets/fridges-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:34:12 -0400
+
+
+Started GET "/assets/ingredients-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:34:12 -0400
+
+
+Started GET "/assets/recipes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:34:12 -0400
+
+
+Started GET "/assets/application-67b1374e10049eab87d7b078c44a9e94.js?body=1" for 127.0.0.1 at 2015-03-29 02:34:12 -0400
+
+
+Started GET "/recipes/5" for 127.0.0.1 at 2015-03-29 02:34:14 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 5]]
+  Rendered recipes/show.html.haml within layouts/application (13.2ms)
+Completed 200 OK in 93ms (Views: 89.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/foods-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:34:14 -0400
+
+
+Started GET "/assets/fridges-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:34:14 -0400
+
+
+Started GET "/assets/ingredients-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:34:14 -0400
+
+
+Started GET "/assets/recipes-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:34:14 -0400
+
+
+Started GET "/assets/application-5266d2988799ecc8fe6e81eaab412e7d.css?body=1" for 127.0.0.1 at 2015-03-29 02:34:14 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-29 02:34:14 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-29 02:34:14 -0400
+
+
+Started GET "/assets/foods-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:34:14 -0400
+
+
+Started GET "/assets/fridges-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:34:14 -0400
+
+
+Started GET "/assets/ingredients-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:34:14 -0400
+
+
+Started GET "/assets/recipes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:34:14 -0400
+
+
+Started GET "/assets/application-67b1374e10049eab87d7b078c44a9e94.js?body=1" for 127.0.0.1 at 2015-03-29 02:34:14 -0400
+
+
+Started GET "/recipes/5" for 127.0.0.1 at 2015-03-29 02:36:24 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered recipes/show.html.haml within layouts/application (8.5ms)
+Completed 500 Internal Server Error in 13ms
+
+SyntaxError (/home/csvm/Desktop/AskSamantha/app/views/recipes/show.html.haml:28: syntax error, unexpected keyword_ensure, expecting keyword_end
+...:Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer....
+...                               ^
+/home/csvm/Desktop/AskSamantha/app/views/recipes/show.html.haml:31: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/recipes/show.html.haml:28: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/recipes/show.html.haml:31: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.9ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.7ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (39.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (32.8ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (65.2ms)
+
+
+Started GET "/recipes/5" for 127.0.0.1 at 2015-03-29 02:36:38 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mIngredient Load (0.2ms)[0m  SELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?  [["recipe_id", 5]]
+  Rendered recipes/show.html.haml within layouts/application (17.1ms)
+Completed 200 OK in 116ms (Views: 106.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/foods-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:36:38 -0400
+
+
+Started GET "/assets/fridges-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:36:38 -0400
+
+
+Started GET "/assets/ingredients-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:36:38 -0400
+
+
+Started GET "/assets/recipes-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 02:36:38 -0400
+
+
+Started GET "/assets/application-5266d2988799ecc8fe6e81eaab412e7d.css?body=1" for 127.0.0.1 at 2015-03-29 02:36:38 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-29 02:36:38 -0400
+
+
+Started GET "/assets/fridges-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:36:38 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-29 02:36:38 -0400
+
+
+Started GET "/assets/foods-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:36:38 -0400
+
+
+Started GET "/assets/ingredients-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:36:38 -0400
+
+
+Started GET "/assets/recipes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 02:36:38 -0400
+
+
+Started GET "/assets/application-67b1374e10049eab87d7b078c44a9e94.js?body=1" for 127.0.0.1 at 2015-03-29 02:36:38 -0400
+  [1m[36m (44.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (6.4ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateFridges (20150328204821)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "fridges" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150328204821"]]
+  [1m[35m (9.3ms)[0m  commit transaction
+Migrating to CreateFoods (20150328204835)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "foods" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "fridge_id" integer, "quantity" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150328204835"]]
+  [1m[35m (8.8ms)[0m  commit transaction
+Migrating to CreateIngredients (20150328204855)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "ingredients" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "recipe_id" integer, "quantity" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150328204855"]]
+  [1m[35m (4.7ms)[0m  commit transaction
+Migrating to CreateRecipes (20150328205002)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (2.4ms)[0m  CREATE TABLE "recipes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "directions" text, "cooking_time" float, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150328205002"]]
+  [1m[35m (6.9ms)[0m  commit transaction
+Migrating to AddAttachmentImageToRecipes (20150328212550)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "recipes" ADD "image_file_name" varchar
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "recipes" ADD "image_content_type" varchar[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "recipes" ADD "image_file_size" integer
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "recipes" ADD "image_updated_at" datetime[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150328212550"]]
+  [1m[36m (5.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (7.6ms)[0m  [1mCREATE TABLE "foods" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "fridge_id" integer, "quantity" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (5.0ms)[0m  CREATE TABLE "fridges" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (6.0ms)[0m  [1mCREATE TABLE "ingredients" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "recipe_id" integer, "quantity" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (6.1ms)[0m  CREATE TABLE "recipes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "directions" text, "cooking_time" float, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "image_file_name" varchar, "image_content_type" varchar, "image_file_size" integer, "image_updated_at" datetime) 
+  [1m[36m (7.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (5.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (3.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150328212550')[0m
+  [1m[35m (3.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150328204835')
+  [1m[36m (5.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150328204855')[0m
+  [1m[35m (4.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150328205002')
+  [1m[36m (4.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150328204821')[0m
+
+
+Started GET "/recipes" for 127.0.0.1 at 2015-03-29 03:06:41 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.5ms)[0m  [1mSELECT "recipes".* FROM "recipes"  ORDER BY "recipes"."name" ASC[0m
+  Rendered recipes/index.html.haml within layouts/application (7.5ms)
+Completed 200 OK in 98ms (Views: 91.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/foods-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 03:06:41 -0400
+
+
+Started GET "/assets/fridges-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 03:06:42 -0400
+
+
+Started GET "/assets/recipes-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 03:06:42 -0400
+
+
+Started GET "/assets/application-5266d2988799ecc8fe6e81eaab412e7d.css?body=1" for 127.0.0.1 at 2015-03-29 03:06:42 -0400
+
+
+Started GET "/assets/foods-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 03:06:42 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-29 03:06:42 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-29 03:06:42 -0400
+
+
+Started GET "/assets/ingredients-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 03:06:42 -0400
+
+
+Started GET "/assets/ingredients-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 03:06:42 -0400
+
+
+Started GET "/assets/fridges-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 03:06:42 -0400
+
+
+Started GET "/assets/recipes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 03:06:42 -0400
+
+
+Started GET "/assets/application-67b1374e10049eab87d7b078c44a9e94.js?body=1" for 127.0.0.1 at 2015-03-29 03:06:42 -0400
+
+
+Started GET "/recipes" for 127.0.0.1 at 2015-03-29 03:06:44 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT "recipes".* FROM "recipes"  ORDER BY "recipes"."name" ASC
+  Rendered recipes/index.html.haml within layouts/application (7.8ms)
+Completed 200 OK in 79ms (Views: 78.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/foods-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 03:06:44 -0400
+
+
+Started GET "/assets/fridges-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 03:06:44 -0400
+
+
+Started GET "/assets/ingredients-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 03:06:44 -0400
+
+
+Started GET "/assets/recipes-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-29 03:06:44 -0400
+
+
+Started GET "/assets/application-5266d2988799ecc8fe6e81eaab412e7d.css?body=1" for 127.0.0.1 at 2015-03-29 03:06:44 -0400
+
+
+Started GET "/assets/fridges-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 03:06:44 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-29 03:06:44 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-29 03:06:44 -0400
+
+
+Started GET "/assets/foods-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 03:06:44 -0400
+
+
+Started GET "/assets/ingredients-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 03:06:44 -0400
+
+
+Started GET "/assets/recipes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-29 03:06:44 -0400
+
+
+Started GET "/assets/application-67b1374e10049eab87d7b078c44a9e94.js?body=1" for 127.0.0.1 at 2015-03-29 03:06:44 -0400
