@@ -3,11 +3,11 @@ require 'rails_helper'
 RSpec.describe "index page", type: :feature do
   before :each do
     Recipe.create!(:name => "Dark Chocolate Peanut Butter Cup", :directions => "Unwrap and enjoy!", :cooking_time => 34)
-    Recipe.create!(:name => "Toast with Jam", :description => "Put the jam on the toast", :cooking_time => 12)
+    Recipe.create!(:name => "Toast with Jam", :directions => "Put the jam on the toast", :cooking_time => 12)
     Recipe.find(1).ingredients.create(:name => "Dark Chocolate (Ew)", :quantity => 10)
     Recipe.find(1).ingredients.create(:name => "Peanuts", :quantity => 56)
     Recipe.find(1).ingredients.create(:name => "Butter", :quantity => 10)
-    Recipe.find(2).ingredients.create(:name => "Toasted bread", :quantity => 3)
+    Recipe.find(2).ingredients.create(:name => "Toasted Bread", :quantity => 3)
     Recipe.find(2).ingredients.create(:name => "Strawberry Jam", :quantity => 4)
 
     visit "/recipes"

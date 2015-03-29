@@ -25,11 +25,25 @@
         1,
         null,
         1,
-        6,
+        10,
+        10,
+        8,
+        null,
+        2,
+        null,
         null,
         null,
         1,
-        2,
+        4,
+        null,
+        null,
+        1,
+        null,
+        1,
+        10,
+        0,
+        0,
+        null,
         null,
         null,
         null
@@ -47,9 +61,22 @@
         1,
         1,
         null,
+        1,
+        12,
+        11,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/home/csvm/Desktop/AskSamantha/app/models/ingredient.rb": [
+        1,
+        1,
         null
       ]
     },
-    "timestamp": 1427613104
+    "timestamp": 1427660865
   }
 }

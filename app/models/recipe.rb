@@ -3,4 +3,12 @@ class Recipe < ActiveRecord::Base
   validates_attachment :image, :content_type => {:content_type => ["image/jpeg", "image/png", "image/gif"]}
   has_many :ingredients
 
+  def self.sorted_by(col)
+    if self.column_names.include?(col)
+      self.order(col)
+    else
+      self.order("name")
+    end
+  end
+
 end

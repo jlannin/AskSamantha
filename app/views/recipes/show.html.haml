@@ -10,10 +10,8 @@
       %td#Cooking_Time= @recipe.cooking_time
   %table.recipes_info
     %tr
-      %th Directions
       %th Ingredients
     %tr.recipe_row
-      %td= @recipe.directions
       %td
         %table
           %tr
@@ -23,5 +21,10 @@
             %tr.ingredient_row
               %td= i.name
               %td= i.quantity
+  %table.recipes_directions
+    %tr
+      %th Directions
+    %tr
+      %td=  @recipe.directions
   = link_to "Edit recipe details", edit_recipe_path
-  = link_to "Back to recipe list", recipes_path
+  = link_to "Back to recipes!", recipes_path
