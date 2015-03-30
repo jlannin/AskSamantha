@@ -30,6 +30,7 @@
         8,
         null,
         2,
+        2,
         null,
         null,
         null,
@@ -77,6 +78,87 @@
         null
       ]
     },
-    "timestamp": 1427660865
+    "timestamp": 1427692364
+  },
+  "Cucumber Features": {
+    "coverage": {
+      "/home/csvm/Desktop/AskSamantha/app/models/recipe.rb": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        8,
+        8,
+        null,
+        0,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/home/csvm/Desktop/AskSamantha/app/models/ingredient.rb": [
+        1,
+        1,
+        null
+      ],
+      "/home/csvm/Desktop/AskSamantha/app/controllers/recipes_controller.rb": [
+        1,
+        null,
+        1,
+        8,
+        8,
+        4,
+        null,
+        4,
+        4,
+        null,
+        null,
+        null,
+        1,
+        2,
+        null,
+        null,
+        1,
+        null,
+        1,
+        8,
+        2,
+        2,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/home/csvm/Desktop/AskSamantha/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        null
+      ],
+      "/home/csvm/Desktop/AskSamantha/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/home/csvm/Desktop/AskSamantha/app/helpers/foods_helper.rb": [
+        1,
+        null
+      ],
+      "/home/csvm/Desktop/AskSamantha/app/helpers/fridges_helper.rb": [
+        1,
+        null
+      ],
+      "/home/csvm/Desktop/AskSamantha/app/helpers/ingredients_helper.rb": [
+        1,
+        null
+      ],
+      "/home/csvm/Desktop/AskSamantha/app/helpers/recipes_helper.rb": [
+        1,
+        null
+      ]
+    },
+    "timestamp": 1427692354
   }
 }

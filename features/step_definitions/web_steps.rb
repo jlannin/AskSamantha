@@ -41,15 +41,20 @@ When /^(.*) within (.*[^:]):$/ do |step, parent, table_or_string|
   with_scope(parent) { When "#{step}:", table_or_string }
 end
 
-Given /^these products:$/i do |table|
+Given /^these recipes:$/i do |table|
   table.hashes.each do |fhash|
-    if fhash.has_key? "minage"
-      fhash["minimum_age_appropriate"] = fhash.delete("minage")
+    if fhash.has_key? "Ingredients"
+      arr = fhash.delete("Ingredients")
     end
-    if fhash.has_key? "maxage"
-      fhash["maximum_age_appropriate"] = fhash.delete("maxage")
+    r = Recipe.create!(fhash)
+    arr = arr.split(",")
+    arr.each do |x|
+      x =~  /(.*)\s(.*)/
+      hash = Hash.new
+      hash[:name] = $1
+      hash[:quantity] = $2
+      r.ingredients.create(hash)
     end
-    Product.create!(fhash)
   end
 end
 
@@ -77,17 +82,6 @@ When /^(?:|I )fill in "([^"]*)" for "([^"]*)"$/ do |value, field|
   fill_in(field, :with => value)
 end
 
-# Use this to fill in an entire form with data from a table. Example:
-#
-#   When I fill in the following:
-#     | Account Number | 5002       |
-#     | Expiry date    | 2009-11-01 |
-#     | Note           | Nice guy   |
-#     | Wants Email?   |            |
-#
-# TODO: Add support for checkbox, select or option
-# based on naming conventions.
-#
 When /^(?:|I )fill in the following:$/ do |fields|
   fields.rows_hash.each do |name, value|
     When %{I fill in "#{name}" with "#{value}"}
@@ -126,14 +120,14 @@ Then /^I should see the image "(.*?)"$/ do |arg1|
   find("img")['src'].should =~ /\/#{arg1}/
 end
 
-Then /^I should see product name in sorted order$/ do
-  name_arr = all(".productname").map {|x| x.text}
+Then /^I should see recipe name in sorted order$/ do
+  name_arr = all(".recipe_name").map {|x| x.text}
   name_arr.should == name_arr.sort
 end
 
-Then /^I should see product price in sorted order$/ do
-  price_arr = all("#price").map {|x| x.text.slice(1,x.text.length-1).to_f}
-  price_arr.should == price_arr.sort
+Then /^I should see recipe cooking time in sorted order$/ do
+  time_arr = all("#time").map {|x| x.text.to_f}
+  time_arr.should == time_arr.sort
 end
 
 Then /^I should see that "(.*?)" has a price of "(.*?)"$/ do |arg1, arg2|
@@ -143,9 +137,7 @@ Then /^I should see that "(.*?)" has a price of "(.*?)"$/ do |arg1, arg2|
 end
 
 Then /^I should see that "(.*?)" has an image "(.*?)"$/ do |arg1, arg2|
-  name_arr = all(".productname").map {|x| x.text}
-  index = name_arr.index(arg1)
-  all("img")[index]['src'].should =~ /\/#{arg2}/
+
 end
 
 Then /^(?:|I )should see \/([^\/]*)\/$/ do |regexp|
