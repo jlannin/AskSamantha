@@ -11,4 +11,12 @@ class Recipe < ActiveRecord::Base
     end
   end
 
+  def self.filter(time)
+    if (time == nil || time == "")
+      self.all
+    else
+      self.where("cooking_time <= ?", time)
+    end
+  end
+
 end
