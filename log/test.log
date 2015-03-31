@@ -22783,3 +22783,1832 @@ Processing by RecipesController#show as HTML
   Rendered recipes/show.html.haml within layouts/application (17.7ms)
 Completed 200 OK in 25ms (Views: 21.4ms | ActiveRecord: 0.7ms)
   [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Toast and Jam"], ["directions", "Put jam on toast"], ["cooking_time", 7.0], ["created_at", "2015-03-31 19:39:41.060671"], ["updated_at", "2015-03-31 19:39:41.060671"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Toast"], ["quantity", 1], ["recipe_id", 1], ["created_at", "2015-03-31 19:39:41.088238"], ["updated_at", "2015-03-31 19:39:41.088238"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", " Jam"], ["quantity", 1], ["recipe_id", 1], ["created_at", "2015-03-31 19:39:41.090772"], ["updated_at", "2015-03-31 19:39:41.090772"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Scrambled Eggs"], ["directions", "Eggs then milk, scramble"], ["cooking_time", 20.0], ["created_at", "2015-03-31 19:39:41.092785"], ["updated_at", "2015-03-31 19:39:41.092785"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Egg"], ["quantity", 4], ["recipe_id", 2], ["created_at", "2015-03-31 19:39:41.095067"], ["updated_at", "2015-03-31 19:39:41.095067"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", " Milk"], ["quantity", 1], ["recipe_id", 2], ["created_at", "2015-03-31 19:39:41.096965"], ["updated_at", "2015-03-31 19:39:41.096965"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", " Butter"], ["quantity", 1], ["recipe_id", 2], ["created_at", "2015-03-31 19:39:41.098829"], ["updated_at", "2015-03-31 19:39:41.098829"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cereal"], ["directions", "Milk first, then cereal"], ["cooking_time", 10.0], ["created_at", "2015-03-31 19:39:41.100549"], ["updated_at", "2015-03-31 19:39:41.100549"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Cereal"], ["quantity", 1], ["recipe_id", 3], ["created_at", "2015-03-31 19:39:41.102683"], ["updated_at", "2015-03-31 19:39:41.102683"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", " Milk"], ["quantity", 1], ["recipe_id", 3], ["created_at", "2015-03-31 19:39:41.105431"], ["updated_at", "2015-03-31 19:39:41.105431"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/recipes/new" for 127.0.0.1 at 2015-03-31 15:39:41 -0400
+Processing by RecipesController#new as HTML
+  Rendered recipes/new.html.haml within layouts/application (16.5ms)
+Completed 200 OK in 46ms (Views: 45.9ms | ActiveRecord: 0.0ms)
+Started POST "/recipes" for 127.0.0.1 at 2015-03-31 15:39:41 -0400
+Processing by RecipesController#create as HTML
+  Parameters: {"utf8"=>"✓", "recipe"=>{"name"=>"new toast", "directions"=>"get new toast", "cooking_time"=>"1", "image"=>#<ActionDispatch::Http::UploadedFile:0xd84fa64 @tempfile=#<Tempfile:/tmp/RackMultipart20150331-19697-1odi93w.jpg>, @original_filename="tenders_productimage.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"recipe[image]\"; filename=\"tenders_productimage.jpg\"\r\nContent-Type: image/jpeg\r\nContent-Length: 31340\r\n">}, "commit"=>"Create Recipe"}
+Command :: file -b --mime '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150331-19697-1j6txi.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150331-19697-gbp4h1.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150331-19697-gbp4h1.jpg[0]'
+Command :: convert '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150331-19697-gbp4h1.jpg[0]' -auto-orient -resize "300x300>" '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150331-19697-gbp4h120150331-19697-35y0rt'
+Command :: file -b --mime '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150331-19697-gbp4h120150331-19697-35y0rt'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150331-19697-gbp4h1.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150331-19697-gbp4h1.jpg[0]'
+Command :: convert '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150331-19697-gbp4h1.jpg[0]' -auto-orient -resize "100x100>" '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150331-19697-gbp4h120150331-19697-1lu920a'
+Command :: file -b --mime '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150331-19697-gbp4h120150331-19697-1lu920a'
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+Command :: file -b --mime '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150331-19697-102h3yb.jpg'
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "image_file_name", "image_content_type", "image_file_size", "image_updated_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["name", "new toast"], ["directions", "get new toast"], ["cooking_time", 1.0], ["image_file_name", "tenders_productimage.jpg"], ["image_content_type", "image/jpeg"], ["image_file_size", 31340], ["image_updated_at", "2015-03-31 19:39:41.208498"], ["created_at", "2015-03-31 19:39:41.290215"], ["updated_at", "2015-03-31 19:39:41.290215"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/recipes
+Completed 302 Found in 106ms (ActiveRecord: 0.4ms)
+Started GET "/recipes" for 127.0.0.1 at 2015-03-31 15:39:41 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes"  ORDER BY name
+  Rendered recipes/index.html.haml within layouts/application (6.0ms)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Toast and Jam"], ["directions", "Put jam on toast"], ["cooking_time", 7.0], ["created_at", "2015-03-31 19:39:57.212282"], ["updated_at", "2015-03-31 19:39:57.212282"]]
+  [1m[36m (0.6ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Toast"], ["quantity", 1], ["recipe_id", 1], ["created_at", "2015-03-31 19:39:57.268952"], ["updated_at", "2015-03-31 19:39:57.268952"]]
+  [1m[35m (0.4ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", " Jam"], ["quantity", 1], ["recipe_id", 1], ["created_at", "2015-03-31 19:39:57.309206"], ["updated_at", "2015-03-31 19:39:57.309206"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Scrambled Eggs"], ["directions", "Eggs then milk, scramble"], ["cooking_time", 20.0], ["created_at", "2015-03-31 19:39:57.327550"], ["updated_at", "2015-03-31 19:39:57.327550"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Egg"], ["quantity", 4], ["recipe_id", 2], ["created_at", "2015-03-31 19:39:57.349666"], ["updated_at", "2015-03-31 19:39:57.349666"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", " Milk"], ["quantity", 1], ["recipe_id", 2], ["created_at", "2015-03-31 19:39:57.372992"], ["updated_at", "2015-03-31 19:39:57.372992"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", " Butter"], ["quantity", 1], ["recipe_id", 2], ["created_at", "2015-03-31 19:39:57.392856"], ["updated_at", "2015-03-31 19:39:57.392856"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cereal"], ["directions", "Milk first, then cereal"], ["cooking_time", 10.0], ["created_at", "2015-03-31 19:39:57.409020"], ["updated_at", "2015-03-31 19:39:57.409020"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Cereal"], ["quantity", 1], ["recipe_id", 3], ["created_at", "2015-03-31 19:39:57.435151"], ["updated_at", "2015-03-31 19:39:57.435151"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", " Milk"], ["quantity", 1], ["recipe_id", 3], ["created_at", "2015-03-31 19:39:57.453058"], ["updated_at", "2015-03-31 19:39:57.453058"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/recipes" for 127.0.0.1 at 2015-03-31 15:39:57 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.5ms)[0m  [1mSELECT "recipes".* FROM "recipes"  ORDER BY name[0m
+  Rendered recipes/index.html.haml within layouts/application (23.4ms)
+Completed 200 OK in 38ms (Views: 35.0ms | ActiveRecord: 0.5ms)
+Started GET "/recipes?utf8=%E2%9C%93&cooking_time=11&commit=Filter+recipes" for 127.0.0.1 at 2015-03-31 15:39:57 -0400
+Processing by RecipesController#index as HTML
+  Parameters: {"utf8"=>"✓", "cooking_time"=>"11", "commit"=>"Filter recipes"}
+  [1m[35mRecipe Load (0.6ms)[0m  SELECT "recipes".* FROM "recipes" WHERE (cooking_time <= '11')  ORDER BY name
+  Rendered recipes/index.html.haml within layouts/application (17.1ms)
+Completed 200 OK in 24ms (Views: 20.9ms | ActiveRecord: 0.6ms)
+Started GET "/recipes?utf8=%E2%9C%93&cooking_time=&commit=Filter+recipes" for 127.0.0.1 at 2015-03-31 15:39:57 -0400
+Processing by RecipesController#index as HTML
+  Parameters: {"utf8"=>"✓", "cooking_time"=>"", "commit"=>"Filter recipes"}
+  [1m[36mRecipe Load (0.5ms)[0m  [1mSELECT "recipes".* FROM "recipes"  ORDER BY name[0m
+  Rendered recipes/index.html.haml within layouts/application (17.2ms)
+Completed 200 OK in 26ms (Views: 20.8ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Toast and Jam"], ["directions", "Put jam on toast"], ["cooking_time", 7.0], ["created_at", "2015-03-31 19:39:57.785929"], ["updated_at", "2015-03-31 19:39:57.785929"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Toast"], ["quantity", 1], ["recipe_id", 1], ["created_at", "2015-03-31 19:39:57.821669"], ["updated_at", "2015-03-31 19:39:57.821669"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", " Jam"], ["quantity", 1], ["recipe_id", 1], ["created_at", "2015-03-31 19:39:57.849152"], ["updated_at", "2015-03-31 19:39:57.849152"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Scrambled Eggs"], ["directions", "Eggs then milk, scramble"], ["cooking_time", 20.0], ["created_at", "2015-03-31 19:39:57.866506"], ["updated_at", "2015-03-31 19:39:57.866506"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Egg"], ["quantity", 4], ["recipe_id", 2], ["created_at", "2015-03-31 19:39:57.888747"], ["updated_at", "2015-03-31 19:39:57.888747"]]
+  [1m[35m (0.5ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", " Milk"], ["quantity", 1], ["recipe_id", 2], ["created_at", "2015-03-31 19:39:57.915626"], ["updated_at", "2015-03-31 19:39:57.915626"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", " Butter"], ["quantity", 1], ["recipe_id", 2], ["created_at", "2015-03-31 19:39:57.935138"], ["updated_at", "2015-03-31 19:39:57.935138"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Cereal"], ["directions", "Milk first, then cereal"], ["cooking_time", 10.0], ["created_at", "2015-03-31 19:39:57.956782"], ["updated_at", "2015-03-31 19:39:57.956782"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cereal"], ["quantity", 1], ["recipe_id", 3], ["created_at", "2015-03-31 19:39:57.986657"], ["updated_at", "2015-03-31 19:39:57.986657"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", " Milk"], ["quantity", 1], ["recipe_id", 3], ["created_at", "2015-03-31 19:39:58.007083"], ["updated_at", "2015-03-31 19:39:58.007083"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/recipes" for 127.0.0.1 at 2015-03-31 15:39:58 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes"  ORDER BY name
+  Rendered recipes/index.html.haml within layouts/application (14.8ms)
+Completed 200 OK in 23ms (Views: 20.3ms | ActiveRecord: 0.2ms)
+Started GET "/recipes?utf8=%E2%9C%93&cooking_time=11&commit=Filter+recipes" for 127.0.0.1 at 2015-03-31 15:39:58 -0400
+Processing by RecipesController#index as HTML
+  Parameters: {"utf8"=>"✓", "cooking_time"=>"11", "commit"=>"Filter recipes"}
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT "recipes".* FROM "recipes" WHERE (cooking_time <= '11')  ORDER BY name[0m
+  Rendered recipes/index.html.haml within layouts/application (17.2ms)
+Completed 200 OK in 30ms (Views: 24.7ms | ActiveRecord: 0.3ms)
+Started GET "/recipes/3" for 127.0.0.1 at 2015-03-31 15:39:58 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mRecipe Load (0.7ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mIngredient Load (0.5ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 3]]
+  Rendered recipes/show.html.haml within layouts/application (45.7ms)
+Completed 200 OK in 67ms (Views: 51.0ms | ActiveRecord: 1.2ms)
+Started GET "/recipes" for 127.0.0.1 at 2015-03-31 15:39:58 -0400
+Processing by RecipesController#index as HTML
+Redirected to http://www.example.com/recipes?cooking_time=11
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+Started GET "/recipes?cooking_time=11" for 127.0.0.1 at 2015-03-31 15:39:58 -0400
+Processing by RecipesController#index as HTML
+  Parameters: {"cooking_time"=>"11"}
+  [1m[35mRecipe Load (0.6ms)[0m  SELECT "recipes".* FROM "recipes" WHERE (cooking_time <= '11')  ORDER BY name
+  Rendered recipes/index.html.haml within layouts/application (18.5ms)
+Completed 200 OK in 28ms (Views: 24.1ms | ActiveRecord: 0.6ms)
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36m (1.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Toast and Jam"], ["directions", "Put jam on toast"], ["cooking_time", 7.0], ["created_at", "2015-03-31 19:39:58.412377"], ["updated_at", "2015-03-31 19:39:58.412377"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Toast"], ["quantity", 1], ["recipe_id", 1], ["created_at", "2015-03-31 19:39:58.436572"], ["updated_at", "2015-03-31 19:39:58.436572"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", " Jam"], ["quantity", 1], ["recipe_id", 1], ["created_at", "2015-03-31 19:39:58.460981"], ["updated_at", "2015-03-31 19:39:58.460981"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Scrambled Eggs"], ["directions", "Eggs then milk, scramble"], ["cooking_time", 20.0], ["created_at", "2015-03-31 19:39:58.479454"], ["updated_at", "2015-03-31 19:39:58.479454"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Egg"], ["quantity", 4], ["recipe_id", 2], ["created_at", "2015-03-31 19:39:58.502327"], ["updated_at", "2015-03-31 19:39:58.502327"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", " Milk"], ["quantity", 1], ["recipe_id", 2], ["created_at", "2015-03-31 19:39:58.526811"], ["updated_at", "2015-03-31 19:39:58.526811"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", " Butter"], ["quantity", 1], ["recipe_id", 2], ["created_at", "2015-03-31 19:39:58.545397"], ["updated_at", "2015-03-31 19:39:58.545397"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cereal"], ["directions", "Milk first, then cereal"], ["cooking_time", 10.0], ["created_at", "2015-03-31 19:39:58.561889"], ["updated_at", "2015-03-31 19:39:58.561889"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Cereal"], ["quantity", 1], ["recipe_id", 3], ["created_at", "2015-03-31 19:39:58.590590"], ["updated_at", "2015-03-31 19:39:58.590590"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", " Milk"], ["quantity", 1], ["recipe_id", 3], ["created_at", "2015-03-31 19:39:58.612463"], ["updated_at", "2015-03-31 19:39:58.612463"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/recipes" for 127.0.0.1 at 2015-03-31 15:39:58 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.5ms)[0m  [1mSELECT "recipes".* FROM "recipes"  ORDER BY name[0m
+  Rendered recipes/index.html.haml within layouts/application (13.6ms)
+Completed 200 OK in 20ms (Views: 17.0ms | ActiveRecord: 0.5ms)
+Started GET "/recipes?utf8=%E2%9C%93&cooking_time=11&commit=Filter+recipes" for 127.0.0.1 at 2015-03-31 15:39:58 -0400
+Processing by RecipesController#index as HTML
+  Parameters: {"utf8"=>"✓", "cooking_time"=>"11", "commit"=>"Filter recipes"}
+  [1m[35mRecipe Load (0.6ms)[0m  SELECT "recipes".* FROM "recipes" WHERE (cooking_time <= '11')  ORDER BY name
+  Rendered recipes/index.html.haml within layouts/application (22.5ms)
+Completed 200 OK in 31ms (Views: 26.8ms | ActiveRecord: 0.6ms)
+Started GET "/recipes?query=cooking_time" for 127.0.0.1 at 2015-03-31 15:39:58 -0400
+Processing by RecipesController#index as HTML
+  Parameters: {"query"=>"cooking_time"}
+Redirected to http://www.example.com/recipes?cooking_time=11&query=cooking_time
+Completed 302 Found in 8ms (ActiveRecord: 0.0ms)
+Started GET "/recipes?cooking_time=11&query=cooking_time" for 127.0.0.1 at 2015-03-31 15:39:58 -0400
+Processing by RecipesController#index as HTML
+  Parameters: {"cooking_time"=>"11", "query"=>"cooking_time"}
+  [1m[36mRecipe Load (0.6ms)[0m  [1mSELECT "recipes".* FROM "recipes" WHERE (cooking_time <= '11')  ORDER BY cooking_time[0m
+  Rendered recipes/index.html.haml within layouts/application (13.8ms)
+Completed 200 OK in 21ms (Views: 17.0ms | ActiveRecord: 0.6ms)
+Started GET "/recipes/3" for 127.0.0.1 at 2015-03-31 15:39:58 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mRecipe Load (0.4ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mIngredient Load (0.4ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 3]]
+  Rendered recipes/show.html.haml within layouts/application (18.6ms)
+Completed 200 OK in 28ms (Views: 23.4ms | ActiveRecord: 0.8ms)
+Started GET "/recipes" for 127.0.0.1 at 2015-03-31 15:39:58 -0400
+Processing by RecipesController#index as HTML
+Redirected to http://www.example.com/recipes?cooking_time=11&query=cooking_time
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms)
+Started GET "/recipes?cooking_time=11&query=cooking_time" for 127.0.0.1 at 2015-03-31 15:39:58 -0400
+Processing by RecipesController#index as HTML
+  Parameters: {"cooking_time"=>"11", "query"=>"cooking_time"}
+  [1m[35mRecipe Load (0.6ms)[0m  SELECT "recipes".* FROM "recipes" WHERE (cooking_time <= '11')  ORDER BY cooking_time
+  Rendered recipes/index.html.haml within layouts/application (15.1ms)
+Completed 200 OK in 26ms (Views: 19.3ms | ActiveRecord: 0.6ms)
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Toast and Jam"], ["directions", "Put jam on toast"], ["cooking_time", 7.0], ["created_at", "2015-03-31 19:39:59.027569"], ["updated_at", "2015-03-31 19:39:59.027569"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Toast"], ["quantity", 1], ["recipe_id", 1], ["created_at", "2015-03-31 19:39:59.056245"], ["updated_at", "2015-03-31 19:39:59.056245"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", " Jam"], ["quantity", 1], ["recipe_id", 1], ["created_at", "2015-03-31 19:39:59.088852"], ["updated_at", "2015-03-31 19:39:59.088852"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Scrambled Eggs"], ["directions", "Eggs then milk, scramble"], ["cooking_time", 20.0], ["created_at", "2015-03-31 19:39:59.105306"], ["updated_at", "2015-03-31 19:39:59.105306"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Egg"], ["quantity", 4], ["recipe_id", 2], ["created_at", "2015-03-31 19:39:59.129669"], ["updated_at", "2015-03-31 19:39:59.129669"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", " Milk"], ["quantity", 1], ["recipe_id", 2], ["created_at", "2015-03-31 19:39:59.155064"], ["updated_at", "2015-03-31 19:39:59.155064"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", " Butter"], ["quantity", 1], ["recipe_id", 2], ["created_at", "2015-03-31 19:39:59.173438"], ["updated_at", "2015-03-31 19:39:59.173438"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cereal"], ["directions", "Milk first, then cereal"], ["cooking_time", 10.0], ["created_at", "2015-03-31 19:39:59.195256"], ["updated_at", "2015-03-31 19:39:59.195256"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Cereal"], ["quantity", 1], ["recipe_id", 3], ["created_at", "2015-03-31 19:39:59.222252"], ["updated_at", "2015-03-31 19:39:59.222252"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", " Milk"], ["quantity", 1], ["recipe_id", 3], ["created_at", "2015-03-31 19:39:59.240168"], ["updated_at", "2015-03-31 19:39:59.240168"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/recipes" for 127.0.0.1 at 2015-03-31 15:39:59 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.6ms)[0m  [1mSELECT "recipes".* FROM "recipes"  ORDER BY name[0m
+  Rendered recipes/index.html.haml within layouts/application (21.4ms)
+Completed 200 OK in 34ms (Views: 30.2ms | ActiveRecord: 0.6ms)
+Started GET "/recipes?query=name" for 127.0.0.1 at 2015-03-31 15:39:59 -0400
+Processing by RecipesController#index as HTML
+  Parameters: {"query"=>"name"}
+  [1m[35mRecipe Load (0.5ms)[0m  SELECT "recipes".* FROM "recipes"  ORDER BY name
+  Rendered recipes/index.html.haml within layouts/application (23.8ms)
+Completed 200 OK in 32ms (Views: 29.2ms | ActiveRecord: 0.5ms)
+Started GET "/recipes/1" for 127.0.0.1 at 2015-03-31 15:39:59 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (2.1ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mIngredient Load (0.6ms)[0m  SELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?  [["recipe_id", 1]]
+  Rendered recipes/show.html.haml within layouts/application (16.4ms)
+Completed 200 OK in 27ms (Views: 19.6ms | ActiveRecord: 2.7ms)
+Started GET "/recipes" for 127.0.0.1 at 2015-03-31 15:39:59 -0400
+Processing by RecipesController#index as HTML
+Redirected to http://www.example.com/recipes?query=name
+Completed 302 Found in 7ms (ActiveRecord: 0.0ms)
+Started GET "/recipes?query=name" for 127.0.0.1 at 2015-03-31 15:39:59 -0400
+Processing by RecipesController#index as HTML
+  Parameters: {"query"=>"name"}
+  [1m[36mRecipe Load (0.8ms)[0m  [1mSELECT "recipes".* FROM "recipes"  ORDER BY name[0m
+  Rendered recipes/index.html.haml within layouts/application (24.9ms)
+Completed 200 OK in 35ms (Views: 31.2ms | ActiveRecord: 0.8ms)
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (1.6ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  commit transaction
+  [1m[36m (0.9ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Toast and Jam"], ["directions", "Put jam on toast"], ["cooking_time", 7.0], ["created_at", "2015-03-31 19:39:59.577821"], ["updated_at", "2015-03-31 19:39:59.577821"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Toast"], ["quantity", 1], ["recipe_id", 1], ["created_at", "2015-03-31 19:39:59.606149"], ["updated_at", "2015-03-31 19:39:59.606149"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", " Jam"], ["quantity", 1], ["recipe_id", 1], ["created_at", "2015-03-31 19:39:59.635193"], ["updated_at", "2015-03-31 19:39:59.635193"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Scrambled Eggs"], ["directions", "Eggs then milk, scramble"], ["cooking_time", 20.0], ["created_at", "2015-03-31 19:39:59.655160"], ["updated_at", "2015-03-31 19:39:59.655160"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Egg"], ["quantity", 4], ["recipe_id", 2], ["created_at", "2015-03-31 19:39:59.681679"], ["updated_at", "2015-03-31 19:39:59.681679"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", " Milk"], ["quantity", 1], ["recipe_id", 2], ["created_at", "2015-03-31 19:39:59.705443"], ["updated_at", "2015-03-31 19:39:59.705443"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", " Butter"], ["quantity", 1], ["recipe_id", 2], ["created_at", "2015-03-31 19:39:59.723928"], ["updated_at", "2015-03-31 19:39:59.723928"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Cereal"], ["directions", "Milk first, then cereal"], ["cooking_time", 10.0], ["created_at", "2015-03-31 19:39:59.747435"], ["updated_at", "2015-03-31 19:39:59.747435"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cereal"], ["quantity", 1], ["recipe_id", 3], ["created_at", "2015-03-31 19:39:59.773388"], ["updated_at", "2015-03-31 19:39:59.773388"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", " Milk"], ["quantity", 1], ["recipe_id", 3], ["created_at", "2015-03-31 19:39:59.795227"], ["updated_at", "2015-03-31 19:39:59.795227"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/recipes" for 127.0.0.1 at 2015-03-31 15:39:59 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.6ms)[0m  SELECT "recipes".* FROM "recipes"  ORDER BY name
+  Rendered recipes/index.html.haml within layouts/application (19.8ms)
+Completed 200 OK in 26ms (Views: 23.0ms | ActiveRecord: 0.6ms)
+Started GET "/recipes?query=cooking_time" for 127.0.0.1 at 2015-03-31 15:39:59 -0400
+Processing by RecipesController#index as HTML
+  Parameters: {"query"=>"cooking_time"}
+  [1m[36mRecipe Load (0.6ms)[0m  [1mSELECT "recipes".* FROM "recipes"  ORDER BY cooking_time[0m
+  Rendered recipes/index.html.haml within layouts/application (22.6ms)
+Completed 200 OK in 30ms (Views: 26.2ms | ActiveRecord: 0.6ms)
+Started GET "/recipes/3" for 127.0.0.1 at 2015-03-31 15:39:59 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mIngredient Load (0.3ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 3]]
+  Rendered recipes/show.html.haml within layouts/application (17.5ms)
+Completed 200 OK in 27ms (Views: 22.7ms | ActiveRecord: 0.5ms)
+Started GET "/recipes" for 127.0.0.1 at 2015-03-31 15:39:59 -0400
+Processing by RecipesController#index as HTML
+Redirected to http://www.example.com/recipes?query=cooking_time
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms)
+Started GET "/recipes?query=cooking_time" for 127.0.0.1 at 2015-03-31 15:40:00 -0400
+Processing by RecipesController#index as HTML
+  Parameters: {"query"=>"cooking_time"}
+  [1m[35mRecipe Load (0.5ms)[0m  SELECT "recipes".* FROM "recipes"  ORDER BY cooking_time
+  Rendered recipes/index.html.haml within layouts/application (21.4ms)
+Completed 200 OK in 39ms (Views: 34.2ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Toast and Jam"], ["directions", "Put jam on toast"], ["cooking_time", 7.0], ["created_at", "2015-03-31 19:40:00.101120"], ["updated_at", "2015-03-31 19:40:00.101120"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Toast"], ["quantity", 1], ["recipe_id", 1], ["created_at", "2015-03-31 19:40:00.129748"], ["updated_at", "2015-03-31 19:40:00.129748"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", " Jam"], ["quantity", 1], ["recipe_id", 1], ["created_at", "2015-03-31 19:40:00.156406"], ["updated_at", "2015-03-31 19:40:00.156406"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Scrambled Eggs"], ["directions", "Eggs then milk, scramble"], ["cooking_time", 20.0], ["created_at", "2015-03-31 19:40:00.175655"], ["updated_at", "2015-03-31 19:40:00.175655"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Egg"], ["quantity", 4], ["recipe_id", 2], ["created_at", "2015-03-31 19:40:00.200007"], ["updated_at", "2015-03-31 19:40:00.200007"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", " Milk"], ["quantity", 1], ["recipe_id", 2], ["created_at", "2015-03-31 19:40:00.225891"], ["updated_at", "2015-03-31 19:40:00.225891"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", " Butter"], ["quantity", 1], ["recipe_id", 2], ["created_at", "2015-03-31 19:40:00.243832"], ["updated_at", "2015-03-31 19:40:00.243832"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cereal"], ["directions", "Milk first, then cereal"], ["cooking_time", 10.0], ["created_at", "2015-03-31 19:40:00.262450"], ["updated_at", "2015-03-31 19:40:00.262450"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Cereal"], ["quantity", 1], ["recipe_id", 3], ["created_at", "2015-03-31 19:40:00.290945"], ["updated_at", "2015-03-31 19:40:00.290945"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", " Milk"], ["quantity", 1], ["recipe_id", 3], ["created_at", "2015-03-31 19:40:00.308747"], ["updated_at", "2015-03-31 19:40:00.308747"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/recipes" for 127.0.0.1 at 2015-03-31 15:40:00 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.6ms)[0m  [1mSELECT "recipes".* FROM "recipes"  ORDER BY name[0m
+  Rendered recipes/index.html.haml within layouts/application (16.6ms)
+Completed 200 OK in 32ms (Views: 20.2ms | ActiveRecord: 0.6ms)
+Started GET "/recipes/3" for 127.0.0.1 at 2015-03-31 15:40:00 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mIngredient Load (3.0ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 3]]
+  Rendered recipes/show.html.haml within layouts/application (20.3ms)
+Completed 200 OK in 32ms (Views: 24.1ms | ActiveRecord: 3.2ms)
+Started GET "/recipes/3/edit" for 127.0.0.1 at 2015-03-31 15:40:00 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mRecipe Load (1.9ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered recipes/edit.html.haml within layouts/application (38.5ms)
+Completed 200 OK in 48ms (Views: 43.0ms | ActiveRecord: 1.9ms)
+Started PUT "/recipes/3" for 127.0.0.1 at 2015-03-31 15:40:00 -0400
+Processing by RecipesController#update as HTML
+  Parameters: {"utf8"=>"✓", "recipe"=>{"name"=>"Cereal", "directions"=>"CEREAL FIRST, then milk", "cooking_time"=>"6"}, "commit"=>"Update Recipe Details", "id"=>"3"}
+  [1m[36mRecipe Load (0.4ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "recipes" SET "directions" = ?, "cooking_time" = ?, "updated_at" = ? WHERE "recipes"."id" = ?[0m  [["directions", "CEREAL FIRST, then milk"], ["cooking_time", 6.0], ["updated_at", "2015-03-31 19:40:00.603816"], ["id", 3]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/recipes/3
+Completed 302 Found in 37ms (ActiveRecord: 2.1ms)
+Started GET "/recipes/3" for 127.0.0.1 at 2015-03-31 15:40:00 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mIngredient Load (0.3ms)[0m  SELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?  [["recipe_id", 3]]
+  Rendered recipes/show.html.haml within layouts/application (22.2ms)
+Completed 200 OK in 34ms (Views: 28.3ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Toast and Jam"], ["directions", "Put jam on toast"], ["cooking_time", 7.0], ["created_at", "2015-03-31 19:40:07.002849"], ["updated_at", "2015-03-31 19:40:07.002849"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Toast"], ["quantity", 1], ["recipe_id", 1], ["created_at", "2015-03-31 19:40:07.029911"], ["updated_at", "2015-03-31 19:40:07.029911"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", " Jam"], ["quantity", 1], ["recipe_id", 1], ["created_at", "2015-03-31 19:40:07.032410"], ["updated_at", "2015-03-31 19:40:07.032410"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Scrambled Eggs"], ["directions", "Eggs then milk, scramble"], ["cooking_time", 20.0], ["created_at", "2015-03-31 19:40:07.034402"], ["updated_at", "2015-03-31 19:40:07.034402"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Egg"], ["quantity", 4], ["recipe_id", 2], ["created_at", "2015-03-31 19:40:07.036689"], ["updated_at", "2015-03-31 19:40:07.036689"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", " Milk"], ["quantity", 1], ["recipe_id", 2], ["created_at", "2015-03-31 19:40:07.038957"], ["updated_at", "2015-03-31 19:40:07.038957"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", " Butter"], ["quantity", 1], ["recipe_id", 2], ["created_at", "2015-03-31 19:40:07.040990"], ["updated_at", "2015-03-31 19:40:07.040990"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cereal"], ["directions", "Milk first, then cereal"], ["cooking_time", 10.0], ["created_at", "2015-03-31 19:40:07.042925"], ["updated_at", "2015-03-31 19:40:07.042925"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Cereal"], ["quantity", 1], ["recipe_id", 3], ["created_at", "2015-03-31 19:40:07.045089"], ["updated_at", "2015-03-31 19:40:07.045089"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", " Milk"], ["quantity", 1], ["recipe_id", 3], ["created_at", "2015-03-31 19:40:07.047066"], ["updated_at", "2015-03-31 19:40:07.047066"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/recipes/new" for 127.0.0.1 at 2015-03-31 15:40:07 -0400
+Processing by RecipesController#new as HTML
+  Rendered recipes/new.html.haml within layouts/application (18.4ms)
+Completed 200 OK in 49ms (Views: 48.7ms | ActiveRecord: 0.0ms)
+Started POST "/recipes" for 127.0.0.1 at 2015-03-31 15:40:07 -0400
+Processing by RecipesController#create as HTML
+  Parameters: {"utf8"=>"✓", "recipe"=>{"name"=>"new toast", "directions"=>"get new toast", "cooking_time"=>"1", "image"=>#<ActionDispatch::Http::UploadedFile:0xbe17764 @tempfile=#<Tempfile:/tmp/RackMultipart20150331-19724-1t8vyzu.jpg>, @original_filename="tenders_productimage.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"recipe[image]\"; filename=\"tenders_productimage.jpg\"\r\nContent-Type: image/jpeg\r\nContent-Length: 31340\r\n">}, "commit"=>"Create Recipe"}
+Command :: file -b --mime '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150331-19724-1wdwuxx.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150331-19724-8vznc4.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150331-19724-8vznc4.jpg[0]'
+Command :: convert '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150331-19724-8vznc4.jpg[0]' -auto-orient -resize "300x300>" '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150331-19724-8vznc420150331-19724-3vziar'
+Command :: file -b --mime '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150331-19724-8vznc420150331-19724-3vziar'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150331-19724-8vznc4.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150331-19724-8vznc4.jpg[0]'
+Command :: convert '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150331-19724-8vznc4.jpg[0]' -auto-orient -resize "100x100>" '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150331-19724-8vznc420150331-19724-13nxffm'
+Command :: file -b --mime '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150331-19724-8vznc420150331-19724-13nxffm'
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+Command :: file -b --mime '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150331-19724-1tmls46.jpg'
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "image_file_name", "image_content_type", "image_file_size", "image_updated_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["name", "new toast"], ["directions", "get new toast"], ["cooking_time", 1.0], ["image_file_name", "tenders_productimage.jpg"], ["image_content_type", "image/jpeg"], ["image_file_size", 31340], ["image_updated_at", "2015-03-31 19:40:07.153355"], ["created_at", "2015-03-31 19:40:07.236275"], ["updated_at", "2015-03-31 19:40:07.236275"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/recipes
+Completed 302 Found in 104ms (ActiveRecord: 0.4ms)
+Started GET "/recipes" for 127.0.0.1 at 2015-03-31 15:40:07 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes"  ORDER BY name
+  Rendered recipes/index.html.haml within layouts/application (6.7ms)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Toast and Jam"], ["directions", "Put jam on toast"], ["cooking_time", 7.0], ["created_at", "2015-03-31 19:40:07.306529"], ["updated_at", "2015-03-31 19:40:07.306529"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Toast"], ["quantity", 1], ["recipe_id", 1], ["created_at", "2015-03-31 19:40:07.312553"], ["updated_at", "2015-03-31 19:40:07.312553"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", " Jam"], ["quantity", 1], ["recipe_id", 1], ["created_at", "2015-03-31 19:40:07.314924"], ["updated_at", "2015-03-31 19:40:07.314924"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Scrambled Eggs"], ["directions", "Eggs then milk, scramble"], ["cooking_time", 20.0], ["created_at", "2015-03-31 19:40:07.318743"], ["updated_at", "2015-03-31 19:40:07.318743"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Egg"], ["quantity", 4], ["recipe_id", 2], ["created_at", "2015-03-31 19:40:07.327261"], ["updated_at", "2015-03-31 19:40:07.327261"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.9ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", " Milk"], ["quantity", 1], ["recipe_id", 2], ["created_at", "2015-03-31 19:40:07.333828"], ["updated_at", "2015-03-31 19:40:07.333828"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", " Butter"], ["quantity", 1], ["recipe_id", 2], ["created_at", "2015-03-31 19:40:07.337194"], ["updated_at", "2015-03-31 19:40:07.337194"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cereal"], ["directions", "Milk first, then cereal"], ["cooking_time", 10.0], ["created_at", "2015-03-31 19:40:07.345220"], ["updated_at", "2015-03-31 19:40:07.345220"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Cereal"], ["quantity", 1], ["recipe_id", 3], ["created_at", "2015-03-31 19:40:07.347903"], ["updated_at", "2015-03-31 19:40:07.347903"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", " Milk"], ["quantity", 1], ["recipe_id", 3], ["created_at", "2015-03-31 19:40:07.350138"], ["updated_at", "2015-03-31 19:40:07.350138"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/recipes" for 127.0.0.1 at 2015-03-31 15:40:07 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT "recipes".* FROM "recipes"  ORDER BY name[0m
+  Rendered recipes/index.html.haml within layouts/application (4.5ms)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.2ms)
+Started GET "/recipes?utf8=%E2%9C%93&cooking_time=11&commit=Filter+recipes" for 127.0.0.1 at 2015-03-31 15:40:07 -0400
+Processing by RecipesController#index as HTML
+  Parameters: {"utf8"=>"✓", "cooking_time"=>"11", "commit"=>"Filter recipes"}
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes" WHERE (cooking_time <= '11')  ORDER BY name
+  Rendered recipes/index.html.haml within layouts/application (2.0ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.2ms)
+Started GET "/recipes?utf8=%E2%9C%93&cooking_time=&commit=Filter+recipes" for 127.0.0.1 at 2015-03-31 15:40:07 -0400
+Processing by RecipesController#index as HTML
+  Parameters: {"utf8"=>"✓", "cooking_time"=>"", "commit"=>"Filter recipes"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT "recipes".* FROM "recipes"  ORDER BY name[0m
+  Rendered recipes/index.html.haml within layouts/application (2.8ms)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Toast and Jam"], ["directions", "Put jam on toast"], ["cooking_time", 7.0], ["created_at", "2015-03-31 19:40:07.442643"], ["updated_at", "2015-03-31 19:40:07.442643"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Toast"], ["quantity", 1], ["recipe_id", 1], ["created_at", "2015-03-31 19:40:07.445936"], ["updated_at", "2015-03-31 19:40:07.445936"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", " Jam"], ["quantity", 1], ["recipe_id", 1], ["created_at", "2015-03-31 19:40:07.449521"], ["updated_at", "2015-03-31 19:40:07.449521"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Scrambled Eggs"], ["directions", "Eggs then milk, scramble"], ["cooking_time", 20.0], ["created_at", "2015-03-31 19:40:07.459467"], ["updated_at", "2015-03-31 19:40:07.459467"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Egg"], ["quantity", 4], ["recipe_id", 2], ["created_at", "2015-03-31 19:40:07.462266"], ["updated_at", "2015-03-31 19:40:07.462266"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", " Milk"], ["quantity", 1], ["recipe_id", 2], ["created_at", "2015-03-31 19:40:07.467470"], ["updated_at", "2015-03-31 19:40:07.467470"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", " Butter"], ["quantity", 1], ["recipe_id", 2], ["created_at", "2015-03-31 19:40:07.470496"], ["updated_at", "2015-03-31 19:40:07.470496"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Cereal"], ["directions", "Milk first, then cereal"], ["cooking_time", 10.0], ["created_at", "2015-03-31 19:40:07.472660"], ["updated_at", "2015-03-31 19:40:07.472660"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cereal"], ["quantity", 1], ["recipe_id", 3], ["created_at", "2015-03-31 19:40:07.476340"], ["updated_at", "2015-03-31 19:40:07.476340"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", " Milk"], ["quantity", 1], ["recipe_id", 3], ["created_at", "2015-03-31 19:40:07.478987"], ["updated_at", "2015-03-31 19:40:07.478987"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/recipes" for 127.0.0.1 at 2015-03-31 15:40:07 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes"  ORDER BY name
+  Rendered recipes/index.html.haml within layouts/application (2.8ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.2ms)
+Started GET "/recipes?utf8=%E2%9C%93&cooking_time=11&commit=Filter+recipes" for 127.0.0.1 at 2015-03-31 15:40:07 -0400
+Processing by RecipesController#index as HTML
+  Parameters: {"utf8"=>"✓", "cooking_time"=>"11", "commit"=>"Filter recipes"}
+  [1m[36mRecipe Load (0.0ms)[0m  [1mSELECT "recipes".* FROM "recipes" WHERE (cooking_time <= '11')  ORDER BY name[0m
+  Rendered recipes/index.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 6ms (Views: 3.5ms | ActiveRecord: 0.0ms)
+Started GET "/recipes/3" for 127.0.0.1 at 2015-03-31 15:40:07 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 3]]
+  Rendered recipes/show.html.haml within layouts/application (8.2ms)
+Completed 200 OK in 19ms (Views: 9.8ms | ActiveRecord: 0.4ms)
+Started GET "/recipes" for 127.0.0.1 at 2015-03-31 15:40:07 -0400
+Processing by RecipesController#index as HTML
+Redirected to http://www.example.com/recipes?cooking_time=11
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+Started GET "/recipes?cooking_time=11" for 127.0.0.1 at 2015-03-31 15:40:07 -0400
+Processing by RecipesController#index as HTML
+  Parameters: {"cooking_time"=>"11"}
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT "recipes".* FROM "recipes" WHERE (cooking_time <= '11')  ORDER BY name
+  Rendered recipes/index.html.haml within layouts/application (5.6ms)
+Completed 200 OK in 9ms (Views: 6.3ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Toast and Jam"], ["directions", "Put jam on toast"], ["cooking_time", 7.0], ["created_at", "2015-03-31 19:40:07.579135"], ["updated_at", "2015-03-31 19:40:07.579135"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Toast"], ["quantity", 1], ["recipe_id", 1], ["created_at", "2015-03-31 19:40:07.582379"], ["updated_at", "2015-03-31 19:40:07.582379"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", " Jam"], ["quantity", 1], ["recipe_id", 1], ["created_at", "2015-03-31 19:40:07.586243"], ["updated_at", "2015-03-31 19:40:07.586243"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Scrambled Eggs"], ["directions", "Eggs then milk, scramble"], ["cooking_time", 20.0], ["created_at", "2015-03-31 19:40:07.592900"], ["updated_at", "2015-03-31 19:40:07.592900"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Egg"], ["quantity", 4], ["recipe_id", 2], ["created_at", "2015-03-31 19:40:07.595779"], ["updated_at", "2015-03-31 19:40:07.595779"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", " Milk"], ["quantity", 1], ["recipe_id", 2], ["created_at", "2015-03-31 19:40:07.599172"], ["updated_at", "2015-03-31 19:40:07.599172"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", " Butter"], ["quantity", 1], ["recipe_id", 2], ["created_at", "2015-03-31 19:40:07.606797"], ["updated_at", "2015-03-31 19:40:07.606797"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cereal"], ["directions", "Milk first, then cereal"], ["cooking_time", 10.0], ["created_at", "2015-03-31 19:40:07.611652"], ["updated_at", "2015-03-31 19:40:07.611652"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Cereal"], ["quantity", 1], ["recipe_id", 3], ["created_at", "2015-03-31 19:40:07.615059"], ["updated_at", "2015-03-31 19:40:07.615059"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", " Milk"], ["quantity", 1], ["recipe_id", 3], ["created_at", "2015-03-31 19:40:07.617470"], ["updated_at", "2015-03-31 19:40:07.617470"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/recipes" for 127.0.0.1 at 2015-03-31 15:40:07 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.6ms)[0m  [1mSELECT "recipes".* FROM "recipes"  ORDER BY name[0m
+  Rendered recipes/index.html.haml within layouts/application (4.5ms)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.6ms)
+Started GET "/recipes?utf8=%E2%9C%93&cooking_time=11&commit=Filter+recipes" for 127.0.0.1 at 2015-03-31 15:40:07 -0400
+Processing by RecipesController#index as HTML
+  Parameters: {"utf8"=>"✓", "cooking_time"=>"11", "commit"=>"Filter recipes"}
+  [1m[35mRecipe Load (2.0ms)[0m  SELECT "recipes".* FROM "recipes" WHERE (cooking_time <= '11')  ORDER BY name
+  Rendered recipes/index.html.haml within layouts/application (6.0ms)
+Completed 200 OK in 8ms (Views: 5.4ms | ActiveRecord: 2.0ms)
+Started GET "/recipes?query=cooking_time" for 127.0.0.1 at 2015-03-31 15:40:07 -0400
+Processing by RecipesController#index as HTML
+  Parameters: {"query"=>"cooking_time"}
+Redirected to http://www.example.com/recipes?cooking_time=11&query=cooking_time
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/recipes?cooking_time=11&query=cooking_time" for 127.0.0.1 at 2015-03-31 15:40:07 -0400
+Processing by RecipesController#index as HTML
+  Parameters: {"cooking_time"=>"11", "query"=>"cooking_time"}
+  [1m[36mRecipe Load (0.4ms)[0m  [1mSELECT "recipes".* FROM "recipes" WHERE (cooking_time <= '11')  ORDER BY cooking_time[0m
+  Rendered recipes/index.html.haml within layouts/application (4.2ms)
+Completed 200 OK in 9ms (Views: 4.8ms | ActiveRecord: 0.4ms)
+Started GET "/recipes/3" for 127.0.0.1 at 2015-03-31 15:40:07 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mIngredient Load (0.1ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 3]]
+  Rendered recipes/show.html.haml within layouts/application (2.4ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.2ms)
+Started GET "/recipes" for 127.0.0.1 at 2015-03-31 15:40:07 -0400
+Processing by RecipesController#index as HTML
+Redirected to http://www.example.com/recipes?cooking_time=11&query=cooking_time
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/recipes?cooking_time=11&query=cooking_time" for 127.0.0.1 at 2015-03-31 15:40:07 -0400
+Processing by RecipesController#index as HTML
+  Parameters: {"cooking_time"=>"11", "query"=>"cooking_time"}
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes" WHERE (cooking_time <= '11')  ORDER BY cooking_time
+  Rendered recipes/index.html.haml within layouts/application (5.8ms)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Toast and Jam"], ["directions", "Put jam on toast"], ["cooking_time", 7.0], ["created_at", "2015-03-31 19:40:07.726390"], ["updated_at", "2015-03-31 19:40:07.726390"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Toast"], ["quantity", 1], ["recipe_id", 1], ["created_at", "2015-03-31 19:40:07.736208"], ["updated_at", "2015-03-31 19:40:07.736208"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", " Jam"], ["quantity", 1], ["recipe_id", 1], ["created_at", "2015-03-31 19:40:07.739282"], ["updated_at", "2015-03-31 19:40:07.739282"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Scrambled Eggs"], ["directions", "Eggs then milk, scramble"], ["cooking_time", 20.0], ["created_at", "2015-03-31 19:40:07.744557"], ["updated_at", "2015-03-31 19:40:07.744557"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Egg"], ["quantity", 4], ["recipe_id", 2], ["created_at", "2015-03-31 19:40:07.747495"], ["updated_at", "2015-03-31 19:40:07.747495"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", " Milk"], ["quantity", 1], ["recipe_id", 2], ["created_at", "2015-03-31 19:40:07.750175"], ["updated_at", "2015-03-31 19:40:07.750175"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", " Butter"], ["quantity", 1], ["recipe_id", 2], ["created_at", "2015-03-31 19:40:07.753303"], ["updated_at", "2015-03-31 19:40:07.753303"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cereal"], ["directions", "Milk first, then cereal"], ["cooking_time", 10.0], ["created_at", "2015-03-31 19:40:07.756985"], ["updated_at", "2015-03-31 19:40:07.756985"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Cereal"], ["quantity", 1], ["recipe_id", 3], ["created_at", "2015-03-31 19:40:07.760175"], ["updated_at", "2015-03-31 19:40:07.760175"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", " Milk"], ["quantity", 1], ["recipe_id", 3], ["created_at", "2015-03-31 19:40:07.763785"], ["updated_at", "2015-03-31 19:40:07.763785"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/recipes" for 127.0.0.1 at 2015-03-31 15:40:07 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT "recipes".* FROM "recipes"  ORDER BY name[0m
+  Rendered recipes/index.html.haml within layouts/application (2.9ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.2ms)
+Started GET "/recipes?query=name" for 127.0.0.1 at 2015-03-31 15:40:07 -0400
+Processing by RecipesController#index as HTML
+  Parameters: {"query"=>"name"}
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes"  ORDER BY name
+  Rendered recipes/index.html.haml within layouts/application (2.9ms)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.2ms)
+Started GET "/recipes/1" for 127.0.0.1 at 2015-03-31 15:40:07 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mIngredient Load (0.2ms)[0m  SELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?  [["recipe_id", 1]]
+  Rendered recipes/show.html.haml within layouts/application (3.3ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.3ms)
+Started GET "/recipes" for 127.0.0.1 at 2015-03-31 15:40:07 -0400
+Processing by RecipesController#index as HTML
+Redirected to http://www.example.com/recipes?query=name
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/recipes?query=name" for 127.0.0.1 at 2015-03-31 15:40:07 -0400
+Processing by RecipesController#index as HTML
+  Parameters: {"query"=>"name"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT "recipes".* FROM "recipes"  ORDER BY name[0m
+  Rendered recipes/index.html.haml within layouts/application (6.9ms)
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Toast and Jam"], ["directions", "Put jam on toast"], ["cooking_time", 7.0], ["created_at", "2015-03-31 19:40:07.846981"], ["updated_at", "2015-03-31 19:40:07.846981"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Toast"], ["quantity", 1], ["recipe_id", 1], ["created_at", "2015-03-31 19:40:07.850514"], ["updated_at", "2015-03-31 19:40:07.850514"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", " Jam"], ["quantity", 1], ["recipe_id", 1], ["created_at", "2015-03-31 19:40:07.852937"], ["updated_at", "2015-03-31 19:40:07.852937"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Scrambled Eggs"], ["directions", "Eggs then milk, scramble"], ["cooking_time", 20.0], ["created_at", "2015-03-31 19:40:07.856225"], ["updated_at", "2015-03-31 19:40:07.856225"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Egg"], ["quantity", 4], ["recipe_id", 2], ["created_at", "2015-03-31 19:40:07.863270"], ["updated_at", "2015-03-31 19:40:07.863270"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", " Milk"], ["quantity", 1], ["recipe_id", 2], ["created_at", "2015-03-31 19:40:07.865794"], ["updated_at", "2015-03-31 19:40:07.865794"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", " Butter"], ["quantity", 1], ["recipe_id", 2], ["created_at", "2015-03-31 19:40:07.868450"], ["updated_at", "2015-03-31 19:40:07.868450"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (1.9ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Cereal"], ["directions", "Milk first, then cereal"], ["cooking_time", 10.0], ["created_at", "2015-03-31 19:40:07.873575"], ["updated_at", "2015-03-31 19:40:07.873575"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cereal"], ["quantity", 1], ["recipe_id", 3], ["created_at", "2015-03-31 19:40:07.879562"], ["updated_at", "2015-03-31 19:40:07.879562"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", " Milk"], ["quantity", 1], ["recipe_id", 3], ["created_at", "2015-03-31 19:40:07.882168"], ["updated_at", "2015-03-31 19:40:07.882168"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/recipes" for 127.0.0.1 at 2015-03-31 15:40:07 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes"  ORDER BY name
+  Rendered recipes/index.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.2ms)
+Started GET "/recipes?query=cooking_time" for 127.0.0.1 at 2015-03-31 15:40:07 -0400
+Processing by RecipesController#index as HTML
+  Parameters: {"query"=>"cooking_time"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT "recipes".* FROM "recipes"  ORDER BY cooking_time[0m
+  Rendered recipes/index.html.haml within layouts/application (3.2ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.2ms)
+Started GET "/recipes/3" for 127.0.0.1 at 2015-03-31 15:40:07 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mIngredient Load (0.1ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 3]]
+  Rendered recipes/show.html.haml within layouts/application (2.7ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.2ms)
+Started GET "/recipes" for 127.0.0.1 at 2015-03-31 15:40:07 -0400
+Processing by RecipesController#index as HTML
+Redirected to http://www.example.com/recipes?query=cooking_time
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/recipes?query=cooking_time" for 127.0.0.1 at 2015-03-31 15:40:07 -0400
+Processing by RecipesController#index as HTML
+  Parameters: {"query"=>"cooking_time"}
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes"  ORDER BY cooking_time
+  Rendered recipes/index.html.haml within layouts/application (6.3ms)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Toast and Jam"], ["directions", "Put jam on toast"], ["cooking_time", 7.0], ["created_at", "2015-03-31 19:40:07.956829"], ["updated_at", "2015-03-31 19:40:07.956829"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Toast"], ["quantity", 1], ["recipe_id", 1], ["created_at", "2015-03-31 19:40:07.963911"], ["updated_at", "2015-03-31 19:40:07.963911"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", " Jam"], ["quantity", 1], ["recipe_id", 1], ["created_at", "2015-03-31 19:40:07.967329"], ["updated_at", "2015-03-31 19:40:07.967329"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Scrambled Eggs"], ["directions", "Eggs then milk, scramble"], ["cooking_time", 20.0], ["created_at", "2015-03-31 19:40:07.973942"], ["updated_at", "2015-03-31 19:40:07.973942"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Egg"], ["quantity", 4], ["recipe_id", 2], ["created_at", "2015-03-31 19:40:07.979970"], ["updated_at", "2015-03-31 19:40:07.979970"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", " Milk"], ["quantity", 1], ["recipe_id", 2], ["created_at", "2015-03-31 19:40:07.982559"], ["updated_at", "2015-03-31 19:40:07.982559"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", " Butter"], ["quantity", 1], ["recipe_id", 2], ["created_at", "2015-03-31 19:40:07.984865"], ["updated_at", "2015-03-31 19:40:07.984865"]]
+  [1m[36m (1.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cereal"], ["directions", "Milk first, then cereal"], ["cooking_time", 10.0], ["created_at", "2015-03-31 19:40:07.988015"], ["updated_at", "2015-03-31 19:40:07.988015"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Cereal"], ["quantity", 1], ["recipe_id", 3], ["created_at", "2015-03-31 19:40:07.990985"], ["updated_at", "2015-03-31 19:40:07.990985"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", " Milk"], ["quantity", 1], ["recipe_id", 3], ["created_at", "2015-03-31 19:40:07.993681"], ["updated_at", "2015-03-31 19:40:07.993681"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/recipes" for 127.0.0.1 at 2015-03-31 15:40:08 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT "recipes".* FROM "recipes"  ORDER BY name[0m
+  Rendered recipes/index.html.haml within layouts/application (6.3ms)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.2ms)
+Started GET "/recipes/3" for 127.0.0.1 at 2015-03-31 15:40:08 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mIngredient Load (0.1ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 3]]
+  Rendered recipes/show.html.haml within layouts/application (4.9ms)
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.2ms)
+Started GET "/recipes/3/edit" for 127.0.0.1 at 2015-03-31 15:40:08 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered recipes/edit.html.haml within layouts/application (32.8ms)
+Completed 200 OK in 37ms (Views: 36.5ms | ActiveRecord: 0.2ms)
+Started PUT "/recipes/3" for 127.0.0.1 at 2015-03-31 15:40:08 -0400
+Processing by RecipesController#update as HTML
+  Parameters: {"utf8"=>"✓", "recipe"=>{"name"=>"Cereal", "directions"=>"CEREAL FIRST, then milk", "cooking_time"=>"6"}, "commit"=>"Update Recipe Details", "id"=>"3"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "recipes" SET "directions" = ?, "cooking_time" = ?, "updated_at" = ? WHERE "recipes"."id" = ?[0m  [["directions", "CEREAL FIRST, then milk"], ["cooking_time", 6.0], ["updated_at", "2015-03-31 19:40:08.101186"], ["id", 3]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/recipes/3
+Completed 302 Found in 8ms (ActiveRecord: 0.5ms)
+Started GET "/recipes/3" for 127.0.0.1 at 2015-03-31 15:40:08 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mIngredient Load (0.1ms)[0m  SELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?  [["recipe_id", 3]]
+  Rendered recipes/show.html.haml within layouts/application (4.1ms)
+Completed 200 OK in 8ms (Views: 5.0ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Toast and Jam"], ["directions", "Put jam on toast"], ["cooking_time", 7.0], ["created_at", "2015-03-31 19:40:55.021920"], ["updated_at", "2015-03-31 19:40:55.021920"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Toast"], ["quantity", 1], ["recipe_id", 1], ["created_at", "2015-03-31 19:40:55.048886"], ["updated_at", "2015-03-31 19:40:55.048886"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", " Jam"], ["quantity", 1], ["recipe_id", 1], ["created_at", "2015-03-31 19:40:55.051637"], ["updated_at", "2015-03-31 19:40:55.051637"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Scrambled Eggs"], ["directions", "Eggs then milk, scramble"], ["cooking_time", 20.0], ["created_at", "2015-03-31 19:40:55.053707"], ["updated_at", "2015-03-31 19:40:55.053707"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Egg"], ["quantity", 4], ["recipe_id", 2], ["created_at", "2015-03-31 19:40:55.056210"], ["updated_at", "2015-03-31 19:40:55.056210"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", " Milk"], ["quantity", 1], ["recipe_id", 2], ["created_at", "2015-03-31 19:40:55.058152"], ["updated_at", "2015-03-31 19:40:55.058152"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", " Butter"], ["quantity", 1], ["recipe_id", 2], ["created_at", "2015-03-31 19:40:55.060041"], ["updated_at", "2015-03-31 19:40:55.060041"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cereal"], ["directions", "Milk first, then cereal"], ["cooking_time", 10.0], ["created_at", "2015-03-31 19:40:55.061934"], ["updated_at", "2015-03-31 19:40:55.061934"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Cereal"], ["quantity", 1], ["recipe_id", 3], ["created_at", "2015-03-31 19:40:55.064836"], ["updated_at", "2015-03-31 19:40:55.064836"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", " Milk"], ["quantity", 1], ["recipe_id", 3], ["created_at", "2015-03-31 19:40:55.066708"], ["updated_at", "2015-03-31 19:40:55.066708"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/recipes/new" for 127.0.0.1 at 2015-03-31 15:40:55 -0400
+Processing by RecipesController#new as HTML
+  Rendered recipes/new.html.haml within layouts/application (18.3ms)
+Completed 200 OK in 54ms (Views: 53.7ms | ActiveRecord: 0.0ms)
+Started POST "/recipes" for 127.0.0.1 at 2015-03-31 15:40:55 -0400
+Processing by RecipesController#create as HTML
+  Parameters: {"utf8"=>"✓", "recipe"=>{"name"=>"new toast", "directions"=>"get new toast", "cooking_time"=>"1", "image"=>#<ActionDispatch::Http::UploadedFile:0xa7ae310 @tempfile=#<Tempfile:/tmp/RackMultipart20150331-19755-g6xvbv.jpg>, @original_filename="tenders_productimage.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"recipe[image]\"; filename=\"tenders_productimage.jpg\"\r\nContent-Type: image/jpeg\r\nContent-Length: 31340\r\n">}, "commit"=>"Create Recipe"}
+Command :: file -b --mime '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150331-19755-1lul3ds.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150331-19755-jx5huy.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150331-19755-jx5huy.jpg[0]'
+Command :: convert '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150331-19755-jx5huy.jpg[0]' -auto-orient -resize "300x300>" '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150331-19755-jx5huy20150331-19755-57b3qv'
+Command :: file -b --mime '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150331-19755-jx5huy20150331-19755-57b3qv'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150331-19755-jx5huy.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150331-19755-jx5huy.jpg[0]'
+Command :: convert '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150331-19755-jx5huy.jpg[0]' -auto-orient -resize "100x100>" '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150331-19755-jx5huy20150331-19755-2zwz50'
+Command :: file -b --mime '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150331-19755-jx5huy20150331-19755-2zwz50'
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+Command :: file -b --mime '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150331-19755-ctqkkb.jpg'
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "image_file_name", "image_content_type", "image_file_size", "image_updated_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["name", "new toast"], ["directions", "get new toast"], ["cooking_time", 1.0], ["image_file_name", "tenders_productimage.jpg"], ["image_content_type", "image/jpeg"], ["image_file_size", 31340], ["image_updated_at", "2015-03-31 19:40:55.178415"], ["created_at", "2015-03-31 19:40:55.256120"], ["updated_at", "2015-03-31 19:40:55.256120"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/recipes
+Completed 302 Found in 101ms (ActiveRecord: 0.5ms)
+Started GET "/recipes" for 127.0.0.1 at 2015-03-31 15:40:55 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes"  ORDER BY name
+  Rendered recipes/index.html.haml within layouts/application (6.1ms)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Toast and Jam"], ["directions", "Put jam on toast"], ["cooking_time", 7.0], ["created_at", "2015-03-31 19:40:55.329416"], ["updated_at", "2015-03-31 19:40:55.329416"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Toast"], ["quantity", 1], ["recipe_id", 1], ["created_at", "2015-03-31 19:40:55.335400"], ["updated_at", "2015-03-31 19:40:55.335400"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", " Jam"], ["quantity", 1], ["recipe_id", 1], ["created_at", "2015-03-31 19:40:55.338253"], ["updated_at", "2015-03-31 19:40:55.338253"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Scrambled Eggs"], ["directions", "Eggs then milk, scramble"], ["cooking_time", 20.0], ["created_at", "2015-03-31 19:40:55.343680"], ["updated_at", "2015-03-31 19:40:55.343680"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Egg"], ["quantity", 4], ["recipe_id", 2], ["created_at", "2015-03-31 19:40:55.347042"], ["updated_at", "2015-03-31 19:40:55.347042"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", " Milk"], ["quantity", 1], ["recipe_id", 2], ["created_at", "2015-03-31 19:40:55.349812"], ["updated_at", "2015-03-31 19:40:55.349812"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", " Butter"], ["quantity", 1], ["recipe_id", 2], ["created_at", "2015-03-31 19:40:55.362643"], ["updated_at", "2015-03-31 19:40:55.362643"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cereal"], ["directions", "Milk first, then cereal"], ["cooking_time", 10.0], ["created_at", "2015-03-31 19:40:55.364749"], ["updated_at", "2015-03-31 19:40:55.364749"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Cereal"], ["quantity", 1], ["recipe_id", 3], ["created_at", "2015-03-31 19:40:55.371149"], ["updated_at", "2015-03-31 19:40:55.371149"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", " Milk"], ["quantity", 1], ["recipe_id", 3], ["created_at", "2015-03-31 19:40:55.374550"], ["updated_at", "2015-03-31 19:40:55.374550"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/recipes" for 127.0.0.1 at 2015-03-31 15:40:55 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT "recipes".* FROM "recipes"  ORDER BY name[0m
+  Rendered recipes/index.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.2ms)
+Started GET "/recipes?utf8=%E2%9C%93&cooking_time=11&commit=Filter+recipes" for 127.0.0.1 at 2015-03-31 15:40:55 -0400
+Processing by RecipesController#index as HTML
+  Parameters: {"utf8"=>"✓", "cooking_time"=>"11", "commit"=>"Filter recipes"}
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes" WHERE (cooking_time <= '11')  ORDER BY name
+  Rendered recipes/index.html.haml within layouts/application (3.6ms)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.2ms)
+Started GET "/recipes?utf8=%E2%9C%93&cooking_time=&commit=Filter+recipes" for 127.0.0.1 at 2015-03-31 15:40:55 -0400
+Processing by RecipesController#index as HTML
+  Parameters: {"utf8"=>"✓", "cooking_time"=>"", "commit"=>"Filter recipes"}
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT "recipes".* FROM "recipes"  ORDER BY name[0m
+  Rendered recipes/index.html.haml within layouts/application (5.1ms)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Toast and Jam"], ["directions", "Put jam on toast"], ["cooking_time", 7.0], ["created_at", "2015-03-31 19:40:55.480270"], ["updated_at", "2015-03-31 19:40:55.480270"]]
+  [1m[35m (1.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Toast"], ["quantity", 1], ["recipe_id", 1], ["created_at", "2015-03-31 19:40:55.484456"], ["updated_at", "2015-03-31 19:40:55.484456"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", " Jam"], ["quantity", 1], ["recipe_id", 1], ["created_at", "2015-03-31 19:40:55.486856"], ["updated_at", "2015-03-31 19:40:55.486856"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Scrambled Eggs"], ["directions", "Eggs then milk, scramble"], ["cooking_time", 20.0], ["created_at", "2015-03-31 19:40:55.489333"], ["updated_at", "2015-03-31 19:40:55.489333"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Egg"], ["quantity", 4], ["recipe_id", 2], ["created_at", "2015-03-31 19:40:55.495999"], ["updated_at", "2015-03-31 19:40:55.495999"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", " Milk"], ["quantity", 1], ["recipe_id", 2], ["created_at", "2015-03-31 19:40:55.498658"], ["updated_at", "2015-03-31 19:40:55.498658"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", " Butter"], ["quantity", 1], ["recipe_id", 2], ["created_at", "2015-03-31 19:40:55.500697"], ["updated_at", "2015-03-31 19:40:55.500697"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Cereal"], ["directions", "Milk first, then cereal"], ["cooking_time", 10.0], ["created_at", "2015-03-31 19:40:55.502456"], ["updated_at", "2015-03-31 19:40:55.502456"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cereal"], ["quantity", 1], ["recipe_id", 3], ["created_at", "2015-03-31 19:40:55.505244"], ["updated_at", "2015-03-31 19:40:55.505244"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", " Milk"], ["quantity", 1], ["recipe_id", 3], ["created_at", "2015-03-31 19:40:55.507427"], ["updated_at", "2015-03-31 19:40:55.507427"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/recipes" for 127.0.0.1 at 2015-03-31 15:40:55 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes"  ORDER BY name
+  Rendered recipes/index.html.haml within layouts/application (8.1ms)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.2ms)
+Started GET "/recipes?utf8=%E2%9C%93&cooking_time=11&commit=Filter+recipes" for 127.0.0.1 at 2015-03-31 15:40:55 -0400
+Processing by RecipesController#index as HTML
+  Parameters: {"utf8"=>"✓", "cooking_time"=>"11", "commit"=>"Filter recipes"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT "recipes".* FROM "recipes" WHERE (cooking_time <= '11')  ORDER BY name[0m
+  Rendered recipes/index.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.2ms)
+Started GET "/recipes/3" for 127.0.0.1 at 2015-03-31 15:40:55 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mIngredient Load (2.0ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 3]]
+  Rendered recipes/show.html.haml within layouts/application (8.6ms)
+Completed 200 OK in 20ms (Views: 8.7ms | ActiveRecord: 2.2ms)
+Started GET "/recipes" for 127.0.0.1 at 2015-03-31 15:40:55 -0400
+Processing by RecipesController#index as HTML
+Redirected to http://www.example.com/recipes?cooking_time=11
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/recipes?cooking_time=11" for 127.0.0.1 at 2015-03-31 15:40:55 -0400
+Processing by RecipesController#index as HTML
+  Parameters: {"cooking_time"=>"11"}
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes" WHERE (cooking_time <= '11')  ORDER BY name
+  Rendered recipes/index.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (2.8ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Toast and Jam"], ["directions", "Put jam on toast"], ["cooking_time", 7.0], ["created_at", "2015-03-31 19:40:55.612930"], ["updated_at", "2015-03-31 19:40:55.612930"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Toast"], ["quantity", 1], ["recipe_id", 1], ["created_at", "2015-03-31 19:40:55.615955"], ["updated_at", "2015-03-31 19:40:55.615955"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", " Jam"], ["quantity", 1], ["recipe_id", 1], ["created_at", "2015-03-31 19:40:55.618483"], ["updated_at", "2015-03-31 19:40:55.618483"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Scrambled Eggs"], ["directions", "Eggs then milk, scramble"], ["cooking_time", 20.0], ["created_at", "2015-03-31 19:40:55.626761"], ["updated_at", "2015-03-31 19:40:55.626761"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Egg"], ["quantity", 4], ["recipe_id", 2], ["created_at", "2015-03-31 19:40:55.630181"], ["updated_at", "2015-03-31 19:40:55.630181"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", " Milk"], ["quantity", 1], ["recipe_id", 2], ["created_at", "2015-03-31 19:40:55.632423"], ["updated_at", "2015-03-31 19:40:55.632423"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", " Butter"], ["quantity", 1], ["recipe_id", 2], ["created_at", "2015-03-31 19:40:55.634446"], ["updated_at", "2015-03-31 19:40:55.634446"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (3.6ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cereal"], ["directions", "Milk first, then cereal"], ["cooking_time", 10.0], ["created_at", "2015-03-31 19:40:55.641740"], ["updated_at", "2015-03-31 19:40:55.641740"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Cereal"], ["quantity", 1], ["recipe_id", 3], ["created_at", "2015-03-31 19:40:55.647220"], ["updated_at", "2015-03-31 19:40:55.647220"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", " Milk"], ["quantity", 1], ["recipe_id", 3], ["created_at", "2015-03-31 19:40:55.649349"], ["updated_at", "2015-03-31 19:40:55.649349"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/recipes" for 127.0.0.1 at 2015-03-31 15:40:55 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT "recipes".* FROM "recipes"  ORDER BY name[0m
+  Rendered recipes/index.html.haml within layouts/application (4.9ms)
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.3ms)
+Started GET "/recipes?utf8=%E2%9C%93&cooking_time=11&commit=Filter+recipes" for 127.0.0.1 at 2015-03-31 15:40:55 -0400
+Processing by RecipesController#index as HTML
+  Parameters: {"utf8"=>"✓", "cooking_time"=>"11", "commit"=>"Filter recipes"}
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes" WHERE (cooking_time <= '11')  ORDER BY name
+  Rendered recipes/index.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 6ms (Views: 3.7ms | ActiveRecord: 0.2ms)
+Started GET "/recipes?query=cooking_time" for 127.0.0.1 at 2015-03-31 15:40:55 -0400
+Processing by RecipesController#index as HTML
+  Parameters: {"query"=>"cooking_time"}
+Redirected to http://www.example.com/recipes?cooking_time=11&query=cooking_time
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/recipes?cooking_time=11&query=cooking_time" for 127.0.0.1 at 2015-03-31 15:40:55 -0400
+Processing by RecipesController#index as HTML
+  Parameters: {"cooking_time"=>"11", "query"=>"cooking_time"}
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT "recipes".* FROM "recipes" WHERE (cooking_time <= '11')  ORDER BY cooking_time[0m
+  Rendered recipes/index.html.haml within layouts/application (4.0ms)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.3ms)
+Started GET "/recipes/3" for 127.0.0.1 at 2015-03-31 15:40:55 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mIngredient Load (0.1ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 3]]
+  Rendered recipes/show.html.haml within layouts/application (2.3ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.1ms)
+Started GET "/recipes" for 127.0.0.1 at 2015-03-31 15:40:55 -0400
+Processing by RecipesController#index as HTML
+Redirected to http://www.example.com/recipes?cooking_time=11&query=cooking_time
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/recipes?cooking_time=11&query=cooking_time" for 127.0.0.1 at 2015-03-31 15:40:55 -0400
+Processing by RecipesController#index as HTML
+  Parameters: {"cooking_time"=>"11", "query"=>"cooking_time"}
+  [1m[35mRecipe Load (0.0ms)[0m  SELECT "recipes".* FROM "recipes" WHERE (cooking_time <= '11')  ORDER BY cooking_time
+  Rendered recipes/index.html.haml within layouts/application (8.8ms)
+Completed 200 OK in 16ms (Views: 10.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Toast and Jam"], ["directions", "Put jam on toast"], ["cooking_time", 7.0], ["created_at", "2015-03-31 19:40:55.773558"], ["updated_at", "2015-03-31 19:40:55.773558"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Toast"], ["quantity", 1], ["recipe_id", 1], ["created_at", "2015-03-31 19:40:55.780408"], ["updated_at", "2015-03-31 19:40:55.780408"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", " Jam"], ["quantity", 1], ["recipe_id", 1], ["created_at", "2015-03-31 19:40:55.783033"], ["updated_at", "2015-03-31 19:40:55.783033"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Scrambled Eggs"], ["directions", "Eggs then milk, scramble"], ["cooking_time", 20.0], ["created_at", "2015-03-31 19:40:55.785112"], ["updated_at", "2015-03-31 19:40:55.785112"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Egg"], ["quantity", 4], ["recipe_id", 2], ["created_at", "2015-03-31 19:40:55.787943"], ["updated_at", "2015-03-31 19:40:55.787943"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", " Milk"], ["quantity", 1], ["recipe_id", 2], ["created_at", "2015-03-31 19:40:55.790368"], ["updated_at", "2015-03-31 19:40:55.790368"]]
+  [1m[35m (1.3ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", " Butter"], ["quantity", 1], ["recipe_id", 2], ["created_at", "2015-03-31 19:40:55.797483"], ["updated_at", "2015-03-31 19:40:55.797483"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cereal"], ["directions", "Milk first, then cereal"], ["cooking_time", 10.0], ["created_at", "2015-03-31 19:40:55.800728"], ["updated_at", "2015-03-31 19:40:55.800728"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Cereal"], ["quantity", 1], ["recipe_id", 3], ["created_at", "2015-03-31 19:40:55.807813"], ["updated_at", "2015-03-31 19:40:55.807813"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", " Milk"], ["quantity", 1], ["recipe_id", 3], ["created_at", "2015-03-31 19:40:55.811205"], ["updated_at", "2015-03-31 19:40:55.811205"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/recipes" for 127.0.0.1 at 2015-03-31 15:40:55 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT "recipes".* FROM "recipes"  ORDER BY name[0m
+  Rendered recipes/index.html.haml within layouts/application (6.8ms)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.2ms)
+Started GET "/recipes?query=name" for 127.0.0.1 at 2015-03-31 15:40:55 -0400
+Processing by RecipesController#index as HTML
+  Parameters: {"query"=>"name"}
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes"  ORDER BY name
+  Rendered recipes/index.html.haml within layouts/application (3.2ms)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.2ms)
+Started GET "/recipes/1" for 127.0.0.1 at 2015-03-31 15:40:55 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mIngredient Load (0.1ms)[0m  SELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?  [["recipe_id", 1]]
+  Rendered recipes/show.html.haml within layouts/application (4.2ms)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.2ms)
+Started GET "/recipes" for 127.0.0.1 at 2015-03-31 15:40:55 -0400
+Processing by RecipesController#index as HTML
+Redirected to http://www.example.com/recipes?query=name
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms)
+Started GET "/recipes?query=name" for 127.0.0.1 at 2015-03-31 15:40:55 -0400
+Processing by RecipesController#index as HTML
+  Parameters: {"query"=>"name"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT "recipes".* FROM "recipes"  ORDER BY name[0m
+  Rendered recipes/index.html.haml within layouts/application (4.7ms)
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Toast and Jam"], ["directions", "Put jam on toast"], ["cooking_time", 7.0], ["created_at", "2015-03-31 19:40:55.912600"], ["updated_at", "2015-03-31 19:40:55.912600"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Toast"], ["quantity", 1], ["recipe_id", 1], ["created_at", "2015-03-31 19:40:55.919807"], ["updated_at", "2015-03-31 19:40:55.919807"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", " Jam"], ["quantity", 1], ["recipe_id", 1], ["created_at", "2015-03-31 19:40:55.924341"], ["updated_at", "2015-03-31 19:40:55.924341"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Scrambled Eggs"], ["directions", "Eggs then milk, scramble"], ["cooking_time", 20.0], ["created_at", "2015-03-31 19:40:55.927034"], ["updated_at", "2015-03-31 19:40:55.927034"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Egg"], ["quantity", 4], ["recipe_id", 2], ["created_at", "2015-03-31 19:40:55.933005"], ["updated_at", "2015-03-31 19:40:55.933005"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", " Milk"], ["quantity", 1], ["recipe_id", 2], ["created_at", "2015-03-31 19:40:55.935552"], ["updated_at", "2015-03-31 19:40:55.935552"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", " Butter"], ["quantity", 1], ["recipe_id", 2], ["created_at", "2015-03-31 19:40:55.939656"], ["updated_at", "2015-03-31 19:40:55.939656"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Cereal"], ["directions", "Milk first, then cereal"], ["cooking_time", 10.0], ["created_at", "2015-03-31 19:40:55.946041"], ["updated_at", "2015-03-31 19:40:55.946041"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cereal"], ["quantity", 1], ["recipe_id", 3], ["created_at", "2015-03-31 19:40:55.950497"], ["updated_at", "2015-03-31 19:40:55.950497"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", " Milk"], ["quantity", 1], ["recipe_id", 3], ["created_at", "2015-03-31 19:40:55.952426"], ["updated_at", "2015-03-31 19:40:55.952426"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/recipes" for 127.0.0.1 at 2015-03-31 15:40:55 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes"  ORDER BY name
+  Rendered recipes/index.html.haml within layouts/application (3.2ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.2ms)
+Started GET "/recipes?query=cooking_time" for 127.0.0.1 at 2015-03-31 15:40:55 -0400
+Processing by RecipesController#index as HTML
+  Parameters: {"query"=>"cooking_time"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT "recipes".* FROM "recipes"  ORDER BY cooking_time[0m
+  Rendered recipes/index.html.haml within layouts/application (4.2ms)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.2ms)
+Started GET "/recipes/3" for 127.0.0.1 at 2015-03-31 15:40:55 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 3]]
+  Rendered recipes/show.html.haml within layouts/application (5.4ms)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.3ms)
+Started GET "/recipes" for 127.0.0.1 at 2015-03-31 15:40:56 -0400
+Processing by RecipesController#index as HTML
+Redirected to http://www.example.com/recipes?query=cooking_time
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/recipes?query=cooking_time" for 127.0.0.1 at 2015-03-31 15:40:56 -0400
+Processing by RecipesController#index as HTML
+  Parameters: {"query"=>"cooking_time"}
+  [1m[35mRecipe Load (0.5ms)[0m  SELECT "recipes".* FROM "recipes"  ORDER BY cooking_time
+  Rendered recipes/index.html.haml within layouts/application (5.3ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Toast and Jam"], ["directions", "Put jam on toast"], ["cooking_time", 7.0], ["created_at", "2015-03-31 19:40:56.034199"], ["updated_at", "2015-03-31 19:40:56.034199"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Toast"], ["quantity", 1], ["recipe_id", 1], ["created_at", "2015-03-31 19:40:56.038426"], ["updated_at", "2015-03-31 19:40:56.038426"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", " Jam"], ["quantity", 1], ["recipe_id", 1], ["created_at", "2015-03-31 19:40:56.043524"], ["updated_at", "2015-03-31 19:40:56.043524"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Scrambled Eggs"], ["directions", "Eggs then milk, scramble"], ["cooking_time", 20.0], ["created_at", "2015-03-31 19:40:56.048333"], ["updated_at", "2015-03-31 19:40:56.048333"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Egg"], ["quantity", 4], ["recipe_id", 2], ["created_at", "2015-03-31 19:40:56.051001"], ["updated_at", "2015-03-31 19:40:56.051001"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", " Milk"], ["quantity", 1], ["recipe_id", 2], ["created_at", "2015-03-31 19:40:56.053467"], ["updated_at", "2015-03-31 19:40:56.053467"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", " Butter"], ["quantity", 1], ["recipe_id", 2], ["created_at", "2015-03-31 19:40:56.056427"], ["updated_at", "2015-03-31 19:40:56.056427"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cereal"], ["directions", "Milk first, then cereal"], ["cooking_time", 10.0], ["created_at", "2015-03-31 19:40:56.059190"], ["updated_at", "2015-03-31 19:40:56.059190"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Cereal"], ["quantity", 1], ["recipe_id", 3], ["created_at", "2015-03-31 19:40:56.064714"], ["updated_at", "2015-03-31 19:40:56.064714"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", " Milk"], ["quantity", 1], ["recipe_id", 3], ["created_at", "2015-03-31 19:40:56.068929"], ["updated_at", "2015-03-31 19:40:56.068929"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/recipes" for 127.0.0.1 at 2015-03-31 15:40:56 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT "recipes".* FROM "recipes"  ORDER BY name[0m
+  Rendered recipes/index.html.haml within layouts/application (7.9ms)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.2ms)
+Started GET "/recipes/3" for 127.0.0.1 at 2015-03-31 15:40:56 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mIngredient Load (0.1ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 3]]
+  Rendered recipes/show.html.haml within layouts/application (2.2ms)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.1ms)
+Started GET "/recipes/3/edit" for 127.0.0.1 at 2015-03-31 15:40:56 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered recipes/edit.html.haml within layouts/application (4.6ms)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.1ms)
+Started PUT "/recipes/3" for 127.0.0.1 at 2015-03-31 15:40:56 -0400
+Processing by RecipesController#update as HTML
+  Parameters: {"utf8"=>"✓", "recipe"=>{"name"=>"Cereal", "directions"=>"CEREAL FIRST, then milk", "cooking_time"=>"6"}, "commit"=>"Update Recipe Details", "id"=>"3"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "recipes" SET "directions" = ?, "cooking_time" = ?, "updated_at" = ? WHERE "recipes"."id" = ?[0m  [["directions", "CEREAL FIRST, then milk"], ["cooking_time", 6.0], ["updated_at", "2015-03-31 19:40:56.175426"], ["id", 3]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/recipes/3
+Completed 302 Found in 7ms (ActiveRecord: 0.6ms)
+Started GET "/recipes/3" for 127.0.0.1 at 2015-03-31 15:40:56 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mIngredient Load (0.1ms)[0m  SELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?  [["recipe_id", 3]]
+  Rendered recipes/show.html.haml within layouts/application (3.6ms)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Toast and Jam"], ["directions", "Put jam on toast"], ["cooking_time", 7.0], ["created_at", "2015-03-31 19:48:01.573363"], ["updated_at", "2015-03-31 19:48:01.573363"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Toast"], ["quantity", 1], ["recipe_id", 1], ["created_at", "2015-03-31 19:48:01.599811"], ["updated_at", "2015-03-31 19:48:01.599811"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", " Jam"], ["quantity", 1], ["recipe_id", 1], ["created_at", "2015-03-31 19:48:01.602292"], ["updated_at", "2015-03-31 19:48:01.602292"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Scrambled Eggs"], ["directions", "Eggs then milk, scramble"], ["cooking_time", 20.0], ["created_at", "2015-03-31 19:48:01.604420"], ["updated_at", "2015-03-31 19:48:01.604420"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Egg"], ["quantity", 4], ["recipe_id", 2], ["created_at", "2015-03-31 19:48:01.606554"], ["updated_at", "2015-03-31 19:48:01.606554"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", " Milk"], ["quantity", 1], ["recipe_id", 2], ["created_at", "2015-03-31 19:48:01.608521"], ["updated_at", "2015-03-31 19:48:01.608521"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", " Butter"], ["quantity", 1], ["recipe_id", 2], ["created_at", "2015-03-31 19:48:01.610408"], ["updated_at", "2015-03-31 19:48:01.610408"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cereal"], ["directions", "Milk first, then cereal"], ["cooking_time", 10.0], ["created_at", "2015-03-31 19:48:01.612328"], ["updated_at", "2015-03-31 19:48:01.612328"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Cereal"], ["quantity", 1], ["recipe_id", 3], ["created_at", "2015-03-31 19:48:01.614613"], ["updated_at", "2015-03-31 19:48:01.614613"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", " Milk"], ["quantity", 1], ["recipe_id", 3], ["created_at", "2015-03-31 19:48:01.616175"], ["updated_at", "2015-03-31 19:48:01.616175"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/recipes/new" for 127.0.0.1 at 2015-03-31 15:48:01 -0400
+Processing by RecipesController#new as HTML
+  Rendered recipes/new.html.haml within layouts/application (20.1ms)
+Completed 200 OK in 49ms (Views: 48.4ms | ActiveRecord: 0.0ms)
+Started POST "/recipes" for 127.0.0.1 at 2015-03-31 15:48:01 -0400
+Processing by RecipesController#create as HTML
+  Parameters: {"utf8"=>"✓", "recipe"=>{"name"=>"new toast", "directions"=>"get new toast", "cooking_time"=>"1", "image"=>#<ActionDispatch::Http::UploadedFile:0xc029fc0 @tempfile=#<Tempfile:/tmp/RackMultipart20150331-19807-1827c2f.jpg>, @original_filename="tenders_productimage.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"recipe[image]\"; filename=\"tenders_productimage.jpg\"\r\nContent-Type: image/jpeg\r\nContent-Length: 31340\r\n">}, "commit"=>"Create Recipe"}
+Command :: file -b --mime '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150331-19807-o5t7ak.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150331-19807-17v2rif.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150331-19807-17v2rif.jpg[0]'
+Command :: convert '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150331-19807-17v2rif.jpg[0]' -auto-orient -resize "300x300>" '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150331-19807-17v2rif20150331-19807-4egoje'
+Command :: file -b --mime '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150331-19807-17v2rif20150331-19807-4egoje'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150331-19807-17v2rif.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150331-19807-17v2rif.jpg[0]'
+Command :: convert '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150331-19807-17v2rif.jpg[0]' -auto-orient -resize "100x100>" '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150331-19807-17v2rif20150331-19807-1x8sffd'
+Command :: file -b --mime '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150331-19807-17v2rif20150331-19807-1x8sffd'
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+Command :: file -b --mime '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150331-19807-1mrwbr8.jpg'
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "image_file_name", "image_content_type", "image_file_size", "image_updated_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["name", "new toast"], ["directions", "get new toast"], ["cooking_time", 1.0], ["image_file_name", "tenders_productimage.jpg"], ["image_content_type", "image/jpeg"], ["image_file_size", 31340], ["image_updated_at", "2015-03-31 19:48:01.721564"], ["created_at", "2015-03-31 19:48:01.812072"], ["updated_at", "2015-03-31 19:48:01.812072"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/recipes
+Completed 302 Found in 112ms (ActiveRecord: 0.4ms)
+Started GET "/recipes" for 127.0.0.1 at 2015-03-31 15:48:01 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes"  ORDER BY name
+  Rendered recipes/index.html.haml within layouts/application (6.1ms)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Toast and Jam"], ["directions", "Put jam on toast"], ["cooking_time", 7.0], ["created_at", "2015-03-31 19:48:01.885098"], ["updated_at", "2015-03-31 19:48:01.885098"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Toast"], ["quantity", 1], ["recipe_id", 1], ["created_at", "2015-03-31 19:48:01.888697"], ["updated_at", "2015-03-31 19:48:01.888697"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", " Jam"], ["quantity", 1], ["recipe_id", 1], ["created_at", "2015-03-31 19:48:01.890826"], ["updated_at", "2015-03-31 19:48:01.890826"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Scrambled Eggs"], ["directions", "Eggs then milk, scramble"], ["cooking_time", 20.0], ["created_at", "2015-03-31 19:48:01.892934"], ["updated_at", "2015-03-31 19:48:01.892934"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Egg"], ["quantity", 4], ["recipe_id", 2], ["created_at", "2015-03-31 19:48:01.895328"], ["updated_at", "2015-03-31 19:48:01.895328"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", " Milk"], ["quantity", 1], ["recipe_id", 2], ["created_at", "2015-03-31 19:48:01.897925"], ["updated_at", "2015-03-31 19:48:01.897925"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", " Butter"], ["quantity", 1], ["recipe_id", 2], ["created_at", "2015-03-31 19:48:01.900484"], ["updated_at", "2015-03-31 19:48:01.900484"]]
+  [1m[36m (4.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cereal"], ["directions", "Milk first, then cereal"], ["cooking_time", 10.0], ["created_at", "2015-03-31 19:48:01.911267"], ["updated_at", "2015-03-31 19:48:01.911267"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Cereal"], ["quantity", 1], ["recipe_id", 3], ["created_at", "2015-03-31 19:48:01.914481"], ["updated_at", "2015-03-31 19:48:01.914481"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", " Milk"], ["quantity", 1], ["recipe_id", 3], ["created_at", "2015-03-31 19:48:01.917147"], ["updated_at", "2015-03-31 19:48:01.917147"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/recipes/new" for 127.0.0.1 at 2015-03-31 15:48:01 -0400
+Processing by RecipesController#new as HTML
+  Rendered recipes/new.html.haml within layouts/application (4.3ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+Started POST "/recipes" for 127.0.0.1 at 2015-03-31 15:48:01 -0400
+Processing by RecipesController#create as HTML
+  Parameters: {"utf8"=>"✓", "recipe"=>{"name"=>"new toast", "directions"=>"get new toast", "cooking_time"=>"61", "image"=>#<ActionDispatch::Http::UploadedFile:0xb93e7c4 @tempfile=#<Tempfile:/tmp/RackMultipart20150331-19807-eqrd9e.jpg>, @original_filename="tenders_productimage.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"recipe[image]\"; filename=\"tenders_productimage.jpg\"\r\nContent-Type: image/jpeg\r\nContent-Length: 31340\r\n">}, "commit"=>"Create Recipe"}
+Command :: file -b --mime '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150331-19807-174xtam.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150331-19807-1w30178.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150331-19807-1w30178.jpg[0]'
+Command :: convert '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150331-19807-1w30178.jpg[0]' -auto-orient -resize "300x300>" '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150331-19807-1w3017820150331-19807-12fn2hx'
+Command :: file -b --mime '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150331-19807-1w3017820150331-19807-12fn2hx'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150331-19807-1w30178.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150331-19807-1w30178.jpg[0]'
+Command :: convert '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150331-19807-1w30178.jpg[0]' -auto-orient -resize "100x100>" '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150331-19807-1w3017820150331-19807-13sq2wj'
+Command :: file -b --mime '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150331-19807-1w3017820150331-19807-13sq2wj'
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+Command :: file -b --mime '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150331-19807-b9469s.jpg'
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "image_file_name", "image_content_type", "image_file_size", "image_updated_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["name", "new toast"], ["directions", "get new toast"], ["cooking_time", 61.0], ["image_file_name", "tenders_productimage.jpg"], ["image_content_type", "image/jpeg"], ["image_file_size", 31340], ["image_updated_at", "2015-03-31 19:48:01.958115"], ["created_at", "2015-03-31 19:48:02.040484"], ["updated_at", "2015-03-31 19:48:02.040484"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/recipes
+Completed 302 Found in 97ms (ActiveRecord: 0.3ms)
+Started GET "/recipes" for 127.0.0.1 at 2015-03-31 15:48:02 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes"  ORDER BY name
+  Rendered recipes/index.html.haml within layouts/application (4.1ms)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Toast and Jam"], ["directions", "Put jam on toast"], ["cooking_time", 7.0], ["created_at", "2015-03-31 19:48:02.076390"], ["updated_at", "2015-03-31 19:48:02.076390"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Toast"], ["quantity", 1], ["recipe_id", 1], ["created_at", "2015-03-31 19:48:02.080154"], ["updated_at", "2015-03-31 19:48:02.080154"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", " Jam"], ["quantity", 1], ["recipe_id", 1], ["created_at", "2015-03-31 19:48:02.082321"], ["updated_at", "2015-03-31 19:48:02.082321"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Scrambled Eggs"], ["directions", "Eggs then milk, scramble"], ["cooking_time", 20.0], ["created_at", "2015-03-31 19:48:02.086503"], ["updated_at", "2015-03-31 19:48:02.086503"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Egg"], ["quantity", 4], ["recipe_id", 2], ["created_at", "2015-03-31 19:48:02.094613"], ["updated_at", "2015-03-31 19:48:02.094613"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", " Milk"], ["quantity", 1], ["recipe_id", 2], ["created_at", "2015-03-31 19:48:02.096953"], ["updated_at", "2015-03-31 19:48:02.096953"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", " Butter"], ["quantity", 1], ["recipe_id", 2], ["created_at", "2015-03-31 19:48:02.100098"], ["updated_at", "2015-03-31 19:48:02.100098"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cereal"], ["directions", "Milk first, then cereal"], ["cooking_time", 10.0], ["created_at", "2015-03-31 19:48:02.102425"], ["updated_at", "2015-03-31 19:48:02.102425"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Cereal"], ["quantity", 1], ["recipe_id", 3], ["created_at", "2015-03-31 19:48:02.107551"], ["updated_at", "2015-03-31 19:48:02.107551"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", " Milk"], ["quantity", 1], ["recipe_id", 3], ["created_at", "2015-03-31 19:48:02.112263"], ["updated_at", "2015-03-31 19:48:02.112263"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/recipes" for 127.0.0.1 at 2015-03-31 15:48:02 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT "recipes".* FROM "recipes"  ORDER BY name[0m
+  Rendered recipes/index.html.haml within layouts/application (3.7ms)
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 0.2ms)
+Started GET "/recipes?utf8=%E2%9C%93&cooking_time=11&commit=Filter+recipes" for 127.0.0.1 at 2015-03-31 15:48:02 -0400
+Processing by RecipesController#index as HTML
+  Parameters: {"utf8"=>"✓", "cooking_time"=>"11", "commit"=>"Filter recipes"}
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT "recipes".* FROM "recipes" WHERE (cooking_time <= '11')  ORDER BY name
+  Rendered recipes/index.html.haml within layouts/application (7.3ms)
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.3ms)
+Started GET "/recipes?utf8=%E2%9C%93&cooking_time=&commit=Filter+recipes" for 127.0.0.1 at 2015-03-31 15:48:02 -0400
+Processing by RecipesController#index as HTML
+  Parameters: {"utf8"=>"✓", "cooking_time"=>"", "commit"=>"Filter recipes"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT "recipes".* FROM "recipes"  ORDER BY name[0m
+  Rendered recipes/index.html.haml within layouts/application (2.9ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Toast and Jam"], ["directions", "Put jam on toast"], ["cooking_time", 7.0], ["created_at", "2015-03-31 19:48:02.207730"], ["updated_at", "2015-03-31 19:48:02.207730"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Toast"], ["quantity", 1], ["recipe_id", 1], ["created_at", "2015-03-31 19:48:02.210918"], ["updated_at", "2015-03-31 19:48:02.210918"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", " Jam"], ["quantity", 1], ["recipe_id", 1], ["created_at", "2015-03-31 19:48:02.213129"], ["updated_at", "2015-03-31 19:48:02.213129"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (1.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Scrambled Eggs"], ["directions", "Eggs then milk, scramble"], ["cooking_time", 20.0], ["created_at", "2015-03-31 19:48:02.219830"], ["updated_at", "2015-03-31 19:48:02.219830"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Egg"], ["quantity", 4], ["recipe_id", 2], ["created_at", "2015-03-31 19:48:02.222594"], ["updated_at", "2015-03-31 19:48:02.222594"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", " Milk"], ["quantity", 1], ["recipe_id", 2], ["created_at", "2015-03-31 19:48:02.224834"], ["updated_at", "2015-03-31 19:48:02.224834"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", " Butter"], ["quantity", 1], ["recipe_id", 2], ["created_at", "2015-03-31 19:48:02.226799"], ["updated_at", "2015-03-31 19:48:02.226799"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Cereal"], ["directions", "Milk first, then cereal"], ["cooking_time", 10.0], ["created_at", "2015-03-31 19:48:02.233123"], ["updated_at", "2015-03-31 19:48:02.233123"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cereal"], ["quantity", 1], ["recipe_id", 3], ["created_at", "2015-03-31 19:48:02.241496"], ["updated_at", "2015-03-31 19:48:02.241496"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", " Milk"], ["quantity", 1], ["recipe_id", 3], ["created_at", "2015-03-31 19:48:02.243675"], ["updated_at", "2015-03-31 19:48:02.243675"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/recipes" for 127.0.0.1 at 2015-03-31 15:48:02 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.4ms)[0m  SELECT "recipes".* FROM "recipes"  ORDER BY name
+  Rendered recipes/index.html.haml within layouts/application (3.2ms)
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.4ms)
+Started GET "/recipes?utf8=%E2%9C%93&cooking_time=11&commit=Filter+recipes" for 127.0.0.1 at 2015-03-31 15:48:02 -0400
+Processing by RecipesController#index as HTML
+  Parameters: {"utf8"=>"✓", "cooking_time"=>"11", "commit"=>"Filter recipes"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT "recipes".* FROM "recipes" WHERE (cooking_time <= '11')  ORDER BY name[0m
+  Rendered recipes/index.html.haml within layouts/application (4.8ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.2ms)
+Started GET "/recipes/3" for 127.0.0.1 at 2015-03-31 15:48:02 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mIngredient Load (1.1ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 3]]
+  Rendered recipes/show.html.haml within layouts/application (10.8ms)
+Completed 200 OK in 21ms (Views: 11.5ms | ActiveRecord: 1.3ms)
+Started GET "/recipes" for 127.0.0.1 at 2015-03-31 15:48:02 -0400
+Processing by RecipesController#index as HTML
+Redirected to http://www.example.com/recipes?cooking_time=11
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/recipes?cooking_time=11" for 127.0.0.1 at 2015-03-31 15:48:02 -0400
+Processing by RecipesController#index as HTML
+  Parameters: {"cooking_time"=>"11"}
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes" WHERE (cooking_time <= '11')  ORDER BY name
+  Rendered recipes/index.html.haml within layouts/application (5.4ms)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Toast and Jam"], ["directions", "Put jam on toast"], ["cooking_time", 7.0], ["created_at", "2015-03-31 19:48:02.361783"], ["updated_at", "2015-03-31 19:48:02.361783"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Toast"], ["quantity", 1], ["recipe_id", 1], ["created_at", "2015-03-31 19:48:02.367990"], ["updated_at", "2015-03-31 19:48:02.367990"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", " Jam"], ["quantity", 1], ["recipe_id", 1], ["created_at", "2015-03-31 19:48:02.373942"], ["updated_at", "2015-03-31 19:48:02.373942"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Scrambled Eggs"], ["directions", "Eggs then milk, scramble"], ["cooking_time", 20.0], ["created_at", "2015-03-31 19:48:02.376469"], ["updated_at", "2015-03-31 19:48:02.376469"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Egg"], ["quantity", 4], ["recipe_id", 2], ["created_at", "2015-03-31 19:48:02.379726"], ["updated_at", "2015-03-31 19:48:02.379726"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", " Milk"], ["quantity", 1], ["recipe_id", 2], ["created_at", "2015-03-31 19:48:02.381900"], ["updated_at", "2015-03-31 19:48:02.381900"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", " Butter"], ["quantity", 1], ["recipe_id", 2], ["created_at", "2015-03-31 19:48:02.384073"], ["updated_at", "2015-03-31 19:48:02.384073"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cereal"], ["directions", "Milk first, then cereal"], ["cooking_time", 10.0], ["created_at", "2015-03-31 19:48:02.385928"], ["updated_at", "2015-03-31 19:48:02.385928"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Cereal"], ["quantity", 1], ["recipe_id", 3], ["created_at", "2015-03-31 19:48:02.388768"], ["updated_at", "2015-03-31 19:48:02.388768"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", " Milk"], ["quantity", 1], ["recipe_id", 3], ["created_at", "2015-03-31 19:48:02.391538"], ["updated_at", "2015-03-31 19:48:02.391538"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/recipes" for 127.0.0.1 at 2015-03-31 15:48:02 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT "recipes".* FROM "recipes"  ORDER BY name[0m
+  Rendered recipes/index.html.haml within layouts/application (3.5ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.3ms)
+Started GET "/recipes?utf8=%E2%9C%93&cooking_time=11&commit=Filter+recipes" for 127.0.0.1 at 2015-03-31 15:48:02 -0400
+Processing by RecipesController#index as HTML
+  Parameters: {"utf8"=>"✓", "cooking_time"=>"11", "commit"=>"Filter recipes"}
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes" WHERE (cooking_time <= '11')  ORDER BY name
+  Rendered recipes/index.html.haml within layouts/application (2.7ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.2ms)
+Started GET "/recipes?query=cooking_time" for 127.0.0.1 at 2015-03-31 15:48:02 -0400
+Processing by RecipesController#index as HTML
+  Parameters: {"query"=>"cooking_time"}
+Redirected to http://www.example.com/recipes?cooking_time=11&query=cooking_time
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/recipes?cooking_time=11&query=cooking_time" for 127.0.0.1 at 2015-03-31 15:48:02 -0400
+Processing by RecipesController#index as HTML
+  Parameters: {"cooking_time"=>"11", "query"=>"cooking_time"}
+  [1m[36mRecipe Load (2.4ms)[0m  [1mSELECT "recipes".* FROM "recipes" WHERE (cooking_time <= '11')  ORDER BY cooking_time[0m
+  Rendered recipes/index.html.haml within layouts/application (5.3ms)
+Completed 200 OK in 10ms (Views: 7.3ms | ActiveRecord: 2.4ms)
+Started GET "/recipes/3" for 127.0.0.1 at 2015-03-31 15:48:02 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 3]]
+  Rendered recipes/show.html.haml within layouts/application (6.7ms)
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.3ms)
+Started GET "/recipes" for 127.0.0.1 at 2015-03-31 15:48:02 -0400
+Processing by RecipesController#index as HTML
+Redirected to http://www.example.com/recipes?cooking_time=11&query=cooking_time
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/recipes?cooking_time=11&query=cooking_time" for 127.0.0.1 at 2015-03-31 15:48:02 -0400
+Processing by RecipesController#index as HTML
+  Parameters: {"cooking_time"=>"11", "query"=>"cooking_time"}
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes" WHERE (cooking_time <= '11')  ORDER BY cooking_time
+  Rendered recipes/index.html.haml within layouts/application (8.2ms)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Toast and Jam"], ["directions", "Put jam on toast"], ["cooking_time", 7.0], ["created_at", "2015-03-31 19:48:02.515051"], ["updated_at", "2015-03-31 19:48:02.515051"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Toast"], ["quantity", 1], ["recipe_id", 1], ["created_at", "2015-03-31 19:48:02.521596"], ["updated_at", "2015-03-31 19:48:02.521596"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", " Jam"], ["quantity", 1], ["recipe_id", 1], ["created_at", "2015-03-31 19:48:02.524218"], ["updated_at", "2015-03-31 19:48:02.524218"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Scrambled Eggs"], ["directions", "Eggs then milk, scramble"], ["cooking_time", 20.0], ["created_at", "2015-03-31 19:48:02.526412"], ["updated_at", "2015-03-31 19:48:02.526412"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Egg"], ["quantity", 4], ["recipe_id", 2], ["created_at", "2015-03-31 19:48:02.529933"], ["updated_at", "2015-03-31 19:48:02.529933"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", " Milk"], ["quantity", 1], ["recipe_id", 2], ["created_at", "2015-03-31 19:48:02.533776"], ["updated_at", "2015-03-31 19:48:02.533776"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", " Butter"], ["quantity", 1], ["recipe_id", 2], ["created_at", "2015-03-31 19:48:02.544677"], ["updated_at", "2015-03-31 19:48:02.544677"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cereal"], ["directions", "Milk first, then cereal"], ["cooking_time", 10.0], ["created_at", "2015-03-31 19:48:02.549088"], ["updated_at", "2015-03-31 19:48:02.549088"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Cereal"], ["quantity", 1], ["recipe_id", 3], ["created_at", "2015-03-31 19:48:02.553251"], ["updated_at", "2015-03-31 19:48:02.553251"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", " Milk"], ["quantity", 1], ["recipe_id", 3], ["created_at", "2015-03-31 19:48:02.556807"], ["updated_at", "2015-03-31 19:48:02.556807"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/recipes" for 127.0.0.1 at 2015-03-31 15:48:02 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT "recipes".* FROM "recipes"  ORDER BY name[0m
+  Rendered recipes/index.html.haml within layouts/application (4.6ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.3ms)
+Started GET "/recipes?query=name" for 127.0.0.1 at 2015-03-31 15:48:02 -0400
+Processing by RecipesController#index as HTML
+  Parameters: {"query"=>"name"}
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT "recipes".* FROM "recipes"  ORDER BY name
+  Rendered recipes/index.html.haml within layouts/application (4.4ms)
+Completed 200 OK in 10ms (Views: 5.2ms | ActiveRecord: 0.3ms)
+Started GET "/recipes/1" for 127.0.0.1 at 2015-03-31 15:48:02 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mIngredient Load (0.1ms)[0m  SELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?  [["recipe_id", 1]]
+  Rendered recipes/show.html.haml within layouts/application (5.8ms)
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.2ms)
+Started GET "/recipes" for 127.0.0.1 at 2015-03-31 15:48:02 -0400
+Processing by RecipesController#index as HTML
+Redirected to http://www.example.com/recipes?query=name
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/recipes?query=name" for 127.0.0.1 at 2015-03-31 15:48:02 -0400
+Processing by RecipesController#index as HTML
+  Parameters: {"query"=>"name"}
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT "recipes".* FROM "recipes"  ORDER BY name[0m
+  Rendered recipes/index.html.haml within layouts/application (8.0ms)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Toast and Jam"], ["directions", "Put jam on toast"], ["cooking_time", 7.0], ["created_at", "2015-03-31 19:48:02.668392"], ["updated_at", "2015-03-31 19:48:02.668392"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Toast"], ["quantity", 1], ["recipe_id", 1], ["created_at", "2015-03-31 19:48:02.673489"], ["updated_at", "2015-03-31 19:48:02.673489"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", " Jam"], ["quantity", 1], ["recipe_id", 1], ["created_at", "2015-03-31 19:48:02.676712"], ["updated_at", "2015-03-31 19:48:02.676712"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Scrambled Eggs"], ["directions", "Eggs then milk, scramble"], ["cooking_time", 20.0], ["created_at", "2015-03-31 19:48:02.681353"], ["updated_at", "2015-03-31 19:48:02.681353"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Egg"], ["quantity", 4], ["recipe_id", 2], ["created_at", "2015-03-31 19:48:02.683994"], ["updated_at", "2015-03-31 19:48:02.683994"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", " Milk"], ["quantity", 1], ["recipe_id", 2], ["created_at", "2015-03-31 19:48:02.686060"], ["updated_at", "2015-03-31 19:48:02.686060"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", " Butter"], ["quantity", 1], ["recipe_id", 2], ["created_at", "2015-03-31 19:48:02.688246"], ["updated_at", "2015-03-31 19:48:02.688246"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Cereal"], ["directions", "Milk first, then cereal"], ["cooking_time", 10.0], ["created_at", "2015-03-31 19:48:02.690345"], ["updated_at", "2015-03-31 19:48:02.690345"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cereal"], ["quantity", 1], ["recipe_id", 3], ["created_at", "2015-03-31 19:48:02.692849"], ["updated_at", "2015-03-31 19:48:02.692849"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", " Milk"], ["quantity", 1], ["recipe_id", 3], ["created_at", "2015-03-31 19:48:02.695030"], ["updated_at", "2015-03-31 19:48:02.695030"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/recipes" for 127.0.0.1 at 2015-03-31 15:48:02 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes"  ORDER BY name
+  Rendered recipes/index.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.2ms)
+Started GET "/recipes?query=cooking_time" for 127.0.0.1 at 2015-03-31 15:48:02 -0400
+Processing by RecipesController#index as HTML
+  Parameters: {"query"=>"cooking_time"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT "recipes".* FROM "recipes"  ORDER BY cooking_time[0m
+  Rendered recipes/index.html.haml within layouts/application (3.4ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.2ms)
+Started GET "/recipes/3" for 127.0.0.1 at 2015-03-31 15:48:02 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mIngredient Load (0.1ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 3]]
+  Rendered recipes/show.html.haml within layouts/application (2.1ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.2ms)
+Started GET "/recipes" for 127.0.0.1 at 2015-03-31 15:48:02 -0400
+Processing by RecipesController#index as HTML
+Redirected to http://www.example.com/recipes?query=cooking_time
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/recipes?query=cooking_time" for 127.0.0.1 at 2015-03-31 15:48:02 -0400
+Processing by RecipesController#index as HTML
+  Parameters: {"query"=>"cooking_time"}
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT "recipes".* FROM "recipes"  ORDER BY cooking_time
+  Rendered recipes/index.html.haml within layouts/application (5.1ms)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Toast and Jam"], ["directions", "Put jam on toast"], ["cooking_time", 7.0], ["created_at", "2015-03-31 19:48:02.778313"], ["updated_at", "2015-03-31 19:48:02.778313"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Toast"], ["quantity", 1], ["recipe_id", 1], ["created_at", "2015-03-31 19:48:02.782648"], ["updated_at", "2015-03-31 19:48:02.782648"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", " Jam"], ["quantity", 1], ["recipe_id", 1], ["created_at", "2015-03-31 19:48:02.789907"], ["updated_at", "2015-03-31 19:48:02.789907"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Scrambled Eggs"], ["directions", "Eggs then milk, scramble"], ["cooking_time", 20.0], ["created_at", "2015-03-31 19:48:02.792230"], ["updated_at", "2015-03-31 19:48:02.792230"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Egg"], ["quantity", 4], ["recipe_id", 2], ["created_at", "2015-03-31 19:48:02.794645"], ["updated_at", "2015-03-31 19:48:02.794645"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", " Milk"], ["quantity", 1], ["recipe_id", 2], ["created_at", "2015-03-31 19:48:02.796596"], ["updated_at", "2015-03-31 19:48:02.796596"]]
+  [1m[35m (2.7ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", " Butter"], ["quantity", 1], ["recipe_id", 2], ["created_at", "2015-03-31 19:48:02.803209"], ["updated_at", "2015-03-31 19:48:02.803209"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cereal"], ["directions", "Milk first, then cereal"], ["cooking_time", 10.0], ["created_at", "2015-03-31 19:48:02.805488"], ["updated_at", "2015-03-31 19:48:02.805488"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Cereal"], ["quantity", 1], ["recipe_id", 3], ["created_at", "2015-03-31 19:48:02.808658"], ["updated_at", "2015-03-31 19:48:02.808658"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "ingredients" ("name", "quantity", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", " Milk"], ["quantity", 1], ["recipe_id", 3], ["created_at", "2015-03-31 19:48:02.811510"], ["updated_at", "2015-03-31 19:48:02.811510"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/recipes" for 127.0.0.1 at 2015-03-31 15:48:02 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT "recipes".* FROM "recipes"  ORDER BY name[0m
+  Rendered recipes/index.html.haml within layouts/application (2.7ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.3ms)
+Started GET "/recipes/3" for 127.0.0.1 at 2015-03-31 15:48:02 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mIngredient Load (0.1ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 3]]
+  Rendered recipes/show.html.haml within layouts/application (4.3ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.2ms)
+Started GET "/recipes/3/edit" for 127.0.0.1 at 2015-03-31 15:48:02 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered recipes/edit.html.haml within layouts/application (4.8ms)
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.1ms)
+Started PUT "/recipes/3" for 127.0.0.1 at 2015-03-31 15:48:02 -0400
+Processing by RecipesController#update as HTML
+  Parameters: {"utf8"=>"✓", "recipe"=>{"name"=>"Cereal", "directions"=>"CEREAL FIRST, then milk", "cooking_time"=>"6"}, "commit"=>"Update Recipe Details", "id"=>"3"}
+  [1m[36mRecipe Load (0.0ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "recipes" SET "directions" = ?, "cooking_time" = ?, "updated_at" = ? WHERE "recipes"."id" = ?[0m  [["directions", "CEREAL FIRST, then milk"], ["cooking_time", 6.0], ["updated_at", "2015-03-31 19:48:02.890030"], ["id", 3]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/recipes/3
+Completed 302 Found in 9ms (ActiveRecord: 0.5ms)
+Started GET "/recipes/3" for 127.0.0.1 at 2015-03-31 15:48:02 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mIngredient Load (0.1ms)[0m  SELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?  [["recipe_id", 3]]
+  Rendered recipes/show.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m

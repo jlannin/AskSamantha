@@ -131,9 +131,9 @@ Then /^I should see recipe cooking time in sorted order$/ do
 end
 
 Then /^I should see that "(.*?)" has a cooking time of "(.*?)"$/ do |arg1, arg2|
-  #name_arr = all(".recipe_name").map {|x| x.text}
-  #index = name_arr.index(arg1)
-  #all("#time")[index].text.to_i.should == arg2
+  name_arr = all(".recipe_name").map {|x| x.text}
+  index = name_arr.index(arg1)
+  all("#time")[index].text.should == arg2
   #justin's method is above
   
 =begin  

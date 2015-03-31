@@ -14,7 +14,7 @@
       <img src="./assets/0.9.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2015-03-31T14:22:37-04:00">2015-03-31T14:22:37-04:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2015-03-31T15:48:03-04:00">2015-03-31T15:48:03-04:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,7 +25,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         4.9
+         5.16
        </span>
     </span> hits/line)
   </h2>
@@ -67,7 +67,7 @@
         <td>45</td>
         <td>41</td>
         <td>4</td>
-        <td>4.8</td>
+        <td>5.1</td>
       </tr>
       
       <tr>
@@ -137,7 +137,7 @@
         <td>12</td>
         <td>11</td>
         <td>1</td>
-        <td>8.2</td>
+        <td>8.5</td>
       </tr>
       
     </tbody>
@@ -153,7 +153,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         4.64
+         4.93
        </span>
     </span> hits/line)
   </h2>
@@ -195,7 +195,7 @@
         <td>45</td>
         <td>41</td>
         <td>4</td>
-        <td>4.8</td>
+        <td>5.1</td>
       </tr>
       
     </tbody>
@@ -210,7 +210,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         7.17
+         7.43
        </span>
     </span> hits/line)
   </h2>
@@ -252,7 +252,7 @@
         <td>12</td>
         <td>11</td>
         <td>1</td>
-        <td>8.2</td>
+        <td>8.5</td>
       </tr>
       
     </tbody>
@@ -511,8 +511,8 @@
           <code class="ruby">def index</code>
         </li>
       
-        <li class="covered" data-hits="23" data-linenumber="4">
-          <span class="hits">23</span>
+        <li class="covered" data-hits="24" data-linenumber="4">
+          <span class="hits">24</span>
           
           <code class="ruby">    if params[:query] != nil</code>
         </li>
@@ -529,8 +529,8 @@
           <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="23" data-linenumber="7">
-          <span class="hits">23</span>
+        <li class="covered" data-hits="24" data-linenumber="7">
+          <span class="hits">24</span>
           
           <code class="ruby">    if params[:cooking_time] != nil</code>
         </li>
@@ -547,20 +547,20 @@
           <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="23" data-linenumber="10">
-          <span class="hits">23</span>
+        <li class="covered" data-hits="24" data-linenumber="10">
+          <span class="hits">24</span>
           
           <code class="ruby">    handle_redirects</code>
         </li>
       
-        <li class="covered" data-hits="23" data-linenumber="11">
-          <span class="hits">23</span>
+        <li class="covered" data-hits="24" data-linenumber="11">
+          <span class="hits">24</span>
           
           <code class="ruby">    if params[:query] == nil</code>
         </li>
       
-        <li class="covered" data-hits="16" data-linenumber="12">
-          <span class="hits">16</span>
+        <li class="covered" data-hits="17" data-linenumber="12">
+          <span class="hits">17</span>
           
           <code class="ruby">      @recipes = Recipe.filter(params[:cooking_time]).sorted_by(&quot;name&quot;)</code>
         </li>
@@ -601,8 +601,8 @@
           <code class="ruby">def new</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="19">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="19">
+          <span class="hits">2</span>
           
           <code class="ruby">  @recipe = Recipe.new #possibly replace this witha helper </code>
         </li>
@@ -625,26 +625,26 @@
           <code class="ruby">def create</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="23">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="23">
+          <span class="hits">2</span>
           
           <code class="ruby">  r= Recipe.new(create_params)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="24">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="24">
+          <span class="hits">2</span>
           
           <code class="ruby">  if r.save</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="25">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="25">
+          <span class="hits">2</span>
           
           <code class="ruby">    flash[:notice] = &quot;New recipe #{r.name} was made&quot;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="26">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="26">
+          <span class="hits">2</span>
           
           <code class="ruby">    redirect_to recipes_path</code>
         </li>
@@ -877,8 +877,8 @@
           <code class="ruby">def create_params</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="65">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="65">
+          <span class="hits">2</span>
           
           <code class="ruby">  params.require(:recipe).permit(:name, :directions, :cooking_time, :image)</code>
         </li>
@@ -907,8 +907,8 @@
           <code class="ruby">def handle_redirects</code>
         </li>
       
-        <li class="covered" data-hits="23" data-linenumber="70">
-          <span class="hits">23</span>
+        <li class="covered" data-hits="24" data-linenumber="70">
+          <span class="hits">24</span>
           
           <code class="ruby">  if !params.has_key?(:cooking_time) &amp;&amp; session.has_key?(:cooking_time) &amp;&amp; session[:cooking_time] != &quot;&quot;</code>
         </li>
@@ -955,8 +955,8 @@
           <code class="ruby">  else</code>
         </li>
       
-        <li class="covered" data-hits="20" data-linenumber="78">
-          <span class="hits">20</span>
+        <li class="covered" data-hits="21" data-linenumber="78">
+          <span class="hits">21</span>
           
           <code class="ruby">    if !params.has_key?(:query) &amp;&amp; session.has_key?(:query)</code>
         </li>
@@ -1243,14 +1243,14 @@
           <code class="ruby">  def self.sorted_by(col)</code>
         </li>
       
-        <li class="covered" data-hits="23" data-linenumber="7">
-          <span class="hits">23</span>
+        <li class="covered" data-hits="24" data-linenumber="7">
+          <span class="hits">24</span>
           
           <code class="ruby">    if self.column_names.include?(col)</code>
         </li>
       
-        <li class="covered" data-hits="23" data-linenumber="8">
-          <span class="hits">23</span>
+        <li class="covered" data-hits="24" data-linenumber="8">
+          <span class="hits">24</span>
           
           <code class="ruby">      self.order(col)</code>
         </li>
@@ -1291,14 +1291,14 @@
           <code class="ruby">  def self.filter(time)</code>
         </li>
       
-        <li class="covered" data-hits="23" data-linenumber="15">
-          <span class="hits">23</span>
+        <li class="covered" data-hits="24" data-linenumber="15">
+          <span class="hits">24</span>
           
           <code class="ruby">    if (time == nil || time == &quot;&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="17" data-linenumber="16">
-          <span class="hits">17</span>
+        <li class="covered" data-hits="18" data-linenumber="16">
+          <span class="hits">18</span>
           
           <code class="ruby">      self.all</code>
         </li>

@@ -22,8 +22,21 @@ Feature: Create a new recipe
     And I press "Create Recipe"
     Then I should be on the recipes page
     #And I should see that "new toast" has directions of "get new toast"
-    And I should see that "new toast" has a cooking time of "1"
+    And I should see that "new toast" has a cooking time of "1 minute"
     And I should see that "new toast" has an image of "tenders_productimage.jpg"
 
-
+  Scenario: Creating a new recipe with an image and deal with cook time
+    Given I am on create new recipe page
+    When I fill in the following:
+      |Name        | new toast   |
+      |Directions  |get new toast|
+      #ingredients problem...
+      #|Ingredients | Bread       |
+      |Cooking time| 61          |
+    When I attach the file "tenders_productimage.jpg" to "Image"
+    And I press "Create Recipe"
+    Then I should be on the recipes page
+    #And I should see that "new toast" has directions of "get new toast"
+    And I should see that "new toast" has a cooking time of "1 hour and 1 minute"
+    And I should see that "new toast" has an image of "tenders_productimage.jpg"
 
