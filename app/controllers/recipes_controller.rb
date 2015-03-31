@@ -26,7 +26,7 @@ def create
     redirect_to recipes_path
   else
     flash[:notice] = "The create didn't work :("
-    redirect_to new_product_path
+    redirect_to new_recipe_path
   end
 end
 
