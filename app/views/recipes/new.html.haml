@@ -1,0 +1,21 @@
+#main
+
+  %h2 Create a New Recipe
+  = form_for @recipe do |f|
+ 
+    =f.label :name
+    =f.text_field :name
+    %br
+    =f.label :directions
+    =f.text_field :directions
+    %br
+    =f.label :cooking_time
+    =f.number_field :cooking_time
+    %br
+    =f.label :image
+    =f.file_field :image
+    %br
+    =f.submit 'Create Recipe'
+    %br
+    %br
+    =link_to "Back to Recipe Index", recipes_path()

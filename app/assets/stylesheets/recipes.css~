@@ -1,0 +1,28 @@
+body {
+  font-family: Helvetica, sans-serif;
+  font-size: 14pt;
+  font-weight: 200;
+  font-style: normal;
+  background-color: #6fcb9f;
+  color: #ffe28a; 
+}
+
+body #main {
+  background-color: #6fcb9f;
+  color: #ffe28a;
+  width: 80%;
+  left: 10%;
+  position: relative;
+  padding: 10px;
+  border: 1px solid #666547;
+	color: #fb2e01;
+}
+
+body h1 {
+  font-family: Helvetica, sans-serif;
+  font-size: 20pt;
+  font-weight: 20;
+  font-style: normal;
+  text-align: center;
+	color: #fb2e01
+}
