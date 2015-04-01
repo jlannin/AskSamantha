@@ -7,7 +7,7 @@
       %th Cooking Time
     %tr
       %td= image_tag(@recipe.image.url(:medium))
-      %td#Cooking_Time= @recipe.cooking_time
+      %td#Cooking_Time= @recipe.fix_time
   %table.recipes_info
     %tr
       %th Ingredients
@@ -25,6 +25,6 @@
     %tr
       %th Directions
     %tr
-      %td=  @recipe.directions
+      %td#directions=  @recipe.directions
   = link_to "Edit recipe details", edit_recipe_path
   = link_to "Back to recipes!", recipes_path

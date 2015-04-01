@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(version: 20150328212550) do
   create_table "recipes", force: :cascade do |t|
     t.string   "name"
     t.text     "directions"
-    t.float    "cooking_time"
+    t.integer  "cooking_time"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
     t.string   "image_file_name"

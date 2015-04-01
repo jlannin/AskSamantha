@@ -21,7 +21,7 @@ Feature: Create a new recipe
     When I attach the file "tenders_productimage.jpg" to "Image"
     And I press "Create Recipe"
     Then I should be on the recipes page
-    #And I should see that "new toast" has directions of "get new toast"
+    And I should see "New recipe new toast was made"
     And I should see that "new toast" has a cooking time of "1 minute"
     And I should see that "new toast" has an image of "tenders_productimage.jpg"
 
@@ -32,11 +32,11 @@ Feature: Create a new recipe
       |Directions  |get new toast|
       #ingredients problem...
       #|Ingredients | Bread       |
-      |Cooking time| 61          |
+      |Cooking time| 67          |
     When I attach the file "tenders_productimage.jpg" to "Image"
     And I press "Create Recipe"
     Then I should be on the recipes page
-    #And I should see that "new toast" has directions of "get new toast"
-    And I should see that "new toast" has a cooking time of "1 hour and 1 minute"
+    And I should see "New recipe new toast was made"
+    And I should see that "new toast" has a cooking time of "1 hour and 7 minutes"
     And I should see that "new toast" has an image of "tenders_productimage.jpg"
 

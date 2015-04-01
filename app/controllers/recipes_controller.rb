@@ -20,6 +20,7 @@ def new
 end
 
 def create
+  ingredients = params[:recipe].delete(:ingredients)
   r= Recipe.new(create_params)
   if r.save
     flash[:notice] = "New recipe #{r.name} was made"
@@ -36,9 +37,8 @@ def show
 end
 
 #added simple edit metod to fix the null item error
-def edit 
+def edit
   @recipe = Recipe.find(params[:id])
-
 end
 
 def update

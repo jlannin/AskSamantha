@@ -3,6 +3,25 @@ class Recipe < ActiveRecord::Base
   validates_attachment :image, :content_type => {:content_type => ["image/jpeg", "image/png", "image/gif"]}
   has_many :ingredients
 
+  def fix_time
+    @time = ""
+    @mins = self.cooking_time%60
+    if self.cooking_time > 60
+      @hr = (self.cooking_time/60)
+      @time << @hr.to_s
+      if @hr == 1
+        @time << " hour and "
+      else
+        @time << " hours and "
+      end
+    end
+    if @mins == 1
+      @time << @mins.to_s << " minute"
+    else
+      @time << @mins.to_s << " minutes"
+    end
+  end
+
   def self.sorted_by(col)
     if self.column_names.include?(col)
       self.order(col)

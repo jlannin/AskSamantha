@@ -49,7 +49,7 @@ Given /^these recipes:$/i do |table|
     r = Recipe.create!(fhash)
     arr = arr.split(",")
     arr.each do |x|
-      x =~  /(.*)\s(.*)/
+      x =~  /(.*)\s(\d*)/
       hash = Hash.new
       hash[:name] = $1
       hash[:quantity] = $2
@@ -125,6 +125,12 @@ Then /^I should see recipe name in sorted order$/ do
   name_arr.should == name_arr.sort
 end
 
+Then /^I should see that "(.*?)" has directions of "(.*?)"$/ do |arg1, arg2|
+  name_arr = all(".recipe_name").map {|x| x.text}
+  index = name_arr.index(arg1)
+  all("#directions")[index].text.should == arg2
+end
+
 Then /^I should see recipe cooking time in sorted order$/ do
   time_arr = all("#time").map {|x| x.text.to_f}
   time_arr.should == time_arr.sort
@@ -134,44 +140,12 @@ Then /^I should see that "(.*?)" has a cooking time of "(.*?)"$/ do |arg1, arg2|
   name_arr = all(".recipe_name").map {|x| x.text}
   index = name_arr.index(arg1)
   all("#time")[index].text.should == arg2
-  #justin's method is above
-  
-=begin  
-  names= page.all(".recipe_name")
-  names = names.map do |x|
-    x=x.text
-    end
-  times= page.all("#time")
-  times = times.map do |x|
-    x=x.text#change it out of its weird format and into a $price
-  end
-  #byebug
-  names.each_index do |i|
-    if (names[i]==arg1)
-      source=times[i]
-      expect(source).to eql(arg2)
-      #source.should == arg2 
-    end
-  end
-=end
 end
 
 Then /^I should see that "(.*?)" has an image of "(.*?)"$/ do |arg1, arg2|
-  names= page.all(".recipe_name")
-  names = names.map do |x|
-    x=x.text
-    end
-  pics= page.all("img")
-  pics = pics.map do |y|
-    y=y['src']
-    end
-  byebug
-  names.each_index do |i|
-    if (names[i]==arg1)
-      source=pics[i]
-      source.should =~ /\/#{arg2}/  
-    end
-  end    
+  name_arr = all(".recipe_name").map {|x| x.text}
+  index = name_arr.index(arg1)
+  all("img")[index]['src'].should =~ /\/#{arg2}/
 end
 
 Then /^(?:|I )should see \/([^\/]*)\/$/ do |regexp|
