@@ -44,7 +44,7 @@ describe "POST #create" do
       p = Recipe.new
       Recipe.should_receive(:new).and_return(p)
       p.should_receive(:save).and_return(true)
-      post :create, { :recipe => { "name"=>"dummy", "cooking_time"=>"1" } }
+      post :create, { :recipe => { "name"=>"dummy", "cooking_time"=>"1", "change_ingredients"=>"Jam 1"} }
       response.should redirect_to(recipes_path)
     end
 
@@ -53,7 +53,7 @@ describe "POST #create" do
       p = Recipe.new
       Recipe.should_receive(:new).and_return(p)
       p.should_receive(:save).and_return(nil)
-      post :create, { :recipe => {"name"=>"tester_Cfail", "cooking_time"=>"1"}} 
+      post :create, { :recipe => {"name"=>"tester_Cfail", "cooking_time"=>"1", "change_ingredients"=>"Jam 1"}} 
       response.should redirect_to(new_recipe_path)
     end
   end
@@ -65,7 +65,7 @@ describe "POST #create" do
       expect(p).to receive(:update).and_return(true)
       expect(Recipe).to receive(:find).and_return(p)
       expect(p).to receive(:save).and_return(true)#nil for fail
-      put :update, :id => p.id, :recipe => {"name"=>"tester", "cooking_time"=>"1"}
+      put :update, :id => p.id, :recipe => {"name"=>"tester", "cooking_time"=>"1", "change_ingredients"=>"Jam 1"}
       response.should redirect_to("/recipes/#{p.id}")
     end
 
@@ -75,7 +75,7 @@ describe "POST #create" do
       expect(p).to receive(:update).and_return(true)
       expect(Recipe).to receive(:find).and_return(p)
       expect(p).to receive(:save).and_return(nil)#nil for fail
-      put :update, :id => p.id, :recipe => {"name"=>"tester", "price"=>"1"}
+      put :update, :id => p.id, :recipe => {"name"=>"tester", "cooking_time"=>"1", "change_ingredients"=>"Jam 1"}
       response.should redirect_to("/recipes/#{p.id}/edit")
     end
   end
