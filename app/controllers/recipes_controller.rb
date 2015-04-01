@@ -16,12 +16,19 @@ def index
 end
 
 def new
-  @recipe = Recipe.new #possibly replace this witha helper 
+  @recipe = Recipe.new #possibly replace this with a helper 
 end
 
 def create
-  ingredients = params[:recipe].delete(:ingredients)
-  r= Recipe.new(create_params)
+  #ingredients = params[:recipe].delete(:change_ingredients).split(",")
+  r = Recipe.new(create_params)
+  #ingredients.each do |i|
+  #  i =~ /\s?(.*)\s(\d*)$/
+  #  hash = Hash.new
+  #  hash[:name] = $1
+  #  hash[:quantity] = $2
+  #  r.ingredients.new(hash)
+  #end
   if r.save
     flash[:notice] = "New recipe #{r.name} was made"
     redirect_to recipes_path
@@ -42,7 +49,9 @@ def edit
 end
 
 def update
+  #ingredients = params[:recipe].delete(:change_ingredients).split(",")
   @recipe = Recipe.find(params[:id])
+  r = @recipe
   @recipe.update(update_params)
   if @recipe.save#wont fail until we add validaitons or force in rspec tests
     flash[:notice] = "You updated #{@recipe.name}"

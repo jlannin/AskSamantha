@@ -12,10 +12,14 @@
 		=f.label :cooking_time
 		=f.number_field :cooking_time
 		%br
+		#=f.label :change_ingredients
+		#=f.text_field :change_ingredients
+		#%br
 		=f.label :image
 		=f.file_field :image
 		%br
 		=f.submit 'Update Recipe Details'
 		%br
 		%br
+		=link_to "Back to #{@recipe.name} page", recipes_path(@recipe)
 		=link_to "Back to recipe index list", recipes_path()

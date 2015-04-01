@@ -22,6 +22,14 @@ class Recipe < ActiveRecord::Base
     end
   end
 
+  def change_ingredients
+    ing = ""
+    self.ingredients.each do |i|
+      ing << i.name << " " << i.quantity.to_s << ","
+    end
+    ing
+  end
+
   def self.sorted_by(col)
     if self.column_names.include?(col)
       self.order(col)
