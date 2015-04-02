@@ -19,10 +19,21 @@ def new
   @recipe = Recipe.new #possibly replace this with a helper 
 end
 
+
 def del_ing
+  
+  
+  
+#=begin
   if params.has_key?(:additional)
-  Ingredient.find(params[:ing_id]).destroy
-  redirect_to edit_recipe_path(Recipe.find(params[:id], :additional => params[:additional]))
+  #case 1 : trying to delete an additional
+  #case 2 : trying to delete something saved to db
+    Ingredient.find(params[:ing_id]).destroy
+  else
+    Ingredient.find(params[:ing_id]).destroy
+  end	# end statement appears to be missing here. I'm not sure what you're trying to do here
+  redirect_to edit_recipe_path(Recipe.find(params[:id]), :additional => params[:additional])
+#=end
 end
 
 
@@ -49,9 +60,14 @@ def edit
 end
 
 def update
-  ingredient_updates = params.delete(:ingreds)
+#  byebug
+  ingredient_quantities = params.delete(:ingreds)
+  ingredient_names = params.delete(:dropdown)
+  newingredient_updates = params.delete(:new_ingreds)
+  newingredient_names = params.delete(:new_dropdown)
   @recipe = Recipe.find(params[:id])
-  @recipe.update_ingredients(ingredient_updates)
+  @recipe.update_ingredients(ingredient_quantities, ingredient_names)
+  @recipe.update_newingredients(newingredient_updates, newingredient_names)
   if @recipe.save#wont fail until we add validations or force in rspec tests
     flash[:notice] = "You updated #{@recipe.name}"
     redirect_to recipe_path(@recipe) #redirect to the show
@@ -88,5 +104,4 @@ def handle_redirects
     end
   end
 end
-
 end

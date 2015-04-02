@@ -34,11 +34,11 @@
           -(1..params[:additional].to_i).each do |x|
             %tr
               %td
-                <select name = "dropdown[newingredient_#{x}]">
+                <select name = "new_dropdown[newingredient_#{x}]">
                 -Food.all.each do |foo|
                   %option= foo.name
                 </select>
-              %td <input type = "number" name = "ingreds[newingredient_#{x}]">
+              %td <input type = "number" name = "new_ingreds[newingredient_#{x}]">
               -if params[:additional] == "1"
                 %td= link_to "Bye bye", edit_recipe_path(@recipe)
               -else
@@ -51,7 +51,8 @@
     =f.label :image
     =f.file_field :image
     %br
+    byebug
     =f.submit 'Update Recipe Details'
     %br
-  =link_to "Back to #{@recipe.name} page", recipes_path(@recipe)
+  =link_to "Back to #{@recipe.name} page", recipe_path(@recipe)
   =link_to "Back to recipe index list", recipes_path()

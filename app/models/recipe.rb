@@ -22,10 +22,19 @@ class Recipe < ActiveRecord::Base
     end
   end
 
-  def update_ingredients(ingreds)
-    ingreds.each do |ing|
-      ing[0] =~ /ingredient_(\d+)/
-      Ingredient.find($1).update(:quantity => "#{ing[1]}")
+
+  def update_newingredients(quantities, names)
+    quantities.each do |ing|
+      byebug
+      self.ingredients.new(:quantity => ing[1].to_i, :food_id => "#{Food.find_by('name == ?', names[ing[0].to_sym]).id}")
+    end
+  end
+
+  def update_ingredients(quantities, names)
+
+    quantities.each do |ing|
+      ing[0] =~ /^ingredient_(\d+)/ 
+      Ingredient.find($1).update(:quantity => "#{ing[1]}", :food_id => "#{Food.find_by('name == ?', names[ing[0]]).id}")
     end
   end
 
