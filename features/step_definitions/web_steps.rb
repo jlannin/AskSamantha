@@ -43,6 +43,7 @@ end
 
 Given /^these recipes:$/i do |table|
   table.hashes.each do |fhash|
+=begin
     if fhash.has_key? "Ingredients"
       arr = fhash.delete("Ingredients")
     end
@@ -54,9 +55,21 @@ Given /^these recipes:$/i do |table|
       hash[:name] = $1
       hash[:quantity] = $2
       r.ingredients.create(hash)
-    end
+=end
+    Recipe.create!(fhash)
   end
 end
+
+Then /^I select "(.*?)"$/ do |arg1|
+  select "#{arg1}", :from => "name_select"
+end
+
+Then /^I input "(.*?)"$/ do |arg1|
+  pending # express the regexp above with the code you wish you had
+end
+
+
+
 
 Given /^(?:|I )am on (.+)$/ do |page_name|
   visit path_to(page_name)

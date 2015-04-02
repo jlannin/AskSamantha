@@ -5,10 +5,10 @@ Feature: Create a new recipe
 
   Background: the toy story has several products
     Given these recipes:
-      | name           |    directions            | Ingredients              | cooking_time |
-      | Toast and Jam  | Put jam on toast         | Toast 1, Jam 1           |  7           |
-      | Scrambled Eggs | Eggs then milk, scramble | Egg 4, Milk 1, Butter 1  |  20          |
-      | Cereal         | Milk first, then cereal  | Cereal 1, Milk 1         |  10          |
+      | name           |    directions            | cooking_time |
+      | Toast and Jam  | Put jam on toast         |  7           |
+      | Scrambled Eggs | Eggs then milk, scramble |  20          |
+      | Cereal         | Milk first, then cereal  |  10          |
 
   Scenario: Creating a new recipe with an image
     Given I am on create new recipe page
@@ -16,9 +16,10 @@ Feature: Create a new recipe
       |Name        | new toast   |
       |Directions  |get new toast|
       #ingredients problem...
-      #|Ingredients | Bread       |
       |Cooking time| 1           |
-    When I attach the file "tenders_productimage.jpg" to "Image"
+    Then I select "Peanut Butter"
+    And I input "2"
+    And I attach the file "tenders_productimage.jpg" to "Image"
     And I press "Create Recipe"
     Then I should be on the recipes page
     And I should see "New recipe new toast was made"

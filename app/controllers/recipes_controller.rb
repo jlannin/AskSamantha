@@ -68,7 +68,7 @@ def edit
 end
 
 def update
-  byebug
+  #byebug
   ingredient_quantities = params.delete(:ingreds)
   ingredient_names = params.delete(:dropdown)
   newingredient_updates = params.delete(:new_ingreds)

@@ -30743,3 +30743,1011 @@ Completed 200 OK in 20ms (Views: 17.8ms | ActiveRecord: 0.5ms)
   [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
   [1m[35m (0.2ms)[0m  begin transaction
   [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Toast and Jam"], ["directions", "Put jam on toast"], ["cooking_time", 7], ["created_at", "2015-04-02 23:06:02.293750"], ["updated_at", "2015-04-02 23:06:02.293750"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (3.3ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Toast and Jam"], ["directions", "Put jam on toast"], ["cooking_time", 7], ["created_at", "2015-04-02 23:06:02.358770"], ["updated_at", "2015-04-02 23:06:02.358770"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Toast and Jam"], ["directions", "Put jam on toast"], ["cooking_time", 7], ["created_at", "2015-04-02 23:06:02.424289"], ["updated_at", "2015-04-02 23:06:02.424289"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.9ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Toast and Jam"], ["directions", "Put jam on toast"], ["cooking_time", 7], ["created_at", "2015-04-02 23:06:02.514205"], ["updated_at", "2015-04-02 23:06:02.514205"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by RecipesController#index as HTML
+  Rendered recipes/index.html.haml within layouts/application (0.3ms)
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "recipes" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2015-04-02 23:08:42.291817"], ["updated_at", "2015-04-02 23:08:42.291817"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "recipes" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-04-02 23:08:42.297635"], ["updated_at", "2015-04-02 23:08:42.297635"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by RecipesController#index as HTML
+  Rendered recipes/index.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered recipes/show.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered recipes/show.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by RecipesController#create as HTML
+  Parameters: {"recipe"=>{"name"=>"dummy", "cooking_time"=>"1", "change_ingredients"=>"Jam 1"}}
+Unpermitted parameter: change_ingredients
+Redirected to http://test.host/recipes
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by RecipesController#create as HTML
+  Parameters: {"recipe"=>{"name"=>"tester_Cfail", "cooking_time"=>"1", "change_ingredients"=>"Jam 1"}}
+Unpermitted parameter: change_ingredients
+Redirected to http://test.host/recipes/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "recipes" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2015-04-02 23:08:42.332153"], ["updated_at", "2015-04-02 23:08:42.332153"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by RecipesController#update as HTML
+  Parameters: {"recipe"=>{"name"=>"tester", "cooking_time"=>"1", "change_ingredients"=>"Jam 1"}, "id"=>"1"}
+Completed 500 Internal Server Error in 21102ms
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "recipes" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-04-02 23:09:03.454956"], ["updated_at", "2015-04-02 23:09:03.454956"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by RecipesController#update as HTML
+  Parameters: {"recipe"=>{"name"=>"tester", "cooking_time"=>"1", "change_ingredients"=>"Jam 1"}, "id"=>"1"}
+Completed 500 Internal Server Error in 2ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.6ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Dark Chocolate Peanut Butter Cup"], ["directions", "Unwrap and enjoy!"], ["cooking_time", 10], ["created_at", "2015-04-02 23:09:03.518005"], ["updated_at", "2015-04-02 23:09:03.518005"]]
+  [1m[36m (0.5ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Toast with Jam"], ["directions", "Put the jam on the toast"], ["cooking_time", 15], ["created_at", "2015-04-02 23:09:03.540515"], ["updated_at", "2015-04-02 23:09:03.540515"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Leftover Pizza"], ["directions", "Just pop in the microwave"], ["cooking_time", 1], ["created_at", "2015-04-02 23:09:03.563335"], ["updated_at", "2015-04-02 23:09:03.563335"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cereal"], ["directions", "Milk first, always"], ["cooking_time", 20], ["created_at", "2015-04-02 23:09:03.584588"], ["updated_at", "2015-04-02 23:09:03.584588"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/recipes" for 127.0.0.1 at 2015-04-02 19:09:03 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.6ms)[0m  [1mSELECT "recipes".* FROM "recipes"  ORDER BY name[0m
+  Rendered recipes/index.html.haml within layouts/application (36.4ms)
+Completed 200 OK in 120ms (Views: 108.7ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Dark Chocolate Peanut Butter Cup"], ["directions", "Unwrap and enjoy!"], ["cooking_time", 10], ["created_at", "2015-04-02 23:09:03.760426"], ["updated_at", "2015-04-02 23:09:03.760426"]]
+  [1m[35m (0.4ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Toast with Jam"], ["directions", "Put the jam on the toast"], ["cooking_time", 15], ["created_at", "2015-04-02 23:09:03.780096"], ["updated_at", "2015-04-02 23:09:03.780096"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Leftover Pizza"], ["directions", "Just pop in the microwave"], ["cooking_time", 1], ["created_at", "2015-04-02 23:09:03.799332"], ["updated_at", "2015-04-02 23:09:03.799332"]]
+  [1m[35m (0.4ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Cereal"], ["directions", "Milk first, always"], ["cooking_time", 20], ["created_at", "2015-04-02 23:09:03.822690"], ["updated_at", "2015-04-02 23:09:03.822690"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/recipes" for 127.0.0.1 at 2015-04-02 19:09:03 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.5ms)[0m  SELECT "recipes".* FROM "recipes"  ORDER BY name
+  Rendered recipes/index.html.haml within layouts/application (15.0ms)
+Completed 200 OK in 21ms (Views: 18.4ms | ActiveRecord: 0.5ms)
+Started GET "/recipes?query=cooking_time" for 127.0.0.1 at 2015-04-02 19:09:03 -0400
+Processing by RecipesController#index as HTML
+  Parameters: {"query"=>"cooking_time"}
+  [1m[36mRecipe Load (0.7ms)[0m  [1mSELECT "recipes".* FROM "recipes"  ORDER BY cooking_time[0m
+  Rendered recipes/index.html.haml within layouts/application (18.9ms)
+Completed 200 OK in 30ms (Views: 22.1ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Dark Chocolate Peanut Butter Cup"], ["directions", "Unwrap and enjoy!"], ["cooking_time", 10], ["created_at", "2015-04-02 23:09:03.933036"], ["updated_at", "2015-04-02 23:09:03.933036"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Toast with Jam"], ["directions", "Put the jam on the toast"], ["cooking_time", 15], ["created_at", "2015-04-02 23:09:03.957112"], ["updated_at", "2015-04-02 23:09:03.957112"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (2.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Leftover Pizza"], ["directions", "Just pop in the microwave"], ["cooking_time", 1], ["created_at", "2015-04-02 23:09:03.989147"], ["updated_at", "2015-04-02 23:09:03.989147"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Cereal"], ["directions", "Milk first, always"], ["cooking_time", 20], ["created_at", "2015-04-02 23:09:04.007488"], ["updated_at", "2015-04-02 23:09:04.007488"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/recipes" for 127.0.0.1 at 2015-04-02 19:09:04 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.5ms)[0m  SELECT "recipes".* FROM "recipes"  ORDER BY name
+  Rendered recipes/index.html.haml within layouts/application (16.7ms)
+Completed 200 OK in 24ms (Views: 20.8ms | ActiveRecord: 0.5ms)
+Started GET "/recipes?query=name" for 127.0.0.1 at 2015-04-02 19:09:04 -0400
+Processing by RecipesController#index as HTML
+  Parameters: {"query"=>"name"}
+  [1m[36mRecipe Load (0.5ms)[0m  [1mSELECT "recipes".* FROM "recipes"  ORDER BY name[0m
+  Rendered recipes/index.html.haml within layouts/application (16.3ms)
+Completed 200 OK in 23ms (Views: 19.6ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Dark Chocolate Peanut Butter Cup"], ["directions", "Unwrap and enjoy!"], ["cooking_time", 34], ["created_at", "2015-04-02 23:09:04.116459"], ["updated_at", "2015-04-02 23:09:04.116459"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Toast with Jam"], ["directions", "Put the jam on the toast"], ["cooking_time", 12], ["created_at", "2015-04-02 23:09:04.146850"], ["updated_at", "2015-04-02 23:09:04.146850"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mRecipe Load (0.5ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Dark Chocolate Peanut Butter Cup"], ["directions", "Unwrap and enjoy!"], ["cooking_time", 34], ["created_at", "2015-04-02 23:09:04.232461"], ["updated_at", "2015-04-02 23:09:04.232461"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Toast with Jam"], ["directions", "Put the jam on the toast"], ["cooking_time", 12], ["created_at", "2015-04-02 23:09:04.252618"], ["updated_at", "2015-04-02 23:09:04.252618"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Dark Chocolate Peanut Butter Cup"], ["directions", "Unwrap and enjoy!"], ["cooking_time", 34], ["created_at", "2015-04-02 23:09:04.289990"], ["updated_at", "2015-04-02 23:09:04.289990"]]
+  [1m[35m (0.4ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Toast with Jam"], ["directions", "Put the jam on the toast"], ["cooking_time", 12], ["created_at", "2015-04-02 23:09:04.323095"], ["updated_at", "2015-04-02 23:09:04.323095"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (1.2ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Toast and Jam"], ["directions", "Put jam on toast"], ["cooking_time", 7], ["created_at", "2015-04-02 23:13:13.858426"], ["updated_at", "2015-04-02 23:13:13.858426"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Toast and Jam"], ["directions", "Put jam on toast"], ["cooking_time", 7], ["created_at", "2015-04-02 23:13:13.902460"], ["updated_at", "2015-04-02 23:13:13.902460"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Toast and Jam"], ["directions", "Put jam on toast"], ["cooking_time", 7], ["created_at", "2015-04-02 23:13:14.004051"], ["updated_at", "2015-04-02 23:13:14.004051"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Toast and Jam"], ["directions", "Put jam on toast"], ["cooking_time", 7], ["created_at", "2015-04-02 23:13:14.044583"], ["updated_at", "2015-04-02 23:13:14.044583"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Toast and Jam"], ["directions", "Put jam on toast"], ["cooking_time", 7], ["created_at", "2015-04-02 23:20:09.564719"], ["updated_at", "2015-04-02 23:20:09.564719"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Scrambled Eggs"], ["directions", "Eggs then milk, scramble"], ["cooking_time", 20], ["created_at", "2015-04-02 23:20:09.573026"], ["updated_at", "2015-04-02 23:20:09.573026"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Cereal"], ["directions", "Milk first, then cereal"], ["cooking_time", 10], ["created_at", "2015-04-02 23:20:09.577030"], ["updated_at", "2015-04-02 23:20:09.577030"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/recipes/new" for 127.0.0.1 at 2015-04-02 19:20:09 -0400
+Processing by RecipesController#new as HTML
+  Rendered recipes/new.html.haml within layouts/application (21.6ms)
+Completed 200 OK in 65ms (Views: 64.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Toast and Jam"], ["directions", "Put jam on toast"], ["cooking_time", 7], ["created_at", "2015-04-02 23:20:09.691265"], ["updated_at", "2015-04-02 23:20:09.691265"]]
+  [1m[35m (1.5ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Scrambled Eggs"], ["directions", "Eggs then milk, scramble"], ["cooking_time", 20], ["created_at", "2015-04-02 23:20:09.694964"], ["updated_at", "2015-04-02 23:20:09.694964"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cereal"], ["directions", "Milk first, then cereal"], ["cooking_time", 10], ["created_at", "2015-04-02 23:20:09.702449"], ["updated_at", "2015-04-02 23:20:09.702449"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/recipes/new" for 127.0.0.1 at 2015-04-02 19:20:09 -0400
+Processing by RecipesController#new as HTML
+  Rendered recipes/new.html.haml within layouts/application (2.9ms)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Toast and Jam"], ["directions", "Put jam on toast"], ["cooking_time", 7], ["created_at", "2015-04-02 23:21:55.353650"], ["updated_at", "2015-04-02 23:21:55.353650"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Scrambled Eggs"], ["directions", "Eggs then milk, scramble"], ["cooking_time", 20], ["created_at", "2015-04-02 23:21:55.361485"], ["updated_at", "2015-04-02 23:21:55.361485"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Cereal"], ["directions", "Milk first, then cereal"], ["cooking_time", 10], ["created_at", "2015-04-02 23:21:55.364208"], ["updated_at", "2015-04-02 23:21:55.364208"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/recipes/new" for 127.0.0.1 at 2015-04-02 19:21:55 -0400
+Processing by RecipesController#new as HTML
+  Rendered recipes/new.html.haml within layouts/application (24.8ms)
+Completed 200 OK in 56ms (Views: 55.8ms | ActiveRecord: 0.0ms)
+Started POST "/recipes" for 127.0.0.1 at 2015-04-02 19:21:55 -0400
+Processing by RecipesController#create as HTML
+  Parameters: {"utf8"=>"✓", "recipe"=>{"name"=>"new toast", "directions"=>"get new toast", "cooking_time"=>"1", "image"=>#<ActionDispatch::Http::UploadedFile:0xcfa8460 @tempfile=#<Tempfile:/tmp/RackMultipart20150402-23800-1rd2ytc.jpg>, @original_filename="tenders_productimage.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"recipe[image]\"; filename=\"tenders_productimage.jpg\"\r\nContent-Type: image/jpeg\r\nContent-Length: 31340\r\n">}, "commit"=>"Create Recipe"}
+Command :: file -b --mime '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23800-zko9tc.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23800-743xu0.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23800-743xu0.jpg[0]'
+Command :: convert '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23800-743xu0.jpg[0]' -auto-orient -resize "300x300>" '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23800-743xu020150402-23800-16t732s'
+Command :: file -b --mime '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23800-743xu020150402-23800-16t732s'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23800-743xu0.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23800-743xu0.jpg[0]'
+Command :: convert '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23800-743xu0.jpg[0]' -auto-orient -resize "100x100>" '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23800-743xu020150402-23800-1rdbkz8'
+Command :: file -b --mime '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23800-743xu020150402-23800-1rdbkz8'
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+Command :: file -b --mime '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23800-gbq3cv.jpg'
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "image_file_name", "image_content_type", "image_file_size", "image_updated_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "new toast"], ["directions", "get new toast"], ["cooking_time", 1], ["image_file_name", "tenders_productimage.jpg"], ["image_content_type", "image/jpeg"], ["image_file_size", 31340], ["image_updated_at", "2015-04-02 23:21:55.478874"], ["created_at", "2015-04-02 23:21:55.744227"], ["updated_at", "2015-04-02 23:21:55.744227"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/recipes
+Completed 302 Found in 290ms (ActiveRecord: 0.6ms)
+Started GET "/recipes" for 127.0.0.1 at 2015-04-02 19:21:55 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT "recipes".* FROM "recipes"  ORDER BY name[0m
+  Rendered recipes/index.html.haml within layouts/application (6.7ms)
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Toast and Jam"], ["directions", "Put jam on toast"], ["cooking_time", 7], ["created_at", "2015-04-02 23:21:55.803519"], ["updated_at", "2015-04-02 23:21:55.803519"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Scrambled Eggs"], ["directions", "Eggs then milk, scramble"], ["cooking_time", 20], ["created_at", "2015-04-02 23:21:55.813203"], ["updated_at", "2015-04-02 23:21:55.813203"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cereal"], ["directions", "Milk first, then cereal"], ["cooking_time", 10], ["created_at", "2015-04-02 23:21:55.816254"], ["updated_at", "2015-04-02 23:21:55.816254"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/recipes/new" for 127.0.0.1 at 2015-04-02 19:21:55 -0400
+Processing by RecipesController#new as HTML
+  Rendered recipes/new.html.haml within layouts/application (9.5ms)
+Completed 200 OK in 11ms (Views: 10.8ms | ActiveRecord: 0.0ms)
+Started POST "/recipes" for 127.0.0.1 at 2015-04-02 19:21:55 -0400
+Processing by RecipesController#create as HTML
+  Parameters: {"utf8"=>"✓", "recipe"=>{"name"=>"new toast", "directions"=>"get new toast", "cooking_time"=>"67", "image"=>#<ActionDispatch::Http::UploadedFile:0xd47e368 @tempfile=#<Tempfile:/tmp/RackMultipart20150402-23800-pqwo6x.jpg>, @original_filename="tenders_productimage.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"recipe[image]\"; filename=\"tenders_productimage.jpg\"\r\nContent-Type: image/jpeg\r\nContent-Length: 31340\r\n">}, "commit"=>"Create Recipe"}
+Command :: file -b --mime '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23800-fgr8tm.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23800-1vl78xu.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23800-1vl78xu.jpg[0]'
+Command :: convert '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23800-1vl78xu.jpg[0]' -auto-orient -resize "300x300>" '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23800-1vl78xu20150402-23800-445p7g'
+Command :: file -b --mime '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23800-1vl78xu20150402-23800-445p7g'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23800-1vl78xu.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23800-1vl78xu.jpg[0]'
+Command :: convert '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23800-1vl78xu.jpg[0]' -auto-orient -resize "100x100>" '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23800-1vl78xu20150402-23800-11nfrub'
+Command :: file -b --mime '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23800-1vl78xu20150402-23800-11nfrub'
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+Command :: file -b --mime '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23800-14r43nd.jpg'
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "image_file_name", "image_content_type", "image_file_size", "image_updated_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["name", "new toast"], ["directions", "get new toast"], ["cooking_time", 67], ["image_file_name", "tenders_productimage.jpg"], ["image_content_type", "image/jpeg"], ["image_file_size", 31340], ["image_updated_at", "2015-04-02 23:21:55.878502"], ["created_at", "2015-04-02 23:21:55.959694"], ["updated_at", "2015-04-02 23:21:55.959694"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/recipes
+Completed 302 Found in 106ms (ActiveRecord: 0.4ms)
+Started GET "/recipes" for 127.0.0.1 at 2015-04-02 19:21:55 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes"  ORDER BY name
+  Rendered recipes/index.html.haml within layouts/application (4.3ms)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (2.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (2.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Toast and Jam"], ["directions", "Put jam on toast"], ["cooking_time", 7], ["created_at", "2015-04-02 23:22:16.494220"], ["updated_at", "2015-04-02 23:22:16.494220"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Scrambled Eggs"], ["directions", "Eggs then milk, scramble"], ["cooking_time", 20], ["created_at", "2015-04-02 23:22:16.498994"], ["updated_at", "2015-04-02 23:22:16.498994"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Cereal"], ["directions", "Milk first, then cereal"], ["cooking_time", 10], ["created_at", "2015-04-02 23:22:16.501199"], ["updated_at", "2015-04-02 23:22:16.501199"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/recipes/new" for 127.0.0.1 at 2015-04-02 19:22:16 -0400
+Processing by RecipesController#new as HTML
+  Rendered recipes/new.html.haml within layouts/application (28.7ms)
+Completed 200 OK in 63ms (Views: 62.8ms | ActiveRecord: 0.0ms)
+Started POST "/recipes" for 127.0.0.1 at 2015-04-02 19:22:16 -0400
+Processing by RecipesController#create as HTML
+  Parameters: {"utf8"=>"✓", "recipe"=>{"name"=>"new toast", "directions"=>"get new toast", "cooking_time"=>"1", "image"=>#<ActionDispatch::Http::UploadedFile:0xd8ab684 @tempfile=#<Tempfile:/tmp/RackMultipart20150402-23847-113swsg.jpg>, @original_filename="tenders_productimage.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"recipe[image]\"; filename=\"tenders_productimage.jpg\"\r\nContent-Type: image/jpeg\r\nContent-Length: 31340\r\n">}, "commit"=>"Create Recipe"}
+Command :: file -b --mime '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23847-mi0z9y.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23847-97559q.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23847-97559q.jpg[0]'
+Command :: convert '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23847-97559q.jpg[0]' -auto-orient -resize "300x300>" '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23847-97559q20150402-23847-7h44sl'
+Command :: file -b --mime '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23847-97559q20150402-23847-7h44sl'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23847-97559q.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23847-97559q.jpg[0]'
+Command :: convert '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23847-97559q.jpg[0]' -auto-orient -resize "100x100>" '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23847-97559q20150402-23847-kx33oj'
+Command :: file -b --mime '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23847-97559q20150402-23847-kx33oj'
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+Command :: file -b --mime '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23847-esz5rb.jpg'
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "image_file_name", "image_content_type", "image_file_size", "image_updated_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "new toast"], ["directions", "get new toast"], ["cooking_time", 1], ["image_file_name", "tenders_productimage.jpg"], ["image_content_type", "image/jpeg"], ["image_file_size", 31340], ["image_updated_at", "2015-04-02 23:22:16.613569"], ["created_at", "2015-04-02 23:22:16.708061"], ["updated_at", "2015-04-02 23:22:16.708061"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/recipes
+Completed 302 Found in 121ms (ActiveRecord: 0.4ms)
+Started GET "/recipes" for 127.0.0.1 at 2015-04-02 19:22:16 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.4ms)[0m  [1mSELECT "recipes".* FROM "recipes"  ORDER BY name[0m
+  Rendered recipes/index.html.haml within layouts/application (6.9ms)
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Toast and Jam"], ["directions", "Put jam on toast"], ["cooking_time", 7], ["created_at", "2015-04-02 23:22:16.778293"], ["updated_at", "2015-04-02 23:22:16.778293"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Scrambled Eggs"], ["directions", "Eggs then milk, scramble"], ["cooking_time", 20], ["created_at", "2015-04-02 23:22:16.780703"], ["updated_at", "2015-04-02 23:22:16.780703"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cereal"], ["directions", "Milk first, then cereal"], ["cooking_time", 10], ["created_at", "2015-04-02 23:22:16.783359"], ["updated_at", "2015-04-02 23:22:16.783359"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/recipes/new" for 127.0.0.1 at 2015-04-02 19:22:16 -0400
+Processing by RecipesController#new as HTML
+  Rendered recipes/new.html.haml within layouts/application (2.4ms)
+Completed 200 OK in 3ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+Started POST "/recipes" for 127.0.0.1 at 2015-04-02 19:22:16 -0400
+Processing by RecipesController#create as HTML
+  Parameters: {"utf8"=>"✓", "recipe"=>{"name"=>"new toast", "directions"=>"get new toast", "cooking_time"=>"67", "image"=>#<ActionDispatch::Http::UploadedFile:0xdcfe2f4 @tempfile=#<Tempfile:/tmp/RackMultipart20150402-23847-giqb8f.jpg>, @original_filename="tenders_productimage.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"recipe[image]\"; filename=\"tenders_productimage.jpg\"\r\nContent-Type: image/jpeg\r\nContent-Length: 31340\r\n">}, "commit"=>"Create Recipe"}
+Command :: file -b --mime '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23847-1tnl5rr.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23847-plvucr.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23847-plvucr.jpg[0]'
+Command :: convert '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23847-plvucr.jpg[0]' -auto-orient -resize "300x300>" '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23847-plvucr20150402-23847-1y303op'
+Command :: file -b --mime '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23847-plvucr20150402-23847-1y303op'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23847-plvucr.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23847-plvucr.jpg[0]'
+Command :: convert '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23847-plvucr.jpg[0]' -auto-orient -resize "100x100>" '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23847-plvucr20150402-23847-1yfffa4'
+Command :: file -b --mime '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23847-plvucr20150402-23847-1yfffa4'
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+Command :: file -b --mime '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23847-174iksm.jpg'
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "image_file_name", "image_content_type", "image_file_size", "image_updated_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["name", "new toast"], ["directions", "get new toast"], ["cooking_time", 67], ["image_file_name", "tenders_productimage.jpg"], ["image_content_type", "image/jpeg"], ["image_file_size", 31340], ["image_updated_at", "2015-04-02 23:22:16.843110"], ["created_at", "2015-04-02 23:22:16.927853"], ["updated_at", "2015-04-02 23:22:16.927853"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/recipes
+Completed 302 Found in 103ms (ActiveRecord: 0.4ms)
+Started GET "/recipes" for 127.0.0.1 at 2015-04-02 19:22:16 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.4ms)[0m  SELECT "recipes".* FROM "recipes"  ORDER BY name
+  Rendered recipes/index.html.haml within layouts/application (4.5ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Toast and Jam"], ["directions", "Put jam on toast"], ["cooking_time", 7], ["created_at", "2015-04-02 23:22:54.464715"], ["updated_at", "2015-04-02 23:22:54.464715"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Scrambled Eggs"], ["directions", "Eggs then milk, scramble"], ["cooking_time", 20], ["created_at", "2015-04-02 23:22:54.471451"], ["updated_at", "2015-04-02 23:22:54.471451"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Cereal"], ["directions", "Milk first, then cereal"], ["cooking_time", 10], ["created_at", "2015-04-02 23:22:54.474146"], ["updated_at", "2015-04-02 23:22:54.474146"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/recipes/new" for 127.0.0.1 at 2015-04-02 19:22:54 -0400
+Processing by RecipesController#new as HTML
+  Rendered recipes/new.html.haml within layouts/application (24.5ms)
+Completed 200 OK in 60ms (Views: 57.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Toast and Jam"], ["directions", "Put jam on toast"], ["cooking_time", 7], ["created_at", "2015-04-02 23:22:54.582868"], ["updated_at", "2015-04-02 23:22:54.582868"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Scrambled Eggs"], ["directions", "Eggs then milk, scramble"], ["cooking_time", 20], ["created_at", "2015-04-02 23:22:54.587074"], ["updated_at", "2015-04-02 23:22:54.587074"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cereal"], ["directions", "Milk first, then cereal"], ["cooking_time", 10], ["created_at", "2015-04-02 23:22:54.596961"], ["updated_at", "2015-04-02 23:22:54.596961"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/recipes/new" for 127.0.0.1 at 2015-04-02 19:22:54 -0400
+Processing by RecipesController#new as HTML
+  Rendered recipes/new.html.haml within layouts/application (4.9ms)
+Completed 200 OK in 6ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+Started POST "/recipes" for 127.0.0.1 at 2015-04-02 19:22:54 -0400
+Processing by RecipesController#create as HTML
+  Parameters: {"utf8"=>"✓", "recipe"=>{"name"=>"new toast", "directions"=>"get new toast", "cooking_time"=>"67", "image"=>#<ActionDispatch::Http::UploadedFile:0xbf430c0 @tempfile=#<Tempfile:/tmp/RackMultipart20150402-23894-1q5msjc.jpg>, @original_filename="tenders_productimage.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"recipe[image]\"; filename=\"tenders_productimage.jpg\"\r\nContent-Type: image/jpeg\r\nContent-Length: 31340\r\n">}, "commit"=>"Create Recipe"}
+Command :: file -b --mime '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23894-lnrpkt.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23894-187uxvb.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23894-187uxvb.jpg[0]'
+Command :: convert '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23894-187uxvb.jpg[0]' -auto-orient -resize "300x300>" '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23894-187uxvb20150402-23894-1fge083'
+Command :: file -b --mime '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23894-187uxvb20150402-23894-1fge083'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23894-187uxvb.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23894-187uxvb.jpg[0]'
+Command :: convert '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23894-187uxvb.jpg[0]' -auto-orient -resize "100x100>" '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23894-187uxvb20150402-23894-1tiyn25'
+Command :: file -b --mime '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23894-187uxvb20150402-23894-1tiyn25'
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+Command :: file -b --mime '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23894-5htdws.jpg'
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "image_file_name", "image_content_type", "image_file_size", "image_updated_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["name", "new toast"], ["directions", "get new toast"], ["cooking_time", 67], ["image_file_name", "tenders_productimage.jpg"], ["image_content_type", "image/jpeg"], ["image_file_size", 31340], ["image_updated_at", "2015-04-02 23:22:54.646108"], ["created_at", "2015-04-02 23:22:54.731569"], ["updated_at", "2015-04-02 23:22:54.731569"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/recipes
+Completed 302 Found in 107ms (ActiveRecord: 0.4ms)
+Started GET "/recipes" for 127.0.0.1 at 2015-04-02 19:22:54 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes"  ORDER BY name
+  Rendered recipes/index.html.haml within layouts/application (6.8ms)
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Toast and Jam"], ["directions", "Put jam on toast"], ["cooking_time", 7], ["created_at", "2015-04-02 23:31:09.069473"], ["updated_at", "2015-04-02 23:31:09.069473"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Scrambled Eggs"], ["directions", "Eggs then milk, scramble"], ["cooking_time", 20], ["created_at", "2015-04-02 23:31:09.077184"], ["updated_at", "2015-04-02 23:31:09.077184"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Cereal"], ["directions", "Milk first, then cereal"], ["cooking_time", 10], ["created_at", "2015-04-02 23:31:09.080097"], ["updated_at", "2015-04-02 23:31:09.080097"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/recipes/new" for 127.0.0.1 at 2015-04-02 19:31:09 -0400
+Processing by RecipesController#new as HTML
+  Rendered recipes/new.html.haml within layouts/application (22.2ms)
+Completed 200 OK in 57ms (Views: 56.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Toast and Jam"], ["directions", "Put jam on toast"], ["cooking_time", 7], ["created_at", "2015-04-02 23:31:09.190141"], ["updated_at", "2015-04-02 23:31:09.190141"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Scrambled Eggs"], ["directions", "Eggs then milk, scramble"], ["cooking_time", 20], ["created_at", "2015-04-02 23:31:09.198588"], ["updated_at", "2015-04-02 23:31:09.198588"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cereal"], ["directions", "Milk first, then cereal"], ["cooking_time", 10], ["created_at", "2015-04-02 23:31:09.202206"], ["updated_at", "2015-04-02 23:31:09.202206"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/recipes/new" for 127.0.0.1 at 2015-04-02 19:31:09 -0400
+Processing by RecipesController#new as HTML
+  Rendered recipes/new.html.haml within layouts/application (3.5ms)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+Started POST "/recipes" for 127.0.0.1 at 2015-04-02 19:31:09 -0400
+Processing by RecipesController#create as HTML
+  Parameters: {"utf8"=>"✓", "recipe"=>{"name"=>"new toast", "directions"=>"get new toast", "cooking_time"=>"67", "image"=>#<ActionDispatch::Http::UploadedFile:0xd5f4968 @tempfile=#<Tempfile:/tmp/RackMultipart20150402-23923-1v6r5ta.jpg>, @original_filename="tenders_productimage.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"recipe[image]\"; filename=\"tenders_productimage.jpg\"\r\nContent-Type: image/jpeg\r\nContent-Length: 31340\r\n">}, "commit"=>"Create Recipe"}
+Command :: file -b --mime '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23923-1ghcnxy.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23923-1rh1cmn.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23923-1rh1cmn.jpg[0]'
+Command :: convert '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23923-1rh1cmn.jpg[0]' -auto-orient -resize "300x300>" '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23923-1rh1cmn20150402-23923-1ojsvpe'
+Command :: file -b --mime '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23923-1rh1cmn20150402-23923-1ojsvpe'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23923-1rh1cmn.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23923-1rh1cmn.jpg[0]'
+Command :: convert '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23923-1rh1cmn.jpg[0]' -auto-orient -resize "100x100>" '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23923-1rh1cmn20150402-23923-10bqoq8'
+Command :: file -b --mime '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23923-1rh1cmn20150402-23923-10bqoq8'
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+Command :: file -b --mime '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23923-e58uhw.jpg'
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "image_file_name", "image_content_type", "image_file_size", "image_updated_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["name", "new toast"], ["directions", "get new toast"], ["cooking_time", 67], ["image_file_name", "tenders_productimage.jpg"], ["image_content_type", "image/jpeg"], ["image_file_size", 31340], ["image_updated_at", "2015-04-02 23:31:09.250195"], ["created_at", "2015-04-02 23:31:09.346335"], ["updated_at", "2015-04-02 23:31:09.346335"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/recipes
+Completed 302 Found in 120ms (ActiveRecord: 0.4ms)
+Started GET "/recipes" for 127.0.0.1 at 2015-04-02 19:31:09 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes"  ORDER BY name
+  Rendered recipes/index.html.haml within layouts/application (7.6ms)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Toast and Jam"], ["directions", "Put jam on toast"], ["cooking_time", 7], ["created_at", "2015-04-02 23:32:48.572454"], ["updated_at", "2015-04-02 23:32:48.572454"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Scrambled Eggs"], ["directions", "Eggs then milk, scramble"], ["cooking_time", 20], ["created_at", "2015-04-02 23:32:48.577180"], ["updated_at", "2015-04-02 23:32:48.577180"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Cereal"], ["directions", "Milk first, then cereal"], ["cooking_time", 10], ["created_at", "2015-04-02 23:32:48.579246"], ["updated_at", "2015-04-02 23:32:48.579246"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/recipes/new" for 127.0.0.1 at 2015-04-02 19:32:48 -0400
+Processing by RecipesController#new as HTML
+  Rendered recipes/new.html.haml within layouts/application (24.6ms)
+Completed 200 OK in 59ms (Views: 58.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Toast and Jam"], ["directions", "Put jam on toast"], ["cooking_time", 7], ["created_at", "2015-04-02 23:32:48.688596"], ["updated_at", "2015-04-02 23:32:48.688596"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Scrambled Eggs"], ["directions", "Eggs then milk, scramble"], ["cooking_time", 20], ["created_at", "2015-04-02 23:32:48.697568"], ["updated_at", "2015-04-02 23:32:48.697568"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cereal"], ["directions", "Milk first, then cereal"], ["cooking_time", 10], ["created_at", "2015-04-02 23:32:48.701239"], ["updated_at", "2015-04-02 23:32:48.701239"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/recipes/new" for 127.0.0.1 at 2015-04-02 19:32:48 -0400
+Processing by RecipesController#new as HTML
+  Rendered recipes/new.html.haml within layouts/application (4.2ms)
+Completed 200 OK in 5ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+Started POST "/recipes" for 127.0.0.1 at 2015-04-02 19:32:48 -0400
+Processing by RecipesController#create as HTML
+  Parameters: {"utf8"=>"✓", "recipe"=>{"name"=>"new toast", "directions"=>"get new toast", "cooking_time"=>"67", "image"=>#<ActionDispatch::Http::UploadedFile:0xdbe5ad4 @tempfile=#<Tempfile:/tmp/RackMultipart20150402-23959-75hv8u.jpg>, @original_filename="tenders_productimage.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"recipe[image]\"; filename=\"tenders_productimage.jpg\"\r\nContent-Type: image/jpeg\r\nContent-Length: 31340\r\n">}, "commit"=>"Create Recipe"}
+Command :: file -b --mime '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23959-1rbr1ix.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23959-1c8dtzz.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23959-1c8dtzz.jpg[0]'
+Command :: convert '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23959-1c8dtzz.jpg[0]' -auto-orient -resize "300x300>" '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23959-1c8dtzz20150402-23959-10prlqt'
+Command :: file -b --mime '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23959-1c8dtzz20150402-23959-10prlqt'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23959-1c8dtzz.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23959-1c8dtzz.jpg[0]'
+Command :: convert '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23959-1c8dtzz.jpg[0]' -auto-orient -resize "100x100>" '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23959-1c8dtzz20150402-23959-1r4vxnb'
+Command :: file -b --mime '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23959-1c8dtzz20150402-23959-1r4vxnb'
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+Command :: file -b --mime '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-23959-1wqaqp3.jpg'
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "image_file_name", "image_content_type", "image_file_size", "image_updated_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["name", "new toast"], ["directions", "get new toast"], ["cooking_time", 67], ["image_file_name", "tenders_productimage.jpg"], ["image_content_type", "image/jpeg"], ["image_file_size", 31340], ["image_updated_at", "2015-04-02 23:32:48.743054"], ["created_at", "2015-04-02 23:32:48.833447"], ["updated_at", "2015-04-02 23:32:48.833447"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/recipes
+Completed 302 Found in 112ms (ActiveRecord: 0.4ms)
+Started GET "/recipes" for 127.0.0.1 at 2015-04-02 19:32:48 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.4ms)[0m  SELECT "recipes".* FROM "recipes"  ORDER BY name
+  Rendered recipes/index.html.haml within layouts/application (7.0ms)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Toast and Jam"], ["directions", "Put jam on toast"], ["cooking_time", 7], ["created_at", "2015-04-02 23:37:32.034675"], ["updated_at", "2015-04-02 23:37:32.034675"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Scrambled Eggs"], ["directions", "Eggs then milk, scramble"], ["cooking_time", 20], ["created_at", "2015-04-02 23:37:32.040357"], ["updated_at", "2015-04-02 23:37:32.040357"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Cereal"], ["directions", "Milk first, then cereal"], ["cooking_time", 10], ["created_at", "2015-04-02 23:37:32.045411"], ["updated_at", "2015-04-02 23:37:32.045411"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/recipes/new" for 127.0.0.1 at 2015-04-02 19:37:32 -0400
+Processing by RecipesController#new as HTML
+  Rendered recipes/new.html.haml within layouts/application (4.4ms)
+Completed 500 Internal Server Error in 17ms
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Toast and Jam"], ["directions", "Put jam on toast"], ["cooking_time", 7], ["created_at", "2015-04-02 23:37:32.113598"], ["updated_at", "2015-04-02 23:37:32.113598"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Scrambled Eggs"], ["directions", "Eggs then milk, scramble"], ["cooking_time", 20], ["created_at", "2015-04-02 23:37:32.116859"], ["updated_at", "2015-04-02 23:37:32.116859"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cereal"], ["directions", "Milk first, then cereal"], ["cooking_time", 10], ["created_at", "2015-04-02 23:37:32.118819"], ["updated_at", "2015-04-02 23:37:32.118819"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/recipes/new" for 127.0.0.1 at 2015-04-02 19:37:32 -0400
+Processing by RecipesController#new as HTML
+  Rendered recipes/new.html.haml within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 4ms
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Toast and Jam"], ["directions", "Put jam on toast"], ["cooking_time", 7], ["created_at", "2015-04-02 23:37:54.902309"], ["updated_at", "2015-04-02 23:37:54.902309"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Scrambled Eggs"], ["directions", "Eggs then milk, scramble"], ["cooking_time", 20], ["created_at", "2015-04-02 23:37:54.907602"], ["updated_at", "2015-04-02 23:37:54.907602"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Cereal"], ["directions", "Milk first, then cereal"], ["cooking_time", 10], ["created_at", "2015-04-02 23:37:54.910504"], ["updated_at", "2015-04-02 23:37:54.910504"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/recipes/new" for 127.0.0.1 at 2015-04-02 19:37:54 -0400
+Processing by RecipesController#new as HTML
+  Rendered recipes/new.html.haml within layouts/application (5.9ms)
+Completed 500 Internal Server Error in 17ms
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Toast and Jam"], ["directions", "Put jam on toast"], ["cooking_time", 7], ["created_at", "2015-04-02 23:37:54.972449"], ["updated_at", "2015-04-02 23:37:54.972449"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (5.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Scrambled Eggs"], ["directions", "Eggs then milk, scramble"], ["cooking_time", 20], ["created_at", "2015-04-02 23:37:54.980968"], ["updated_at", "2015-04-02 23:37:54.980968"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cereal"], ["directions", "Milk first, then cereal"], ["cooking_time", 10], ["created_at", "2015-04-02 23:37:54.988004"], ["updated_at", "2015-04-02 23:37:54.988004"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/recipes/new" for 127.0.0.1 at 2015-04-02 19:37:54 -0400
+Processing by RecipesController#new as HTML
+  Rendered recipes/new.html.haml within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 3ms
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Toast and Jam"], ["directions", "Put jam on toast"], ["cooking_time", 7], ["created_at", "2015-04-02 23:38:26.637809"], ["updated_at", "2015-04-02 23:38:26.637809"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Scrambled Eggs"], ["directions", "Eggs then milk, scramble"], ["cooking_time", 20], ["created_at", "2015-04-02 23:38:26.645905"], ["updated_at", "2015-04-02 23:38:26.645905"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Cereal"], ["directions", "Milk first, then cereal"], ["cooking_time", 10], ["created_at", "2015-04-02 23:38:26.647755"], ["updated_at", "2015-04-02 23:38:26.647755"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/recipes/new" for 127.0.0.1 at 2015-04-02 19:38:26 -0400
+Processing by RecipesController#new as HTML
+  Rendered recipes/new.html.haml within layouts/application (21.9ms)
+Completed 200 OK in 55ms (Views: 54.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Toast and Jam"], ["directions", "Put jam on toast"], ["cooking_time", 7], ["created_at", "2015-04-02 23:38:26.775888"], ["updated_at", "2015-04-02 23:38:26.775888"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Scrambled Eggs"], ["directions", "Eggs then milk, scramble"], ["cooking_time", 20], ["created_at", "2015-04-02 23:38:26.778033"], ["updated_at", "2015-04-02 23:38:26.778033"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cereal"], ["directions", "Milk first, then cereal"], ["cooking_time", 10], ["created_at", "2015-04-02 23:38:26.780082"], ["updated_at", "2015-04-02 23:38:26.780082"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/recipes/new" for 127.0.0.1 at 2015-04-02 19:38:26 -0400
+Processing by RecipesController#new as HTML
+  Rendered recipes/new.html.haml within layouts/application (2.1ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+Started POST "/recipes" for 127.0.0.1 at 2015-04-02 19:38:26 -0400
+Processing by RecipesController#create as HTML
+  Parameters: {"utf8"=>"✓", "recipe"=>{"name"=>"new toast", "directions"=>"get new toast", "cooking_time"=>"67", "image"=>#<ActionDispatch::Http::UploadedFile:0xd3c07c8 @tempfile=#<Tempfile:/tmp/RackMultipart20150402-24015-1v95dax.jpg>, @original_filename="tenders_productimage.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"recipe[image]\"; filename=\"tenders_productimage.jpg\"\r\nContent-Type: image/jpeg\r\nContent-Length: 31340\r\n">}, "commit"=>"Create Recipe"}
+Command :: file -b --mime '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-24015-8331d8.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-24015-2pcl58.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-24015-2pcl58.jpg[0]'
+Command :: convert '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-24015-2pcl58.jpg[0]' -auto-orient -resize "300x300>" '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-24015-2pcl5820150402-24015-1h4e36b'
+Command :: file -b --mime '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-24015-2pcl5820150402-24015-1h4e36b'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-24015-2pcl58.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-24015-2pcl58.jpg[0]'
+Command :: convert '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-24015-2pcl58.jpg[0]' -auto-orient -resize "100x100>" '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-24015-2pcl5820150402-24015-bhx17t'
+Command :: file -b --mime '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-24015-2pcl5820150402-24015-bhx17t'
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+Command :: file -b --mime '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-24015-171adoa.jpg'
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "image_file_name", "image_content_type", "image_file_size", "image_updated_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["name", "new toast"], ["directions", "get new toast"], ["cooking_time", 67], ["image_file_name", "tenders_productimage.jpg"], ["image_content_type", "image/jpeg"], ["image_file_size", 31340], ["image_updated_at", "2015-04-02 23:38:26.826024"], ["created_at", "2015-04-02 23:38:26.924101"], ["updated_at", "2015-04-02 23:38:26.924101"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/recipes
+Completed 302 Found in 121ms (ActiveRecord: 0.4ms)
+Started GET "/recipes" for 127.0.0.1 at 2015-04-02 19:38:26 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT "recipes".* FROM "recipes"  ORDER BY name
+  Rendered recipes/index.html.haml within layouts/application (8.9ms)
+Completed 200 OK in 12ms (Views: 10.2ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Toast and Jam"], ["directions", "Put jam on toast"], ["cooking_time", 7], ["created_at", "2015-04-02 23:41:05.233801"], ["updated_at", "2015-04-02 23:41:05.233801"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Scrambled Eggs"], ["directions", "Eggs then milk, scramble"], ["cooking_time", 20], ["created_at", "2015-04-02 23:41:05.238168"], ["updated_at", "2015-04-02 23:41:05.238168"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Cereal"], ["directions", "Milk first, then cereal"], ["cooking_time", 10], ["created_at", "2015-04-02 23:41:05.240282"], ["updated_at", "2015-04-02 23:41:05.240282"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/recipes/new" for 127.0.0.1 at 2015-04-02 19:41:05 -0400
+Processing by RecipesController#new as HTML
+  Rendered recipes/new.html.haml within layouts/application (28.5ms)
+Completed 200 OK in 58ms (Views: 58.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Toast and Jam"], ["directions", "Put jam on toast"], ["cooking_time", 7], ["created_at", "2015-04-02 23:41:05.348815"], ["updated_at", "2015-04-02 23:41:05.348815"]]
+  [1m[35m (5.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Scrambled Eggs"], ["directions", "Eggs then milk, scramble"], ["cooking_time", 20], ["created_at", "2015-04-02 23:41:05.358307"], ["updated_at", "2015-04-02 23:41:05.358307"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cereal"], ["directions", "Milk first, then cereal"], ["cooking_time", 10], ["created_at", "2015-04-02 23:41:05.361546"], ["updated_at", "2015-04-02 23:41:05.361546"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/recipes/new" for 127.0.0.1 at 2015-04-02 19:41:05 -0400
+Processing by RecipesController#new as HTML
+  Rendered recipes/new.html.haml within layouts/application (6.3ms)
+Completed 200 OK in 8ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+Started POST "/recipes" for 127.0.0.1 at 2015-04-02 19:41:05 -0400
+Processing by RecipesController#create as HTML
+  Parameters: {"utf8"=>"✓", "recipe"=>{"name"=>"new toast", "directions"=>"get new toast", "cooking_time"=>"67", "image"=>#<ActionDispatch::Http::UploadedFile:0xd8844e4 @tempfile=#<Tempfile:/tmp/RackMultipart20150402-24042-brr3xf.jpg>, @original_filename="tenders_productimage.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"recipe[image]\"; filename=\"tenders_productimage.jpg\"\r\nContent-Type: image/jpeg\r\nContent-Length: 31340\r\n">}, "commit"=>"Create Recipe"}
+Command :: file -b --mime '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-24042-82nmg1.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-24042-1xsf6qy.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-24042-1xsf6qy.jpg[0]'
+Command :: convert '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-24042-1xsf6qy.jpg[0]' -auto-orient -resize "300x300>" '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-24042-1xsf6qy20150402-24042-yyw7ci'
+Command :: file -b --mime '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-24042-1xsf6qy20150402-24042-yyw7ci'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-24042-1xsf6qy.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-24042-1xsf6qy.jpg[0]'
+Command :: convert '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-24042-1xsf6qy.jpg[0]' -auto-orient -resize "100x100>" '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-24042-1xsf6qy20150402-24042-17vwlpe'
+Command :: file -b --mime '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-24042-1xsf6qy20150402-24042-17vwlpe'
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+Command :: file -b --mime '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-24042-3m2hj5.jpg'
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "image_file_name", "image_content_type", "image_file_size", "image_updated_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["name", "new toast"], ["directions", "get new toast"], ["cooking_time", 67], ["image_file_name", "tenders_productimage.jpg"], ["image_content_type", "image/jpeg"], ["image_file_size", 31340], ["image_updated_at", "2015-04-02 23:41:05.409562"], ["created_at", "2015-04-02 23:41:05.494877"], ["updated_at", "2015-04-02 23:41:05.494877"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/recipes
+Completed 302 Found in 114ms (ActiveRecord: 0.5ms)
+Started GET "/recipes" for 127.0.0.1 at 2015-04-02 19:41:05 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes"  ORDER BY name
+  Rendered recipes/index.html.haml within layouts/application (6.0ms)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36m (5.5ms)[0m  [1mCREATE TABLE "foods" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (3.6ms)[0m  CREATE TABLE "fridges" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (4.5ms)[0m  [1mCREATE TABLE "ingredients" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "recipe_id" integer, "quantity" integer, "quantity_spec_id" integer, "food_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (3.1ms)[0m  CREATE TABLE "quantity_specs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "unit" varchar, "one" float, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (3.5ms)[0m  [1mCREATE TABLE "recipes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "directions" text, "cooking_time" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "image_file_name" varchar, "image_content_type" varchar, "image_file_size" integer, "image_updated_at" datetime) [0m
+  [1m[35m (3.5ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (3.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (3.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150401180842')
+  [1m[36m (2.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150328204835')[0m
+  [1m[35m (3.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150328204855')
+  [1m[36m (3.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150328205002')[0m
+  [1m[35m (3.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150328212550')
+  [1m[36m (3.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150328204821')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Toast and Jam"], ["directions", "Put jam on toast"], ["cooking_time", 7], ["created_at", "2015-04-02 23:47:56.382167"], ["updated_at", "2015-04-02 23:47:56.382167"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Scrambled Eggs"], ["directions", "Eggs then milk, scramble"], ["cooking_time", 20], ["created_at", "2015-04-02 23:47:56.388904"], ["updated_at", "2015-04-02 23:47:56.388904"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Cereal"], ["directions", "Milk first, then cereal"], ["cooking_time", 10], ["created_at", "2015-04-02 23:47:56.390946"], ["updated_at", "2015-04-02 23:47:56.390946"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/recipes/new" for 127.0.0.1 at 2015-04-02 19:47:56 -0400
+Processing by RecipesController#new as HTML
+  Rendered recipes/new.html.haml within layouts/application (20.0ms)
+Completed 200 OK in 55ms (Views: 55.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Toast and Jam"], ["directions", "Put jam on toast"], ["cooking_time", 7], ["created_at", "2015-04-02 23:47:56.499690"], ["updated_at", "2015-04-02 23:47:56.499690"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Scrambled Eggs"], ["directions", "Eggs then milk, scramble"], ["cooking_time", 20], ["created_at", "2015-04-02 23:47:56.503761"], ["updated_at", "2015-04-02 23:47:56.503761"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "recipes" ("name", "directions", "cooking_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Cereal"], ["directions", "Milk first, then cereal"], ["cooking_time", 10], ["created_at", "2015-04-02 23:47:56.509472"], ["updated_at", "2015-04-02 23:47:56.509472"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/recipes/new" for 127.0.0.1 at 2015-04-02 19:47:56 -0400
+Processing by RecipesController#new as HTML
+  Rendered recipes/new.html.haml within layouts/application (2.7ms)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+Started POST "/recipes" for 127.0.0.1 at 2015-04-02 19:47:56 -0400
+Processing by RecipesController#create as HTML
+  Parameters: {"utf8"=>"✓", "recipe"=>{"name"=>"new toast", "directions"=>"get new toast", "cooking_time"=>"67", "image"=>#<ActionDispatch::Http::UploadedFile:0xc258710 @tempfile=#<Tempfile:/tmp/RackMultipart20150402-24094-1qbsw4n.jpg>, @original_filename="tenders_productimage.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"recipe[image]\"; filename=\"tenders_productimage.jpg\"\r\nContent-Type: image/jpeg\r\nContent-Length: 31340\r\n">}, "commit"=>"Create Recipe"}
+Command :: file -b --mime '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-24094-1nyo9gd.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-24094-jqj2t.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-24094-jqj2t.jpg[0]'
+Command :: convert '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-24094-jqj2t.jpg[0]' -auto-orient -resize "300x300>" '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-24094-jqj2t20150402-24094-1vm0i9t'
+Command :: file -b --mime '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-24094-jqj2t20150402-24094-1vm0i9t'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-24094-jqj2t.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-24094-jqj2t.jpg[0]'
+Command :: convert '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-24094-jqj2t.jpg[0]' -auto-orient -resize "100x100>" '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-24094-jqj2t20150402-24094-10czhr6'
+Command :: file -b --mime '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-24094-jqj2t20150402-24094-10czhr6'
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+Command :: file -b --mime '/tmp/865e043ac6284eacc6d8e3ddfa284f8f20150402-24094-15jq5bj.jpg'
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "recipes" ("name", "directions", "cooking_time", "image_file_name", "image_content_type", "image_file_size", "image_updated_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["name", "new toast"], ["directions", "get new toast"], ["cooking_time", 67], ["image_file_name", "tenders_productimage.jpg"], ["image_content_type", "image/jpeg"], ["image_file_size", 31340], ["image_updated_at", "2015-04-02 23:47:56.555456"], ["created_at", "2015-04-02 23:47:56.634208"], ["updated_at", "2015-04-02 23:47:56.634208"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/recipes
+Completed 302 Found in 100ms (ActiveRecord: 0.4ms)
+Started GET "/recipes" for 127.0.0.1 at 2015-04-02 19:47:56 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes"  ORDER BY name
+  Rendered recipes/index.html.haml within layouts/application (6.0ms)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
