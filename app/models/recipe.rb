@@ -24,17 +24,24 @@ class Recipe < ActiveRecord::Base
 
 
   def update_newingredients(quantities, names)
-    quantities.each do |ing|
-      byebug
-      self.ingredients.new(:quantity => ing[1].to_i, :food_id => "#{Food.find_by('name == ?', names[ing[0].to_sym]).id}")
+    if(quantities != nil)
+      quantities.each do |ing|
+        byebug
+        if(ing[1].to_i > 0)
+          self.ingredients.new(:quantity => ing[1].to_i, :food_id => "#{Food.find_by('name == ?', names[ing[0].to_sym]).id}")
+        end
+      end
     end
   end
-
   def update_ingredients(quantities, names)
 
     quantities.each do |ing|
-      ing[0] =~ /^ingredient_(\d+)/ 
-      Ingredient.find($1).update(:quantity => "#{ing[1]}", :food_id => "#{Food.find_by('name == ?', names[ing[0]]).id}")
+      ing[0] =~ /^ingredient_(\d+)/
+      if (ing[1].to_i > 0)
+        Ingredient.find($1).update(:quantity => "#{ing[1]}", :food_id => "#{Food.find_by('name == ?', names[ing[0]]).id}")
+      else#quant is a bad number
+        Ingredient.find($1).destroy
+      end
     end
   end
 

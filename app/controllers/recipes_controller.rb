@@ -38,9 +38,17 @@ end
 
 
 def create
+
+=begin
   new_ingredients = params[:recipe].delete(:change_ingredients).split(",")
   r = Recipe.new(create_params)
-  add_ingredients(new_ingredients, r, 0)
+  add_ingredients(new_ingredients, r, 0)#add this in later
+=end
+  ingredient_quantities = params.delete(:ingreds)
+  ingredient_names = params.delete(:dropdown)
+  r=Recipe.new(create_params)
+  
+  r.update_newingredients(ingredient_quantities, ingredient_names)
   if r.save
     flash[:notice] = "New recipe #{r.name} was made"
     redirect_to recipes_path
@@ -60,7 +68,7 @@ def edit
 end
 
 def update
-#  byebug
+  byebug
   ingredient_quantities = params.delete(:ingreds)
   ingredient_names = params.delete(:dropdown)
   newingredient_updates = params.delete(:new_ingreds)

@@ -12,23 +12,29 @@
     =f.label :cooking_time
     =f.number_field :cooking_time
     %br
-    -count = 1
     %table
       %tr
         %th Ingredient
         %th Quantity
         %th Delete Ingredient
-      -(1..count).each do |x|
-        %tr
-          %td
-            <select name = "dropdown[ingredient_#{x}]">
-            -Food.all.each do |foo|
-              %option= foo.name
-            </select>
-            %br
-          %td <input type = "number" name = "ingreds[ingredient_#{x}]">
-          %td= link_to "D", recipes_path()
-    =link_to "Add ingredient", {:controller => "recipes", :action => "add_ing", :id => "#{@recipe.id}"}
+        -if params.has_key?(:additional)
+          -(1..params[:additional].to_i).each do |x|
+            %tr
+              %td
+                <select#select_name name = "dropdown[newingredient_#{x}]">
+                -Food.all.each do |foo|
+                  %option= foo.name
+                </select>
+              %td <input type = "number" name = "ingreds[newingredient_#{x}]">
+              -if params[:additional] == "1"
+                %td= link_to "Bye bye", new_recipe_path(@recipe)
+              -else
+                %td= link_to "Bye bye", new_recipe_path(@recipe, :additional => (params[:additional].to_i - 1).to_s)
+    -if params.has_key?(:additional)
+      =link_to "Add ingredient", new_recipe_path(:additional => (params[:additional].to_i + 1).to_s)
+    -else
+      =link_to "Add ingredient", new_recipe_path(:additional => "1")
+    %br
     %br
     =f.label :image
     =f.file_field :image
