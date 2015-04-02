@@ -22,12 +22,11 @@ class Recipe < ActiveRecord::Base
     end
   end
 
-  def change_ingredients
-    ing = ""
-    self.ingredients.each do |i|
-      ing << i.name << " " << i.quantity.to_s << ","
+  def update_ingredients(ingreds)
+    ingreds.each do |ing|
+      ing[0] =~ /ingredient_(\d+)/
+      Ingredient.find($1).update(:quantity => "#{ing[1]}")
     end
-    ing
   end
 
   def self.sorted_by(col)

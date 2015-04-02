@@ -12,8 +12,23 @@
     =f.label :cooking_time
     =f.number_field :cooking_time
     %br
-    =f.label :change_ingredients
-    =f.text_field :change_ingredients
+    -count = 1
+    %table
+      %tr
+        %th Ingredient
+        %th Quantity
+        %th Delete Ingredient
+      -(1..count).each do |x|
+        %tr
+          %td
+            <select name = "dropdown[ingredient_#{x}]">
+            -Food.all.each do |foo|
+              %option= foo.name
+            </select>
+            %br
+          %td <input type = "number" name = "ingreds[ingredient_#{x}]">
+          %td= link_to "D", recipes_path()
+    =link_to "Add ingredient", {:controller => "recipes", :action => "add_ing", :id => "#{@recipe.id}"}
     %br
     =f.label :image
     =f.file_field :image

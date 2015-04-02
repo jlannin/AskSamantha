@@ -1,25 +1,57 @@
 #main
 
-	%h2 Edit Recipe Details
-	= form_for @recipe, :method => :put do |f|
-
-		=f.label :name
-		=f.text_field :name
-		%br
-		=f.label :directions
-		=f.text_field :directions
-		%br
-		=f.label :cooking_time
-		=f.number_field :cooking_time
-		%br
-		=f.label :change_ingredients
-		=f.text_field :change_ingredients
-		%br
-		=f.label :image
-		=f.file_field :image
-		%br
-		=f.submit 'Update Recipe Details'
-		%br
-		%br
-		=link_to "Back to #{@recipe.name} page", recipes_path(@recipe)
-		=link_to "Back to recipe index list", recipes_path()
+  %h2 Edit Recipe Details
+  = form_for @recipe, :method => :put do |f|
+    =f.label :name
+    =f.text_field :name
+    %br
+    =f.label :directions
+    =f.text_field :directions
+    %br
+    =f.label :cooking_time
+    =f.number_field :cooking_time
+    %br
+    %table
+      %tr
+        %th Ingredient
+        %th Quantity
+        %th Delete Ingredient
+        -@recipe.ingredients.each do |i|
+          %tr
+            %td
+              <select name = "dropdown[ingredient_#{i.id}]">
+              -Food.all.each do |foo|
+                -if foo.name == i.food.name
+                  <option selected>
+                  = foo.name
+                  </option>
+                -else
+                  %option= foo.name
+              </select>
+            %td <input type = "number" name = "ingreds[ingredient_#{i.id}]" value = "#{i.quantity}">
+            %td= link_to "Bye bye", {:controller => "recipes", :action => "del_ing", :id => "#{@recipe.id}", :ing_id => "#{i.id}", :additional => params[:additional]}
+        -if params.has_key?(:additional)
+          -(1..params[:additional].to_i).each do |x|
+            %tr
+              %td
+                <select name = "dropdown[newingredient_#{x}]">
+                -Food.all.each do |foo|
+                  %option= foo.name
+                </select>
+              %td <input type = "number" name = "ingreds[newingredient_#{x}]">
+              -if params[:additional] == "1"
+                %td= link_to "Bye bye", edit_recipe_path(@recipe)
+              -else
+                %td= link_to "Bye bye", edit_recipe_path(@recipe, :additional => (params[:additional].to_i - 1).to_s)
+    -if params.has_key?(:additional)
+      =link_to "Add ingredient", edit_recipe_path(:additional => (params[:additional].to_i + 1).to_s)
+    -else
+      =link_to "Add ingredient", edit_recipe_path(:additional => "1")
+    %br
+    =f.label :image
+    =f.file_field :image
+    %br
+    =f.submit 'Update Recipe Details'
+    %br
+  =link_to "Back to #{@recipe.name} page", recipes_path(@recipe)
+  =link_to "Back to recipe index list", recipes_path()
