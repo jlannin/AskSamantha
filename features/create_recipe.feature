@@ -19,6 +19,16 @@ Feature: Create a new recipe
       | Scrambled Eggs | Eggs then milk, scramble | Eggs 4, Milk 1,         |  20          |
       | Cereal         | Milk first, then cereal  | Cereal 1, Milk 1        |  10          |
 
+  Scenario: Creating with no ingredients should fail
+    Given I am on create new recipe page
+    When I fill in the following:
+      |Name                     | new toast         |
+      |Directions               | Go to the Coop    |
+      |Cooking time             | 67                |
+    And I press "Create Recipe"
+    Then I should be creating on create new recipe page
+    And I should see "The create didn't work :( Need at least one ingredient when saving recipe."
+
   Scenario: Creating a new recipe
     Given I am on create new recipe page
     When I fill in the following:
@@ -26,7 +36,7 @@ Feature: Create a new recipe
       |Directions               | Get a new toaster |
       |Cooking time             | 121               |
       |ingreds[newingredient_1] | 7		    |
-    Then I select "Jam"
+    Then I select "Jam" for ingredient "1"
     And I press "Create Recipe"
     Then I should be on the recipes page
     And I should see "New recipe New toast was made"
@@ -50,7 +60,7 @@ Feature: Create a new recipe
     And I should see that "Tenders" has an image of "tenders_productimage.jpg"
 
   Scenario: Creating a new recipe with multiple ingredients
-Given I am on create new recipe page
+    Given I am on create new recipe page
     And I follow "Add ingredient"
     When I fill in the following:
       |Name                     | new toast         |
@@ -58,12 +68,19 @@ Given I am on create new recipe page
       |Cooking time             | 67                |
       |ingreds[newingredient_1] | 7		    |
       |ingreds[newingredient_2] | 13                |
-    Then I select "Jam for ingredient "1"
+    Then I select "Jam" for ingredient "1"
     And I select "Honey" for ingredient "2"
     And I press "Create Recipe"
     Then I should be on the recipes page
     And I should see "New recipe new toast was made"
     And I should see that "new toast" has a cooking time of "1 hour and 7 minutes"
+    Then I follow "new toast"
     And I should see that "Jam" has a quantity of "7"
     And I should see that "Honey" has a quantity of "13"
+
+
+
+
+
+   
 

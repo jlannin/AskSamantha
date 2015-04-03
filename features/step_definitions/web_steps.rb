@@ -68,6 +68,7 @@ Then /^I select "(.*?)" for ingredient "(.*?)"$/ do |arg1, arg2|
 end
 
 Then /^I should see that "(.*?)" has a quantity of "(.*?)"$/ do |ingredient, quantity|
+  byebug
   name_arr = all(".name").map {|x| x.text}
   index = name_arr.index(ingredient)
   all(".quantity")[index].text.should == quantity
@@ -90,6 +91,7 @@ When /^(?:|I )follow "([^"]*)"$/ do |link|
 end
 
 When /^(?:|I )fill in "([^"]*)" with "([^"]*)"$/ do |field, value|
+  
   fill_in(field, :with => value)
 end
 
@@ -147,7 +149,7 @@ Then /^I should see that "(.*?)" has directions of "(.*?)"$/ do |arg1, arg2|
 end
 
 Then /^I should see recipe cooking time in sorted order$/ do
-  byebug
+  #byebug
   time_arr = all("#time").map do |x|
     x.text =~ /(\d+)[a-zA-Z\s]*\s(\d+)?/
     if $2 == nil
@@ -286,8 +288,26 @@ Then /^the "([^"]*)" checkbox(?: within (.*))? should not be checked$/ do |label
     end
   end
 end
- 
+
+When(/^I delete ingredient "(.*?)"$/) do |arg1|
+  #byebug
+  page.all('a')[arg1.to_i].click
+end
+
+
+Then /^(?:|I )should be creating on (.+)$/ do |page_name|
+  #byebug
+  path_to(page_name)=~/new(.*)$/
+  current_path = URI.parse(current_url).path+$1
+  if current_path.respond_to? :should
+    current_path.should == path_to(page_name)
+  else
+    assert_equal path_to(page_name), current_path
+  end
+end
+
 Then /^(?:|I )should be on (.+)$/ do |page_name|
+  #byebug
   current_path = URI.parse(current_url).path
   if current_path.respond_to? :should
     current_path.should == path_to(page_name)

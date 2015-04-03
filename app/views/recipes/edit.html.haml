@@ -19,12 +19,10 @@
       -@recipe.ingredients.each do |i|
         %tr
           %td
-            <select name = "dropdown[ingredient_#{i.id}]">
+            <select name = "dropdown[ingredient_#{i.id}]" id="food_select_#{i.id}">
             -Food.all.each do |foo|
               -if foo.name == i.food.name
-                <option selected>
-                = foo.name
-                </option>
+                %option{:selected => "#{foo.name}"}=foo.name
               -else
                 %option= foo.name
             </select>
@@ -34,7 +32,7 @@
         -(1..params[:additional].to_i).each do |x|
           %tr
             %td
-              <select name = "new_dropdown[newingredient_#{x}]">
+              <select name = "new_dropdown[newingredient_#{x}]" id="food_select_#{x}">
               -Food.all.each do |foo|
                 %option= foo.name
               </select>
