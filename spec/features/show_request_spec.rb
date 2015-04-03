@@ -2,15 +2,18 @@ require 'rails_helper'
 
 RSpec.describe "show page", type: :feature do
   before :each do
-    Recipe.create!(:name => "Dark Chocolate Peanut Butter Cup", :directions => "Unwrap and enjoy!", :cooking_time => 34)
-    Recipe.create!(:name => "Toast with Jam", :directions => "Put the jam on the toast", :cooking_time => 12)
+    x = Recipe.new(:name => "Dark Chocolate Peanut Butter Cup", :directions => "Unwrap and enjoy!", :cooking_time => 34)
+    y = Recipe.new(:name => "Toast with Jam", :directions => "Put the jam on the toast", :cooking_time => 12)
     Food.create!(:name => "Dark Chocolate")
     Food.create!(:name => "Peanut Butter")
     Food.create!(:name => "Jam")
-    Ingredient.create!(:quantity => 56, :food_id => 1, :recipe_id => 1)  #56 dark chocolates to dark chocolate peanut butter cup
-    Ingredient.create!(:quantity => 10, :food_id => 2, :recipe_id => 1)  #10 Peanut butters to dark chocolate cup
-    Ingredient.create!(:quantity => 23, :food_id => 3, :recipe_id => 2)   #Toast gets 23 Jams
-    Ingredient.create!(:quantity => 6, :food_id => 2, :recipe_id => 2)   #Toast gets 6 Peanuts Buttre
+    x.ingredients.new(:quantity => 56, :food_id => 1, :recipe_id => 1)  #56 dark chocolates to dark chocolate peanut butter cup
+    x.ingredients.new(:quantity => 10, :food_id => 2, :recipe_id => 1)  #10 Peanut butters to dark chocolate cup
+    y.ingredients.new(:quantity => 23, :food_id => 3, :recipe_id => 2)   #Toast gets 23 Jams
+    y.ingredients.new(:quantity => 6, :food_id => 2, :recipe_id => 2)   #Toast gets 6 Peanuts Buttre
+
+    x.save
+    y.save
 
 
     visit "/recipes"

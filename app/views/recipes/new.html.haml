@@ -1,5 +1,5 @@
 #main
-
+  %h4= flash[:notice] if flash[:notice]
   %h2 Create a New Recipe
   = form_for @recipe do |f|
  

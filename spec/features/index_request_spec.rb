@@ -4,10 +4,24 @@ RSpec.describe "index page", type: :feature do
   let(:cooking_time_sort) { ["Leftover Pizza", "Dark Chocolate Peanut Butter Cup", "Toast with Jam", "Cereal" ] }
 
   before :each do
-    Recipe.create!(:name => "Dark Chocolate Peanut Butter Cup", :directions => "Unwrap and enjoy!", :cooking_time => 10)
-    Recipe.create!(:name => "Toast with Jam", :directions => "Put the jam on the toast", :cooking_time => 15)
-    Recipe.create!(:name => "Leftover Pizza", :directions => "Just pop in the microwave", :cooking_time => 1)
-    Recipe.create!(:name => "Cereal", :directions => "Milk first, always", :cooking_time => 20)
+    Food.create!(:name => "Test")
+
+    x = Recipe.new(:name => "Dark Chocolate Peanut Butter Cup", :directions => "Unwrap and enjoy!", :cooking_time => 10)
+    x.ingredients.new(:quantity => 1, :food_id => 1) 
+ 
+    y = Recipe.new(:name => "Toast with Jam", :directions => "Put the jam on the toast", :cooking_time => 15)
+    y.ingredients.new(:quantity => 1, :food_id => 1)
+
+    z = Recipe.new(:name => "Leftover Pizza", :directions => "Just pop in the microwave", :cooking_time => 1)
+    z.ingredients.new(:quantity => 1, :food_id => 1)
+
+    j = Recipe.new(:name => "Cereal", :directions => "Milk first, always", :cooking_time => 20)
+    j.ingredients.new(:quantity => 1, :food_id => 1)
+
+    x.save
+    y.save
+    z.save
+    j.save
 
     visit "/recipes"
   end

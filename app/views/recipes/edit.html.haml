@@ -1,5 +1,5 @@
 #main
-
+  %h4= flash[:notice] if flash[:notice]
   %h2 Edit Recipe Details
   = form_for @recipe, :method => :put do |f|
     =f.label :name

@@ -2,6 +2,9 @@ class Recipe < ActiveRecord::Base
   has_attached_file :image, :styles=> {:medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/empty-plate.jpg"
   validates_attachment :image, :content_type => {:content_type => ["image/jpeg", "image/png", "image/gif"]}
   has_many :ingredients
+  validates_presence_of :name, :directions, :cooking_time
+  validates_numericality_of :cooking_time
+  validate :need_at_least_one_ingredient
 
   def fix_time
     @time = ""
@@ -22,26 +25,26 @@ class Recipe < ActiveRecord::Base
     end
   end
 
-
   def update_newingredients(quantities, names)
     if(quantities != nil)
       quantities.each do |ing|
-        byebug
         if(ing[1].to_i > 0)
           self.ingredients.new(:quantity => ing[1].to_i, :food_id => "#{Food.find_by('name == ?', names[ing[0].to_sym]).id}")
         end
       end
     end
   end
-  def update_ingredients(quantities, names)
 
-    quantities.each do |ing|
-      byebug
-      ing[0] =~ /^ingredient_(\d+)/
-      if (ing[1].to_i > 0)
-        Ingredient.find($1).update(:quantity => "#{ing[1]}", :food_id => "#{Food.find_by('name == ?', names[ing[0]]).id}")
-      else#quant is a bad number
-        Ingredient.find($1).destroy
+  def update_ingredients(quantities, names)
+    if(quantities != nil)
+      quantities.each do |ing|
+        byebug
+        ing[0] =~ /^ingredient_(\d+)/
+        if (ing[1].to_i > 0)
+          Ingredient.find($1).update(:quantity => "#{ing[1]}", :food_id => "#{Food.find_by('name == ?', names[ing[0]]).id}")
+        else#quant is a bad number
+          Ingredient.find($1).destroy
+        end
       end
     end
   end
@@ -59,6 +62,14 @@ class Recipe < ActiveRecord::Base
       self.all
     else
       self.where("cooking_time <= ?", time)
+    end
+  end
+
+  private
+
+  def need_at_least_one_ingredient
+    if self.ingredients.length == 0
+      errors[:need_at_least_one_ingredient] << "when saving recipe"
     end
   end
 

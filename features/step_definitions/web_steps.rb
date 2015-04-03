@@ -50,20 +50,20 @@ end
 Given /^these recipes:$/i do |table|
   table.hashes.each do |fhash|
     arr = fhash.delete("Ingredients")
-    r = Recipe.create!(fhash)
+    r = Recipe.new(fhash)
     arr = arr.split(",")
     arr.each do |x|
       x =~  /\s?(.*)\s(\d*)/
       hash = Hash.new
       hash[:food_id] = Food.find_by('name = ?', $1).id
       hash[:quantity] = $2
-      r.ingredients.create!(hash)
+      r.ingredients.new(hash)
     end
+    r.save
   end
 end
 
 Then /^I select "(.*?)"$/ do |arg1|
-  byebug
   page.select("#{arg1}", :from => "name_select")
 end
 
@@ -148,7 +148,15 @@ Then /^I should see that "(.*?)" has directions of "(.*?)"$/ do |arg1, arg2|
 end
 
 Then /^I should see recipe cooking time in sorted order$/ do
-  time_arr = all("#time").map {|x| x.text.to_f}
+  byebug
+  time_arr = all("#time").map do |x|
+    x.text =~ /(\d+)[a-zA-Z\s]*\s(\d+)?/
+    if $2 == nil
+      $1.to_i
+    else
+      ($1.to_i * 60) + $2.to_i
+    end
+  end
   time_arr.should == time_arr.sort
 end
 

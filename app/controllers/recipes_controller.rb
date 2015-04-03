@@ -21,40 +21,23 @@ end
 
 
 def del_ing
-  
-  
-  
-#=begin
-  if params.has_key?(:additional)
-  #case 1 : trying to delete an additional
-  #case 2 : trying to delete something saved to db
-    Ingredient.find(params[:ing_id]).destroy
-  else
-    Ingredient.find(params[:ing_id]).destroy
-  end	# end statement appears to be missing here. I'm not sure what you're trying to do here
+  Ingredient.find(params[:ing_id]).destroy
   redirect_to edit_recipe_path(Recipe.find(params[:id]), :additional => params[:additional])
-#=end
 end
 
 
 def create
-
-=begin
-  new_ingredients = params[:recipe].delete(:change_ingredients).split(",")
-  r = Recipe.new(create_params)
-  add_ingredients(new_ingredients, r, 0)#add this in later
-=end
   ingredient_quantities = params.delete(:ingreds)
   ingredient_names = params.delete(:dropdown)
   r=Recipe.new(create_params)
-  
   r.update_newingredients(ingredient_quantities, ingredient_names)
   if r.save
     flash[:notice] = "New recipe #{r.name} was made"
     redirect_to recipes_path
   else
-    flash[:notice] = "The create didn't work :("
-    redirect_to new_recipe_path
+    flash[:notice] = "The create didn't work :(  "
+    flash[:notice] << r.errors.full_messages.join(". ") << "."
+    redirect_to new_recipe_path(:additional => 1)
   end
 end
 
@@ -68,7 +51,6 @@ def edit
 end
 
 def update
-  #byebug
   ingredient_quantities = params.delete(:ingreds)
   ingredient_names = params.delete(:dropdown)
   newingredient_updates = params.delete(:new_ingreds)
@@ -81,8 +63,13 @@ def update
     flash[:notice] = "You updated #{@recipe.name}"
     redirect_to recipe_path(@recipe) #redirect to the show
   else
-    flash[:notice] = "The update failed :("
-    redirect_to edit_recipe_path(@recipe) #redirect back to the edit page
+    flash[:notice] = "The update failed :(   "
+    flash[:notice] << @recipe.errors.full_messages.join(". ") << "."
+    if @recipe.errors.has_key?(:need_at_least_one_ingredient)
+      redirect_to edit_recipe_path(@recipe, {:additional => 1}) #redirect back to the edit page
+    else
+      redirect_to edit_recipe_path(@recipe)
+    end
   end
 end
 
