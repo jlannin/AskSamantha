@@ -61,7 +61,7 @@ Given /^these recipes:$/i do |table|
 end
 
 Then /^I select "(.*?)"$/ do |arg1|
-  select "#{arg1}", :from => "name_select"
+  page.select("#{arg1}", :from => "name_select")
 end
 
 Then /^I input "(.*?)"$/ do |arg1|

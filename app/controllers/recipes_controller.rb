@@ -76,6 +76,7 @@ def update
   @recipe = Recipe.find(params[:id])
   @recipe.update_ingredients(ingredient_quantities, ingredient_names)
   @recipe.update_newingredients(newingredient_updates, newingredient_names)
+  @recipe.update(update_params)
   if @recipe.save#wont fail until we add validations or force in rspec tests
     flash[:notice] = "You updated #{@recipe.name}"
     redirect_to recipe_path(@recipe) #redirect to the show

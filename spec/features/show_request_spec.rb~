@@ -4,8 +4,11 @@ RSpec.describe "index page", type: :feature do
   before :each do
     Recipe.create!(:name => "Dark Chocolate Peanut Butter Cup", :directions => "Unwrap and enjoy!", :cooking_time => 34)
     Recipe.create!(:name => "Toast with Jam", :directions => "Put the jam on the toast", :cooking_time => 12)
-    f1 = Food.create!(:name => "Peanut Butter")
-    i1 = Ingredient.create!(:quantity => 1, :food_id => 1, :recipe_id => 1)
+    Recipe.find(1).ingredients.create(:name => "Dark Chocolate (Ew)", :quantity => 10)
+    Recipe.find(1).ingredients.create(:name => "Peanuts", :quantity => 56)
+    Recipe.find(1).ingredients.create(:name => "Butter", :quantity => 10)
+    Recipe.find(2).ingredients.create(:name => "Toasted Bread", :quantity => 3)
+    Recipe.find(2).ingredients.create(:name => "Strawberry Jam", :quantity => 4)
 
     visit "/recipes"
   end

@@ -75,13 +75,10 @@ describe "POST #create" do
 
     it "should show redirect to edit on the update fail" do
       p = Recipe.create!
-      f1 = Food.create!(:name => "Peanut Butter")
-      i1 = Ingredient.create!(:quantity => 1, :food_id => 1, :recipe_id => 1)
-      
       expect(p).to receive(:update).and_return(true)
       expect(Recipe).to receive(:find).and_return(p)
       expect(p).to receive(:save).and_return(nil)#nil for fail
-      put :update, :id => p.id, :recipe => {"name"=>"tester", "cooking_time"=>"1"}, :ingreds => {"ingredient_1"=> "1"}, :dropdown => {"ingredient_1"=>"Peanut Butter"}
+      put :update, :id => p.id, :recipe => {"name"=>"tester", "cooking_time"=>"1", "change_ingredients"=>"Jam 1"}
       response.should redirect_to("/recipes/#{p.id}/edit")
     end
   end
