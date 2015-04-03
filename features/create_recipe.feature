@@ -3,12 +3,36 @@ Feature: Create a new recipe
   so that I can share my creations with the world
   I want to be able to create new recipes.
 
-  Background: the toy story has several products
+  Background: We have several foods and recipes
+
+    Given these foods:
+      | name           |
+      | Cereal         |
+      | Milk           |
+      | Honey          |
+      | Jam            |
+      | Eggs           |
+
     Given these recipes:
-      | name           |    directions            | cooking_time |
-      | Toast and Jam  | Put jam on toast         |  7           |
-      | Scrambled Eggs | Eggs then milk, scramble |  20          |
-      | Cereal         | Milk first, then cereal  |  10          |
+      | name           |    directions            | Ingredients             | cooking_time |
+      | Toast and Jam  | Put jam on toast         | Honey 1, Jam 1          |  7           |
+      | Scrambled Eggs | Eggs then milk, scramble | Eggs 4, Milk 1,         |  20          |
+      | Cereal         | Milk first, then cereal  | Cereal 1, Milk 1        |  10          |
+
+  Scenario: Creating a new recipe
+    Given I am on create new recipe page
+    When I fill in the following:
+      |Name                     | New toast         |
+      |Directions               | Get a new toaster |
+      |Cooking time             | 12                |
+      |ingreds[newingredient_1] | 7		    |
+    Then I select "Jam"
+    And I press "Create Recipe"
+    Then I should be on the recipes page
+    And I should see "New recipe new toast was made"
+    And I should see that "new toast" has a cooking time of "1 minute"
+    When I click on "new toast"
+    Then I should see that "Jam" has a quantity of "12"
 
   Scenario: Creating a new recipe with an image
     Given I am on create new recipe page
@@ -32,7 +56,7 @@ Feature: Create a new recipe
       |Name        | new toast   |
       |Directions  |get new toast|
       #ingredients problem...
-      #|Ingredients | Bread       |
+      #|Ingredients | Bread      |
       |Cooking time| 67          |
     When I attach the file "tenders_productimage.jpg" to "Image"
     And I press "Create Recipe"

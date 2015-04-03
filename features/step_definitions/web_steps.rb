@@ -41,26 +41,29 @@ When /^(.*) within (.*[^:]):$/ do |step, parent, table_or_string|
   with_scope(parent) { When "#{step}:", table_or_string }
 end
 
+Given /^these foods:$/i do |table|
+  table.hashes.each do |fhash|
+    r = Food.create!(fhash)
+  end
+end
+
 Given /^these recipes:$/i do |table|
   table.hashes.each do |fhash|
-=begin
-    if fhash.has_key? "Ingredients"
-      arr = fhash.delete("Ingredients")
-    end
+    arr = fhash.delete("Ingredients")
     r = Recipe.create!(fhash)
     arr = arr.split(",")
     arr.each do |x|
-      x =~  /(.*)\s(\d*)/
+      x =~  /\s?(.*)\s(\d*)/
       hash = Hash.new
-      hash[:name] = $1
+      hash[:food_id] = Food.find_by('name = ?', $1).id
       hash[:quantity] = $2
-      r.ingredients.create(hash)
-=end
-    Recipe.create!(fhash)
+      r.ingredients.create!(hash)
+    end
   end
 end
 
 Then /^I select "(.*?)"$/ do |arg1|
+  byebug
   page.select("#{arg1}", :from => "name_select")
 end
 

@@ -15,4 +15,4 @@
         %td.recipe_name= link_to r.name, recipe_path(r.id)
         %td= image_tag(r.image.url(:thumb))
         %td#time= r.fix_time
-  = link_to "Create a new recipe", new_recipe_path
+  = link_to "Create a new recipe", new_recipe_path(:additional => 1)

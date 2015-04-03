@@ -21,7 +21,7 @@
           -(1..params[:additional].to_i).each do |x|
             %tr
               %td
-                <select name = "dropdown[newingredient_#{x}]" id="name_select">
+                <select name = "dropdown[newingredient_#{x}]" id="food_select">
                 -Food.all.each do |foo|
                   %option= foo.name
                 </select>

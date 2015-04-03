@@ -3,12 +3,20 @@ Feature: Sort recipes by name, rating, and cooking time
   so that I can see which recipes are rated the best and are the quickest,
   I want to be able to sort by rating and cooking time.
 
-  Background: the toy story has several products
+  Background: We have several foods and recipes
+    Given these foods:
+      | name           |
+      | Cereal         |
+      | Milk           |
+      | Honey          |
+      | Jam            |
+      | Eggs           |
+
     Given these recipes:
-      | name           |    directions            | Ingredients              | cooking_time |
-      | Toast and Jam  | Put jam on toast         | Toast 1, Jam 1           |  7           |
-      | Scrambled Eggs | Eggs then milk, scramble | Egg 4, Milk 1, Butter 1  |  20          |
-      | Cereal         | Milk first, then cereal  | Cereal 1, Milk 1         |  10          |
+      | name           |    directions            | Ingredients             | cooking_time |
+      | Toast and Jam  | Put jam on toast         | Honey 1, Jam 1          |  7           |
+      | Scrambled Eggs | Eggs then milk, scramble | Eggs 4, Milk 1,         |  200         |
+      | Cereal         | Milk first, then cereal  | Cereal 1, Milk 1        |  10          |
 
   Scenario: sort by name
     When I go to the recipes page
