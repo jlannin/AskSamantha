@@ -3,8 +3,10 @@ class Recipe < ActiveRecord::Base
   validates_attachment :image, :content_type => {:content_type => ["image/jpeg", "image/png", "image/gif"]}
   has_many :ingredients
   validates_presence_of :name, :directions, :cooking_time
-  validates_numericality_of :cooking_time
+  validates :cooking_time, :numericality => {:greater_than => 0}
   validate :need_at_least_one_ingredient
+  validate :unique_ingredients
+
 
   def fix_time
     @time = ""
@@ -72,5 +74,15 @@ class Recipe < ActiveRecord::Base
       errors[:need_at_least_one_ingredient] << "when saving recipe"
     end
   end
+
+  def unique_ingredients
+    ing_arr = self.ingredients.map do |x|
+      x.food.name
+    end
+    if (ing_arr != ing_arr.uniq)
+      errors[:unique_ingredients] << "are needed"
+    end
+  end
+      
 
 end

@@ -33,30 +33,37 @@ Feature: Update the recipe details
     When I delete ingredient "1"
     And I press "Update Recipe Details"
     Then I should see that "Milk" has a quantity of "1"
-    And I should not see "Cereal"
+    And I should not see the ingredient "Cereal"
+  
+  Scenario: Update: setting to 0 should delete it
+    When I fill in "ingreds[ingredient_5]" with "0"
+    And I press "Update Recipe Details"
+    Then I should see that "Milk" has a quantity of "1"
+    And I should not see the ingredient "Cereal"
+
 
   Scenario: Update a spcecific recipe's properties
     When I fill in the following:
       |Name                     | Cereal                     |
       |Directions               | CEREAL FIRST, then milk    |
       |Cooking time             | 12                         |
-     # |Cooking time             | 12                         |
-     # |ingreds[ingredient_1]    | 2		             |
     And I press "Update Recipe Details"
     Then I should see "CEREAL FIRST, then milk"
     And I should see that "Milk" has a quantity of "1"
-    #And I should see that "Cereal" has a quantity of "2" 
     And I should see "12 minutes"
 
   Scenario: Update: change one ingredient quant
-    #When I fill in "Directions" with "CEREAL FIRST, then milk"
-    #And I fill in "Cooking time" with "61"
     When I fill in "ingreds[ingredient_5]" with "2"
     And I press "Update Recipe Details"
     Then I should see "Milk first, then cereal"
     And I should see that "Cereal" has a quantity of "2"
     And I should see that "Milk" has a quantity of "1"
     And I should see "10 minutes"
+
+  Scenario: Update: non-unique ingredients
+    When I select "Milk" for ingredient "5"
+    And I press "Update Recipe Details"
+    And I should see "The update failed :( Unique ingredients are needed."
 
 
   Scenario: Update a recipe by adding a new ingredient

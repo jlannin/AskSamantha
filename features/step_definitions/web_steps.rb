@@ -182,14 +182,23 @@ Then /^(?:|I )should see \/([^\/]*)\/$/ do |regexp|
   end
 end
 
+
 Then /^(?:|I )should not see "([^"]*)"$/ do |text|
-  byebug
+  #byebug
   if page.respond_to? :should
     page.should have_no_content(text)
   else
     assert page.has_no_content?(text)
   end
 end
+
+
+Then /^(?:|I )should not see the ingredient "([^"]*)"$/ do |arg1|
+  name_arr = all(".name").map {|x| x.text}
+  index = name_arr.index(arg1)
+  index.should == nil
+end
+ 
 
 Then /^(?:|I )should not see \/([^\/]*)\/$/ do |regexp|
   
@@ -299,7 +308,7 @@ end
 
 Then /^(?:|I )should be creating on (.+)$/ do |page_name|
   #byebug
-  path_to(page_name)=~/new(.*)$/
+  path_to(page_name)=~/new(.*)$/#hardwire
   current_path = URI.parse(current_url).path+$1
   if current_path.respond_to? :should
     current_path.should == path_to(page_name)
