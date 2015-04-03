@@ -63,16 +63,15 @@ Given /^these recipes:$/i do |table|
   end
 end
 
-Then /^I select "(.*?)"$/ do |arg1|
-  page.select("#{arg1}", :from => "name_select")
+Then /^I select "(.*?)" for ingredient "(.*?)"$/ do |arg1, arg2|
+  page.select("#{arg1}", :from => "food_select_#{arg2}")
 end
 
-Then /^I input "(.*?)"$/ do |arg1|
-  pending # express the regexp above with the code you wish you had
+Then /^I should see that "(.*?)" has a quantity of "(.*?)"$/ do |ingredient, quantity|
+  name_arr = all(".name").map {|x| x.text}
+  index = name_arr.index(ingredient)
+  all(".quantity")[index].text.should == quantity
 end
-
-
-
 
 Given /^(?:|I )am on (.+)$/ do |page_name|
   visit path_to(page_name)

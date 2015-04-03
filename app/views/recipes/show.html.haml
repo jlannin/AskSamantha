@@ -19,8 +19,8 @@
             %th Quantity
           -@recipe.ingredients.each do |i|
             %tr.ingredient_row
-              %td= i.food.name
-              %td= i.quantity
+              %td.name= i.food.name
+              %td.quantity= i.quantity
   %table.recipes_directions
     %tr
       %th Directions
