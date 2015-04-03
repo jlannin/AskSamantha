@@ -19,6 +19,7 @@ Feature: Update the recipe details
       | Cereal!        | Milk first, then cereal  | Cereal 1, Milk 1        |  10          |
 
 
+
   Given I am on the recipes page
   When I follow "Cereal!"
   Then I should see "Milk first, then cereal"

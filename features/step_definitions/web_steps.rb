@@ -68,7 +68,7 @@ Then /^I select "(.*?)" for ingredient "(.*?)"$/ do |arg1, arg2|
 end
 
 Then /^I should see that "(.*?)" has a quantity of "(.*?)"$/ do |ingredient, quantity|
-  byebug
+  #byebug
   name_arr = all(".name").map {|x| x.text}
   index = name_arr.index(ingredient)
   all(".quantity")[index].text.should == quantity
@@ -183,6 +183,7 @@ Then /^(?:|I )should see \/([^\/]*)\/$/ do |regexp|
 end
 
 Then /^(?:|I )should not see "([^"]*)"$/ do |text|
+  byebug
   if page.respond_to? :should
     page.should have_no_content(text)
   else
@@ -191,6 +192,7 @@ Then /^(?:|I )should not see "([^"]*)"$/ do |text|
 end
 
 Then /^(?:|I )should not see \/([^\/]*)\/$/ do |regexp|
+  
   regexp = Regexp.new(regexp)
 
   if page.respond_to? :should
@@ -290,8 +292,8 @@ Then /^the "([^"]*)" checkbox(?: within (.*))? should not be checked$/ do |label
 end
 
 When(/^I delete ingredient "(.*?)"$/) do |arg1|
-  #byebug
-  page.all('a')[arg1.to_i].click
+  index = arg1.to_i - 1
+  page.all('a')[index].click
 end
 
 
