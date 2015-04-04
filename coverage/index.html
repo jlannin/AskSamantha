@@ -14,7 +14,7 @@
       <img src="./assets/0.9.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2015-04-03T19:59:04-04:00">2015-04-03T19:59:04-04:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2015-04-03T21:29:13-04:00">2015-04-03T21:29:13-04:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -1740,7 +1740,7 @@
         <li class="covered" data-hits="5" data-linenumber="34">
           <span class="hits">5</span>
           
-          <code class="ruby">          self.ingredients.new(:quantity =&gt; ing[1].to_i, :food_id =&gt; &quot;#{Food.find_by(&#39;name == ?&#39;, names[ing[0].to_sym]).id}&quot;)</code>
+          <code class="ruby">          self.ingredients.new(:quantity =&gt; ing[1].to_i, :food_id =&gt; &quot;#{Food.find_by(&#39;name == ?&#39;, names[ing[0].to_sym].to_s).id}&quot;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="35">
@@ -1812,7 +1812,7 @@
         <li class="covered" data-hits="13" data-linenumber="46">
           <span class="hits">13</span>
           
-          <code class="ruby">          Ingredient.find($1).update(:quantity =&gt; &quot;#{ing[1]}&quot;, :food_id =&gt; &quot;#{Food.find_by(&#39;name == ?&#39;, names[ing[0]].to_sym).id}&quot;)</code>
+          <code class="ruby">          Ingredient.find($1).update(:quantity =&gt; &quot;#{ing[1]}&quot;, :food_id =&gt; &quot;#{Food.find_by(&#39;name == ?&#39;, names[ing[0].to_sym].to_s).id}&quot;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="47">
