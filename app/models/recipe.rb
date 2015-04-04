@@ -31,7 +31,7 @@ class Recipe < ActiveRecord::Base
     if(quantities != nil)
       quantities.each do |ing|
         if(ing[1].to_i > 0)
-          self.ingredients.new(:quantity => ing[1].to_i, :food_id => "#{Food.find_by('name == ?', names[ing[0].to_sym].to_s).id}")
+          self.ingredients.new(:quantity => ing[1].to_i, :food_id => "#{Food.find_by('name = ?', names[ing[0].to_sym].to_s).id}")
         end
       end
     end
@@ -43,7 +43,7 @@ class Recipe < ActiveRecord::Base
         #byebug
         ing[0] =~ /^ingredient_(\d+)/
         if (ing[1].to_i > 0)
-          Ingredient.find($1).update(:quantity => "#{ing[1]}", :food_id => "#{Food.find_by('name == ?', names[ing[0].to_sym].to_s).id}")
+          Ingredient.find($1).update(:quantity => "#{ing[1]}", :food_id => "#{Food.find_by('name = ?', names[ing[0].to_sym].to_s).id}")
         else#quant is a bad number
           Ingredient.find($1).destroy #HIT THIS
         end
