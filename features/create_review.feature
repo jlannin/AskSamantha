@@ -1,4 +1,4 @@
-Feature: Create a new recipe
+Feature: Create a new 
   As a chef,
   so that I can share my creations with the world
   I want to be able to create new recipes.
@@ -26,6 +26,6 @@ Feature: Create a new recipe
     When I press "Write a review"
     And I fill in "Comments" with "Theyrrrree Greeeaat!"
     And I select "5" for rating
-    And I press "Post review"
+    And I press "Post Review"
     Then I should see "Review posted"
     And I should see that the review with "Theyrrrree Greeeat!" has a rating of "5"

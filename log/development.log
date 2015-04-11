@@ -59989,3 +59989,2970 @@ Started GET "/assets/recipes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127
 
 
 Started GET "/assets/application-833bfcfa2a6bd3620f2a5e41ff8c269d.js?body=1" for 127.0.0.1 at 2015-04-11 12:39:48 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-11 13:19:27 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes"  ORDER BY name
+  Rendered recipes/index.html.haml within layouts/application (18.4ms)
+Completed 200 OK in 148ms (Views: 130.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/foods-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 13:19:27 -0400
+
+
+Started GET "/assets/fridges-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 13:19:27 -0400
+
+
+Started GET "/assets/ingredients-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 13:19:27 -0400
+
+
+Started GET "/assets/quantity_specs-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 13:19:27 -0400
+
+
+Started GET "/assets/recipes-cd4e55e930d68139af21022151dc7da3.css?body=1" for 127.0.0.1 at 2015-04-11 13:19:27 -0400
+
+
+Started GET "/assets/application-9efe71a88794e91e42e3df1bfbc8ea24.css?body=1" for 127.0.0.1 at 2015-04-11 13:19:27 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-11 13:19:27 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-11 13:19:27 -0400
+
+
+Started GET "/assets/foods-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 13:19:27 -0400
+
+
+Started GET "/assets/fridges-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 13:19:27 -0400
+
+
+Started GET "/assets/ingredients-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 13:19:27 -0400
+
+
+Started GET "/assets/quantity_specs-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 13:19:28 -0400
+
+
+Started GET "/assets/recipes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 13:19:28 -0400
+
+
+Started GET "/assets/application-833bfcfa2a6bd3620f2a5e41ff8c269d.js?body=1" for 127.0.0.1 at 2015-04-11 13:19:28 -0400
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2015-04-11 13:22:48 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mIngredient Load (0.2ms)[0m  SELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?  [["recipe_id", 1]]
+  [1m[36mFood Load (0.1ms)[0m  [1mSELECT  "foods".* FROM "foods" WHERE "foods"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mFood Load (0.1ms)[0m  SELECT  "foods".* FROM "foods" WHERE "foods"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mFood Load (0.1ms)[0m  [1mSELECT  "foods".* FROM "foods" WHERE "foods"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered recipes/show.html.haml within layouts/application (41.6ms)
+Completed 200 OK in 139ms (Views: 129.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-04-11 13:53:07 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/devise-3.4.1/app/views/devise/shared/_links.html.erb (14.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/devise-3.4.1/app/views/devise/sessions/new.html.erb within layouts/application (60.4ms)
+Completed 200 OK in 160ms (Views: 143.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/auth/github" for 127.0.0.1 at 2015-04-11 13:53:22 -0400
+
+
+Started GET "/?error=redirect_uri_mismatch&error_description=The+redirect_uri+MUST+match+the+registered+callback+URL+for+this+application.&error_uri=https%3A%2F%2Fdeveloper.github.com%2Fv3%2Foauth%2F%23redirect-uri-mismatch&state=d5dd55f6b3fd74d3f932bdf75971c31cfb2a7e110447daa6" for 127.0.0.1 at 2015-04-11 13:53:25 -0400
+Processing by RecipesController#index as HTML
+  Parameters: {"error"=>"redirect_uri_mismatch", "error_description"=>"The redirect_uri MUST match the registered callback URL for this application.", "error_uri"=>"https://developer.github.com/v3/oauth/#redirect-uri-mismatch", "state"=>"d5dd55f6b3fd74d3f932bdf75971c31cfb2a7e110447daa6"}
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes"  ORDER BY name
+  Rendered recipes/index.html.haml within layouts/application (17.6ms)
+Completed 200 OK in 103ms (Views: 95.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/foods-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 13:53:25 -0400
+
+
+Started GET "/assets/fridges-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 13:53:25 -0400
+
+
+Started GET "/assets/ingredients-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 13:53:25 -0400
+
+
+Started GET "/assets/quantity_specs-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 13:53:25 -0400
+
+
+Started GET "/assets/recipes-cd4e55e930d68139af21022151dc7da3.css?body=1" for 127.0.0.1 at 2015-04-11 13:53:25 -0400
+
+
+Started GET "/assets/application-9efe71a88794e91e42e3df1bfbc8ea24.css?body=1" for 127.0.0.1 at 2015-04-11 13:53:25 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-11 13:53:25 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-11 13:53:25 -0400
+
+
+Started GET "/assets/foods-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 13:53:25 -0400
+
+
+Started GET "/assets/fridges-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 13:53:25 -0400
+
+
+Started GET "/assets/ingredients-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 13:53:25 -0400
+
+
+Started GET "/assets/quantity_specs-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 13:53:25 -0400
+
+
+Started GET "/assets/recipes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 13:53:25 -0400
+
+
+Started GET "/assets/application-833bfcfa2a6bd3620f2a5e41ff8c269d.js?body=1" for 127.0.0.1 at 2015-04-11 13:53:25 -0400
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2015-04-11 13:53:39 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mIngredient Load (0.3ms)[0m  SELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?  [["recipe_id", 1]]
+  [1m[36mFood Load (0.2ms)[0m  [1mSELECT  "foods".* FROM "foods" WHERE "foods"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mFood Load (0.1ms)[0m  SELECT  "foods".* FROM "foods" WHERE "foods"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mFood Load (0.1ms)[0m  [1mSELECT  "foods".* FROM "foods" WHERE "foods"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered recipes/show.html.haml within layouts/application (25.2ms)
+Completed 200 OK in 102ms (Views: 98.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2015-04-11 13:53:41 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes"  ORDER BY name
+  Rendered recipes/index.html.haml within layouts/application (10.0ms)
+Completed 200 OK in 81ms (Views: 80.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-04-11 13:53:56 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/devise-3.4.1/app/views/devise/shared/_links.html.erb (5.8ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/devise-3.4.1/app/views/devise/sessions/new.html.erb within layouts/application (29.5ms)
+Completed 200 OK in 104ms (Views: 102.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2015-04-11 13:54:01 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/devise-3.4.1/app/views/devise/shared/_links.html.erb (4.7ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/devise-3.4.1/app/views/devise/registrations/new.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 97ms (Views: 92.3ms | ActiveRecord: 0.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateReviews (20150411175640)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateReviews (20150411175640)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "reviews" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "comments" text, "stars" integer, "recipe_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150411175640"]]
+  [1m[36m (16.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (3.5ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+
+
+Started GET "/recipes" for 127.0.0.1 at 2015-04-11 14:34:28 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes"  ORDER BY name
+  Rendered recipes/index.html.haml within layouts/application (11.4ms)
+Completed 200 OK in 424ms (Views: 417.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/foods-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 14:34:29 -0400
+
+
+Started GET "/assets/ingredients-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 14:34:29 -0400
+
+
+Started GET "/assets/fridges-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 14:34:29 -0400
+
+
+Started GET "/assets/quantity_specs-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 14:34:29 -0400
+
+
+Started GET "/assets/recipes-cd4e55e930d68139af21022151dc7da3.css?body=1" for 127.0.0.1 at 2015-04-11 14:34:29 -0400
+
+
+Started GET "/assets/reviews-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 14:34:29 -0400
+
+
+Started GET "/assets/application-9efe71a88794e91e42e3df1bfbc8ea24.css?body=1" for 127.0.0.1 at 2015-04-11 14:34:29 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-11 14:34:29 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-11 14:34:29 -0400
+
+
+Started GET "/assets/foods-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 14:34:29 -0400
+
+
+Started GET "/assets/fridges-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 14:34:29 -0400
+
+
+Started GET "/assets/ingredients-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 14:34:29 -0400
+
+
+Started GET "/assets/recipes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 14:34:29 -0400
+
+
+Started GET "/assets/quantity_specs-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 14:34:29 -0400
+
+
+Started GET "/assets/reviews-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 14:34:29 -0400
+
+
+Started GET "/assets/application-292b60c96f20dd4e3de4e7d55a0afa55.js?body=1" for 127.0.0.1 at 2015-04-11 14:34:29 -0400
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2015-04-11 14:34:30 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mIngredient Load (0.1ms)[0m  SELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?  [["recipe_id", 1]]
+  [1m[36mFood Load (0.1ms)[0m  [1mSELECT  "foods".* FROM "foods" WHERE "foods"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mFood Load (0.1ms)[0m  SELECT  "foods".* FROM "foods" WHERE "foods"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mFood Load (0.0ms)[0m  [1mSELECT  "foods".* FROM "foods" WHERE "foods"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered recipes/show.html.haml within layouts/application (57.2ms)
+Completed 500 Internal Server Error in 68ms
+
+ActionView::Template::Error (undefined method `new_recipe_review' for #<#<Class:0xa376d60>:0xb1a2998>):
+    28:       %td#directions=  @recipe.directions
+    29:   = link_to "Edit recipe details", edit_recipe_path
+    30:   = link_to "Back to recipes!", recipes_path
+    31:   = link_to "Write a Review", new_recipe_review(@recipe)
+  app/views/recipes/show.html.haml:31:in `_app_views_recipes_show_html_haml___867673053_93130590'
+
+
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.6ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (29.8ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.1ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (22.2ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (54.5ms)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2015-04-11 14:35:01 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mIngredient Load (0.1ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  [1m[35mFood Load (0.1ms)[0m  SELECT  "foods".* FROM "foods" WHERE "foods"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mFood Load (0.0ms)[0m  [1mSELECT  "foods".* FROM "foods" WHERE "foods"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mFood Load (0.1ms)[0m  SELECT  "foods".* FROM "foods" WHERE "foods"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered recipes/show.html.haml within layouts/application (10.5ms)
+Completed 200 OK in 89ms (Views: 87.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/foods-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 14:35:01 -0400
+
+
+Started GET "/assets/ingredients-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 14:35:01 -0400
+
+
+Started GET "/assets/fridges-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 14:35:01 -0400
+
+
+Started GET "/assets/quantity_specs-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 14:35:02 -0400
+
+
+Started GET "/assets/recipes-cd4e55e930d68139af21022151dc7da3.css?body=1" for 127.0.0.1 at 2015-04-11 14:35:02 -0400
+
+
+Started GET "/assets/reviews-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 14:35:02 -0400
+
+
+Started GET "/assets/application-9efe71a88794e91e42e3df1bfbc8ea24.css?body=1" for 127.0.0.1 at 2015-04-11 14:35:02 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-11 14:35:02 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-11 14:35:02 -0400
+
+
+Started GET "/assets/foods-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 14:35:02 -0400
+
+
+Started GET "/assets/fridges-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 14:35:02 -0400
+
+
+Started GET "/assets/ingredients-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 14:35:02 -0400
+
+
+Started GET "/assets/quantity_specs-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 14:35:02 -0400
+
+
+Started GET "/assets/recipes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 14:35:02 -0400
+
+
+Started GET "/assets/reviews-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 14:35:02 -0400
+
+
+Started GET "/assets/application-292b60c96f20dd4e3de4e7d55a0afa55.js?body=1" for 127.0.0.1 at 2015-04-11 14:35:02 -0400
+
+
+Started GET "/recipes/1/reviews/new" for 127.0.0.1 at 2015-04-11 14:35:05 -0400
+
+SyntaxError (/home/csvm/AskSamantha/app/controllers/reviews_controller.rb:18: syntax error, unexpected tIVAR, expecting ')'
+      @review = Review.new
+             ^):
+  app/controllers/reviews_controller.rb:18: syntax error, unexpected tIVAR, expecting ')'
+
+
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.6ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (24.9ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (17.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (41.4ms)
+
+
+Started GET "/recipes/1/reviews/new" for 127.0.0.1 at 2015-04-11 14:35:45 -0400
+Processing by ReviewsController#new as HTML
+  Parameters: {"recipe_id"=>"1"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 21ms
+
+ActionView::MissingTemplate (Missing template reviews/new, application/new with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :haml, :jbuilder]}. Searched in:
+  * "/home/csvm/AskSamantha/app/views"
+  * "/home/csvm/.rvm/gems/ruby-2.2.0/gems/devise-3.4.1/app/views"
+):
+  actionview (4.2.0) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.0) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.0) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.0) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.0) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.0) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.0) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.0) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.0) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.0) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.0) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.0) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.0) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.0) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.2.0) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/benchmark.rb:303:in `realtime'
+  activesupport (4.2.0) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.2.0) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.2.0) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.0) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.0) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.0) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:234:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:92:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:92:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_process_action_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.2.0) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.0) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.0) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.0) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.0) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.0) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.0) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.2.0) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.0) lib/action_controller/metal.rb:236:in `block in action'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:42:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:802:in `call'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:186:in `call!'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:164:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.6.0) lib/rack/etag.rb:24:in `call'
+  rack (1.6.0) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.0) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:647:in `call'
+  activerecord (4.2.0) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/csvm/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (27.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (19.6ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (47.2ms)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2015-04-11 14:42:04 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  [1m[35mFood Load (0.1ms)[0m  SELECT  "foods".* FROM "foods" WHERE "foods"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mFood Load (0.1ms)[0m  [1mSELECT  "foods".* FROM "foods" WHERE "foods"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mFood Load (0.0ms)[0m  SELECT  "foods".* FROM "foods" WHERE "foods"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered recipes/show.html.haml within layouts/application (20.7ms)
+Completed 200 OK in 98ms (Views: 96.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/foods-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 14:42:05 -0400
+
+
+Started GET "/assets/ingredients-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 14:42:05 -0400
+
+
+Started GET "/assets/fridges-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 14:42:05 -0400
+
+
+Started GET "/assets/quantity_specs-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 14:42:05 -0400
+
+
+Started GET "/assets/recipes-cd4e55e930d68139af21022151dc7da3.css?body=1" for 127.0.0.1 at 2015-04-11 14:42:05 -0400
+
+
+Started GET "/assets/reviews-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 14:42:05 -0400
+
+
+Started GET "/assets/application-9efe71a88794e91e42e3df1bfbc8ea24.css?body=1" for 127.0.0.1 at 2015-04-11 14:42:05 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-11 14:42:05 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-11 14:42:05 -0400
+
+
+Started GET "/assets/foods-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 14:42:05 -0400
+
+
+Started GET "/assets/fridges-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 14:42:05 -0400
+
+
+Started GET "/assets/ingredients-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 14:42:05 -0400
+
+
+Started GET "/assets/quantity_specs-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 14:42:05 -0400
+
+
+Started GET "/assets/recipes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 14:42:05 -0400
+
+
+Started GET "/assets/reviews-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 14:42:05 -0400
+
+
+Started GET "/assets/application-292b60c96f20dd4e3de4e7d55a0afa55.js?body=1" for 127.0.0.1 at 2015-04-11 14:42:05 -0400
+
+
+Started GET "/recipes/1/edit" for 127.0.0.1 at 2015-04-11 14:42:09 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mIngredient Load (0.1ms)[0m  SELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?  [["recipe_id", 1]]
+  [1m[36mFood Load (0.2ms)[0m  [1mSELECT "foods".* FROM "foods"[0m
+  [1m[35mFood Load (0.1ms)[0m  SELECT  "foods".* FROM "foods" WHERE "foods"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "foods".* FROM "foods"[0m
+  [1m[35mFood Load (0.1ms)[0m  SELECT  "foods".* FROM "foods" WHERE "foods"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "foods".* FROM "foods"[0m
+  [1m[35mFood Load (0.1ms)[0m  SELECT  "foods".* FROM "foods" WHERE "foods"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered recipes/edit.html.haml within layouts/application (23.3ms)
+Completed 200 OK in 123ms (Views: 118.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/foods-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 14:42:09 -0400
+
+
+Started GET "/assets/ingredients-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 14:42:09 -0400
+
+
+Started GET "/assets/quantity_specs-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 14:42:09 -0400
+
+
+Started GET "/assets/fridges-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 14:42:09 -0400
+
+
+Started GET "/assets/recipes-cd4e55e930d68139af21022151dc7da3.css?body=1" for 127.0.0.1 at 2015-04-11 14:42:09 -0400
+
+
+Started GET "/assets/reviews-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 14:42:09 -0400
+
+
+Started GET "/assets/application-9efe71a88794e91e42e3df1bfbc8ea24.css?body=1" for 127.0.0.1 at 2015-04-11 14:42:09 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-11 14:42:09 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-11 14:42:09 -0400
+
+
+Started GET "/assets/foods-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 14:42:09 -0400
+
+
+Started GET "/assets/fridges-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 14:42:09 -0400
+
+
+Started GET "/assets/ingredients-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 14:42:09 -0400
+
+
+Started GET "/assets/quantity_specs-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 14:42:09 -0400
+
+
+Started GET "/assets/recipes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 14:42:09 -0400
+
+
+Started GET "/assets/reviews-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 14:42:09 -0400
+
+
+Started GET "/assets/application-292b60c96f20dd4e3de4e7d55a0afa55.js?body=1" for 127.0.0.1 at 2015-04-11 14:42:09 -0400
+
+
+Started GET "/recipes" for 127.0.0.1 at 2015-04-11 14:42:13 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT "recipes".* FROM "recipes"  ORDER BY name[0m
+  Rendered recipes/index.html.haml within layouts/application (7.3ms)
+Completed 200 OK in 80ms (Views: 79.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/foods-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 14:42:13 -0400
+
+
+Started GET "/assets/fridges-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 14:42:13 -0400
+
+
+Started GET "/assets/ingredients-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 14:42:13 -0400
+
+
+Started GET "/assets/quantity_specs-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 14:42:13 -0400
+
+
+Started GET "/assets/recipes-cd4e55e930d68139af21022151dc7da3.css?body=1" for 127.0.0.1 at 2015-04-11 14:42:13 -0400
+
+
+Started GET "/assets/reviews-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 14:42:13 -0400
+
+
+Started GET "/assets/foods-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 14:42:13 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-11 14:42:13 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-11 14:42:13 -0400
+
+
+Started GET "/assets/application-9efe71a88794e91e42e3df1bfbc8ea24.css?body=1" for 127.0.0.1 at 2015-04-11 14:42:13 -0400
+
+
+Started GET "/assets/fridges-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 14:42:13 -0400
+
+
+Started GET "/assets/ingredients-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 14:42:13 -0400
+
+
+Started GET "/assets/recipes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 14:42:13 -0400
+
+
+Started GET "/assets/quantity_specs-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 14:42:13 -0400
+
+
+Started GET "/assets/reviews-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 14:42:13 -0400
+
+
+Started GET "/assets/application-292b60c96f20dd4e3de4e7d55a0afa55.js?body=1" for 127.0.0.1 at 2015-04-11 14:42:13 -0400
+
+
+Started GET "/recipes/new?additional=1" for 127.0.0.1 at 2015-04-11 14:42:14 -0400
+Processing by RecipesController#new as HTML
+  Parameters: {"additional"=>"1"}
+  [1m[35mFood Load (0.2ms)[0m  SELECT "foods".* FROM "foods"
+  Rendered recipes/new.html.haml within layouts/application (12.2ms)
+Completed 200 OK in 97ms (Views: 96.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/foods-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 14:42:14 -0400
+
+
+Started GET "/assets/fridges-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 14:42:14 -0400
+
+
+Started GET "/assets/ingredients-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 14:42:14 -0400
+
+
+Started GET "/assets/quantity_specs-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 14:42:14 -0400
+
+
+Started GET "/assets/recipes-cd4e55e930d68139af21022151dc7da3.css?body=1" for 127.0.0.1 at 2015-04-11 14:42:14 -0400
+
+
+Started GET "/assets/reviews-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 14:42:14 -0400
+
+
+Started GET "/assets/application-9efe71a88794e91e42e3df1bfbc8ea24.css?body=1" for 127.0.0.1 at 2015-04-11 14:42:14 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-11 14:42:14 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-11 14:42:14 -0400
+
+
+Started GET "/assets/foods-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 14:42:14 -0400
+
+
+Started GET "/assets/fridges-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 14:42:14 -0400
+
+
+Started GET "/assets/ingredients-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 14:42:14 -0400
+
+
+Started GET "/assets/quantity_specs-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 14:42:14 -0400
+
+
+Started GET "/assets/recipes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 14:42:14 -0400
+
+
+Started GET "/assets/reviews-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 14:42:14 -0400
+
+
+Started GET "/assets/application-292b60c96f20dd4e3de4e7d55a0afa55.js?body=1" for 127.0.0.1 at 2015-04-11 14:42:14 -0400
+
+
+Started GET "/recipes/new?additional=1" for 127.0.0.1 at 2015-04-11 14:46:35 -0400
+Processing by RecipesController#new as HTML
+  Parameters: {"additional"=>"1"}
+  [1m[36mFood Load (0.2ms)[0m  [1mSELECT "foods".* FROM "foods"[0m
+  Rendered recipes/new.html.haml within layouts/application (13.1ms)
+Completed 200 OK in 108ms (Views: 95.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/foods-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 14:46:35 -0400
+
+
+Started GET "/assets/fridges-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 14:46:35 -0400
+
+
+Started GET "/assets/ingredients-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 14:46:35 -0400
+
+
+Started GET "/assets/quantity_specs-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 14:46:35 -0400
+
+
+Started GET "/assets/recipes-cd4e55e930d68139af21022151dc7da3.css?body=1" for 127.0.0.1 at 2015-04-11 14:46:35 -0400
+
+
+Started GET "/assets/reviews-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 14:46:35 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-11 14:46:35 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-11 14:46:35 -0400
+
+
+Started GET "/assets/foods-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 14:46:35 -0400
+
+
+Started GET "/assets/fridges-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 14:46:35 -0400
+
+
+Started GET "/assets/application-9efe71a88794e91e42e3df1bfbc8ea24.css?body=1" for 127.0.0.1 at 2015-04-11 14:46:35 -0400
+
+
+Started GET "/assets/ingredients-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 14:46:35 -0400
+
+
+Started GET "/assets/quantity_specs-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 14:46:35 -0400
+
+
+Started GET "/assets/recipes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 14:46:35 -0400
+
+
+Started GET "/assets/reviews-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 14:46:35 -0400
+
+
+Started GET "/assets/application-292b60c96f20dd4e3de4e7d55a0afa55.js?body=1" for 127.0.0.1 at 2015-04-11 14:46:35 -0400
+
+
+Started GET "/recipes" for 127.0.0.1 at 2015-04-11 14:46:38 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes"  ORDER BY name
+  Rendered recipes/index.html.haml within layouts/application (14.4ms)
+Completed 200 OK in 102ms (Views: 101.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/foods-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 14:46:38 -0400
+
+
+Started GET "/assets/fridges-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 14:46:38 -0400
+
+
+Started GET "/assets/ingredients-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 14:46:38 -0400
+
+
+Started GET "/assets/quantity_specs-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 14:46:38 -0400
+
+
+Started GET "/assets/recipes-cd4e55e930d68139af21022151dc7da3.css?body=1" for 127.0.0.1 at 2015-04-11 14:46:38 -0400
+
+
+Started GET "/assets/reviews-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 14:46:38 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-11 14:46:38 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-11 14:46:38 -0400
+
+
+Started GET "/assets/foods-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 14:46:38 -0400
+
+
+Started GET "/assets/fridges-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 14:46:38 -0400
+
+
+Started GET "/assets/application-9efe71a88794e91e42e3df1bfbc8ea24.css?body=1" for 127.0.0.1 at 2015-04-11 14:46:38 -0400
+
+
+Started GET "/assets/ingredients-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 14:46:38 -0400
+
+
+Started GET "/assets/recipes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 14:46:38 -0400
+
+
+Started GET "/assets/quantity_specs-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 14:46:38 -0400
+
+
+Started GET "/assets/reviews-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 14:46:38 -0400
+
+
+Started GET "/assets/application-292b60c96f20dd4e3de4e7d55a0afa55.js?body=1" for 127.0.0.1 at 2015-04-11 14:46:38 -0400
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2015-04-11 14:46:39 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mIngredient Load (0.2ms)[0m  SELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?  [["recipe_id", 1]]
+  [1m[36mFood Load (0.2ms)[0m  [1mSELECT  "foods".* FROM "foods" WHERE "foods"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mFood Load (0.1ms)[0m  SELECT  "foods".* FROM "foods" WHERE "foods"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mFood Load (0.1ms)[0m  [1mSELECT  "foods".* FROM "foods" WHERE "foods"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered recipes/show.html.haml within layouts/application (21.3ms)
+Completed 200 OK in 100ms (Views: 94.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/foods-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 14:46:40 -0400
+
+
+Started GET "/assets/fridges-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 14:46:40 -0400
+
+
+Started GET "/assets/ingredients-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 14:46:40 -0400
+
+
+Started GET "/assets/application-9efe71a88794e91e42e3df1bfbc8ea24.css?body=1" for 127.0.0.1 at 2015-04-11 14:46:40 -0400
+
+
+Started GET "/assets/quantity_specs-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 14:46:40 -0400
+
+
+Started GET "/assets/reviews-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 14:46:40 -0400
+
+
+Started GET "/assets/recipes-cd4e55e930d68139af21022151dc7da3.css?body=1" for 127.0.0.1 at 2015-04-11 14:46:40 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-11 14:46:40 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-11 14:46:40 -0400
+
+
+Started GET "/assets/foods-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 14:46:40 -0400
+
+
+Started GET "/assets/fridges-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 14:46:40 -0400
+
+
+Started GET "/assets/ingredients-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 14:46:40 -0400
+
+
+Started GET "/assets/quantity_specs-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 14:46:40 -0400
+
+
+Started GET "/assets/recipes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 14:46:40 -0400
+
+
+Started GET "/assets/reviews-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 14:46:40 -0400
+
+
+Started GET "/assets/application-292b60c96f20dd4e3de4e7d55a0afa55.js?body=1" for 127.0.0.1 at 2015-04-11 14:46:40 -0400
+
+
+Started GET "/recipes/1/reviews/new" for 127.0.0.1 at 2015-04-11 14:46:41 -0400
+Processing by ReviewsController#new as HTML
+  Parameters: {"recipe_id"=>"1"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered reviews/new.html.haml within layouts/application (17.4ms)
+Completed 500 Internal Server Error in 29ms
+
+ActionView::Template::Error (undefined method `reviews_path' for #<#<Class:0xa2a1fac>:0xa29a1f8>):
+    1: #main
+    2:   %h4= flash[:notice] if flash[:notice]
+    3:   %h2 Create a New Review
+    4:   = form_for @review do |f|
+    5: 
+    6:     =f.label :comments
+    7:     =f.text_field :comments
+  app/views/reviews/new.html.haml:4:in `_app_views_reviews_new_html_haml__73174926_85248100'
+
+
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.1ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (32.6ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (22.9ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (45.3ms)
+
+
+Started GET "/recipes/1/reviews/new" for 127.0.0.1 at 2015-04-11 14:49:16 -0400
+Processing by ReviewsController#new as HTML
+  Parameters: {"recipe_id"=>"1"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered reviews/new.html.haml within layouts/application (22.2ms)
+Completed 500 Internal Server Error in 24ms
+
+ActionView::Template::Error (undefined method `reviews_path' for #<#<Class:0xa2a1fac>:0xb0b38ac>):
+    1: #main
+    2:   %h4= flash[:notice] if flash[:notice]
+    3:   %h2 Create a New Review
+    4:   = form_for @review do |f|
+    5: 
+    6:     =f.label :comments
+    7:     =f.text_field :comments
+  app/views/reviews/new.html.haml:4:in `_app_views_reviews_new_html_haml__73174926_92641210'
+
+
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.6ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (32.7ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (20.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (46.8ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2015-04-11 14:52:22 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes"  ORDER BY name
+  Rendered recipes/index.html.haml within layouts/application (7.6ms)
+Completed 200 OK in 89ms (Views: 88.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/foods-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 14:52:22 -0400
+
+
+Started GET "/assets/ingredients-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 14:52:22 -0400
+
+
+Started GET "/assets/fridges-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 14:52:22 -0400
+
+
+Started GET "/assets/quantity_specs-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 14:52:22 -0400
+
+
+Started GET "/assets/application-9efe71a88794e91e42e3df1bfbc8ea24.css?body=1" for 127.0.0.1 at 2015-04-11 14:52:22 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-11 14:52:22 -0400
+
+
+Started GET "/assets/recipes-cd4e55e930d68139af21022151dc7da3.css?body=1" for 127.0.0.1 at 2015-04-11 14:52:22 -0400
+
+
+Started GET "/assets/reviews-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 14:52:22 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-11 14:52:22 -0400
+
+
+Started GET "/assets/foods-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 14:52:22 -0400
+
+
+Started GET "/assets/fridges-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 14:52:22 -0400
+
+
+Started GET "/assets/ingredients-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 14:52:22 -0400
+
+
+Started GET "/assets/quantity_specs-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 14:52:22 -0400
+
+
+Started GET "/assets/recipes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 14:52:22 -0400
+
+
+Started GET "/assets/reviews-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 14:52:22 -0400
+
+
+Started GET "/assets/application-292b60c96f20dd4e3de4e7d55a0afa55.js?body=1" for 127.0.0.1 at 2015-04-11 14:52:22 -0400
+
+
+Started GET "/recipes/new?additional=1" for 127.0.0.1 at 2015-04-11 15:12:15 -0400
+Processing by RecipesController#new as HTML
+  Parameters: {"additional"=>"1"}
+  [1m[36mFood Load (8.4ms)[0m  [1mSELECT "foods".* FROM "foods"[0m
+  Rendered recipes/new.html.haml within layouts/application (13.3ms)
+Completed 200 OK in 100ms (Views: 91.2ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/assets/foods-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 15:12:15 -0400
+
+
+Started GET "/assets/ingredients-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 15:12:15 -0400
+
+
+Started GET "/assets/fridges-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 15:12:15 -0400
+
+
+Started GET "/assets/quantity_specs-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 15:12:15 -0400
+
+
+Started GET "/assets/recipes-cd4e55e930d68139af21022151dc7da3.css?body=1" for 127.0.0.1 at 2015-04-11 15:12:15 -0400
+
+
+Started GET "/assets/reviews-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 15:12:15 -0400
+
+
+Started GET "/assets/application-9efe71a88794e91e42e3df1bfbc8ea24.css?body=1" for 127.0.0.1 at 2015-04-11 15:12:15 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-11 15:12:15 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-11 15:12:15 -0400
+
+
+Started GET "/assets/recipes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 15:12:15 -0400
+
+
+Started GET "/assets/foods-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 15:12:15 -0400
+
+
+Started GET "/assets/fridges-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 15:12:15 -0400
+
+
+Started GET "/assets/ingredients-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 15:12:15 -0400
+
+
+Started GET "/assets/quantity_specs-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 15:12:15 -0400
+
+
+Started GET "/assets/application-292b60c96f20dd4e3de4e7d55a0afa55.js?body=1" for 127.0.0.1 at 2015-04-11 15:12:15 -0400
+
+
+Started GET "/assets/reviews-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 15:12:15 -0400
+
+
+Started GET "/recipes" for 127.0.0.1 at 2015-04-11 15:12:18 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes"  ORDER BY name
+  Rendered recipes/index.html.haml within layouts/application (17.1ms)
+Completed 200 OK in 101ms (Views: 100.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/foods-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 15:12:18 -0400
+
+
+Started GET "/assets/ingredients-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 15:12:18 -0400
+
+
+Started GET "/assets/fridges-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 15:12:18 -0400
+
+
+Started GET "/assets/quantity_specs-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 15:12:18 -0400
+
+
+Started GET "/assets/recipes-cd4e55e930d68139af21022151dc7da3.css?body=1" for 127.0.0.1 at 2015-04-11 15:12:18 -0400
+
+
+Started GET "/assets/reviews-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 15:12:18 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-11 15:12:18 -0400
+
+
+Started GET "/assets/application-9efe71a88794e91e42e3df1bfbc8ea24.css?body=1" for 127.0.0.1 at 2015-04-11 15:12:18 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-11 15:12:18 -0400
+
+
+Started GET "/assets/foods-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 15:12:18 -0400
+
+
+Started GET "/assets/fridges-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 15:12:18 -0400
+
+
+Started GET "/assets/ingredients-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 15:12:18 -0400
+
+
+Started GET "/assets/quantity_specs-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 15:12:18 -0400
+
+
+Started GET "/assets/recipes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 15:12:18 -0400
+
+
+Started GET "/assets/reviews-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 15:12:18 -0400
+
+
+Started GET "/assets/application-292b60c96f20dd4e3de4e7d55a0afa55.js?body=1" for 127.0.0.1 at 2015-04-11 15:12:18 -0400
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2015-04-11 15:12:29 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mIngredient Load (6.3ms)[0m  SELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?  [["recipe_id", 1]]
+  [1m[36mFood Load (0.2ms)[0m  [1mSELECT  "foods".* FROM "foods" WHERE "foods"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mFood Load (0.2ms)[0m  SELECT  "foods".* FROM "foods" WHERE "foods"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mFood Load (0.1ms)[0m  [1mSELECT  "foods".* FROM "foods" WHERE "foods"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered recipes/show.html.haml within layouts/application (26.2ms)
+Completed 200 OK in 119ms (Views: 110.9ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/assets/foods-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 15:12:29 -0400
+
+
+Started GET "/assets/fridges-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 15:12:29 -0400
+
+
+Started GET "/assets/ingredients-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 15:12:29 -0400
+
+
+Started GET "/assets/quantity_specs-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 15:12:29 -0400
+
+
+Started GET "/assets/recipes-cd4e55e930d68139af21022151dc7da3.css?body=1" for 127.0.0.1 at 2015-04-11 15:12:29 -0400
+
+
+Started GET "/assets/reviews-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 15:12:29 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-11 15:12:29 -0400
+
+
+Started GET "/assets/application-9efe71a88794e91e42e3df1bfbc8ea24.css?body=1" for 127.0.0.1 at 2015-04-11 15:12:29 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-11 15:12:29 -0400
+
+
+Started GET "/assets/foods-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 15:12:29 -0400
+
+
+Started GET "/assets/fridges-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 15:12:29 -0400
+
+
+Started GET "/assets/ingredients-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 15:12:29 -0400
+
+
+Started GET "/assets/quantity_specs-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 15:12:29 -0400
+
+
+Started GET "/assets/recipes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 15:12:29 -0400
+
+
+Started GET "/assets/reviews-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 15:12:29 -0400
+
+
+Started GET "/assets/application-292b60c96f20dd4e3de4e7d55a0afa55.js?body=1" for 127.0.0.1 at 2015-04-11 15:12:29 -0400
+
+
+Started GET "/recipes/1/reviews/new" for 127.0.0.1 at 2015-04-11 15:12:52 -0400
+Processing by ReviewsController#new as HTML
+  Parameters: {"recipe_id"=>"1"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered reviews/new.html.haml within layouts/application (30.5ms)
+Completed 500 Internal Server Error in 34ms
+
+ActionView::Template::Error (undefined method `reviews_path' for #<#<Class:0xa2a1fac>:0xb4f3584>):
+    1: #main
+    2:   %h4= flash[:notice] if flash[:notice]
+    3:   %h2 Create a New Review
+    4:   = form_for @review do |f|
+    5: 
+    6:     =f.label :comments
+    7:     =f.text_field :comments
+  app/views/reviews/new.html.haml:4:in `_app_views_reviews_new_html_haml__73174926_92641210'
+
+
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.7ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (31.2ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (21.6ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (44.5ms)
+
+
+Started GET "/recipes/1/reviews/new" for 127.0.0.1 at 2015-04-11 15:23:58 -0400
+Processing by ReviewsController#new as HTML
+  Parameters: {"recipe_id"=>"1"}
+  [1m[36mRecipe Load (0.7ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 1]]
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-11 15:36:34 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes"  ORDER BY name
+  Rendered recipes/index.html.haml within layouts/application (15.8ms)
+Completed 200 OK in 163ms (Views: 148.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/reviews-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 15:36:34 -0400
+
+
+Started GET "/assets/application-292b60c96f20dd4e3de4e7d55a0afa55.js?body=1" for 127.0.0.1 at 2015-04-11 15:36:34 -0400
+
+
+Started GET "/assets/reviews-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 15:36:34 -0400
+
+
+Started GET "/assets/foods-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 15:36:34 -0400
+
+
+Started GET "/assets/ingredients-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 15:36:34 -0400
+
+
+Started GET "/assets/fridges-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 15:36:34 -0400
+
+
+Started GET "/assets/recipes-cd4e55e930d68139af21022151dc7da3.css?body=1" for 127.0.0.1 at 2015-04-11 15:36:34 -0400
+
+
+Started GET "/assets/quantity_specs-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 15:36:34 -0400
+
+
+Started GET "/assets/application-9efe71a88794e91e42e3df1bfbc8ea24.css?body=1" for 127.0.0.1 at 2015-04-11 15:36:34 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-11 15:36:34 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-11 15:36:34 -0400
+
+
+Started GET "/assets/fridges-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 15:36:34 -0400
+
+
+Started GET "/assets/foods-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 15:36:34 -0400
+
+
+Started GET "/assets/ingredients-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 15:36:34 -0400
+
+
+Started GET "/assets/quantity_specs-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 15:36:34 -0400
+
+
+Started GET "/assets/recipes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 15:36:35 -0400
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2015-04-11 15:36:40 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mIngredient Load (0.1ms)[0m  SELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?  [["recipe_id", 1]]
+  [1m[36mFood Load (0.2ms)[0m  [1mSELECT  "foods".* FROM "foods" WHERE "foods"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mFood Load (0.1ms)[0m  SELECT  "foods".* FROM "foods" WHERE "foods"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mFood Load (0.0ms)[0m  [1mSELECT  "foods".* FROM "foods" WHERE "foods"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered recipes/show.html.haml within layouts/application (56.5ms)
+Completed 200 OK in 174ms (Views: 158.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/recipes/1/reviews/new" for 127.0.0.1 at 2015-04-11 15:36:43 -0400
+Processing by ReviewsController#new as HTML
+  Parameters: {"recipe_id"=>"1"}
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 24ms
+
+NameError (undefined local variable or method `byebuggggg' for #<ReviewsController:0xc5a9e78>):
+  app/controllers/reviews_controller.rb:19:in `new'
+
+
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.7ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (33.7ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (25.9ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (51.2ms)
+
+
+Started GET "/recipes/1/reviews/new" for 127.0.0.1 at 2015-04-11 15:37:30 -0400
+Processing by ReviewsController#new as HTML
+  Parameters: {"recipe_id"=>"1"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered reviews/new.html.haml within layouts/application (1328.6ms)
+Completed 500 Internal Server Error in 169369ms
+
+ActionView::Template::Error (undefined method `comments' for #<Recipe:0xb59c7d80>):
+     5:   = form_for @recipe do |f|
+     6: 
+     7:     =f.label :comments
+     8:     =f.text_field :comments
+     9:     %br
+    10:     =f.label :stars
+    11:     =f.number_field :stars
+  app/views/reviews/new.html.haml:8:in `block in _app_views_reviews_new_html_haml___370840655__621985218'
+  app/views/reviews/new.html.haml:5:in `_app_views_reviews_new_html_haml___370840655__621985218'
+
+
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (910.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (185.9ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (23.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (1273.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (5.6ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (9.6ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.2ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (72.9ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (1.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.2ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (199.3ms)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2015-04-11 15:40:59 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mRecipe Load (1.0ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mIngredient Load (0.7ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  [1m[35mFood Load (0.8ms)[0m  SELECT  "foods".* FROM "foods" WHERE "foods"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mFood Load (0.4ms)[0m  [1mSELECT  "foods".* FROM "foods" WHERE "foods"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mFood Load (0.4ms)[0m  SELECT  "foods".* FROM "foods" WHERE "foods"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered recipes/show.html.haml within layouts/application (182.6ms)
+Completed 200 OK in 794ms (Views: 770.3ms | ActiveRecord: 12.9ms)
+
+
+Started GET "/assets/foods-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 15:41:00 -0400
+
+
+Started GET "/assets/fridges-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 15:41:00 -0400
+
+
+Started GET "/assets/ingredients-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 15:41:01 -0400
+
+
+Started GET "/assets/reviews-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 15:41:01 -0400
+
+
+Started GET "/assets/quantity_specs-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 15:41:01 -0400
+
+
+Started GET "/assets/recipes-cd4e55e930d68139af21022151dc7da3.css?body=1" for 127.0.0.1 at 2015-04-11 15:41:01 -0400
+
+
+Started GET "/assets/application-9efe71a88794e91e42e3df1bfbc8ea24.css?body=1" for 127.0.0.1 at 2015-04-11 15:41:01 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-11 15:41:01 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-11 15:41:01 -0400
+
+
+Started GET "/assets/foods-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 15:41:01 -0400
+
+
+Started GET "/assets/fridges-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 15:41:01 -0400
+
+
+Started GET "/assets/ingredients-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 15:41:01 -0400
+
+
+Started GET "/assets/quantity_specs-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 15:41:01 -0400
+
+
+Started GET "/assets/recipes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 15:41:01 -0400
+
+
+Started GET "/assets/reviews-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 15:41:01 -0400
+
+
+Started GET "/assets/application-292b60c96f20dd4e3de4e7d55a0afa55.js?body=1" for 127.0.0.1 at 2015-04-11 15:41:01 -0400
+
+
+Started GET "/recipes/1/reviews/new" for 127.0.0.1 at 2015-04-11 15:41:03 -0400
+Processing by ReviewsController#new as HTML
+  Parameters: {"recipe_id"=>"1"}
+  [1m[36mRecipe Load (1.8ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered reviews/new.html.haml within layouts/application (149.3ms)
+Completed 500 Internal Server Error in 173ms
+
+ActionView::Template::Error (undefined method `reviews_path' for #<#<Class:0xb5a7e9e0>:0xb5dd5b0c>):
+    2:   %h4= flash[:notice] if flash[:notice]
+    3:   %h2 Create a New Review
+    4: 	
+    5:   = form_for @review do |f|
+    6: 
+    7:     =f.label :comments
+    8:     =f.text_field :comments
+  app/views/reviews/new.html.haml:5:in `_app_views_reviews_new_html_haml___370840655__621265828'
+
+
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (385.8ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (97.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (8.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (524.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (2.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (2.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (7.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (6.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (70.2ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (6.6ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.7ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (141.4ms)
+
+
+Started GET "/recipes/1/reviews/new" for 127.0.0.1 at 2015-04-11 15:41:54 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ReviewsController#new as HTML
+  Parameters: {"recipe_id"=>"1"}
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered reviews/new.html.haml within layouts/application (101.3ms)
+Completed 500 Internal Server Error in 53002ms
+
+ActionView::Template::Error (undefined method `reviews_path' for #<#<Class:0xb61c4560>:0xb61ee4b4>):
+    2:   %h4= flash[:notice] if flash[:notice]
+    3:   %h2 Create a New Review
+    4: 	
+    5:   = form_for @review do |f|
+    6: 
+    7:     =f.label :comments
+    8:     =f.text_field :comments
+  app/views/reviews/new.html.haml:5:in `_app_views_reviews_new_html_haml__452467516__621681098'
+
+
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (202.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (56.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.9ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (290.7ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (1.2ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.2ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.2ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (55.9ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (7.6ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.1ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (115.7ms)
+
+
+Started GET "/recipes/1/reviews/new" for 127.0.0.1 at 2015-04-11 15:46:44 -0400
+Processing by ReviewsController#new as HTML
+  Parameters: {"recipe_id"=>"1"}
+  [1m[36mRecipe Load (0.6ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered reviews/new.html.haml within layouts/application (63.1ms)
+Completed 500 Internal Server Error in 180ms
+
+ActionView::Template::Error (undefined method `reviews_path' for #<#<Class:0xb5f369ec>:0xb5ef305c>):
+    2:   %h4= flash[:notice] if flash[:notice]
+    3:   %h2 Create a New Review
+    4: 	
+    5:   = form_for @review do |f|
+    6: 
+    7:     =f.label :comments
+    8:     =f.text_field :comments
+  app/views/reviews/new.html.haml:5:in `_app_views_reviews_new_html_haml__452467516__621681098'
+
+
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (205.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (49.8ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (288.2ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (1.1ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (50.6ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (1.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (93.4ms)
+
+
+Started GET "/recipes/1/reviews/new" for 127.0.0.1 at 2015-04-11 15:47:05 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ReviewsController#new as HTML
+  Parameters: {"recipe_id"=>"1"}
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered reviews/new.html.haml within layouts/application (102.4ms)
+Completed 500 Internal Server Error in 67427ms
+
+ActionView::Template::Error (undefined method `reviews_path' for #<#<Class:0xa67c794>:0xb62d6ef8>):
+    2:   %h4= flash[:notice] if flash[:notice]
+    3:   %h2 Create a New Review
+    4: 	
+    5:   = form_for @review do |f|
+    6: 
+    7:     =f.label :comments
+    8:     =f.text_field :comments
+  app/views/reviews/new.html.haml:5:in `_app_views_reviews_new_html_haml__729102760__621207678'
+
+
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (200.8ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (53.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (8.7ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (289.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (2.9ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (50.9ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (108.1ms)
+
+
+Started GET "/recipes/1/reviews/new" for 127.0.0.1 at 2015-04-11 15:50:03 -0400
+Processing by ReviewsController#new as HTML
+  Parameters: {"recipe_id"=>"1"}
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered reviews/new.html.haml within layouts/application (194.2ms)
+Completed 200 OK in 1012ms (Views: 1004.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/foods-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 15:50:05 -0400
+
+
+Started GET "/assets/quantity_specs-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 15:50:05 -0400
+
+
+Started GET "/assets/ingredients-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 15:50:05 -0400
+
+
+Started GET "/assets/reviews-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 15:50:05 -0400
+
+
+Started GET "/assets/fridges-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 15:50:05 -0400
+
+
+Started GET "/assets/recipes-cd4e55e930d68139af21022151dc7da3.css?body=1" for 127.0.0.1 at 2015-04-11 15:50:05 -0400
+
+
+Started GET "/assets/application-9efe71a88794e91e42e3df1bfbc8ea24.css?body=1" for 127.0.0.1 at 2015-04-11 15:50:05 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-11 15:50:05 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-11 15:50:05 -0400
+
+
+Started GET "/assets/foods-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 15:50:05 -0400
+
+
+Started GET "/assets/fridges-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 15:50:05 -0400
+
+
+Started GET "/assets/ingredients-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 15:50:05 -0400
+
+
+Started GET "/assets/quantity_specs-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 15:50:06 -0400
+
+
+Started GET "/assets/recipes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 15:50:06 -0400
+
+
+Started GET "/assets/reviews-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 15:50:06 -0400
+
+
+Started GET "/assets/application-292b60c96f20dd4e3de4e7d55a0afa55.js?body=1" for 127.0.0.1 at 2015-04-11 15:50:06 -0400
+
+
+Started GET "/recipes/1/reviews/new" for 127.0.0.1 at 2015-04-11 15:54:21 -0400
+Processing by ReviewsController#new as HTML
+  Parameters: {"recipe_id"=>"1"}
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered reviews/new.html.haml within layouts/application (20.8ms)
+Completed 500 Internal Server Error in 42ms
+
+ActionView::Template::Error (Illegal nesting: nesting within plain text is illegal.):
+     8:     =f.text_field :comments
+     9:     %br
+    10:     <select name = "review[stars]" id="food_select_#{x}">
+    11:               -Food.all.each do |foo|
+    12:                 %option= foo.name
+    13:     </select>
+    14:     %br
+  app/views/reviews/new.html.haml:11
+
+
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (231.1ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (65.1ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.1ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (335.1ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.2ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (2.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.9ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (59.7ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.1ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (102.9ms)
+
+
+Started GET "/recipes/1/reviews/new" for 127.0.0.1 at 2015-04-11 15:56:54 -0400
+Processing by ReviewsController#new as HTML
+  Parameters: {"recipe_id"=>"1"}
+  [1m[36mRecipe Load (0.4ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered reviews/new.html.haml within layouts/application (13.6ms)
+Completed 500 Internal Server Error in 33ms
+
+ActionView::Template::Error (Illegal nesting: nesting within plain text is illegal.):
+     8:     =f.text_field :comments
+     9:     %br
+    10:     <select name = "review[stars]" id="food_select_#{x}">
+    11:       -(1..5).each do |x|
+    12:         %option= x
+    13:     </select>
+    14:     %br
+  app/views/reviews/new.html.haml:11
+
+
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (262.9ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (84.1ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (21.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (416.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (1.2ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.1ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (59.1ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (1.1ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.1ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (124.2ms)
+
+
+Started GET "/recipes/1/reviews/new" for 127.0.0.1 at 2015-04-11 15:58:06 -0400
+Processing by ReviewsController#new as HTML
+  Parameters: {"recipe_id"=>"1"}
+  [1m[35mRecipe Load (0.5ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered reviews/new.html.haml within layouts/application (96.5ms)
+Completed 500 Internal Server Error in 118ms
+
+ActionView::Template::Error (undefined local variable or method `x' for #<#<Class:0xa67c794>:0xb0b0ea4>):
+     7:     =f.label :comments
+     8:     =f.text_field :comments
+     9:     %br
+    10:     <select name = "review[stars]" id="food_select_#{x}">
+    11:     -(1..5).each do |x|
+    12:       %option= x
+    13:     </select>
+  app/views/reviews/new.html.haml:10:in `block in _app_views_reviews_new_html_haml__729102760_89706790'
+  app/views/reviews/new.html.haml:5:in `_app_views_reviews_new_html_haml__729102760_89706790'
+
+
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (207.1ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (61.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (306.8ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (1.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (7.1ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (55.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (127.3ms)
+
+
+Started GET "/recipes/1/reviews/new" for 127.0.0.1 at 2015-04-11 15:58:34 -0400
+Processing by ReviewsController#new as HTML
+  Parameters: {"recipe_id"=>"1"}
+  [1m[36mRecipe Load (0.4ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered reviews/new.html.haml within layouts/application (48.2ms)
+Completed 200 OK in 609ms (Views: 604.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/foods-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 15:58:35 -0400
+
+
+Started GET "/assets/reviews-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 15:58:35 -0400
+
+
+Started GET "/assets/fridges-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 15:58:35 -0400
+
+
+Started GET "/assets/ingredients-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 15:58:35 -0400
+
+
+Started GET "/assets/recipes-cd4e55e930d68139af21022151dc7da3.css?body=1" for 127.0.0.1 at 2015-04-11 15:58:35 -0400
+
+
+Started GET "/assets/quantity_specs-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 15:58:35 -0400
+
+
+Started GET "/assets/application-9efe71a88794e91e42e3df1bfbc8ea24.css?body=1" for 127.0.0.1 at 2015-04-11 15:58:35 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-11 15:58:35 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-11 15:58:35 -0400
+
+
+Started GET "/assets/foods-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 15:58:35 -0400
+
+
+Started GET "/assets/fridges-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 15:58:35 -0400
+
+
+Started GET "/assets/ingredients-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 15:58:35 -0400
+
+
+Started GET "/assets/quantity_specs-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 15:58:35 -0400
+
+
+Started GET "/assets/recipes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 15:58:35 -0400
+
+
+Started GET "/assets/reviews-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 15:58:36 -0400
+
+
+Started GET "/assets/application-292b60c96f20dd4e3de4e7d55a0afa55.js?body=1" for 127.0.0.1 at 2015-04-11 15:58:36 -0400
+
+
+Started POST "/recipes/1/reviews" for 127.0.0.1 at 2015-04-11 15:59:27 -0400
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JeLEMrXWB6/JbfZXCY5f97Q+OnYwylYmZO2NtQxwa8bBjQumjZAvbCrPhLZmiHwg1BF8wUF4KpB2kdJmA1mCWQ==", "review"=>{"comments"=>"Fabulous!", "stars"=>"1"}, "commit"=>"Post Review", "recipe_id"=>"1"}
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "reviews" ("stars", "comments", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["stars", 1], ["comments", "Fabulous!"], ["recipe_id", 1], ["created_at", "2015-04-11 19:59:27.659227"], ["updated_at", "2015-04-11 19:59:27.659227"]]
+  [1m[36m (14.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/recipes/1
+Completed 302 Found in 123ms (ActiveRecord: 16.4ms)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2015-04-11 15:59:27 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mRecipe Load (6.1ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mIngredient Load (0.7ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  [1m[35mFood Load (0.5ms)[0m  SELECT  "foods".* FROM "foods" WHERE "foods"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mFood Load (0.3ms)[0m  [1mSELECT  "foods".* FROM "foods" WHERE "foods"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mFood Load (0.3ms)[0m  SELECT  "foods".* FROM "foods" WHERE "foods"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered recipes/show.html.haml within layouts/application (212.8ms)
+Completed 200 OK in 791ms (Views: 776.4ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/assets/foods-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 15:59:28 -0400
+
+
+Started GET "/assets/fridges-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 15:59:28 -0400
+
+
+Started GET "/assets/ingredients-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 15:59:28 -0400
+
+
+Started GET "/assets/quantity_specs-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 15:59:28 -0400
+
+
+Started GET "/assets/recipes-cd4e55e930d68139af21022151dc7da3.css?body=1" for 127.0.0.1 at 2015-04-11 15:59:28 -0400
+
+
+Started GET "/assets/reviews-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 15:59:29 -0400
+
+
+Started GET "/assets/application-9efe71a88794e91e42e3df1bfbc8ea24.css?body=1" for 127.0.0.1 at 2015-04-11 15:59:29 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-11 15:59:29 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-11 15:59:29 -0400
+
+
+Started GET "/assets/foods-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 15:59:29 -0400
+
+
+Started GET "/assets/fridges-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 15:59:29 -0400
+
+
+Started GET "/assets/ingredients-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 15:59:29 -0400
+
+
+Started GET "/assets/quantity_specs-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 15:59:29 -0400
+
+
+Started GET "/assets/recipes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 15:59:29 -0400
+
+
+Started GET "/assets/reviews-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 15:59:29 -0400
+
+
+Started GET "/assets/application-292b60c96f20dd4e3de4e7d55a0afa55.js?body=1" for 127.0.0.1 at 2015-04-11 15:59:29 -0400
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2015-04-11 16:10:05 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered recipes/show.html.haml within layouts/application (37.8ms)
+Completed 500 Internal Server Error in 50ms
+
+ActionView::Template::Error (Inconsistent indentation: 3 tabs used for indentation, but the rest of the document was indented using 2 spaces.):
+    28:       %td#directions=  @recipe.directions
+    29:   %table.recipes_reviews
+    30:     %tr.review_header
+    31: 			%th Stars
+    32: 			%th Comments
+    33: 
+    34: 
+  app/views/recipes/show.html.haml:31
+
+
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (214.9ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (53.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.6ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (305.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (1.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.2ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (2.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (54.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.1ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (102.3ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2015-04-11 16:10:47 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.8ms)[0m  SELECT "recipes".* FROM "recipes"  ORDER BY name
+  Rendered recipes/index.html.haml within layouts/application (62.1ms)
+Completed 200 OK in 592ms (Views: 579.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/foods-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:10:48 -0400
+
+
+Started GET "/assets/fridges-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:10:48 -0400
+
+
+Started GET "/assets/reviews-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:10:48 -0400
+
+
+Started GET "/assets/ingredients-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:10:48 -0400
+
+
+Started GET "/assets/quantity_specs-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:10:48 -0400
+
+
+Started GET "/assets/recipes-cd4e55e930d68139af21022151dc7da3.css?body=1" for 127.0.0.1 at 2015-04-11 16:10:48 -0400
+
+
+Started GET "/assets/application-9efe71a88794e91e42e3df1bfbc8ea24.css?body=1" for 127.0.0.1 at 2015-04-11 16:10:48 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-11 16:10:48 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-11 16:10:49 -0400
+
+
+Started GET "/assets/foods-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:10:49 -0400
+
+
+Started GET "/assets/fridges-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:10:49 -0400
+
+
+Started GET "/assets/ingredients-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:10:49 -0400
+
+
+Started GET "/assets/quantity_specs-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:10:49 -0400
+
+
+Started GET "/assets/recipes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:10:49 -0400
+
+
+Started GET "/assets/reviews-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:10:49 -0400
+
+
+Started GET "/assets/application-292b60c96f20dd4e3de4e7d55a0afa55.js?body=1" for 127.0.0.1 at 2015-04-11 16:10:49 -0400
+
+
+Started GET "/recipes/2" for 127.0.0.1 at 2015-04-11 16:10:53 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRecipe Load (2.0ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered recipes/show.html.haml within layouts/application (51.9ms)
+Completed 500 Internal Server Error in 78ms
+
+ActionView::Template::Error (Inconsistent indentation: 2 tabs used for indentation, but the rest of the document was indented using 2 spaces.):
+    27:     %tr
+    28:       %td#directions=  @recipe.directions
+    29:   %table.recipes_reviews
+    30: 		%tr.review_header
+    31: 			%th Stars
+    32: 			%th Comments
+    33: 
+  app/views/recipes/show.html.haml:30
+
+
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (404.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (112.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (10.2ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (568.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (1.9ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.9ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.8ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.9ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (95.1ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (1.7ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.2ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (163.4ms)
+
+
+Started GET "/recipes/2" for 127.0.0.1 at 2015-04-11 16:11:24 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered recipes/show.html.haml within layouts/application (27.1ms)
+Completed 500 Internal Server Error in 36ms
+
+ActionView::Template::Error (Inconsistent indentation: 2 tabs used for indentation, but the rest of the document was indented using 2 spaces.):
+    27:     %tr
+    28:       %td#directions=  @recipe.directions
+    29:   %table.recipes_reviews
+    30: 		%tr.review_header
+    31:       %th Stars
+    32:       %th Comments
+    33: 
+  app/views/recipes/show.html.haml:30
+
+
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (226.2ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (60.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (7.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (316.8ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (7.8ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.9ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (49.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (104.3ms)
+
+
+Started GET "/recipes/2" for 127.0.0.1 at 2015-04-11 16:11:56 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRecipe Load (1.9ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mIngredient Load (0.4ms)[0m  SELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?  [["recipe_id", 2]]
+  [1m[36mFood Load (0.4ms)[0m  [1mSELECT  "foods".* FROM "foods" WHERE "foods"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mFood Load (1.5ms)[0m  SELECT  "foods".* FROM "foods" WHERE "foods"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered recipes/show.html.haml within layouts/application (101.7ms)
+Completed 200 OK in 683ms (Views: 670.1ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/assets/foods-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:11:57 -0400
+
+
+Started GET "/assets/quantity_specs-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:11:57 -0400
+
+
+Started GET "/assets/ingredients-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:11:57 -0400
+
+
+Started GET "/assets/recipes-cd4e55e930d68139af21022151dc7da3.css?body=1" for 127.0.0.1 at 2015-04-11 16:11:57 -0400
+
+
+Started GET "/assets/fridges-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:11:58 -0400
+
+
+Started GET "/assets/reviews-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:11:58 -0400
+
+
+Started GET "/assets/application-9efe71a88794e91e42e3df1bfbc8ea24.css?body=1" for 127.0.0.1 at 2015-04-11 16:11:58 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-11 16:11:58 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-11 16:11:58 -0400
+
+
+Started GET "/assets/foods-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:11:58 -0400
+
+
+Started GET "/assets/fridges-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:11:58 -0400
+
+
+Started GET "/assets/ingredients-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:11:58 -0400
+
+
+Started GET "/assets/quantity_specs-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:11:58 -0400
+
+
+Started GET "/assets/recipes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:11:58 -0400
+
+
+Started GET "/assets/reviews-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:11:58 -0400
+
+
+Started GET "/assets/application-292b60c96f20dd4e3de4e7d55a0afa55.js?body=1" for 127.0.0.1 at 2015-04-11 16:11:58 -0400
+
+
+Started GET "/recipes/2/reviews/new" for 127.0.0.1 at 2015-04-11 16:12:00 -0400
+Processing by ReviewsController#new as HTML
+  Parameters: {"recipe_id"=>"2"}
+  [1m[36mRecipe Load (0.5ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered reviews/new.html.haml within layouts/application (28.1ms)
+Completed 200 OK in 1089ms (Views: 1069.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/foods-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:12:01 -0400
+
+
+Started GET "/assets/fridges-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:12:01 -0400
+
+
+Started GET "/assets/quantity_specs-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:12:01 -0400
+
+
+Started GET "/assets/ingredients-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:12:01 -0400
+
+
+Started GET "/assets/recipes-cd4e55e930d68139af21022151dc7da3.css?body=1" for 127.0.0.1 at 2015-04-11 16:12:01 -0400
+
+
+Started GET "/assets/reviews-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:12:02 -0400
+
+
+Started GET "/assets/application-9efe71a88794e91e42e3df1bfbc8ea24.css?body=1" for 127.0.0.1 at 2015-04-11 16:12:02 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-11 16:12:02 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-11 16:12:02 -0400
+
+
+Started GET "/assets/foods-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:12:02 -0400
+
+
+Started GET "/assets/fridges-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:12:02 -0400
+
+
+Started GET "/assets/ingredients-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:12:02 -0400
+
+
+Started GET "/assets/quantity_specs-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:12:02 -0400
+
+
+Started GET "/assets/recipes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:12:02 -0400
+
+
+Started GET "/assets/reviews-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:12:02 -0400
+
+
+Started GET "/assets/application-292b60c96f20dd4e3de4e7d55a0afa55.js?body=1" for 127.0.0.1 at 2015-04-11 16:12:02 -0400
+
+
+Started POST "/recipes/2/reviews" for 127.0.0.1 at 2015-04-11 16:12:13 -0400
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Wuj04swefp4iK/2kn41d4S6UpJ1MR8EKLuztK6zuk1m+hzt29FhWXcGJj0Xwi342TrviKj31vbw8kLL4o8d6xg==", "review"=>{"comments"=>"Great!", "stars"=>"1"}, "commit"=>"Post Review", "recipe_id"=>"2"}
+  [1m[35mRecipe Load (0.6ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.8ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "reviews" ("stars", "comments", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["stars", 1], ["comments", "Great!"], ["recipe_id", 2], ["created_at", "2015-04-11 20:12:13.713748"], ["updated_at", "2015-04-11 20:12:13.713748"]]
+  [1m[36m (21.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  begin transaction
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/recipes/2
+Completed 302 Found in 176ms (ActiveRecord: 24.9ms)
+
+
+Started GET "/recipes/2" for 127.0.0.1 at 2015-04-11 16:12:13 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mRecipe Load (0.6ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mIngredient Load (0.7ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 2]]
+  [1m[35mFood Load (0.5ms)[0m  SELECT  "foods".* FROM "foods" WHERE "foods"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mFood Load (0.5ms)[0m  [1mSELECT  "foods".* FROM "foods" WHERE "foods"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered recipes/show.html.haml within layouts/application (81.0ms)
+Completed 200 OK in 1156ms (Views: 1142.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/reviews-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:12:15 -0400
+
+
+Started GET "/assets/ingredients-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:12:15 -0400
+
+
+Started GET "/assets/foods-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:12:15 -0400
+
+
+Started GET "/assets/quantity_specs-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:12:15 -0400
+
+
+Started GET "/assets/recipes-cd4e55e930d68139af21022151dc7da3.css?body=1" for 127.0.0.1 at 2015-04-11 16:12:15 -0400
+
+
+Started GET "/assets/fridges-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:12:15 -0400
+
+
+Started GET "/assets/application-9efe71a88794e91e42e3df1bfbc8ea24.css?body=1" for 127.0.0.1 at 2015-04-11 16:12:15 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-11 16:12:15 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-11 16:12:15 -0400
+
+
+Started GET "/assets/foods-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:12:15 -0400
+
+
+Started GET "/assets/fridges-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:12:15 -0400
+
+
+Started GET "/assets/ingredients-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:12:15 -0400
+
+
+Started GET "/assets/quantity_specs-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:12:15 -0400
+
+
+Started GET "/assets/recipes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:12:15 -0400
+
+
+Started GET "/assets/reviews-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:12:16 -0400
+
+
+Started GET "/assets/application-292b60c96f20dd4e3de4e7d55a0afa55.js?body=1" for 127.0.0.1 at 2015-04-11 16:12:16 -0400
+
+
+Started GET "/recipes" for 127.0.0.1 at 2015-04-11 16:13:36 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.7ms)[0m  SELECT "recipes".* FROM "recipes"  ORDER BY name
+  Rendered recipes/index.html.haml within layouts/application (25.2ms)
+Completed 200 OK in 594ms (Views: 588.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/foods-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:13:37 -0400
+
+
+Started GET "/assets/reviews-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:13:37 -0400
+
+
+Started GET "/assets/recipes-cd4e55e930d68139af21022151dc7da3.css?body=1" for 127.0.0.1 at 2015-04-11 16:13:37 -0400
+
+
+Started GET "/assets/quantity_specs-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:13:37 -0400
+
+
+Started GET "/assets/fridges-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:13:37 -0400
+
+
+Started GET "/assets/ingredients-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:13:37 -0400
+
+
+Started GET "/assets/application-9efe71a88794e91e42e3df1bfbc8ea24.css?body=1" for 127.0.0.1 at 2015-04-11 16:13:37 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-11 16:13:37 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-11 16:13:37 -0400
+
+
+Started GET "/assets/foods-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:13:37 -0400
+
+
+Started GET "/assets/fridges-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:13:38 -0400
+
+
+Started GET "/assets/ingredients-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:13:38 -0400
+
+
+Started GET "/assets/quantity_specs-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:13:38 -0400
+
+
+Started GET "/assets/recipes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:13:38 -0400
+
+
+Started GET "/assets/reviews-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:13:38 -0400
+
+
+Started GET "/assets/application-292b60c96f20dd4e3de4e7d55a0afa55.js?body=1" for 127.0.0.1 at 2015-04-11 16:13:38 -0400
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2015-04-11 16:13:41 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.6ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mIngredient Load (0.7ms)[0m  SELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?  [["recipe_id", 1]]
+  [1m[36mFood Load (0.6ms)[0m  [1mSELECT  "foods".* FROM "foods" WHERE "foods"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mFood Load (0.5ms)[0m  SELECT  "foods".* FROM "foods" WHERE "foods"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mFood Load (0.7ms)[0m  [1mSELECT  "foods".* FROM "foods" WHERE "foods"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered recipes/show.html.haml within layouts/application (194.3ms)
+Completed 200 OK in 1234ms (Views: 1214.1ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/assets/foods-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:13:42 -0400
+
+
+Started GET "/assets/reviews-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:13:42 -0400
+
+
+Started GET "/assets/ingredients-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:13:42 -0400
+
+
+Started GET "/assets/quantity_specs-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:13:42 -0400
+
+
+Started GET "/assets/recipes-cd4e55e930d68139af21022151dc7da3.css?body=1" for 127.0.0.1 at 2015-04-11 16:13:42 -0400
+
+
+Started GET "/assets/fridges-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:13:42 -0400
+
+
+Started GET "/assets/application-9efe71a88794e91e42e3df1bfbc8ea24.css?body=1" for 127.0.0.1 at 2015-04-11 16:13:42 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-11 16:13:42 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-11 16:13:43 -0400
+
+
+Started GET "/assets/foods-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:13:43 -0400
+
+
+Started GET "/assets/fridges-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:13:43 -0400
+
+
+Started GET "/assets/ingredients-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:13:43 -0400
+
+
+Started GET "/assets/quantity_specs-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:13:43 -0400
+
+
+Started GET "/assets/recipes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:13:43 -0400
+
+
+Started GET "/assets/reviews-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:13:43 -0400
+
+
+Started GET "/assets/application-292b60c96f20dd4e3de4e7d55a0afa55.js?body=1" for 127.0.0.1 at 2015-04-11 16:13:43 -0400
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2015-04-11 16:14:49 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mRecipe Load (0.4ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mIngredient Load (0.4ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  [1m[35mFood Load (0.2ms)[0m  SELECT  "foods".* FROM "foods" WHERE "foods"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mFood Load (0.3ms)[0m  [1mSELECT  "foods".* FROM "foods" WHERE "foods"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mFood Load (0.5ms)[0m  SELECT  "foods".* FROM "foods" WHERE "foods"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered recipes/show.html.haml within layouts/application (132.6ms)
+Completed 200 OK in 713ms (Views: 706.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/foods-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:14:50 -0400
+
+
+Started GET "/assets/reviews-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:14:50 -0400
+
+
+Started GET "/assets/recipes-cd4e55e930d68139af21022151dc7da3.css?body=1" for 127.0.0.1 at 2015-04-11 16:14:50 -0400
+
+
+Started GET "/assets/quantity_specs-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:14:50 -0400
+
+
+Started GET "/assets/ingredients-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:14:51 -0400
+
+
+Started GET "/assets/fridges-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:14:51 -0400
+
+
+Started GET "/assets/application-9efe71a88794e91e42e3df1bfbc8ea24.css?body=1" for 127.0.0.1 at 2015-04-11 16:14:51 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-11 16:14:51 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-11 16:14:51 -0400
+
+
+Started GET "/assets/foods-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:14:51 -0400
+
+
+Started GET "/assets/fridges-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:14:51 -0400
+
+
+Started GET "/assets/ingredients-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:14:51 -0400
+
+
+Started GET "/assets/quantity_specs-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:14:51 -0400
+
+
+Started GET "/assets/recipes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:14:51 -0400
+
+
+Started GET "/assets/reviews-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:14:51 -0400
+
+
+Started GET "/assets/application-292b60c96f20dd4e3de4e7d55a0afa55.js?body=1" for 127.0.0.1 at 2015-04-11 16:14:51 -0400
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2015-04-11 16:20:05 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered recipes/show.html.haml within layouts/application (51.5ms)
+Completed 500 Internal Server Error in 70ms
+
+ActionView::Template::Error (Inconsistent indentation: 2 tabs used for indentation, but the rest of the document was indented using 2 spaces.):
+    33:     %tr.review_header
+    34:       %th Stars
+    35:       %th Comments
+    36: 		%tr
+    37:       -@recipe.reviews.all.each do |rev|
+    38: 				%tr.review_row
+    39:           %td.rev.stars
+  app/views/recipes/show.html.haml:36
+
+
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (225.9ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (58.8ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.2ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (343.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (1.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (6.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.1ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (19.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (71.2ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (128.7ms)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2015-04-11 16:20:42 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered recipes/show.html.haml within layouts/application (47.7ms)
+Completed 500 Internal Server Error in 59ms
+
+ActionView::Template::Error (Inconsistent indentation: 4 tabs used for indentation, but the rest of the document was indented using 2 spaces.):
+    35:       %th Comments
+    36:     %tr
+    37:       -@recipe.reviews.all.each do |rev|
+    38: 				%tr.review_row
+    39:           %td.rev.stars
+    40:           %td.rev.comments
+    41: 
+  app/views/recipes/show.html.haml:38
+
+
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (234.4ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (63.9ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.2ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (354.7ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (1.6ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.7ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.3ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (78.9ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (1.1ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.5ms)
+  Rendered /home/csvm/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (124.2ms)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2015-04-11 16:21:04 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mIngredient Load (0.9ms)[0m  SELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?  [["recipe_id", 1]]
+  [1m[36mFood Load (0.3ms)[0m  [1mSELECT  "foods".* FROM "foods" WHERE "foods"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mFood Load (1.3ms)[0m  SELECT  "foods".* FROM "foods" WHERE "foods"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mFood Load (0.3ms)[0m  [1mSELECT  "foods".* FROM "foods" WHERE "foods"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mReview Load (1.6ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = ?  [["recipe_id", 1]]
+  Rendered recipes/show.html.haml within layouts/application (138.3ms)
+Completed 200 OK in 729ms (Views: 720.9ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/assets/foods-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:21:05 -0400
+
+
+Started GET "/assets/reviews-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:21:05 -0400
+
+
+Started GET "/assets/recipes-cd4e55e930d68139af21022151dc7da3.css?body=1" for 127.0.0.1 at 2015-04-11 16:21:05 -0400
+
+
+Started GET "/assets/quantity_specs-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:21:05 -0400
+
+
+Started GET "/assets/ingredients-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:21:06 -0400
+
+
+Started GET "/assets/fridges-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:21:06 -0400
+
+
+Started GET "/assets/application-9efe71a88794e91e42e3df1bfbc8ea24.css?body=1" for 127.0.0.1 at 2015-04-11 16:21:06 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-11 16:21:06 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-11 16:21:06 -0400
+
+
+Started GET "/assets/foods-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:21:06 -0400
+
+
+Started GET "/assets/fridges-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:21:06 -0400
+
+
+Started GET "/assets/ingredients-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:21:06 -0400
+
+
+Started GET "/assets/quantity_specs-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:21:06 -0400
+
+
+Started GET "/assets/recipes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:21:06 -0400
+
+
+Started GET "/assets/reviews-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:21:06 -0400
+
+
+Started GET "/assets/application-292b60c96f20dd4e3de4e7d55a0afa55.js?body=1" for 127.0.0.1 at 2015-04-11 16:21:06 -0400
+
+
+Started GET "/recipes/1/reviews/new" for 127.0.0.1 at 2015-04-11 16:21:10 -0400
+Processing by ReviewsController#new as HTML
+  Parameters: {"recipe_id"=>"1"}
+  [1m[36mRecipe Load (0.5ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered reviews/new.html.haml within layouts/application (33.4ms)
+Completed 200 OK in 1185ms (Views: 1173.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/foods-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:21:11 -0400
+
+
+Started GET "/assets/recipes-cd4e55e930d68139af21022151dc7da3.css?body=1" for 127.0.0.1 at 2015-04-11 16:21:11 -0400
+
+
+Started GET "/assets/ingredients-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:21:11 -0400
+
+
+Started GET "/assets/quantity_specs-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:21:12 -0400
+
+
+Started GET "/assets/reviews-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:21:12 -0400
+
+
+Started GET "/assets/fridges-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:21:12 -0400
+
+
+Started GET "/assets/application-9efe71a88794e91e42e3df1bfbc8ea24.css?body=1" for 127.0.0.1 at 2015-04-11 16:21:12 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-11 16:21:12 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-11 16:21:12 -0400
+
+
+Started GET "/assets/foods-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:21:12 -0400
+
+
+Started GET "/assets/fridges-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:21:12 -0400
+
+
+Started GET "/assets/ingredients-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:21:12 -0400
+
+
+Started GET "/assets/quantity_specs-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:21:12 -0400
+
+
+Started GET "/assets/recipes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:21:12 -0400
+
+
+Started GET "/assets/reviews-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:21:12 -0400
+
+
+Started GET "/assets/application-292b60c96f20dd4e3de4e7d55a0afa55.js?body=1" for 127.0.0.1 at 2015-04-11 16:21:12 -0400
+
+
+Started POST "/recipes/1/reviews" for 127.0.0.1 at 2015-04-11 16:21:20 -0400
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+w6iP/6xpF68oqm7vBGE2wv9PDizQXQqGEVdd/M9degfYW2rxveMnV8A21rTF6cMa9J6j8LzCJwKOQKk/BScdw==", "review"=>{"comments"=>"Faabbb!", "stars"=>"5"}, "commit"=>"Post Review", "recipe_id"=>"1"}
+  [1m[35mRecipe Load (8.3ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "reviews" ("stars", "comments", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["stars", 5], ["comments", "Faabbb!"], ["recipe_id", 1], ["created_at", "2015-04-11 20:21:20.348983"], ["updated_at", "2015-04-11 20:21:20.348983"]]
+  [1m[36m (16.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.6ms)[0m  begin transaction
+  [1m[36m (7.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/recipes/1
+Completed 302 Found in 160ms (ActiveRecord: 34.1ms)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2015-04-11 16:21:20 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mRecipe Load (1.8ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mIngredient Load (0.8ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  [1m[35mFood Load (0.5ms)[0m  SELECT  "foods".* FROM "foods" WHERE "foods"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mFood Load (0.5ms)[0m  [1mSELECT  "foods".* FROM "foods" WHERE "foods"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mFood Load (0.6ms)[0m  SELECT  "foods".* FROM "foods" WHERE "foods"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mReview Load (0.9ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  Rendered recipes/show.html.haml within layouts/application (148.9ms)
+Completed 200 OK in 1321ms (Views: 1308.7ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/assets/fridges-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:21:22 -0400
+
+
+Started GET "/assets/ingredients-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:21:22 -0400
+
+
+Started GET "/assets/quantity_specs-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:21:22 -0400
+
+
+Started GET "/assets/recipes-cd4e55e930d68139af21022151dc7da3.css?body=1" for 127.0.0.1 at 2015-04-11 16:21:22 -0400
+
+
+Started GET "/assets/foods-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:21:22 -0400
+
+
+Started GET "/assets/reviews-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:21:22 -0400
+
+
+Started GET "/assets/application-9efe71a88794e91e42e3df1bfbc8ea24.css?body=1" for 127.0.0.1 at 2015-04-11 16:21:22 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-11 16:21:22 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-11 16:21:22 -0400
+
+
+Started GET "/assets/foods-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:21:22 -0400
+
+
+Started GET "/assets/fridges-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:21:22 -0400
+
+
+Started GET "/assets/ingredients-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:21:22 -0400
+
+
+Started GET "/assets/quantity_specs-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:21:22 -0400
+
+
+Started GET "/assets/recipes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:21:22 -0400
+
+
+Started GET "/assets/reviews-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:21:22 -0400
+
+
+Started GET "/assets/application-292b60c96f20dd4e3de4e7d55a0afa55.js?body=1" for 127.0.0.1 at 2015-04-11 16:21:23 -0400
+
+
+Started POST "/recipes/1/reviews" for 127.0.0.1 at 2015-04-11 16:21:52 -0400
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+w6iP/6xpF68oqm7vBGE2wv9PDizQXQqGEVdd/M9degfYW2rxveMnV8A21rTF6cMa9J6j8LzCJwKOQKk/BScdw==", "review"=>{"comments"=>"Faabbb!", "stars"=>"5"}, "commit"=>"Post Review", "recipe_id"=>"1"}
+  [1m[35mRecipe Load (17.2ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.8ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "reviews" ("stars", "comments", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["stars", 5], ["comments", "Faabbb!"], ["recipe_id", 1], ["created_at", "2015-04-11 20:21:52.259428"], ["updated_at", "2015-04-11 20:21:52.259428"]]
+  [1m[36m (10.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.6ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/recipes/1
+Completed 302 Found in 182ms (ActiveRecord: 30.6ms)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2015-04-11 16:21:52 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mRecipe Load (0.5ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mIngredient Load (12.3ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  [1m[35mFood Load (0.7ms)[0m  SELECT  "foods".* FROM "foods" WHERE "foods"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mFood Load (12.0ms)[0m  [1mSELECT  "foods".* FROM "foods" WHERE "foods"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mFood Load (0.6ms)[0m  SELECT  "foods".* FROM "foods" WHERE "foods"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mReview Load (0.5ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  Rendered recipes/show.html.haml within layouts/application (280.5ms)
+Completed 200 OK in 1126ms (Views: 1093.7ms | ActiveRecord: 26.6ms)
+
+
+Started GET "/assets/foods-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:21:53 -0400
+
+
+Started GET "/assets/recipes-cd4e55e930d68139af21022151dc7da3.css?body=1" for 127.0.0.1 at 2015-04-11 16:21:53 -0400
+
+
+Started GET "/assets/quantity_specs-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:21:53 -0400
+
+
+Started GET "/assets/reviews-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:21:54 -0400
+
+
+Started GET "/assets/ingredients-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:21:54 -0400
+
+
+Started GET "/assets/fridges-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:21:54 -0400
+
+
+Started GET "/assets/application-9efe71a88794e91e42e3df1bfbc8ea24.css?body=1" for 127.0.0.1 at 2015-04-11 16:21:54 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-11 16:21:54 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-11 16:21:54 -0400
+
+
+Started GET "/assets/foods-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:21:54 -0400
+
+
+Started GET "/assets/fridges-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:21:54 -0400
+
+
+Started GET "/assets/ingredients-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:21:54 -0400
+
+
+Started GET "/assets/quantity_specs-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:21:54 -0400
+
+
+Started GET "/assets/recipes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:21:54 -0400
+
+
+Started GET "/assets/reviews-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:21:54 -0400
+
+
+Started GET "/assets/application-292b60c96f20dd4e3de4e7d55a0afa55.js?body=1" for 127.0.0.1 at 2015-04-11 16:21:54 -0400
+  [1m[36mReview Load (0.2ms)[0m  [1mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mReview Load (0.2ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  [1m[35mReview Load (0.2ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = ?  [["recipe_id", 1]]
+  [1m[36mReview Load (0.1ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = ?[0m  [["recipe_id", 1]]
+
+
+Started POST "/recipes/1/reviews" for 127.0.0.1 at 2015-04-11 16:29:34 -0400
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+w6iP/6xpF68oqm7vBGE2wv9PDizQXQqGEVdd/M9degfYW2rxveMnV8A21rTF6cMa9J6j8LzCJwKOQKk/BScdw==", "review"=>{"comments"=>"Faabbb!", "stars"=>"5"}, "commit"=>"Post Review", "recipe_id"=>"1"}
+  [1m[35mRecipe Load (0.6ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "reviews" ("stars", "comments", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["stars", 5], ["comments", "Faabbb!"], ["recipe_id", 1], ["created_at", "2015-04-11 20:29:35.229814"], ["updated_at", "2015-04-11 20:29:35.229814"]]
+  [1m[36m (13.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.6ms)[0m  begin transaction
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/recipes/1
+Completed 302 Found in 239ms (ActiveRecord: 23.6ms)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2015-04-11 16:29:35 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mRecipe Load (0.4ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mIngredient Load (2.9ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  [1m[35mFood Load (0.5ms)[0m  SELECT  "foods".* FROM "foods" WHERE "foods"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mFood Load (0.4ms)[0m  [1mSELECT  "foods".* FROM "foods" WHERE "foods"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mFood Load (0.3ms)[0m  SELECT  "foods".* FROM "foods" WHERE "foods"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mReview Load (0.6ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  Rendered recipes/show.html.haml within layouts/application (263.9ms)
+Completed 200 OK in 953ms (Views: 920.6ms | ActiveRecord: 18.5ms)
+
+
+Started GET "/assets/foods-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:29:36 -0400
+
+
+Started GET "/assets/quantity_specs-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:29:36 -0400
+
+
+Started GET "/assets/fridges-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:29:36 -0400
+
+
+Started GET "/assets/ingredients-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:29:36 -0400
+
+
+Started GET "/assets/recipes-cd4e55e930d68139af21022151dc7da3.css?body=1" for 127.0.0.1 at 2015-04-11 16:29:36 -0400
+
+
+Started GET "/assets/reviews-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:29:36 -0400
+
+
+Started GET "/assets/application-9efe71a88794e91e42e3df1bfbc8ea24.css?body=1" for 127.0.0.1 at 2015-04-11 16:29:36 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-11 16:29:36 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-11 16:29:37 -0400
+
+
+Started GET "/assets/foods-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:29:37 -0400
+
+
+Started GET "/assets/fridges-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:29:37 -0400
+
+
+Started GET "/assets/ingredients-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:29:37 -0400
+
+
+Started GET "/assets/quantity_specs-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:29:37 -0400
+
+
+Started GET "/assets/recipes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:29:37 -0400
+
+
+Started GET "/assets/reviews-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:29:37 -0400
+
+
+Started GET "/assets/application-292b60c96f20dd4e3de4e7d55a0afa55.js?body=1" for 127.0.0.1 at 2015-04-11 16:29:37 -0400
+
+
+Started GET "/recipes" for 127.0.0.1 at 2015-04-11 16:29:59 -0400
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.8ms)[0m  SELECT "recipes".* FROM "recipes"  ORDER BY name
+  Rendered recipes/index.html.haml within layouts/application (71.3ms)
+Completed 200 OK in 1342ms (Views: 1321.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/foods-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:30:00 -0400
+
+
+Started GET "/assets/fridges-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:30:01 -0400
+
+
+Started GET "/assets/recipes-cd4e55e930d68139af21022151dc7da3.css?body=1" for 127.0.0.1 at 2015-04-11 16:30:01 -0400
+
+
+Started GET "/assets/ingredients-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:30:01 -0400
+
+
+Started GET "/assets/reviews-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:30:01 -0400
+
+
+Started GET "/assets/quantity_specs-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:30:01 -0400
+
+
+Started GET "/assets/application-9efe71a88794e91e42e3df1bfbc8ea24.css?body=1" for 127.0.0.1 at 2015-04-11 16:30:01 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-11 16:30:01 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-11 16:30:01 -0400
+
+
+Started GET "/assets/foods-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:30:01 -0400
+
+
+Started GET "/assets/fridges-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:30:01 -0400
+
+
+Started GET "/assets/ingredients-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:30:01 -0400
+
+
+Started GET "/assets/quantity_specs-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:30:01 -0400
+
+
+Started GET "/assets/recipes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:30:01 -0400
+
+
+Started GET "/assets/reviews-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:30:01 -0400
+
+
+Started GET "/assets/application-292b60c96f20dd4e3de4e7d55a0afa55.js?body=1" for 127.0.0.1 at 2015-04-11 16:30:01 -0400
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2015-04-11 16:30:03 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.5ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mIngredient Load (1.3ms)[0m  SELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?  [["recipe_id", 1]]
+  [1m[36mFood Load (0.6ms)[0m  [1mSELECT  "foods".* FROM "foods" WHERE "foods"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mFood Load (0.6ms)[0m  SELECT  "foods".* FROM "foods" WHERE "foods"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mFood Load (0.5ms)[0m  [1mSELECT  "foods".* FROM "foods" WHERE "foods"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mReview Load (3.4ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = ?  [["recipe_id", 1]]
+  Rendered recipes/show.html.haml within layouts/application (296.5ms)
+Completed 200 OK in 1472ms (Views: 1458.3ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/assets/reviews-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:30:05 -0400
+
+
+Started GET "/assets/ingredients-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:30:05 -0400
+
+
+Started GET "/assets/foods-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:30:05 -0400
+
+
+Started GET "/assets/quantity_specs-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:30:05 -0400
+
+
+Started GET "/assets/recipes-cd4e55e930d68139af21022151dc7da3.css?body=1" for 127.0.0.1 at 2015-04-11 16:30:05 -0400
+
+
+Started GET "/assets/fridges-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:30:05 -0400
+
+
+Started GET "/assets/application-9efe71a88794e91e42e3df1bfbc8ea24.css?body=1" for 127.0.0.1 at 2015-04-11 16:30:05 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-11 16:30:05 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-11 16:30:05 -0400
+
+
+Started GET "/assets/foods-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:30:05 -0400
+
+
+Started GET "/assets/fridges-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:30:05 -0400
+
+
+Started GET "/assets/ingredients-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:30:05 -0400
+
+
+Started GET "/assets/quantity_specs-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:30:05 -0400
+
+
+Started GET "/assets/recipes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:30:06 -0400
+
+
+Started GET "/assets/reviews-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:30:06 -0400
+
+
+Started GET "/assets/application-292b60c96f20dd4e3de4e7d55a0afa55.js?body=1" for 127.0.0.1 at 2015-04-11 16:30:06 -0400
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2015-04-11 16:30:45 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.5ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mIngredient Load (0.5ms)[0m  SELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."recipe_id" = ?  [["recipe_id", 1]]
+  [1m[36mFood Load (0.3ms)[0m  [1mSELECT  "foods".* FROM "foods" WHERE "foods"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mFood Load (0.6ms)[0m  SELECT  "foods".* FROM "foods" WHERE "foods"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mFood Load (0.4ms)[0m  [1mSELECT  "foods".* FROM "foods" WHERE "foods"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mReview Load (0.5ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = ?  [["recipe_id", 1]]
+  Rendered recipes/show.html.haml within layouts/application (121.6ms)
+Completed 200 OK in 701ms (Views: 687.1ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/foods-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:30:46 -0400
+
+
+Started GET "/assets/reviews-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:30:46 -0400
+
+
+Started GET "/assets/quantity_specs-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:30:46 -0400
+
+
+Started GET "/assets/fridges-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:30:46 -0400
+
+
+Started GET "/assets/application-9efe71a88794e91e42e3df1bfbc8ea24.css?body=1" for 127.0.0.1 at 2015-04-11 16:30:46 -0400
+
+
+Started GET "/assets/ingredients-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:30:46 -0400
+
+
+Started GET "/assets/recipes-cd4e55e930d68139af21022151dc7da3.css?body=1" for 127.0.0.1 at 2015-04-11 16:30:46 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-11 16:30:46 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-11 16:30:46 -0400
+
+
+Started GET "/assets/foods-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:30:46 -0400
+
+
+Started GET "/assets/fridges-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:30:46 -0400
+
+
+Started GET "/assets/ingredients-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:30:46 -0400
+
+
+Started GET "/assets/quantity_specs-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:30:46 -0400
+
+
+Started GET "/assets/recipes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:30:46 -0400
+
+
+Started GET "/assets/reviews-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:30:46 -0400
+
+
+Started GET "/assets/application-292b60c96f20dd4e3de4e7d55a0afa55.js?body=1" for 127.0.0.1 at 2015-04-11 16:30:46 -0400
+
+
+Started GET "/recipes" for 127.0.0.1 at 2015-04-11 16:31:02 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (1.1ms)[0m  [1mSELECT "recipes".* FROM "recipes"  ORDER BY name[0m
+  Rendered recipes/index.html.haml within layouts/application (59.0ms)
+Completed 200 OK in 1106ms (Views: 1095.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/quantity_specs-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:31:04 -0400
+
+
+Started GET "/assets/ingredients-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:31:04 -0400
+
+
+Started GET "/assets/recipes-cd4e55e930d68139af21022151dc7da3.css?body=1" for 127.0.0.1 at 2015-04-11 16:31:04 -0400
+
+
+Started GET "/assets/reviews-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:31:04 -0400
+
+
+Started GET "/assets/fridges-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:31:04 -0400
+
+
+Started GET "/assets/foods-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-11 16:31:04 -0400
+
+
+Started GET "/assets/application-9efe71a88794e91e42e3df1bfbc8ea24.css?body=1" for 127.0.0.1 at 2015-04-11 16:31:04 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-11 16:31:04 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-11 16:31:04 -0400
+
+
+Started GET "/assets/foods-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:31:04 -0400
+
+
+Started GET "/assets/fridges-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:31:04 -0400
+
+
+Started GET "/assets/ingredients-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:31:04 -0400
+
+
+Started GET "/assets/quantity_specs-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:31:04 -0400
+
+
+Started GET "/assets/recipes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:31:04 -0400
+
+
+Started GET "/assets/reviews-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-11 16:31:04 -0400
+
+
+Started GET "/assets/application-292b60c96f20dd4e3de4e7d55a0afa55.js?body=1" for 127.0.0.1 at 2015-04-11 16:31:04 -0400

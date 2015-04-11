@@ -1,4 +1,5 @@
 #main
+  = link_to "Back to recipes!", recipes_path
   %h4= flash[:notice] if flash[:notice] 
   %h3= "Recipe Details For #{@recipe.name}"
   %table.recipes_table
@@ -26,5 +27,21 @@
       %th Directions
     %tr
       %td#directions=  @recipe.directions
+  %table.recipes_reviews
+    %tr  
+      %th Reviews
+    %tr
+    %tr.review_header
+      %th Stars
+      %th Comments
+    %tr
+      -@recipe.reviews.each do |rev|
+        %tr.review_row
+          %td=rev.stars
+          %td=rev.comments
+
+
+
+
   = link_to "Edit recipe details", edit_recipe_path
-  = link_to "Back to recipes!", recipes_path
+  = link_to "Write a Review", new_recipe_review_path(@recipe)

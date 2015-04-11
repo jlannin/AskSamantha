@@ -1,0 +1,17 @@
+#main
+  %h4= flash[:notice] if flash[:notice]
+  %h2 Create a New Review
+	
+  = form_for [@recipe, @review], :method => :post do |f|
+
+    =f.label :comments
+    =f.text_field :comments
+    %br
+    <select name = "review[stars]">
+    -(1..5).each do |x|
+      %option= x
+    </select>
+    %br
+    =f.submit 'Post Review'
+    %br
+    =link_to "Back to Recipe", recipes_path()

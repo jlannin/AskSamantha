@@ -2,6 +2,7 @@ class Recipe < ActiveRecord::Base
   has_attached_file :image, :styles=> {:medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/empty-plate.jpg"
   validates_attachment :image, :content_type => {:content_type => ["image/jpeg", "image/png", "image/gif"]}
   has_many :ingredients
+  has_many :reviews
   validates_presence_of :name, :directions, :cooking_time
   validates :cooking_time, :numericality => {:greater_than => 0}
   validate :need_at_least_one_ingredient
