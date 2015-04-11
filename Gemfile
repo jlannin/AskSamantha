@@ -13,6 +13,10 @@ gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+gem 'devise'
+gem 'omniauth'
+gem 'omniauth-github'
+
 gem 'haml-rails'
 
 gem "paperclip", "~> 4.2"
