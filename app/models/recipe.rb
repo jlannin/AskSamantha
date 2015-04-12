@@ -51,6 +51,10 @@ class Recipe < ActiveRecord::Base
     end
   end
 
+  def self.search(search)
+    Recipe.where("name like ?", "%#{search}%")
+  end
+
   def self.sorted_by(col)
     if self.column_names.include?(col)
       if col == "average_rating"

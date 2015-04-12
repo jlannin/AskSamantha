@@ -7,11 +7,14 @@ def index
     if params[:cooking_time] != nil
       session[:cooking_time] = params[:cooking_time]
     end
+    if params[:recipe_search] != nil
+      session[:recipe_search] = params[:recipe_search]
+    end
     handle_redirects
     if params[:query] == nil
-      @recipes = Recipe.filter(params[:cooking_time]).sorted_by("name")
+      @recipes = Recipe.filter(params[:cooking_time]).sorted_by("name").search(params[:recipe_search])
     else
-      @recipes = Recipe.filter(params[:cooking_time]).sorted_by(params[:query])
+      @recipes = Recipe.filter(params[:cooking_time]).sorted_by(params[:query]).search(params[:recipe_search])
     end
 end
 
@@ -86,18 +89,30 @@ def create_params
 end
 
 def handle_redirects
+  hash = Hash.new
+  redirect = false
   if !params.has_key?(:cooking_time) && session.has_key?(:cooking_time) && session[:cooking_time] != ""
+    hash[:cooking_time] = session[:cooking_time]
+    hash[:query] = params[:query] unless !params.has_key?(:query)
+    hash[:recipe_search] = params[:query] unless !params.has_key?(:query)
+    redirect = true
+  end
+  #should have cooking time set
+  if !params.has_key?(:query) && session.has_key?(:query) && session[:query] != ""
+    hash[:query] = session[:query]
+    hash[:cooking_time] = params[:cooking_time] unless !params.has_key?(:cooking_time)
+    hash[:recipe_search] = params[:recipe_search] unless !params.has_key?(:recipe_search)
+    redirect = true
+  end
+  if !params.has_key?(:recipe_search) && session.has_key?(:recipe_search) && session[:recipe_search] != ""
+    hash[:recipe_search] = session[:recipe_search]
+    hash[:cooking_time] = params[:cooking_time] unless !params.has_key?(:cooking_time)
+    hash[:recipe_search] = params[:query] unless !params.has_key?(:query)
+    redirect = true
+  end
+  if redirect
     flash.keep
-    if session.has_key?(:query)
-      redirect_to recipes_path(:cooking_time => session[:cooking_time], :query => session[:query]) and return
-    else
-      redirect_to recipes_path(:cooking_time => session[:cooking_time]) and return
-    end
-  else
-    if !params.has_key?(:query) && session.has_key?(:query)
-      flash.keep
-      redirect_to recipes_path(:cooking_time => params[:cooking_time], :query => session[:query]) and return
-    end
+    redirect_to recipes_path(hash) and return
   end
 end
 end
