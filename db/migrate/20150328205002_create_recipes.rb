@@ -4,6 +4,7 @@ class CreateRecipes < ActiveRecord::Migration
       t.string :name
       t.text :directions
       t.integer :cooking_time
+      t.float :average_rating, :default => nil
 
       t.timestamps null: false
     end

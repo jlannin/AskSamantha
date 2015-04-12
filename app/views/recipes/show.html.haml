@@ -30,15 +30,21 @@
   %table.recipes_reviews
     %tr  
       %th Reviews
-    %tr
-    %tr.review_header
-      %th Stars
-      %th Comments
-    %tr
-      -@recipe.reviews.each do |rev|
-        %tr.review_row
-          %td=rev.stars
-          %td=rev.comments
+    -if @recipe.reviews == []
+      %tr
+        %td Write the first review!
+    -else
+      %tr
+        %td
+          %table
+            %tr.review_header
+              %th Stars
+              %th Comments
+            %tr
+              -@recipe.reviews.each do |rev|
+                %tr.review_row
+                  %td=rev.stars
+                  %td=rev.comments
 
 
 

@@ -53,10 +53,13 @@ class Recipe < ActiveRecord::Base
 
   def self.sorted_by(col)
     if self.column_names.include?(col)
-      self.order(col)
-    else
-      self.order("name")
+      if col == "average_rating"
+        s = self.order("#{col} DESC")
+      else
+        s = self.order(col)
+      end
     end
+    s.order("name")
   end
 
   def self.filter(time)
@@ -64,6 +67,17 @@ class Recipe < ActiveRecord::Base
       self.all
     else
       self.where("cooking_time <= ?", time)
+    end
+  end
+
+  def update_avg_rating(new_rating)
+    if (new_rating != nil)
+      count = self.reviews.length + 1
+      rating = new_rating
+      self.reviews.each do |r|
+        rating += r.stars
+      end
+      self.average_rating = rating.to_f / count.to_f
     end
   end
 

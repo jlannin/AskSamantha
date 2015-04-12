@@ -10,9 +10,14 @@
       %th= link_to "Name", recipes_path(:query => "name")
       %th Image
       %th= link_to "Cooking Time", recipes_path(:query => "cooking_time")
+      %th= link_to "Ratings", recipes_path(:query => "average_rating")
     -@recipes.each do |r|
       %tr.recipe_row
         %td.recipe_name= link_to r.name, recipe_path(r.id)
         %td= image_tag(r.image.url(:thumb))
         %td#time= r.fix_time
+        - if r.average_rating != nil
+          %td= r.average_rating.round(2)
+        -else
+          %td Not yet rated!
   = link_to "Create a new recipe", new_recipe_path(:additional => 1)

@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 20150411175640) do
     t.string   "name"
     t.text     "directions"
     t.integer  "cooking_time"
+    t.float    "average_rating"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
     t.string   "image_file_name"

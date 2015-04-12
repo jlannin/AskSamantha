@@ -3,8 +3,9 @@ class ReviewsController < ApplicationController
    def create
       @recipe = Recipe.find(params[:recipe_id])
       @review = Review.new(create_update_params)
+      @recipe.update_avg_rating(@review.stars)
       @recipe.reviews << @review
-      if @review.save
+      if @recipe.save
          flash[:notice] = 'Review successfully created.'
          redirect_to(recipe_path(@recipe))
       else
