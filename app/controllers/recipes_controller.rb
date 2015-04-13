@@ -1,6 +1,7 @@
 class RecipesController < ApplicationController
 
 def index
+    @user = current_user
     if params[:query] != nil
       session[:query] = params[:query]
     end

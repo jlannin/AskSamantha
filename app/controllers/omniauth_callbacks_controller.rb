@@ -6,7 +6,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       flash[:notice] = "Successful authentication via github"
       sign_in_and_redirect @user
     else
-      session["devise.user_attributes"] = user.attributes
+      session["devise.user_attributes"] = @user.attributes
       redirect_to new_user_registration_url
     end
   end
