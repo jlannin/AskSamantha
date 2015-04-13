@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'sessions/new'
+
   devise_for :users, controllers:
     { omniauth_callbacks: "omniauth_callbacks" }
     root 'recipes#index'
