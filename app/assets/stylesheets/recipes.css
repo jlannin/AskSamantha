@@ -26,3 +26,12 @@ body h1 {
   text-align: center;
 	color: #ffe28a
 }
+
+.login {
+  text-align: right;
+  margin-right: 2cm;
+}
+
+a:hover {
+  color: red;
+}

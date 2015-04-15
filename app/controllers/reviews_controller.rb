@@ -6,10 +6,10 @@ class ReviewsController < ApplicationController
       @recipe.update_avg_rating(@review.stars)
       @recipe.reviews << @review
       if @recipe.save
-         flash[:notice] = 'Review successfully created.'
+         flash[:notice] = 'Review successfully created!'
          redirect_to(recipe_path(@recipe))
       else
-         flash[:notice] = 'Failure to create new review.'
+         flash[:notice] = 'Failure to create new review!'
          redirect_to(new_recipe_review_path(@recipe))
       end
    end

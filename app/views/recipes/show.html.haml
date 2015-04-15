@@ -1,3 +1,4 @@
+=render 'login'
 #main
   = link_to "Back to recipes!", recipes_path
   %h4= flash[:notice] if flash[:notice] 
@@ -43,8 +44,8 @@
             %tr
               -@recipe.reviews.each do |rev|
                 %tr.review_row
-                  %td=rev.stars
-                  %td=rev.comments
+                  %td.stars=rev.stars
+                  %td.comment=rev.comments
 
 
 

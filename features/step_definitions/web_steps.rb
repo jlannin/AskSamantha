@@ -67,11 +67,22 @@ Then /^I select "(.*?)" for ingredient "(.*?)"$/ do |arg1, arg2|
   page.select("#{arg1}", :from => "food_select_#{arg2}")
 end
 
+Then /^I select "(.*?)" for rating$/ do |arg1|
+  page.select("#{arg1}", :from => "review_stars")
+end
+
 Then /^I should see that "(.*?)" has a quantity of "(.*?)"$/ do |ingredient, quantity|
   #byebug
   name_arr = all(".name").map {|x| x.text}
   index = name_arr.index(ingredient)
   all(".quantity")[index].text.should == quantity
+end
+
+Then /^I should see that the review with "(.*?)" has a rating of "(.*?)"$/ do |comment, rating|
+  #byebug
+  review_arr = all(".comment").map {|x| x.text}
+  index = review_arr.index(comment)
+  all(".stars")[index].text.should == rating
 end
 
 Given /^(?:|I )am on (.+)$/ do |page_name|

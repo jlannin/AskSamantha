@@ -1,14 +1,10 @@
+= render 'login'
 #main
-  - if (@user)
-    %p.welcome Welcome, #{@user.email}
-    =link_to "Sign Out", destroy_user_session_path, :method => "delete"
-  - else
-    %p.login= link_to "Login", (new_user_session_path)
   %h4= flash[:notice] if flash[:notice] 
   %h3 All Recipes
   = form_tag recipes_path, method: :get do
-    = label_tag "recipe_search"
-    = text_field_tag "recipe_search", nil, maxlength: 10
+    = label_tag "recipe_name"
+    = text_field_tag "recipe_name", nil, maxlength: 10
     = submit_tag "Search Recipes"
   = form_tag('/recipes', method: :get) do
     = label_tag(:cooking_time, "Meals in:")

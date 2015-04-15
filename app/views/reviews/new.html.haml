@@ -3,14 +3,18 @@
   %h2 Create a New Review
 	
   = form_for [@recipe, @review], :method => :post do |f|
-
-    =f.label :comments
-    =f.text_field :comments
-    %br
-    <select name = "review[stars]">
-    -(1..5).each do |x|
-      %option= x
-    </select>
+    %table
+      %tr
+        %th Comments
+        %th Stars
+      %tr
+        %td
+          =f.text_field :comments
+        %td
+          <select name = "review[stars]" id = "review_stars">
+          -(1..5).each do |x|
+            %option= x
+          </select>
     %br
     =f.submit 'Post Review'
     %br

@@ -1,0 +1,10 @@
+- if (@user)
+  %p.login
+    #{@user.email} 
+    |
+    =link_to " Sign Out", destroy_user_session_path, :method => "delete"
+- else
+  %p.login
+    Welcome
+    |
+    = link_to "Login", (new_user_session_path)
