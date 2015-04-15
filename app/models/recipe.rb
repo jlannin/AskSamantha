@@ -62,8 +62,9 @@ class Recipe < ActiveRecord::Base
       else
         s = self.order(col)
       end
+    else
+      self.order("name")
     end
-    s.order("name")
   end
 
   def self.filter(time)

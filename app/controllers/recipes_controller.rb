@@ -1,7 +1,6 @@
 class RecipesController < ApplicationController
 
 def index
-    @user = current_user
     if params[:query] != nil
       session[:query] = params[:query]
     end
@@ -14,9 +13,9 @@ def index
     redirect = handle_redirects
     if !redirect
       if params[:query] == nil
-        @recipes = Recipe.filter(params[:cooking_time]).sorted_by("name").search(params[:recipe_name])
+        @recipes = Recipe.filter(params[:cooking_time]).search(params[:recipe_name]).sorted_by("name")
       else
-        @recipes = Recipe.filter(params[:cooking_time]).sorted_by(params[:query]).search(params[:recipe_name])
+        @recipes = Recipe.filter(params[:cooking_time]).search(params[:recipe_name]).sorted_by(params[:query])
       end
       if @recipes.length == 0
         reset_search

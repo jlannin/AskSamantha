@@ -313,7 +313,7 @@ end
 
 When(/^I delete ingredient "(.*?)"$/) do |arg1|
   index = arg1.to_i - 1
-  page.all('a')[index].click
+  page.all('.del_ing')[index].click
 end
 
 

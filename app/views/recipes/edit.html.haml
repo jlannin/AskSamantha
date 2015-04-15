@@ -1,3 +1,4 @@
+=render 'login'
 #main
   %h4= flash[:notice] if flash[:notice]
   %h2 Edit Recipe Details
@@ -27,7 +28,7 @@
                 %option= foo.name
             </select>
           %td <input type = "number" name = "ingreds[ingredient_#{i.id}]" value = "#{i.quantity}">
-          %td= link_to "Bye bye", {:controller => "recipes", :action => "del_ing", :id => "#{@recipe.id}", :ing_id => "#{i.id}", :additional => params[:additional]}
+          %td= link_to "Bye bye", {:controller => "recipes", :action => "del_ing", :id => "#{@recipe.id}", :ing_id => "#{i.id}", :additional => params[:additional]}, class: "del_ing"
       -if params.has_key?(:additional)
         -(1..params[:additional].to_i).each do |x|
           %tr
@@ -38,9 +39,9 @@
               </select>
             %td <input type = "number" name = "new_ingreds[newingredient_#{x}]">
             -if params[:additional] == "1"
-              %td= link_to "Bye bye", edit_recipe_path(@recipe)
+              %td= link_to "Bye bye", edit_recipe_path(@recipe), class: "del_ing" 
             -else
-              %td= link_to "Bye bye", edit_recipe_path(@recipe, :additional => (params[:additional].to_i - 1).to_s)
+              %td= link_to "Bye bye", edit_recipe_path(@recipe, :additional => (params[:additional].to_i - 1).to_s), class: "del_ing"
     -if params.has_key?(:additional)
       =link_to "Add ingredient", edit_recipe_path(:additional => (params[:additional].to_i + 1).to_s)
     -else

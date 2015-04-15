@@ -13,4 +13,10 @@ class User < ActiveRecord::Base
     end
   end
 
+  def get_name
+    email = self.email
+    email =~ /^(.+)@/
+    $1
+  end
+
 end
