@@ -22,7 +22,7 @@
         %td= image_tag(r.image.url(:thumb))
         %td#time= r.fix_time
         - if r.average_rating != nil
-          %td= r.average_rating.round(2)
+          %td.starry= r.fix_stars
         -else
           %td Not yet rated!
   = link_to "Create a new recipe", new_recipe_path(:additional => 1)

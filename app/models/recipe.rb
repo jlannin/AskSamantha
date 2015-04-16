@@ -8,7 +8,13 @@ class Recipe < ActiveRecord::Base
   validate :need_at_least_one_ingredient
   validate :unique_ingredients
 
-
+  def fix_stars
+    @my_stars = ""
+    i = self.average_rating#correct?
+    1.upto(i) {@my_stars<<"★"} #☆⍟🌟✪✰★
+    @my_stars #needed?
+  end
+  
   def fix_time
     @time = ""
     @mins = self.cooking_time%60

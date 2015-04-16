@@ -35,3 +35,10 @@ body h1 {
 a:hover {
   color: red;
 }
+
+.starry {
+  color: #C5B358;
+  font-size: 25pt;
+  text-align: center;
+  
+}
