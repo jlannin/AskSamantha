@@ -2,6 +2,10 @@ require 'rails_helper'
 
 RSpec.describe ReviewsController, type: :controller do
   before :each do
+    #expect(controller).to receive(:current_user) {nil}
+    u=User.create!(:email => "test@gmail.com", :password=> "test1234")
+    expect(request.env['warden']).to receive(:authenticate!) {u}
+    expect(controller).to receive(:current_user) {u}
     Food.create!(:name => "Test")
     x = Recipe.new(:name => "Dark Chocolate Peanut Butter Cup", :directions => "Unwrap and enjoy!", :cooking_time => 10)
     x.ingredients.new(:quantity => 1, :food_id => 1) 

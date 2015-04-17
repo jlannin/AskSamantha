@@ -57,6 +57,7 @@ ActiveRecord::Schema.define(version: 20150416200412) do
     t.text     "comments"
     t.integer  "stars"
     t.integer  "recipe_id"
+    t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

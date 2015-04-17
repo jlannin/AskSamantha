@@ -43,12 +43,13 @@
             %tr.review_header
               %th Stars
               %th Comments
+              %th User
             %tr
               -@recipe.reviews.each do |rev|
                 %tr.review_row
                   %td.starry_show=rev.show_stars
                   %td.comment=rev.comments
-
+                  %td.user= rev.user.get_name
 
 
 

@@ -3,10 +3,7 @@ require 'rails_helper'
 RSpec.describe RecipesController, type: :controller do
 
   before :each do
-    #authenticate error?
-    #User.create!(:email => "jd.roth@comcast.net", :encrypted_password => "tester123")
-    #current_user = User.find(1)
-    ####
+    allow(controller).to receive(:current_user) {nil}
     Food.create!(:name => "Jam")
     p = Recipe.new(:name => "Dark Chocolate Peanut Butter Cup", :directions => "Unwrap and enjoy!", :cooking_time => 10)
     p.ingredients.new(:quantity => 1, :food_id => 1)
@@ -21,11 +18,13 @@ RSpec.describe RecipesController, type: :controller do
 
   describe "GET #index" do
     it "routes correctly" do
+      
       get :index
       expect(response.status).to eq(200)
     end
 
     it "renders the index template and sorts by name by default" do
+      
       y = Recipe.new(:name => "Toast with Jam", :directions => "Put the jam on the toast", :cooking_time => 15)
       y.ingredients.new(:quantity => 2, :food_id => 1) #need at least one ingredient for validation
       y.save

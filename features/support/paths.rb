@@ -17,8 +17,12 @@ module NavigationHelpers
       '/'
     when /^create new recipe page$/
       '/recipes/new?additional=1'
+    
     when /^the sign in page$/
       '/users/sign_in'
+
+    when /^create new review page$/
+      '/reviews/new' 
 
    
     # Add more mappings here.

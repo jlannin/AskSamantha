@@ -29,6 +29,18 @@ Feature: Search recipes by name
     But I should not see "Cereal"
     And I should not see "Scrambled Eggs"
 
+  Scenario: search results should last
+    When I go to the recipes page
+    And I fill in "Recipe name" with "Toast"
+    And I press "Search Recipes"
+    And I press "New Toast"
+    Then I press "Back to recipes!"
+    Then I should be on the recipes page
+    And I should see "New Toast"
+    And I should see "Toast and Jam"
+    But I should not see "Cereal"
+    And I should not see "Scrambled Eggs"
+
   Scenario:  Gibberish search should return helpful message
     When I go to the recipes page
     And I fill in "Recipe name" with "Lava Cake"

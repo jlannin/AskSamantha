@@ -80,11 +80,35 @@ Then /^I should see that "(.*?)" has a quantity of "(.*?)"$/ do |ingredient, qua
   all(".quantity")[index].text.should == quantity
 end
 
+Then /^I review "(.+)" with "(.+)"$/ do |name, rating|
+    
+    When %{I press "Write a Review"}
+    Then %{I should be reviewing "#{name}" on create new review page}
+    And %{I fill in "review_comments" with "Theyrrrree Greeeaat!"}
+    And %{I select "#{rating}" for rating}
+    And %{I press "Post Review"}
+end
+
+
+Then /^I should see that the recipe "(.*?)" has a rating of "(.*?)"$/ do |name, rating|
+  recipes_arr = all(".recipe_name").map {|x| x.text}
+  index = recipes_arr.index(name)
+  my_stars=""
+  1.upto(rating.to_i) do
+  my_stars<<"★"
+  end
+  all(".rating")[index].text.should == my_stars
+end
+
+
 Then /^I should see that the review with "(.*?)" has a rating of "(.*?)"$/ do |comment, rating|
-  #byebug
   review_arr = all(".comment").map {|x| x.text}
   index = review_arr.index(comment)
-  all(".stars")[index].text.should == rating
+  my_stars=""
+  1.upto(rating.to_i) do
+  my_stars<<"★"
+  end
+  all(".starry_show")[index].text.should == my_stars
 end
 
 Given /^(?:|I )am on (.+)$/ do |page_name|
@@ -113,7 +137,7 @@ When /^(?:|I )fill in "([^"]*)" for "([^"]*)"$/ do |value, field|
 end
 
 When /^(?:|I )fill in the following:$/ do |fields|
-  byebug
+  #byebug
   fields.rows_hash.each do |name, value|
     When %{I fill in "#{name}" with "#{value}"}
   end
@@ -173,6 +197,27 @@ Then /^I should see recipe cooking time in sorted order$/ do
     end
   end
   time_arr.should == time_arr.sort
+end
+
+Then /^I should see the recipe rating in sorted order$/ do
+  
+  star_arr = all(".rating").map {|x| x.text}
+  star_arr = star_arr.map do |x|
+    if(x.length>5)
+      x=0
+    else
+      x=x.length
+    end
+  end
+  avg_arr=[]
+  Recipe.all.each do |r|
+    if(r.average_rating == nil)
+      avg_arr<<0
+    else
+      avg_arr<<r.average_rating.round
+    end
+  end
+  avg_arr.sort.reverse.should == star_arr
 end
 
 Then /^I should see that "(.*?)" has a cooking time of "(.*?)"$/ do |arg1, arg2|
@@ -317,6 +362,29 @@ end
 When(/^I delete ingredient "(.*?)"$/) do |arg1|
   index = arg1.to_i - 1
   page.all('.del_ing')[index].click
+end
+
+
+Then /^I sign in$/ do
+  Then %{I press "Sign up"}
+  Then %{I fill in "Email" with "jd.roth@comcast.net"} 
+  Then %{I fill in "Password" with "tester123"}
+  Then %{I fill in "Password confirmation" with "tester123"}
+  Then %{I press "Sign up"} 
+end
+
+Then /^(?:|I )should be reviewing "(.*)" on (.+)$/ do |recipe, page_name|
+  r=Recipe.find_by('name = ?',recipe)
+  r_id=r.id
+  #path_to(page_name)=~/new(.*)$/#hardwire
+
+  #current_path = "/review/new"
+  current_path = URI.parse(current_url).path
+  if current_path.respond_to? :should
+    current_path.should == "/recipes/#{r_id}#{path_to(page_name)}"
+  else
+    assert_equal "/recipes/#{r_id}#{path_to(page_name)}", current_path
+  end
 end
 
 

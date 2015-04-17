@@ -37,3 +37,21 @@ Feature: Sort recipes by name, rating, and cooking time
     Then I press "Back to recipes!"
     Then I should be on the recipes page
     And I should see recipe cooking time in sorted order
+
+  Scenario: sort bu the average rating
+    When I go to the recipes page
+    Then I press "Login"
+    Then I sign in
+    Then I press "Cereal"
+    Then I review "Cereal" with "5"
+    Then I review "Cereal" with "3"
+    Then I press "Back to recipes!"
+    And I should see that the recipe "Cereal" has a rating of "4"
+    And I press "Ratings"    
+    Then I should see the recipe rating in sorted order
+
+
+
+
+
+
