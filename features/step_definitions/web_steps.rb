@@ -47,6 +47,8 @@ Given /^these foods:$/i do |table|
   end
 end
 
+
+
 Given /^these recipes:$/i do |table|
   table.hashes.each do |fhash|
     arr = fhash.delete("Ingredients")
@@ -111,6 +113,7 @@ When /^(?:|I )fill in "([^"]*)" for "([^"]*)"$/ do |value, field|
 end
 
 When /^(?:|I )fill in the following:$/ do |fields|
+  byebug
   fields.rows_hash.each do |name, value|
     When %{I fill in "#{name}" with "#{value}"}
   end
@@ -320,7 +323,8 @@ end
 Then /^(?:|I )should be creating on (.+)$/ do |page_name|
   #byebug
   path_to(page_name)=~/new(.*)$/#hardwire
-  current_path = URI.parse(current_url).path+$1
+  current_path = "/recipes/new"+$1
+  #current_path = URI.parse(current_url).path+$1
   if current_path.respond_to? :should
     current_path.should == path_to(page_name)
   else

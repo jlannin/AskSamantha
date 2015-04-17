@@ -15,6 +15,8 @@ class Recipe < ActiveRecord::Base
     @my_stars #needed?
   end
   
+ 
+  
   def fix_time
     @time = ""
     @mins = self.cooking_time%60

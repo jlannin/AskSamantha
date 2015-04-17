@@ -3,6 +3,10 @@ require 'rails_helper'
 RSpec.describe RecipesController, type: :controller do
 
   before :each do
+    #authenticate error?
+    #User.create!(:email => "jd.roth@comcast.net", :encrypted_password => "tester123")
+    #current_user = User.find(1)
+    ####
     Food.create!(:name => "Jam")
     p = Recipe.new(:name => "Dark Chocolate Peanut Butter Cup", :directions => "Unwrap and enjoy!", :cooking_time => 10)
     p.ingredients.new(:quantity => 1, :food_id => 1)

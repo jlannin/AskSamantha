@@ -10,9 +10,16 @@ class Recipe < ActiveRecord::Base
 
   def fix_stars
     @my_stars = ""
-    i = self.average_rating#correct?
-    1.upto(i) {@my_stars<<"🌟"} #☆⍟🌟✪✰★
+    i = self.average_rating.round 
+    1.upto(i) {@my_stars<<"★"} #☆⍟🌟✪✰★
     @my_stars #needed?
+  end
+  
+  def show_stars
+    @my_stars = ""
+    i = self.reviews.stars 
+    1.upto(i) {@my_stars<<"★"} #☆⍟🌟✪✰★
+    @my_stars 
   end
   
   def fix_time

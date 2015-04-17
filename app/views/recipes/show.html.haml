@@ -46,7 +46,7 @@
             %tr
               -@recipe.reviews.each do |rev|
                 %tr.review_row
-                  %td.stars=rev.stars
+                  %td.starry_show=rev.show_stars
                   %td.comment=rev.comments
 
 

@@ -17,6 +17,10 @@ module NavigationHelpers
       '/'
     when /^create new recipe page$/
       '/recipes/new?additional=1'
+    when /^the sign in page$/
+      '/users/sign_in'
+
+   
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #

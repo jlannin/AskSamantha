@@ -4,7 +4,13 @@ Feature: Create a new recipe
   I want to be able to create new recipes.
 
   Background: We have several foods and recipes
-
+    Given I am on the sign in page
+    Then I press "Sign up"
+    Then I fill in "Email" with "jd.roth@comcast.net"
+    Then I fill in "Password" with "tester123"
+    Then I fill in "Password" with "tester123"
+    Then I press "Sign up"
+    Then I should be creating on create new recipe page
     Given these foods:
       | name           |
       | Cereal         |
