@@ -10,7 +10,7 @@ class Recipe < ActiveRecord::Base
 
   def fix_stars
     @my_stars = ""
-    i = self.average_rating#correct?
+    i = self.average_rating.round 
     1.upto(i) {@my_stars<<"★"} #☆⍟🌟✪✰★
     @my_stars #needed?
   end
