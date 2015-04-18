@@ -6,16 +6,16 @@ RSpec.describe "index page", type: :feature do
   before :each do
     Food.create!(:name => "Test")
 
-    x = Recipe.new(:name => "Dark Chocolate Peanut Butter Cup", :directions => "Unwrap and enjoy!", :cooking_time => 10)
+    x = Recipe.new(:name => "Dark Chocolate Peanut Butter Cup", :directions => "Unwrap and enjoy!", :cooking_time => 10, :average_rating => 0)
     x.ingredients.new(:quantity => 1, :food_id => 1) 
  
-    y = Recipe.new(:name => "Toast with Jam", :directions => "Put the jam on the toast", :cooking_time => 15)
+    y = Recipe.new(:name => "Toast with Jam", :directions => "Put the jam on the toast", :cooking_time => 1, :average_rating => 05)
     y.ingredients.new(:quantity => 1, :food_id => 1)
 
-    z = Recipe.new(:name => "Leftover Pizza", :directions => "Just pop in the microwave", :cooking_time => 1)
+    z = Recipe.new(:name => "Leftover Pizza", :directions => "Just pop in the microwave", :cooking_time => 1, :average_rating => 0)
     z.ingredients.new(:quantity => 1, :food_id => 1)
 
-    j = Recipe.new(:name => "Cereal", :directions => "Milk first, always", :cooking_time => 20)
+    j = Recipe.new(:name => "Cereal", :directions => "Milk first, always", :cooking_time => 20, :average_rating => 0)
     j.ingredients.new(:quantity => 1, :food_id => 1)
 
     x.save

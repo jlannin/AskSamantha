@@ -2,8 +2,8 @@ require 'rails_helper'
 
 RSpec.describe "show page", type: :feature do
   before :each do
-    x = Recipe.new(:name => "Dark Chocolate Peanut Butter Cup", :directions => "Unwrap and enjoy!", :cooking_time => 34)
-    y = Recipe.new(:name => "Toast with Jam", :directions => "Put the jam on the toast", :cooking_time => 12)
+    x = Recipe.new(:name => "Dark Chocolate Peanut Butter Cup", :directions => "Unwrap and enjoy!", :cooking_time => 34, :average_rating => 0)
+    y = Recipe.new(:name => "Toast with Jam", :directions => "Put the jam on the toast", :cooking_time => 12, :average_rating => 0)
     Food.create!(:name => "Dark Chocolate")
     Food.create!(:name => "Peanut Butter")
     Food.create!(:name => "Jam")

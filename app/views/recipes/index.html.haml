@@ -21,7 +21,7 @@
         %td.recipe_name= link_to r.name, recipe_path(r.id)
         %td= image_tag(r.image.url(:thumb))
         %td#time= r.fix_time
-        - if r.average_rating != nil
+        - if r.average_rating != 0
           %td.rating#starry= r.fix_stars
         -else
           %td.rating Not yet rated!

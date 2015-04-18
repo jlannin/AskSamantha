@@ -6,7 +6,7 @@ RSpec.describe RecipesController, type: :controller do
     allow(controller).to receive(:current_user) {nil}
     Food.create!(:name => "Jam")
     Unit.create!(:unit => "cup", :conversion_factor => 10)
-    p = Recipe.new(:name => "Dark Chocolate Peanut Butter Cup", :directions => "Unwrap and enjoy!", :cooking_time => 10)
+    p = Recipe.new(:name => "Dark Chocolate Peanut Butter Cup", :directions => "Unwrap and enjoy!", :cooking_time => 10, average_rating: 0)
     p.ingredients.new(:quantity => 1, :food_id => 1, :unit_id => 1)
     p.save
   end
@@ -26,7 +26,7 @@ RSpec.describe RecipesController, type: :controller do
 
     it "renders the index template and sorts by name by default" do
       
-      y = Recipe.new(:name => "Toast with Jam", :directions => "Put the jam on the toast", :cooking_time => 15)
+      y = Recipe.new(:name => "Toast with Jam", :directions => "Put the jam on the toast", :cooking_time => 15, average_rating: 0)
       y.ingredients.new(:quantity => 2, :food_id => 1) #need at least one ingredient for validation
       y.save
       p = Recipe.find(1)
@@ -58,7 +58,7 @@ describe "POST #create" do
       p = Recipe.new
       Recipe.should_receive(:new).and_return(p)
       p.should_receive(:save).and_return(true)
-      post :create, { :recipe => { "name"=>"dummy", "cooking_time"=>"1","directions"=>"test_directs"} }
+      post :create, { :recipe => { "name"=>"dummy", "cooking_time"=>"1","directions"=>"test_directs", "average_rating" => 0} }
       response.should redirect_to(recipes_path)
     end
 
@@ -79,7 +79,7 @@ describe "POST #create" do
       expect(p).to receive(:update).and_return(true)
       expect(Recipe).to receive(:find).and_return(p)
       expect(p).to receive(:save).and_return(true)#nil for fail
-      put :update, :id => p.id, :recipe => {"name"=>"tester", "cooking_time"=>"1", "directions"=>"test_directs"}, :ingreds => {"ingredient_1"=> "1"}, :dropdown => {"ingredient_1"=>"Jam"}, :units => {"ingredient_1"=>"cup"}
+      put :update, :id => p.id, :recipe => {"name"=>"tester", "cooking_time"=>"1", "directions"=>"test_directs", "average_rating" => 0}, :ingreds => {"ingredient_1"=> "1"}, :dropdown => {"ingredient_1"=>"Jam"}, :units => {"ingredient_1"=>"cup"}
       response.should redirect_to("/recipes/#{p.id}")
     end
 
@@ -89,7 +89,7 @@ describe "POST #create" do
       expect(p).to receive(:update).and_return(true)
       expect(Recipe).to receive(:find).and_return(p)
       expect(p).to receive(:save).and_return(nil)#nil for fail
-      put :update, :id => p.id, :recipe => {"name"=>"tester", "cooking_time"=>"1", "directions"=>"test_directs"}, :ingreds => {"ingredient_1"=> "1"}, :dropdown => {"ingredient_1"=>"Jam"}, :units => {"ingredient_1"=>"cup"}
+      put :update, :id => p.id, :recipe => {"name"=>"tester", "cooking_time"=>"1", "directions"=>"test_directs", "average_rating" => 0}, :ingreds => {"ingredient_1"=> "1"}, :dropdown => {"ingredient_1"=>"Jam"}, :units => {"ingredient_1"=>"cup"}
       response.should redirect_to("/recipes/#{p.id}/edit")
     end
 
@@ -99,7 +99,7 @@ describe "POST #create" do
       expect(Recipe).to receive(:find).and_return(p)
       expect(p).to receive(:save).and_return(nil)#nil for fail
       p.errors[:need_at_least_one_ingredient] = "test"
-      put :update, :id => p.id, :recipe => {"name"=>"tester", "cooking_time"=>"1", "directions"=>"test_directs"}, :ingreds => {"ingredient_1"=> "1"}, :dropdown => {"ingredient_1"=>"Jam"}, :units => {"ingredient_1"=>"cup"}
+      put :update, :id => p.id, :recipe => {"name"=>"tester", "cooking_time"=>"1", "directions"=>"test_directs", "average_rating" => 0}, :ingreds => {"ingredient_1"=> "1"}, :dropdown => {"ingredient_1"=>"Jam"}, :units => {"ingredient_1"=>"cup"}
       response.should redirect_to(edit_recipe_path(p.id, :additional => 1))
     end
   end

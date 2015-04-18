@@ -57,6 +57,7 @@ end
 Given /^these recipes:$/i do |table|
   table.hashes.each do |fhash|
     arr = fhash.delete("Ingredients")
+    fhash[:average_rating] = 0
     r = Recipe.new(fhash)
     arr = arr.split(",")
     arr.each do |x|

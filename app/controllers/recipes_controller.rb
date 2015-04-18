@@ -38,6 +38,7 @@ def create
   ingredient_quantities = params.delete(:ingreds)
   ingredient_names = params.delete(:dropdown)
   ingredient_units = params.delete(:units)
+  params[:recipe][:average_rating] = 0
   r=Recipe.new(create_params)
   r.update_newingredients(ingredient_quantities, ingredient_names, ingredient_units)
   if r.save
@@ -93,7 +94,7 @@ def update_params
 end
 
 def create_params
-  params.require(:recipe).permit(:name, :directions, :cooking_time, :image)
+  params.require(:recipe).permit(:name, :directions, :cooking_time, :image, :average_rating)
 end
 
 def handle_redirects
