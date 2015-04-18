@@ -16,6 +16,7 @@
       %tr
         %th Ingredient
         %th Quantity
+        %th Units
         %th Delete Ingredient
       -@recipe.ingredients.each do |i|
         %tr
@@ -28,6 +29,14 @@
                 %option= foo.name
             </select>
           %td <input type = "number" name = "ingreds[ingredient_#{i.id}]" value = "#{i.quantity}">
+          %td.units
+            <select name = "units[ingredient_#{i.id}]" id = "unit_select_#{i.id}">
+            -Unit.all.each do |foo|
+              -if foo.unit == i.unit.unit
+                %option{:selected => "#{foo.unit}"}=foo.unit
+              -else
+                %option= foo.unit
+            </select>
           %td= link_to "Bye bye", {:controller => "recipes", :action => "del_ing", :id => "#{@recipe.id}", :ing_id => "#{i.id}", :additional => params[:additional]}, class: "del_ing"
       -if params.has_key?(:additional)
         -(1..params[:additional].to_i).each do |x|
@@ -38,6 +47,11 @@
                 %option= foo.name
               </select>
             %td <input type = "number" name = "new_ingreds[newingredient_#{x}]">
+            %td.units
+              <select name = "new_units[newingredient_#{x}]" id = "unit_select_#{x}">
+              -Unit.all.each do |foo|
+                %option= foo.unit
+              </select>
             -if params[:additional] == "1"
               %td= link_to "Bye bye", edit_recipe_path(@recipe), class: "del_ing" 
             -else

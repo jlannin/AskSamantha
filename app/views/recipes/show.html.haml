@@ -19,12 +19,10 @@
           %tr
             %th Name
             %th Quantity
-            %th Units
           -@recipe.ingredients.each do |i|
             %tr.ingredient_row
               %td.name= i.food.name
-              %td.quantity= i.quantity
-              %td.unit= i.unit
+              %td.quantity= i.format_quantity
   %table.recipes_directions
     %tr
       %th Directions

@@ -47,6 +47,11 @@ Given /^these foods:$/i do |table|
   end
 end
 
+Given /^these units:$/i do |table|
+  table.hashes.each do |fhash|
+    r = Unit.create!(fhash)
+  end
+end
 
 
 Given /^these recipes:$/i do |table|
@@ -55,18 +60,23 @@ Given /^these recipes:$/i do |table|
     r = Recipe.new(fhash)
     arr = arr.split(",")
     arr.each do |x|
-      x =~  /\s?(.*)\s(\d*)/
+      x =~  /\s?(.*)\s(\d*)\s(.*)/
       hash = Hash.new
       hash[:food_id] = Food.find_by('name = ?', $1).id
       hash[:quantity] = $2
+      hash[:unit_id] = Unit.find_by('unit =?', $3).id
       r.ingredients.new(hash)
     end
     r.save
   end
 end
 
-Then /^I select "(.*?)" for ingredient "(.*?)"$/ do |arg1, arg2|
+Then /^I select "(.*?)" for ingredient "(.*?)" food$/ do |arg1, arg2|
   page.select("#{arg1}", :from => "food_select_#{arg2}")
+end
+
+Then /^I select "(.*?)" for ingredient "(.*?)" unit$/ do |arg1, arg2|
+  page.select("#{arg1}", :from => "unit_select_#{arg2}")
 end
 
 Then /^I select "(.*?)" for rating$/ do |arg1|

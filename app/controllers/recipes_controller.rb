@@ -37,8 +37,9 @@ end
 def create
   ingredient_quantities = params.delete(:ingreds)
   ingredient_names = params.delete(:dropdown)
+  ingredient_units = params.delete(:units)
   r=Recipe.new(create_params)
-  r.update_newingredients(ingredient_quantities, ingredient_names)
+  r.update_newingredients(ingredient_quantities, ingredient_names, ingredient_units)
   if r.save
     flash[:notice] = "New recipe #{r.name} was made"
     redirect_to recipes_path
@@ -61,11 +62,13 @@ end
 def update
   ingredient_quantities = params.delete(:ingreds)
   ingredient_names = params.delete(:dropdown)
+  ingredient_units = params.delete(:units)
   newingredient_updates = params.delete(:new_ingreds)
   newingredient_names = params.delete(:new_dropdown)
+  newingredient_units = params.delete(:new_units)
   @recipe = Recipe.find(params[:id])
-  @recipe.update_ingredients(ingredient_quantities, ingredient_names)
-  @recipe.update_newingredients(newingredient_updates, newingredient_names)
+  @recipe.update_ingredients(ingredient_quantities, ingredient_names, ingredient_units)
+  @recipe.update_newingredients(newingredient_updates, newingredient_names, newingredient_units)
   @recipe.update(update_params)
   if @recipe.save#wont fail until we add validations or force in rspec tests
     flash[:notice] = "You updated #{@recipe.name}"

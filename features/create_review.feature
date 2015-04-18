@@ -13,11 +13,16 @@ Feature: Create a new
       | Jam            |
       | Eggs           |
 
+    Given these units:
+      | unit   | conversion_factor  | 
+      | cup    | 5                  |
+      | liter  | 10                 |
+
     Given these recipes:
-      | name           |    directions            | Ingredients             | cooking_time |
-      | Toast and Jam  | Put jam on toast         | Honey 1, Jam 1          |  7           |
-      | Scrambled Eggs | Eggs then milk, scramble | Eggs 4, Milk 1,         |  20          |
-      | Cereal         | Milk first, then cereal  | Cereal 1, Milk 1        |  10          |
+      | name           |    directions            | Ingredients                 | cooking_time |
+      | Toast and Jam  | Put jam on toast         | Honey 1 cup, Jam 1 liter    |  7           |
+      | Scrambled Eggs | Eggs then milk, scramble | Eggs 4 cup, Milk 1 liter    |  20          |
+      | Cereal         | Milk first, then cereal  | Cereal 1 cup, Milk 1 liter  |  10          |
 
   Scenario: Creating a new review with no sign in
     Given I am on the recipes page

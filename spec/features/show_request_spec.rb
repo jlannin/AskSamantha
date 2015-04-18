@@ -7,10 +7,11 @@ RSpec.describe "show page", type: :feature do
     Food.create!(:name => "Dark Chocolate")
     Food.create!(:name => "Peanut Butter")
     Food.create!(:name => "Jam")
-    x.ingredients.new(:quantity => 56, :food_id => 1, :recipe_id => 1)  #56 dark chocolates to dark chocolate peanut butter cup
-    x.ingredients.new(:quantity => 10, :food_id => 2, :recipe_id => 1)  #10 Peanut butters to dark chocolate cup
-    y.ingredients.new(:quantity => 23, :food_id => 3, :recipe_id => 2)   #Toast gets 23 Jams
-    y.ingredients.new(:quantity => 6, :food_id => 2, :recipe_id => 2)   #Toast gets 6 Peanuts Buttre
+    Unit.create!(:unit => "cup", :conversion_factor => 10)
+    x.ingredients.new(:quantity => 56, :food_id => 1, :recipe_id => 1, :unit_id => 1)  #56 dark chocolates to dark chocolate peanut butter cup
+    x.ingredients.new(:quantity => 10, :food_id => 2, :recipe_id => 1, :unit_id => 1)  #10 Peanut butters to dark chocolate cup
+    y.ingredients.new(:quantity => 23, :food_id => 3, :recipe_id => 2, :unit_id => 1)   #Toast gets 23 Jams
+    y.ingredients.new(:quantity => 6, :food_id => 2, :recipe_id => 2, :unit_id => 1)   #Toast gets 6 Peanuts Buttre
 
     x.save
     y.save

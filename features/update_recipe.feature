@@ -12,19 +12,25 @@ Feature: Update the recipe details
       | Jam            |
       | Eggs           |
 
+    Given these units:
+      | unit     | conversion_factor  | 
+      | cup      | 5                |
+      | liter    | 10               |
+      | teaspoon | 12               |
+
     Given these recipes:
-      | name           |    directions            | Ingredients             | cooking_time |
-      | Toast and Jam  | Put jam on toast         | Honey 1, Jam 1          |  7           |
-      | Scrambled Eggs | Eggs then milk, scramble | Eggs 4, Milk 1,         |  20          |
-      | Cereal!        | Milk first, then cereal  | Cereal 1, Milk 1        |  10          |
+      | name           |    directions            | Ingredients                 | cooking_time |
+      | Toast and Jam  | Put jam on toast         | Honey 1 cup, Jam 1 liter    |  7           |
+      | Scrambled Eggs | Eggs then milk, scramble | Eggs 4 cup, Milk 1 liter    |  20          |
+      | Cereal!        | Milk first, then cereal  | Cereal 1 cup, Milk 1 liter  |  10          |
 
 
 
   Given I am on the recipes page
   When I follow "Cereal!"
   Then I should see "Milk first, then cereal"
-  And I should see "Cereal 1"
-  And I should see "Milk 1"
+  And I should see "Cereal 1 cup"
+  And I should see "Milk 1 liter"
   And I should see "10"
   When I follow "Edit recipe details"
 
@@ -32,13 +38,13 @@ Feature: Update the recipe details
   Scenario: Update: delete an ingrediant
     When I delete ingredient "1"
     And I press "Update Recipe Details"
-    Then I should see that "Milk" has a quantity of "1"
+    Then I should see that "Milk" has a quantity of "1 liter"
     And I should not see the ingredient "Cereal"
   
   Scenario: Update: setting to 0 should delete it
     When I fill in "ingreds[ingredient_5]" with "0"
     And I press "Update Recipe Details"
-    Then I should see that "Milk" has a quantity of "1"
+    Then I should see that "Milk" has a quantity of "1 liter"
     And I should not see the ingredient "Cereal"
 
 
@@ -49,28 +55,29 @@ Feature: Update the recipe details
       |Cooking time             | 12                         |
     And I press "Update Recipe Details"
     Then I should see "CEREAL FIRST, then milk"
-    And I should see that "Milk" has a quantity of "1"
+    And I should see that "Milk" has a quantity of "1 liter"
     And I should see "12 minutes"
 
   Scenario: Update: change one ingredient quant
     When I fill in "ingreds[ingredient_5]" with "2"
     And I press "Update Recipe Details"
     Then I should see "Milk first, then cereal"
-    And I should see that "Cereal" has a quantity of "2"
-    And I should see that "Milk" has a quantity of "1"
+    And I should see that "Cereal" has a quantity of "2 cups"
+    And I should see that "Milk" has a quantity of "1 liter"
     And I should see "10 minutes"
 
   Scenario: Update: non-unique ingredients
-    When I select "Milk" for ingredient "5"
+    When I select "Milk" for ingredient "5" food
     And I press "Update Recipe Details"
     And I should see "The update failed :( Unique ingredients are needed."
 
 
   Scenario: Update a recipe by adding a new ingredient
     When I follow "Add ingredient"
-    Then I fill in "new_ingreds[newingredient_1]" with "1"
-    And I select "Honey" for ingredient "1"
+    Then I fill in "new_ingreds[newingredient_1]" with "2"
+    And I select "Honey" for ingredient "1" food
+    And I select "teaspoon" for ingredient "1" unit
     And I press "Update Recipe Details"
-    Then I should see that "Honey" has a quantity of "1"
-    And I should see that "Cereal" has a quantity of "1"
-    And I should see that "Milk" has a quantity of "1"
+    Then I should see that "Honey" has a quantity of "2 teaspoons"
+    And I should see that "Cereal" has a quantity of "1 cup"
+    And I should see that "Milk" has a quantity of "1 liter"

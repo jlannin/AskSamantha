@@ -17,6 +17,7 @@
       %tr
         %th Ingredient
         %th Quantity
+        %th Units
         %th Delete Ingredient
       -if params.has_key?(:additional)
         -(1..params[:additional].to_i).each do |x|
@@ -27,6 +28,11 @@
                 %option= foo.name
               </select>
             %td#test <input type = "number" name = "ingreds[newingredient_#{x}]">
+            %td.units
+              <select name = "units[newingredient_#{x}]" id = "unit_select_#{x}">
+              -Unit.all.each do |foo|
+                %option= foo.unit
+              </select>
             -if params[:additional] == "1"
               %td= link_to "Bye bye", new_recipe_path(@recipe)
             -else
