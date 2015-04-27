@@ -26,26 +26,7 @@ y.ingredients.new(:quantity => 2, :food_id => 2, :unit_id => 5)
 y.save
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+u = User.new(:email => 'test@colgate.edu', :password => 'test1234')
+u.groceries.new(:quantity => 2, :food_id => 1, :unit_id => 5)
+u.groceries.new(:quantity => 4, :food_id => 2, :unit_id => 2)
+u.save
