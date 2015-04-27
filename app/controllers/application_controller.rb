@@ -11,5 +11,12 @@ protected
     #byebug
     @user = current_user
   end
+
+
+  def after_sign_in_path_for(resource)
+    byebug
+    root_path
+  end
+
 end
 

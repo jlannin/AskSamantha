@@ -1,12 +1,6 @@
 = render 'login'
 #main
-  %h4= flash[:notice] if flash[:notice] 
-  %h3 My Fridge
-  %table.groceries_table
-    %tr.groceries_header
-      %th Name
-      %th Quantity
-    -@groceries.each do |g|
-      %tr.grocery_row
-        %td.grocery_name= g.food.name
-        %td.grocery_quant= g.format_quantity
+  -if @user
+    =render 'loginview'
+  -else
+    =render 'notlogview'

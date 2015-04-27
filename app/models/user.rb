@@ -21,4 +21,33 @@ class User < ActiveRecord::Base
     $1
   end
 
+  def update_fridge(oldgrocs)
+    quantities = oldgrocs.delete(:groc)
+    names = oldgrocs.delete(:dropdown)
+    units = oldgrocs.delete(:units)
+    if(quantities != nil)
+      quantities.each do |g|
+        g[0] =~ /^grocery_(\d+)/
+        if (g[1].to_i > 0)
+          Grocery.find($1).update(:quantity => "#{g[1]}", :food_id => "#{Food.find_by('name = ?', names[g[0].to_sym].to_s).id}", :unit_id => "#{Unit.find_by('unit = ?', units[g[0].to_sym].to_s).id}")
+        else#quant is a bad number
+          Grocery.find($1).destroy #HIT THIS
+        end
+      end
+    end
+  end
+
+  def update_fridge_new(newgrocs)
+    quantities = newgrocs.delete(:new_grocs)
+    names = newgrocs.delete(:new_dropdown)
+    units = newgrocs.delete(:new_units)
+    if(quantities != nil)
+      quantities.each do |g|
+        if(g[1].to_i > 0)
+          self.groceries.new(:quantity => g[1].to_i, :food_id => "#{Food.find_by('name = ?', names[g[0].to_sym].to_s).id}", :unit_id => "#{Unit.find_by('unit = ?', units[g[0].to_sym].to_s).id}")
+        end
+      end
+    end
+  end
+
 end
