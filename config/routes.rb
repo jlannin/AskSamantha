@@ -4,12 +4,12 @@ Rails.application.routes.draw do
 
   devise_for :users, controllers:
     { omniauth_callbacks: "omniauth_callbacks" }
-  root 'recipes#index'
+  root 'recipes#home'
 
   resources :recipes do 
     resources :reviews, :only => [:create, :new]
   end
-
+  get 'home/', to: 'recipes#home', as: :home
   get 'fridge/', to: 'users#show_fridge', as: :show_fridge
   get 'fridge/edit', to: 'users#edit_fridge', as: :edit_fridge
   

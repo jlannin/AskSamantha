@@ -7,6 +7,12 @@ body {
   color: #ffe28a; 
 }
 
+body #title{
+  text-align: center;
+  font-size: 40pt;
+  font-style: italic;
+}
+
 body #main {
   background-color: #6fcb9f;
   color: #ffe28a;

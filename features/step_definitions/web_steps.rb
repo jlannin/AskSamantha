@@ -432,7 +432,8 @@ Then /^I sign in$/ do
   Then %{I fill in "Email" with "jd.roth@comcast.net"} 
   Then %{I fill in "Password" with "tester123"}
   Then %{I fill in "Password confirmation" with "tester123"}
-  Then %{I press "Sign up"} 
+  Then %{I press "Sign up"}
+  Then %{I press "Check out the recipes!"}
 end
 
 Then /^(?:|I )should be reviewing "(.*)" on (.+)$/ do |recipe, page_name|

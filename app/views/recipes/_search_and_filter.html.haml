@@ -1,0 +1,8 @@
+= form_tag recipes_path, method: :get do
+  = label_tag "recipe_name"
+  = text_field_tag "recipe_name", nil, maxlength: 10
+  = submit_tag "Search Recipes"
+= form_tag('/recipes', method: :get) do
+  = label_tag(:cooking_time, "Meals in:")
+  = number_field_tag(:cooking_time, nil, min: 0)
+  = submit_tag("Filter recipes")
