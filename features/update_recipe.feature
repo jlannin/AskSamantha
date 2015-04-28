@@ -75,8 +75,8 @@ Feature: Update the recipe details
   Scenario: Update a recipe by adding a new ingredient
     When I follow "Add ingredient"
     Then I fill in "new_ingreds[newingredient_1]" with "2"
-    And I select "Honey" for ingredient "1" food
-    And I select "teaspoon" for ingredient "1" unit
+    And I select "Honey" for new ingredient "1" food
+    And I select "teaspoon" for new ingredient "1" unit
     And I press "Update Recipe Details"
     Then I should see that "Honey" has a quantity of "2 teaspoons"
     And I should see that "Cereal" has a quantity of "1 cup"

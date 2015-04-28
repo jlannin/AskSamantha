@@ -53,6 +53,24 @@ Given /^these units:$/i do |table|
   end
 end
 
+Given /^a user with these groceries:$/i do |table|
+  When %{I go to the recipes page}
+  And %{I press "Login"}
+  And %{I sign in}
+  u = User.find(1)
+  table.hashes.each do |fhash|
+    x = fhash.delete("groceries")
+    x =~  /\s?(.*)\s(\d*)\s(.*)/
+    hash = Hash.new
+    hash[:food_id] = Food.find_by('name = ?', $1).id
+    hash[:quantity] = $2
+    hash[:unit_id] = Unit.find_by('unit =?', $3).id
+    u.groceries.new(hash) 
+    u.save
+  end
+  Then %{I press "Sign Out"}
+end
+
 
 Given /^these recipes:$/i do |table|
   table.hashes.each do |fhash|
@@ -72,12 +90,45 @@ Given /^these recipes:$/i do |table|
   end
 end
 
+When /^I view my fridge/ do
+    When %{I go to the recipes page}
+    And %{I press "Login"}
+    Then %{I fill in "Email" with "jd.roth@comcast.net"}
+    Then %{I fill in "Password" with "tester123"}
+    Then %{I press "Log in"}
+    And %{I press "My fridge"}
+end
+
+Then /^I select "(.*?)" for grocery "(.*?)" food$/ do |arg1, arg2|
+  page.select("#{arg1}", :from => "food_select_#{arg2}")
+end
+
+Then /^I select "(.*?)" for grocery "(.*?)" unit$/ do |arg1, arg2|
+  page.select("#{arg1}", :from => "unit_select_#{arg2}")
+end
+
+Then /^I select "(.*?)" for new grocery "(.*?)" food$/ do |arg1, arg2|
+  page.select("#{arg1}", :from => "newfood_select_#{arg2}")
+end
+
+Then /^I select "(.*?)" for new grocery "(.*?)" unit$/ do |arg1, arg2|
+  page.select("#{arg1}", :from => "newunit_select_#{arg2}")
+end
+
 Then /^I select "(.*?)" for ingredient "(.*?)" food$/ do |arg1, arg2|
   page.select("#{arg1}", :from => "food_select_#{arg2}")
 end
 
 Then /^I select "(.*?)" for ingredient "(.*?)" unit$/ do |arg1, arg2|
   page.select("#{arg1}", :from => "unit_select_#{arg2}")
+end
+
+Then /^I select "(.*?)" for new ingredient "(.*?)" food$/ do |arg1, arg2|
+  page.select("#{arg1}", :from => "newfood_select_#{arg2}")
+end
+
+Then /^I select "(.*?)" for new ingredient "(.*?)" unit$/ do |arg1, arg2|
+  page.select("#{arg1}", :from => "newunit_select_#{arg2}")
 end
 
 Then /^I select "(.*?)" for rating$/ do |arg1|

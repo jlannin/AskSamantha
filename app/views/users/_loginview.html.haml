@@ -7,8 +7,8 @@
       %th Quantity
     -@groceries.each do |g|
       %tr.grocery_row
-        %td.grocery_name= g.food.name
-        %td.grocery_quant= g.format_quantity
+        %td.name= g.food.name
+        %td.quantity= g.format_quantity
 -else
   %p Add some ingredients to your fridge!
 =link_to "Update fridge!", edit_fridge_path

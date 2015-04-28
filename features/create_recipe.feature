@@ -41,8 +41,8 @@ Feature: Create a new recipe
       |Directions               | Get a new toaster |
       |Cooking time             | 121               |
       |ingreds[newingredient_1] | 7		    |
-    Then I select "Jam" for ingredient "1" food
-    Then I select "cup" for ingredient "1" unit
+    Then I select "Jam" for new ingredient "1" food
+    Then I select "cup" for new ingredient "1" unit
     And I press "Create Recipe"
     Then I should be on the recipes page
     And I should see "New recipe New toast was made"
@@ -57,8 +57,8 @@ Feature: Create a new recipe
       |Directions               | Go to the Coop    |
       |Cooking time             | 12                |
       |ingreds[newingredient_1] | 7		    |
-    Then I select "Jam" for ingredient "1" food
-    Then I select "cup" for ingredient "1" unit
+    Then I select "Jam" for new ingredient "1" food
+    Then I select "cup" for new ingredient "1" unit
     And I attach the file "tenders_productimage.jpg" to "Image"
     And I press "Create Recipe"
     Then I should be on the recipes page
@@ -75,10 +75,10 @@ Feature: Create a new recipe
       |Cooking time             | 67                |
       |ingreds[newingredient_1] | 7		    |
       |ingreds[newingredient_2] | 1                 |
-    Then I select "Jam" for ingredient "1" food
-    And I select "cup" for ingredient "1" unit
-    And I select "Honey" for ingredient "2" food
-    And I select "liter" for ingredient "2" unit
+    Then I select "Jam" for new ingredient "1" food
+    And I select "cup" for new ingredient "1" unit
+    And I select "Honey" for new ingredient "2" food
+    And I select "liter" for new ingredient "2" unit
     And I press "Create Recipe"
     Then I should be on the recipes page
     And I should see "New recipe new toast was made"

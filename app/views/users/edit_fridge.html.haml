@@ -33,13 +33,13 @@
         -(1..params[:additional].to_i).each do |x|
           %tr
             %td
-              <select name = "newgrocs[new_dropdown[newgrocery_#{x}]]" id="food_select_#{x}">
+              <select name = "newgrocs[new_dropdown[newgrocery_#{x}]]" id="newfood_select_#{x}">
               -Food.all.each do |foo|
                 %option= foo.name
               </select>
             %td <input type = "number" name = "newgrocs[new_grocs[newgrocery_#{x}]]">
             %td.units
-              <select name = "newgrocs[new_units[newgrocery_#{x}]]" id = "unit_select_#{x}">
+              <select name = "newgrocs[new_units[newgrocery_#{x}]]" id = "newunit_select_#{x}">
               -Unit.all.each do |foo|
                 %option= foo.unit
               </select>
