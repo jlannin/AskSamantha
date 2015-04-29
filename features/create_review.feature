@@ -28,9 +28,10 @@ Feature: Create a new
     Given I am on the recipes page
     When I press "Cereal"
     Then I should see "Write the first review"
-    When I press "Write a Review"
+    When I press "Sign in to Review!"
     Then I sign in
     Then I should see "Welcome! You have signed up successfully."
+    Then I press "Write a Review"
     Then I should be reviewing "Cereal" on create new review page
     And I fill in "review_comments" with "Theyrrrree Greeeaat!"
     And I select "5" for rating

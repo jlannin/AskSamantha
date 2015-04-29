@@ -52,4 +52,7 @@
 
 
   = link_to "Edit recipe details", edit_recipe_path
-  = link_to "Write a Review", new_recipe_review_path(@recipe)
+  -if @user
+    = link_to "Write a Review", new_recipe_review_path(@recipe)
+  -else
+    = link_to "Sign in to Review!", (new_user_session_path)
