@@ -1,6 +1,9 @@
 = render 'login'
 #main
+  
   -if @user
     =render 'loginview'
   -else
     =render 'notlogview'
+  %p
+  = link_to "Back to recipes!", recipes_path
