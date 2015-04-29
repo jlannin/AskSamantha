@@ -54,9 +54,9 @@ Given /^these units:$/i do |table|
 end
 
 Given /^a user with these groceries:$/i do |table|
-  When %{I go to the recipes page}
-  And %{I press "Login"}
-  And %{I sign in}
+  step %{I go to the recipes page}
+  step %{I press "Login"}
+  step %{I sign in}
   u = User.find(1)
   table.hashes.each do |fhash|
     x = fhash.delete("groceries")
@@ -68,7 +68,7 @@ Given /^a user with these groceries:$/i do |table|
     u.groceries.new(hash) 
     u.save
   end
-  Then %{I press "Sign Out"}
+  step %{I press "Sign Out"}
 end
 
 
@@ -91,12 +91,12 @@ Given /^these recipes:$/i do |table|
 end
 
 When /^I view my fridge/ do
-    When %{I go to the recipes page}
-    And %{I press "Login"}
-    Then %{I fill in "Email" with "jd.roth@comcast.net"}
-    Then %{I fill in "Password" with "tester123"}
-    Then %{I press "Log in"}
-    And %{I press "My fridge"}
+    step %{I go to the recipes page}
+    step %{I press "Login"}
+    step %{I fill in "Email" with "jd.roth@comcast.net"}
+    step %{I fill in "Password" with "tester123"}
+    step %{I press "Log in"}
+    step %{I press "My fridge"}
 end
 
 Then /^I select "(.*?)" for grocery "(.*?)" food$/ do |arg1, arg2|
@@ -144,11 +144,11 @@ end
 
 Then /^I review "(.+)" with "(.+)"$/ do |name, rating|
     
-    When %{I press "Write a Review"}
-    Then %{I should be reviewing "#{name}" on create new review page}
-    And %{I fill in "review_comments" with "Theyrrrree Greeeaat!"}
-    And %{I select "#{rating}" for rating}
-    And %{I press "Post Review"}
+    step %{I press "Write a Review"}
+    step %{I should be reviewing "#{name}" on create new review page}
+    step %{I fill in "review_comments" with "Theyrrrree Greeeaat!"}
+    step %{I select "#{rating}" for rating}
+    step %{I press "Post Review"}
 end
 
 
@@ -428,12 +428,12 @@ end
 
 
 Then /^I sign in$/ do
-  Then %{I press "Sign up"}
-  Then %{I fill in "Email" with "jd.roth@comcast.net"} 
-  Then %{I fill in "Password" with "tester123"}
-  Then %{I fill in "Password confirmation" with "tester123"}
-  Then %{I press "Sign up"}
-  Then %{I press "Check out the recipes!"}
+  step %{I press "Sign up"}
+  step %{I fill in "Email" with "jd.roth@comcast.net"} 
+  step %{I fill in "Password" with "tester123"}
+  step %{I fill in "Password confirmation" with "tester123"}
+  step %{I press "Sign up"}
+  step %{I press "Check out the recipes!"}
 end
 
 Then /^(?:|I )should be reviewing "(.*)" on (.+)$/ do |recipe, page_name|
