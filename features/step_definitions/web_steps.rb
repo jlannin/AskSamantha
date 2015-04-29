@@ -433,7 +433,6 @@ Then /^I sign in$/ do
   step %{I fill in "Password" with "tester123"}
   step %{I fill in "Password confirmation" with "tester123"}
   step %{I press "Sign up"}
-  step %{I press "Check out the recipes!"}
 end
 
 Then /^(?:|I )should be reviewing "(.*)" on (.+)$/ do |recipe, page_name|

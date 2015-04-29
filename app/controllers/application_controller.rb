@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
 
   before_action  :set_current
 
-=begin
+
   after_filter :store_location
 
   def store_location
@@ -13,10 +13,6 @@ class ApplicationController < ActionController::Base
     return unless request.get? 
     if (request.path != "/users/sign_in" &&
       request.path != "/users/sign_up" &&   
-  
-      request.path != "/fridge"
-      request.path != "/reviews/new"
-
       request.path != "/users/password/new" &&
       request.path != "/users/password/edit" &&
       request.path != "/users/confirmation" &&
@@ -25,12 +21,17 @@ class ApplicationController < ActionController::Base
     session[:previous_url] = request.fullpath 
   end
 end
-=end
+
 
 def after_sign_in_path_for(resource)
   session[:previous_url] || root_path
   #recipes_path
 end
+
+def after_sign_out_path_for(resource)
+  recipes_path
+end
+
 	
 protected
 
