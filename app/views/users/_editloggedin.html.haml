@@ -45,7 +45,7 @@
             %td= link_to "Delete grocery", edit_fridge_path(:additional => (params[:additional].to_i - 1).to_s), class: "del_groc"
   %br
   -if params.has_key?(:additional)
-    =submit_tag("Add grocery", :name => "additional[params[:additional].to_i+1]")
+    =submit_tag("Add grocery", :name => "additional[#{params[:additional].to_i+1}]")
   -else
     =submit_tag("Add grocery", :name => "additional[1]")
   %br
