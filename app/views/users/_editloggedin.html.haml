@@ -1,0 +1,53 @@
+= form_tag update_fridge_path, method: :put do
+  %table
+    %tr
+      %th Name
+      %th Quantity
+      %th Units
+      %th Delete Grocery
+    -@user.groceries.each do |g|
+      %tr
+        %td
+          <select name = "oldgrocs[dropdown[grocery_#{g.id}]]" id="food_select_#{g.id}">
+          -Food.all.each do |foo|
+            -if foo.name == g.food.name
+              %option{:selected => "#{foo.name}"}=foo.name
+            -else
+              %option= foo.name
+          </select>
+        %td <input type = "number" name = "oldgrocs[groc[grocery_#{g.id}]]" value = "#{g.quantity}">
+        %td.units
+          <select name = "oldgrocs[units[grocery_#{g.id}]]" id = "unit_select_#{g.id}">
+          -Unit.all.each do |foo|
+            -if foo.unit == g.unit.unit
+              %option{:selected => "#{foo.unit}"}=foo.unit
+            -else
+              %option= foo.unit
+          </select>
+        %td= link_to "Delete grocery", {:controller => "users", :action => "del_groc", :groc_id => "#{g.id}", :additional => params[:additional]}, class: "del_groc"
+    -if params.has_key?(:additional)
+      -(1..params[:additional].to_i).each do |x|
+        %tr
+          %td
+            <select name = "newgrocs[new_dropdown[newgrocery_#{x}]]" id="newfood_select_#{x}">
+            -Food.all.each do |foo|
+              %option= foo.name
+            </select>
+          %td <input type = "number" name = "newgrocs[new_grocs[newgrocery_#{x}]]">
+          %td.units
+            <select name = "newgrocs[new_units[newgrocery_#{x}]]" id = "newunit_select_#{x}">
+            -Unit.all.each do |foo|
+              %option= foo.unit
+            </select>
+          -if params[:additional] == "1"
+            %td= link_to "Delete grocery", edit_fridge_path, class: "del_groc" 
+          -else
+            %td= link_to "Delete grocery", edit_fridge_path(:additional => (params[:additional].to_i - 1).to_s), class: "del_groc"
+  %br
+  -if params.has_key?(:additional)
+    =submit_tag("Add grocery", :name => "additional[1+params[:additional].to_i]")
+  -else
+    =submit_tag("Add grocery", :name => "additional[1]")
+  %br
+  =submit_tag('Update Fridge!')
+  %br

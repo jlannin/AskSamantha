@@ -41,13 +41,15 @@ class User < ActiveRecord::Base
     quantities = newgrocs.delete(:new_grocs)
     names = newgrocs.delete(:new_dropdown)
     units = newgrocs.delete(:new_units)
+    count = 0
     if(quantities != nil)
       quantities.each do |g|
         if(g[1].to_i > 0)
           self.groceries.new(:quantity => g[1].to_i, :food_id => "#{Food.find_by('name = ?', names[g[0].to_sym].to_s).id}", :unit_id => "#{Unit.find_by('unit = ?', units[g[0].to_sym].to_s).id}")
+          count = count +1
         end
       end
     end
+    count
   end
-
 end
