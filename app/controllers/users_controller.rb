@@ -13,18 +13,23 @@ class UsersController < ApplicationController
   end
 
   def update
-    byebug
+    
     add = params.delete(:additional)
     old_grocs = params.delete(:oldgrocs)
     @user.update_fridge(old_grocs) if old_grocs
     new_grocs = params.delete(:newgrocs)
     new_added=0
-    new_added= @user.update_fridge_new(new_grocs) if new_grocs
+    if (new_grocs != nil)
+      #byebug
+      new_added= @user.update_fridge_new(new_grocs)
+    end
+    byebug
     if @user.save  #wont fail until we add validations or force in rspec tests
       flash[:notice] = "Fridge successfully updated!"
       if add 
-        #byebug
+        
         add = add.keys[0].to_i
+        
         draw= add-new_added
         redirect_to edit_fridge_path(:additional => "#{draw}")
       else
