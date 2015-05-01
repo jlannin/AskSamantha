@@ -15,7 +15,18 @@ class Recipe < ActiveRecord::Base
     @my_stars #needed?
   end
   
- 
+  def fix_miss(miss)
+    str = ""
+    miss.each do |ing, miss_num|
+      byebug
+      if miss_num == 1
+        str << miss_num.to_s << " " << ing << ", "
+      else
+        str << miss_num.to_s << " " << ing.pluralize << ", "
+      end
+    end
+    str.slice(0, str.length-2)
+  end
   
   def fix_time
     @time = ""

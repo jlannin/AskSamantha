@@ -3,7 +3,7 @@ body {
   font-size: 14pt;
   font-weight: 200;
   font-style: normal;
-  background-color: #6fcb9f;
+  background-color: #99CCFF;
   color: #ffe28a; 
 }
 
@@ -14,14 +14,14 @@ body #title{
 }
 
 body #main {
-  background-color: #6fcb9f;
+  background-color: #B0B7BF;
   color: #ffe28a;
   width: 80%;
   left: 10%;
   position: relative;
   padding: 10px;
   border: 1px solid #666547;
-	color: #ffe28a;
+	color: black;
 }
 
 body h1 {
@@ -30,7 +30,7 @@ body h1 {
   font-weight: 20;
   font-style: normal;
   text-align: center;
-	color: #ffe28a
+	color: black;
 }
 
 .login {

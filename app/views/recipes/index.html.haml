@@ -4,7 +4,7 @@
 .page-header
   %h3 All Recipes
 =render 'search_and_filter'
--if params.has_key?(:cook)
+-if @my_cookable != nil && @my_cookable.length>0
   = render 'cookview'
 -else
   = render 'regview'

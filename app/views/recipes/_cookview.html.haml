@@ -4,8 +4,8 @@
     %th Image
     %th= link_to "Cooking Time", recipes_path(:query => "cooking_time")
     %th= link_to "Ratings", recipes_path(:query => "average_rating")
-    %th= Missing Ingredients
-  -@recipes.each do |r|
+    %th Missing Ingredients
+  -@my_cookable.each do |r, missing_i|
     %tr.recipe_row
       %td.recipe_name= link_to r.name, recipe_path(r.id)
       %td= image_tag(r.image.url(:thumb))
@@ -14,5 +14,8 @@
         %td.rating#starry= r.fix_stars
       -else
         %td.rating Not yet rated!
-      %td= r.miss_ingreds(params[:cook:])
+      -if missing_i.length == 0
+        %td= link_to "Cook Recipe", {:controller => "recipes", :id => "#{r.id}", :action => "cook_recipe"}, method: :put
+      -else
+        %td= r.fix_miss(missing_i)
 = link_to "Create a new recipe", new_recipe_path(:additional => 1)

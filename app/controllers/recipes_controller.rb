@@ -12,17 +12,13 @@ class RecipesController < ApplicationController
     end
     redirect = handle_redirects
     if !redirect
-      if params[:cookable] != nil
-        @recipes = params[:cookable].keys
+      if params[:query] == nil
+        @recipes = Recipe.filter(params[:cooking_time]).search(params[:recipe_name]).sorted_by("name")
       else
-        if params[:query] == nil
-          @recipes = Recipe.filter(params[:cooking_time]).search(params[:recipe_name]).sorted_by("name")
-        else
-          @recipes = Recipe.filter(params[:cooking_time]).search(params[:recipe_name]).sorted_by(params[:query])
-      	end
-      	if @recipes.length == 0
-          reset_search
-      	end
+        @recipes = Recipe.filter(params[:cooking_time]).search(params[:recipe_name]).sorted_by(params[:query])
+      end
+      if @recipes.length == 0
+        reset_search
       end
     end
   end
@@ -36,10 +32,11 @@ def can_cook()
             cookable[r] = missing_ingred
         end
     end
-    byebug
-    cook = cookable.to_s
-    redirect_to recipes_path(:cook => cookable.to_s)
+    #byebug
+    @my_cookable = cookable
+    render :index and return
 end
+
 
 
 def cook_recipe()
@@ -74,13 +71,14 @@ def lacking(recipe)
 ## this method takes a recipe and a user and creates a hash with the food lacking in a fridge to make a recipe
     lacking = Hash.new()
     my_groceries = grocery_list() # returns hash of {Food name : Grocery quantity}
-    Ingredient.where('recipe_id = ?',recipe.id).each do |ingred|
+    recipe.ingredients.each do |ingred|
         if (my_groceries[ingred.food.name] == nil)
             lacking[ingred.food.name] = ingred.quantity
         elsif (my_groceries[ingred.food.name] < ingred.quantity)
             lacking[ingred.food.name] = (ingred.quantity - my_groceries[ingred.food.name])
         end
     end
+    lacking
 end
 
 def grocery_list()
