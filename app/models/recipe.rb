@@ -36,17 +36,26 @@ class Recipe < ActiveRecord::Base
     end
   end
 
-  def update_newingredients(quantities, names, units)
+  def update_newingredients(newingreds)
+    quantities = newingreds.delete(:new_ingreds)
+    names = newingreds.delete(:new_dropdown)
+    units = newingreds.delete(:new_units)
+    count = 0
     if(quantities != nil)
       quantities.each do |ing|
         if(ing[1].to_i > 0)
+          count = count + 1
           self.ingredients.new(:quantity => ing[1].to_i, :food_id => "#{Food.find_by('name = ?', names[ing[0].to_sym].to_s).id}", :unit_id => "#{Unit.find_by('unit = ?', units[ing[0].to_sym].to_s).id}")
         end
       end
     end
+    count
   end
 
-  def update_ingredients(quantities, names, units)
+  def update_ingredients(old)
+    quantities = old.delete(:ingreds)
+    names = old.delete(:dropdown)
+    units = old.delete(:units)
     if(quantities != nil)
       quantities.each do |ing|
         ing[0] =~ /^ingredient_(\d+)/

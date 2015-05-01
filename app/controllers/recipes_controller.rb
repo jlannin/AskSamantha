@@ -35,15 +35,18 @@ end
 
 
 def create
-  ingredient_quantities = params.delete(:ingreds)
-  ingredient_names = params.delete(:dropdown)
-  ingredient_units = params.delete(:units)
+  add = params.delete(:additional)
+  ingreds = params.delete(:newingreds)
   params[:recipe][:average_rating] = 0
   r=Recipe.new(create_params)
-  r.update_newingredients(ingredient_quantities, ingredient_names, ingredient_units)
+  r.update_newingredients(ingreds)
   if r.save
     flash[:notice] = "New recipe #{r.name} was made"
-    redirect_to recipes_path
+    if add
+        redirect_to edit_recipe_path(r, :additional => "1")
+      else
+        redirect_to recipes_path
+      end
   else
     flash[:notice] = "The create didn't work :(  "
     flash[:notice] << r.errors.full_messages.join(". ") << "."
@@ -61,19 +64,25 @@ def edit
 end
 
 def update
-  ingredient_quantities = params.delete(:ingreds)
-  ingredient_names = params.delete(:dropdown)
-  ingredient_units = params.delete(:units)
-  newingredient_updates = params.delete(:new_ingreds)
-  newingredient_names = params.delete(:new_dropdown)
-  newingredient_units = params.delete(:new_units)
+  add = params.delete(:additional)
+  oldingreds = params.delete(:old)
+  newingreds = params.delete(:new)
   @recipe = Recipe.find(params[:id])
-  @recipe.update_ingredients(ingredient_quantities, ingredient_names, ingredient_units)
-  @recipe.update_newingredients(newingredient_updates, newingredient_names, newingredient_units)
+  @recipe.update_ingredients(oldingreds) if oldingreds
+  ingreds_added=0
+  if (newingreds != nil)
+    ingreds_added = @recipe.update_newingredients(newingreds)
+  end
   @recipe.update(update_params)
   if @recipe.save#wont fail until we add validations or force in rspec tests
     flash[:notice] = "You updated #{@recipe.name}"
-    redirect_to recipe_path(@recipe) #redirect to the show
+    if add 
+      add = add.keys[0].to_i
+      draw = add - ingreds_added
+      redirect_to edit_recipe_path(@recipe, :additional => "#{draw}")
+    else
+      redirect_to recipe_path(@recipe) #redirect to the show
+    end
   else
     flash[:notice] = "The update failed :(   "
     flash[:notice] << @recipe.errors.full_messages.join(". ") << "."

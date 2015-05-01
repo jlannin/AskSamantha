@@ -23,13 +23,13 @@
         -(1..params[:additional].to_i).each do |x|
           %tr
             %td
-              <select name = "dropdown[newingredient_#{x}]" id="newfood_select_#{x}">
+              <select name = "newingreds[dropdown[newingredient_#{x}]]" id="newfood_select_#{x}">
               -Food.all.each do |foo|
                 %option= foo.name
               </select>
-            %td#test <input type = "number" name = "ingreds[newingredient_#{x}]">
+            %td#test <input type = "number" name = "newingreds[ingreds[newingredient_#{x}]]">
             %td.units
-              <select name = "units[newingredient_#{x}]" id = "newunit_select_#{x}">
+              <select name = "newingreds[units[newingredient_#{x}]]" id = "newunit_select_#{x}">
               -Unit.all.each do |foo|
                 %option= foo.unit
               </select>
@@ -38,10 +38,9 @@
             -else
               %td= link_to "Bye bye", new_recipe_path(@recipe, :additional => (params[:additional].to_i - 1).to_s)
     -if params.has_key?(:additional)
-      =link_to "Add ingredient", new_recipe_path(:additional => (params[:additional].to_i + 1).to_s)
+      =submit_tag("Add ingredient", :name => "additional[#{params[:additional].to_i+1}]")
     -else
-      =link_to "Add ingredient", new_recipe_path(:additional => "1")
-    %br
+      =submit_tag("Add ingredient", :name => "additional[1]")
     %br
     =f.label :image
     =f.file_field :image
