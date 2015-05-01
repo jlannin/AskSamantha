@@ -51,7 +51,6 @@ class Recipe < ActiveRecord::Base
     quantities = newingreds.delete(:new_ingreds)
     names = newingreds.delete(:new_dropdown)
     units = newingreds.delete(:new_units)
-    byebug
     count = 0
     if(quantities != nil)
       quantities.each do |ing|

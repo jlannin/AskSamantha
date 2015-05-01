@@ -12,8 +12,8 @@ RSpec.describe RecipesController, type: :controller do
   end
 
   describe "root route" do
-    it "routes to recipes#index" do
-      expect(:get => '/').to route_to(:controller => "recipes", :action => "index")
+    it "routes to recipes#home" do
+      expect(:get => '/').to route_to(:controller => "recipes", :action => "home")
     end
   end
 
@@ -58,7 +58,7 @@ describe "POST #create" do
       p = Recipe.new
       Recipe.should_receive(:new).and_return(p)
       p.should_receive(:save).and_return(true)
-      post :create, { :recipe => { "name"=>"dummy", "cooking_time"=>"1","directions"=>"test_directs", "average_rating" => 0} }
+      post :create, :recipe => { "name"=>"dummy", "cooking_time"=>"1","directions"=>"test_directs", "average_rating" => 0}, :newingreds => {:new_ingreds => {"ingredient_1"=> "1"}, :new_dropdown => {"ingredient_1"=>"Jam"}, :new_units => {"ingredient_1"=>"cup"}}
       response.should redirect_to(recipes_path)
     end
 
@@ -67,7 +67,7 @@ describe "POST #create" do
       p = Recipe.new
       Recipe.should_receive(:new).and_return(p)
       p.should_receive(:save).and_return(nil)
-      post :create, { :recipe => {"name"=>"tester_Cfail", "cooking_time"=>"1","directions"=>"test_directs"}} 
+      post :create, :recipe => { "name"=>"dummy", "cooking_time"=>"1","directions"=>"test_directs", "average_rating" => 0}, :newingreds => {:new_ingreds => {"ingredient_1"=> "1"}, :new_dropdown => {"ingredient_1"=>"Jam"}, :new_units => {"ingredient_1"=>"cup"}} 
       response.should redirect_to(new_recipe_path(:additional => 1))
     end
   end

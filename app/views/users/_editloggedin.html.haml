@@ -25,6 +25,8 @@
               %option= foo.unit
           </select>
         %td= link_to "Delete grocery", {:controller => "users", :action => "del_groc", :groc_id => "#{g.id}", :additional => params[:additional]}, class: "del_groc"
+    -if !params.has_key?(:additional) && @user.groceries.length == 0
+      -params[:additional] = "1"
     -if params.has_key?(:additional)
       -(1..params[:additional].to_i).each do |x|
         %tr

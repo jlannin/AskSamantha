@@ -3,19 +3,20 @@
   = link_to "Back to recipes!", recipes_path
   %h4= flash[:notice] if flash[:notice] 
   %h3= "Recipe Details For #{@recipe.name}"
-  %table.recipes_table
+  %table.recipes_table.table
     %tr.recipes_header
       %th Image
       %th Cooking Time
     %tr
       %td= image_tag(@recipe.image.url(:medium))
       %td#Cooking_Time= @recipe.fix_time
-  %table.recipes_info
+  %br
+  %table.table.recipes_info
     %tr
       %th Ingredients
     %tr.recipe_row
       %td
-        %table
+        %table.table.table-hover
           %tr
             %th Name
             %th Quantity
