@@ -13,6 +13,15 @@ Food.create!(name: "Peanut Butter")
 Food.create!(name: "Dark Chocolate")
 Food.create!(name: "Milk")
 Food.create!(name: "Honey")
+Food.create!(name: "Sugar")
+Food.create!(name: "Sommer's Secret Ingredient!!!!!!!!")
+Food.create!(name: "whipped cream")
+Food.create!(name: "Flour")
+Food.create!(name: "Sprinkles")
+Food.create!(name: "The Blood of My Enemies...")
+Food.create!(name: "BEER")
+
+
 
 x = Recipe.new(name: "Dark Chocolate Peanut Butter Cups", cooking_time: 30, directions: "Unwrap and enjoy!", average_rating: 0)
 x.ingredients.new(:quantity => 4, :food_id => 1, :unit_id => 5)
