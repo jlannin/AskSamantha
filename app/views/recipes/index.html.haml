@@ -20,3 +20,7 @@
       -else
         %td.rating Not yet rated!
 = link_to "Create a new recipe", new_recipe_path(:additional => 1)
+%br
+-if @user
+  =link_to "What can I cook?", {:controller => "recipes", :action => "can_cook"}
+

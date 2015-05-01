@@ -1,6 +1,6 @@
 class RecipesController < ApplicationController
  
-def index
+  def index
     if params[:query] != nil
       session[:query] = params[:query]
     end
@@ -12,16 +12,80 @@ def index
     end
     redirect = handle_redirects
     if !redirect
-      if params[:query] == nil
-        @recipes = Recipe.filter(params[:cooking_time]).search(params[:recipe_name]).sorted_by("name")
+      if params[:cookable] != nil
+        @recipes = params[:cookable].keys
       else
-        @recipes = Recipe.filter(params[:cooking_time]).search(params[:recipe_name]).sorted_by(params[:query])
-      end
-      if @recipes.length == 0
-        reset_search
+        if params[:query] == nil
+          @recipes = Recipe.filter(params[:cooking_time]).search(params[:recipe_name]).sorted_by("name")
+        else
+          @recipes = Recipe.filter(params[:cooking_time]).search(params[:recipe_name]).sorted_by(params[:query])
+      	end
+      	if @recipes.length == 0
+          reset_search
+      	end
       end
     end
+  end
+
+def can_cook()
+    limit = 2
+    cookable = Hash.new
+    Recipe.all.each do |r|
+        missing_ingred = lacking(r)
+        if missing_ingred.length <= limit
+            cookable[r] = missing_ingred
+        end
+    end
+    redirect recipes_path(params[:cookable])
 end
+
+
+def cook_recipe()
+	  byebug
+		recipe = Recipe.find(params.delete[:r_id])
+    missing_ingred = Hash.new()
+    my_groceries = grocery_list() # { Food Name : Grocery Quantity }
+    Ingredient.where('recipe_id = ?',recipe.id).each do |ingred|
+        if (my_groceries[ingred.food.name] == nil)
+            missing_ingred[ingred.food.name] = ingred.quantity
+        elsif (my_groceries[ingred.food.name] < ingred.quantity)
+            missing_ingred[ingred.food.name] = ingred.quantity -  my_groceries[ingred]
+            f = Food.find_by("name = ?","#{ingred.food.name}")
+            g = Grocery.where('user_id = ?', @user.id).find_by("food_id = ?", f.id)
+            User.delete_grocery(g)
+        elsif (my_groceries[ingred.food.name] = ingred.quantity)
+            f = Food.find_by("name = ?", "#{ingred.food.name}")
+            g = Grocery.where("user_id = ?", @user.id).find_by("food_id = ?", f.id)
+            User.delete_grocery(g)
+        end
+    end
+    flash[:notice] = "Hope you enjoyed, #{recipe.name}"
+    redirect_to show_fridge_path
+end
+
+def lacking(recipe)
+## this method takes a recipe and a user and creates a hash with the food lacking in a fridge to make a recipe
+    lacking = Hash.new()
+    my_groceries = grocery_list() # returns hash of {Food name : Grocery quantity}
+    Ingredient.where('recipe_id = ?',recipe.id).each do |ingred|
+        if (my_groceries[ingred.food.name] == nil)
+            lacking[ingred.food.name] = ingred.quantity
+        elsif (my_groceries[ingred.food.name] < ingred.quantity)
+            lacking[ingred.food.name] = (ingred.quantity - my_groceries[ingred.food.name])
+        end
+    end
+end
+
+def grocery_list()
+## given a user, this method creates a hash list of groceries in a user's fridge
+## { Food Name : Grocery Quantity }
+    my_groceries = Hash.new()
+    @user.groceries.each do |grocery|
+        my_groceries[grocery.food.name] = grocery.quantity
+    end
+    return my_groceries
+end
+
 
 def new
   @recipe = Recipe.new #possibly replace this with a helper 
@@ -55,6 +119,7 @@ def create
 end
 
 def show
+	byebug
   @recipe = Recipe.find(params[:id])
 end
 

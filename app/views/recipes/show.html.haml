@@ -50,9 +50,10 @@
                   %td.user= rev.user.get_name
 
 
-
   = link_to "Edit recipe details", edit_recipe_path
   -if @user
     = link_to "Write a Review", new_recipe_review_path(@recipe)
+    %br
+    =link_to "Cook Recipe", {:controller => "recipes", :action => "cook_recipe", :r_id => "#{@recipe.id}" }
   -else
     = link_to "Sign in to Review!", (new_user_session_path)
