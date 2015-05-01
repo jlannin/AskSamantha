@@ -36,27 +36,34 @@ def can_cook()
             cookable[r] = missing_ingred
         end
     end
-    redirect recipes_path(params[:cookable])
+    byebug
+    cook = cookable.to_s
+    redirect_to recipes_path(:cook => cookable.to_s)
 end
 
 
 def cook_recipe()
-	  byebug
 		recipe = Recipe.find(params.delete(:id))
     missing_ingred = Hash.new()
     my_groceries = grocery_list() # { Food Name : Grocery Quantity }
     Ingredient.where('recipe_id = ?',recipe.id).each do |ingred|
         if (my_groceries[ingred.food.name] == nil)
+            byebug
             missing_ingred[ingred.food.name] = ingred.quantity
         elsif (my_groceries[ingred.food.name] < ingred.quantity)
-            missing_ingred[ingred.food.name] = ingred.quantity -  my_groceries[ingred]
+            byebug
             f = Food.find_by("name = ?","#{ingred.food.name}")
             g = Grocery.where('user_id = ?', @user.id).find_by("food_id = ?", f.id)
             User.delete_grocery(g)
-        elsif (my_groceries[ingred.food.name] = ingred.quantity)
+        elsif (my_groceries[ingred.food.name] == ingred.quantity)
+            byebug
             f = Food.find_by("name = ?", "#{ingred.food.name}")
             g = Grocery.where("user_id = ?", @user.id).find_by("food_id = ?", f.id)
             User.delete_grocery(g)
+        else
+            f = Food.find_by("name = ?", "#{ingred.food.name}")
+	    g = Grocery.where('user_id = ?', @user.id).find_by("food_id = ?", f.id)
+	    g.update(:quantity => "#{(g.quantity - ingred.quantity)}")
         end
     end
     flash[:notice] = "Hope you enjoyed, #{recipe.name}"

@@ -4,22 +4,10 @@
 .page-header
   %h3 All Recipes
 =render 'search_and_filter'
-%table.recipes_table
-  %tr.recipes_header
-    %th= link_to "Name", recipes_path(:query => "name")
-    %th Image
-    %th= link_to "Cooking Time", recipes_path(:query => "cooking_time")
-    %th= link_to "Ratings", recipes_path(:query => "average_rating")
-  -@recipes.each do |r|
-    %tr.recipe_row
-      %td.recipe_name= link_to r.name, recipe_path(r.id)
-      %td= image_tag(r.image.url(:thumb))
-      %td#time= r.fix_time
-      - if r.average_rating != 0
-        %td.rating#starry= r.fix_stars
-      -else
-        %td.rating Not yet rated!
-= link_to "Create a new recipe", new_recipe_path(:additional => 1)
+-if params.has_key?(:cook)
+  = render 'cookview'
+-else
+  = render 'regview'
 %br
 -if @user
   =link_to "What can I cook?", {:controller => "recipes", :action => "can_cook"}

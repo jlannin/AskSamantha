@@ -12,9 +12,6 @@ class UsersController < ApplicationController
     redirect_to edit_fridge_path(:additional => params[:additional])
   end
 
-  def delete_grocery(g)
-    Grocery.find(g.id).destroy
-  end
 
   def update
     add = params.delete(:additional)

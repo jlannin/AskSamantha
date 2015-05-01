@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   get 'fridge/', to: 'users#show_fridge', as: :show_fridge
   get 'fridge/edit', to: 'users#edit_fridge', as: :edit_fridge
 
-  get 'recipes/cookable', to: 'recipes#can_cook', as: :can_cook
+  get 'cookable/recipes/', to: 'recipes#can_cook', as: :can_cook
 	put 'recipes/:id/cook', to: 'recipes#cook_recipe', as: :cook_recipe
 
   put 'fridge/update', to: 'users#update', as: :update_fridge

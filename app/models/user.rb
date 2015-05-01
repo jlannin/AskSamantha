@@ -21,6 +21,10 @@ class User < ActiveRecord::Base
     $1
   end
 
+  def self.delete_grocery(g)
+    Grocery.find(g.id).destroy
+  end
+
   def update_fridge(oldgrocs)
     quantities = oldgrocs.delete(:groc)
     names = oldgrocs.delete(:dropdown)
