@@ -9,6 +9,8 @@
 -else
   = render 'regview'
 %br
--if @user
+-if @user && @my_cookable==nil
   =link_to "What can I cook?", {:controller => "recipes", :action => "can_cook"}
+-elsif @user
+  =link_to "View All", {:controller => "recipes", :action => "index"}
 
