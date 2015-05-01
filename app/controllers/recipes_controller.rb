@@ -32,7 +32,7 @@ def can_cook()
             cookable[r] = missing_ingred
         end
     end
-    #byebug
+    
     @my_cookable = cookable
     render :index and return
 end
@@ -45,15 +45,15 @@ def cook_recipe()
     my_groceries = grocery_list() # { Food Name : Grocery Quantity }
     Ingredient.where('recipe_id = ?',recipe.id).each do |ingred|
         if (my_groceries[ingred.food.name] == nil)
-            byebug
+            
             missing_ingred[ingred.food.name] = ingred.quantity
         elsif (my_groceries[ingred.food.name] < ingred.quantity)
-            byebug
+            
             f = Food.find_by("name = ?","#{ingred.food.name}")
             g = Grocery.where('user_id = ?', @user.id).find_by("food_id = ?", f.id)
             User.delete_grocery(g)
         elsif (my_groceries[ingred.food.name] == ingred.quantity)
-            byebug
+            
             f = Food.find_by("name = ?", "#{ingred.food.name}")
             g = Grocery.where("user_id = ?", @user.id).find_by("food_id = ?", f.id)
             User.delete_grocery(g)

@@ -1,16 +1,16 @@
-
 = render 'login'
-%h4= flash[:notice] if flash[:notice] 
-.page-header
-  %h3 All Recipes
-=render 'search_and_filter'
--if @my_cookable != nil && @my_cookable.length>0
-  = render 'cookview'
--else
-  = render 'regview'
-%br
--if @user && @my_cookable==nil
-  =link_to "What can I cook?", {:controller => "recipes", :action => "can_cook"}
--elsif @user
-  =link_to "View All", {:controller => "recipes", :action => "index"}
+#shift
+  %h4= flash[:notice] if flash[:notice] 
+  .page-header
+    %h3 All Recipes
+  =render 'search_and_filter'
+  -if @my_cookable != nil && @my_cookable.length>0
+    = render 'cookview'
+  -else
+    = render 'regview'
+  %br
+  -if @user && @my_cookable==nil
+    =link_to "What can I cook?", {:controller => "recipes", :action => "can_cook"}
+  -elsif @user
+    =link_to "View All", {:controller => "recipes", :action => "index"}
 
