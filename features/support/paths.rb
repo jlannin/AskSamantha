@@ -18,6 +18,9 @@ module NavigationHelpers
     when /^create new recipe page$/
       '/recipes/new?additional=1'
     
+    when /^the cookable recipes page$/
+      '/cookable/recipes'
+    
     when /^the sign in page$/
       '/users/sign_in'
 

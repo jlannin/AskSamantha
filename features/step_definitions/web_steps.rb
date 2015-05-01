@@ -142,6 +142,12 @@ Then /^I should see that "(.*?)" has a quantity of "(.*?)"$/ do |ingredient, qua
   all(".quantity")[index].text.should == quantity
 end
 
+Then /^I should see that I can cook "(.*?)"$/ do |recipe|
+  name_arr = all(".recipe_name").map {|x| x.text}
+  index = name_arr.index(recipe)
+  all(".cook")[index].text.should == "Cook Recipe"
+end
+
 Then /^I review "(.+)" with "(.+)"$/ do |name, rating|
     
     step %{I press "Write a Review"}

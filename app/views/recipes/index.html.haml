@@ -6,6 +6,8 @@
   =render 'search_and_filter'
   -if @my_cookable != nil && @my_cookable.length>0
     = render 'cookview'
+  -elsif @my_cookable != nil &&  @my_cookable.length == 0
+    %h1 You are more than two ingredients away from all recipes, go shopping!
   -else
     = render 'regview'
   %br

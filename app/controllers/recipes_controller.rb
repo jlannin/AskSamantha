@@ -32,7 +32,6 @@ def can_cook()
             cookable[r] = missing_ingred
         end
     end
-    
     @my_cookable = cookable
     render :index and return
 end

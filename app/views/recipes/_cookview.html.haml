@@ -15,7 +15,7 @@
       -else
         %td.rating Not yet rated!
       -if missing_i.length == 0
-        %td= link_to "Cook Recipe", {:controller => "recipes", :id => "#{r.id}", :action => "cook_recipe"}, method: :put
+        %td.cook= link_to "Cook Recipe", {:controller => "recipes", :id => "#{r.id}", :action => "cook_recipe"}, method: :put
       -else
-        %td= r.fix_miss(missing_i)
+        %td.cook= r.fix_miss(missing_i)
 = link_to "Create a new recipe", new_recipe_path(:additional => 1)

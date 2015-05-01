@@ -14,9 +14,9 @@ Feature: Update the recipe details
 
     Given these units:
       | unit     | conversion_factor  | 
-      | cup      | 5                |
-      | liter    | 10               |
-      | teaspoon | 12               |
+      | cup      | 5                  |
+      | liter    | 10                 |
+      | teaspoon | 12                 |
 
     Given these recipes:
       | name           |    directions            | Ingredients                 | cooking_time |
@@ -42,7 +42,7 @@ Feature: Update the recipe details
     And I should not see the ingredient "Cereal"
   
   Scenario: Update: setting to 0 should delete it
-    When I fill in "ingreds[ingredient_5]" with "0"
+    When I fill in "old[ingreds[ingredient_5]]" with "0"
     And I press "Update Recipe Details"
     Then I should see that "Milk" has a quantity of "1 liter"
     And I should not see the ingredient "Cereal"
@@ -59,7 +59,7 @@ Feature: Update the recipe details
     And I should see "12 minutes"
 
   Scenario: Update: change one ingredient quant
-    When I fill in "ingreds[ingredient_5]" with "2"
+    When I fill in "old[ingreds[ingredient_5]]" with "2"
     And I press "Update Recipe Details"
     Then I should see "Milk first, then cereal"
     And I should see that "Cereal" has a quantity of "2 cups"
@@ -73,8 +73,8 @@ Feature: Update the recipe details
 
 
   Scenario: Update a recipe by adding a new ingredient
-    When I follow "Add ingredient"
-    Then I fill in "new_ingreds[newingredient_1]" with "2"
+    When I press "Add ingredient"
+    Then I fill in "new[new_ingreds[newingredient_1]]" with "2"
     And I select "Honey" for new ingredient "1" food
     And I select "teaspoon" for new ingredient "1" unit
     And I press "Update Recipe Details"
