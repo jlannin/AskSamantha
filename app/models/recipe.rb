@@ -18,7 +18,7 @@ class Recipe < ActiveRecord::Base
   def fix_miss(miss)
     str = ""
     miss.each do |ing, miss_num|
-      byebug
+      
       if miss_num == 1
         str << miss_num.to_s << " " << ing << ", "
       else
