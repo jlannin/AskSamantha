@@ -54,6 +54,6 @@
   -if @user
     = link_to "Write a Review", new_recipe_review_path(@recipe)
     %br
-    =link_to "Cook Recipe", {:controller => "recipes", :action => "cook_recipe", :r_id => "#{@recipe.id}" }
+    =link_to "Cook Recipe", {:controller => "recipes", :id => "#{@recipe.id}", :action => "cook_recipe"}, method: :put
   -else
     = link_to "Sign in to Review!", (new_user_session_path)

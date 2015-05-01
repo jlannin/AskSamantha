@@ -42,7 +42,7 @@ end
 
 def cook_recipe()
 	  byebug
-		recipe = Recipe.find(params.delete[:r_id])
+		recipe = Recipe.find(params.delete(:id))
     missing_ingred = Hash.new()
     my_groceries = grocery_list() # { Food Name : Grocery Quantity }
     Ingredient.where('recipe_id = ?',recipe.id).each do |ingred|
@@ -119,7 +119,6 @@ def create
 end
 
 def show
-	byebug
   @recipe = Recipe.find(params[:id])
 end
 
