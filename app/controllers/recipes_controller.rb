@@ -27,67 +27,21 @@ def can_cook()
     limit = 2
     cookable = Hash.new
     Recipe.all.each do |r|
-        missing_ingred = lacking(r)
+        missing_ingred = r.lacking(@user)
         if missing_ingred.length <= limit
             cookable[r] = missing_ingred
         end
     end
-    @my_cookable = cookable
+    coo = Recipe.sort_cook(cookable)
+    @my_cookable = coo
     render :index and return
 end
 
-
-
 def cook_recipe()
-		recipe = Recipe.find(params.delete(:id))
-    missing_ingred = Hash.new()
-    my_groceries = grocery_list() # { Food Name : Grocery Quantity }
-    Ingredient.where('recipe_id = ?',recipe.id).each do |ingred|
-        if (my_groceries[ingred.food.name] == nil)
-            
-            missing_ingred[ingred.food.name] = ingred.quantity
-        elsif (my_groceries[ingred.food.name] < ingred.quantity)
-            
-            f = Food.find_by("name = ?","#{ingred.food.name}")
-            g = Grocery.where('user_id = ?', @user.id).find_by("food_id = ?", f.id)
-            User.delete_grocery(g)
-        elsif (my_groceries[ingred.food.name] == ingred.quantity)
-            
-            f = Food.find_by("name = ?", "#{ingred.food.name}")
-            g = Grocery.where("user_id = ?", @user.id).find_by("food_id = ?", f.id)
-            User.delete_grocery(g)
-        else
-            f = Food.find_by("name = ?", "#{ingred.food.name}")
-	    g = Grocery.where('user_id = ?', @user.id).find_by("food_id = ?", f.id)
-	    g.update(:quantity => "#{(g.quantity - ingred.quantity)}")
-        end
-    end
+    recipe = Recipe.find(params.delete(:id))
+    recipe.cook_helper(@user)
     flash[:notice] = "Hope you enjoyed, #{recipe.name}"
     redirect_to show_fridge_path
-end
-
-def lacking(recipe)
-## this method takes a recipe and a user and creates a hash with the food lacking in a fridge to make a recipe
-    lacking = Hash.new()
-    my_groceries = grocery_list() # returns hash of {Food name : Grocery quantity}
-    recipe.ingredients.each do |ingred|
-        if (my_groceries[ingred.food.name] == nil)
-            lacking[ingred.food.name] = ingred.quantity
-        elsif (my_groceries[ingred.food.name] < ingred.quantity)
-            lacking[ingred.food.name] = (ingred.quantity - my_groceries[ingred.food.name])
-        end
-    end
-    lacking
-end
-
-def grocery_list()
-## given a user, this method creates a hash list of groceries in a user's fridge
-## { Food Name : Grocery Quantity }
-    my_groceries = Hash.new()
-    @user.groceries.each do |grocery|
-        my_groceries[grocery.food.name] = grocery.quantity
-    end
-    return my_groceries
 end
 
 

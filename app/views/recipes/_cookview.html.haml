@@ -1,21 +1,22 @@
 %table.table.table-hover.recipes_table
   %tr.recipes_header
-    %th= link_to "Name", recipes_path(:query => "name")
+    %th Name
     %th Image
-    %th= link_to "Cooking Time", recipes_path(:query => "cooking_time")
-    %th= link_to "Ratings", recipes_path(:query => "average_rating")
+    %th Cooking Time
+    %th Ratings
     %th Missing Ingredients
-  -@my_cookable.each do |r, missing_i|
-    %tr.recipe_row
-      %td.recipe_name= link_to r.name, recipe_path(r.id)
-      %td= image_tag(r.image.url(:thumb))
-      %td#time= r.fix_time
-      - if r.average_rating != 0
-        %td.rating#starry= r.fix_stars
-      -else
-        %td.rating Not yet rated!
-      -if missing_i.length == 0
-        %td.cook= link_to "Cook Recipe", {:controller => "recipes", :id => "#{r.id}", :action => "cook_recipe"}, method: :put
-      -else
-        %td.cook= r.fix_miss(missing_i)
+  -@my_cookable.each do |c|
+    -c.each do |r, missing_i|
+      %tr.recipe_row
+        %td.recipe_name= link_to r.name, recipe_path(r.id)
+        %td= image_tag(r.image.url(:thumb))
+        %td#time= r.fix_time
+        - if r.average_rating != 0
+          %td.rating#starry= r.fix_stars
+        -else
+          %td.rating Not yet rated!
+        -if missing_i.length == 0
+          %td.cook= link_to "Cook Recipe", {:controller => "recipes", :id => "#{r.id}", :action => "cook_recipe"}, method: :put
+        -else
+          %td.cook= r.fix_miss(missing_i)
 = link_to "Create a new recipe", new_recipe_path(:additional => 1)

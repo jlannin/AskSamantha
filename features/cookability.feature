@@ -44,6 +44,18 @@ Feature: User "cooking"
   Scenario: I should not be able to see recipes for which I am lacking more than two ingredients
     When I view my fridge
     And I press "Update fridge!"
+    Then I fill in "oldgrocs[groc[grocery_2]]" with "1"
+    Then I fill in "oldgrocs[groc[grocery_5]]" with "0"
+    Then I press "Update Fridge!"
+    Then I press "What can I cook?"
+    Then I should be on the cookable recipes page
+    And I should see that I can cook "Cereal"
+    And I should see that I am missing "1 Jam, 3 Eggs" in order to make "Toast and Jam"
+    And I should see that I am missing "4 Eggs, 1 Jam" in order to make "Scrambled Eggs"
+
+  Scenario:  I should see recipes that I cannot cook display the number of missing ingredients
+    When I view my fridge
+    And I press "Update fridge!"
     Then I fill in "oldgrocs[groc[grocery_1]]" with "1"
     Then I fill in "oldgrocs[groc[grocery_2]]" with "1"
     Then I fill in "oldgrocs[groc[grocery_3]]" with "1"
@@ -52,12 +64,14 @@ Feature: User "cooking"
     Then I press "Update Fridge!"
     Then I press "What can I cook?"
     Then I should be on the cookable recipes page
-    And I should see "go shopping!"
-    And I should not see "Cereal"
-    And I should not see "Toast and Jam"
-    And I should not see "Scrambled Eggs"
-    
 
+  Scenario:  I should see recipes that I cannot cook display the number of missing ingredients
+    When I view my fridge
+    And I press "Update fridge!"
+    Then I fill in "oldgrocs[groc[grocery_1]]" with "0"
+    Then I press "Update Fridge!"
+    Then I press "What can I cook?"
+    Then I should be on the cookable recipes page
 
 
 

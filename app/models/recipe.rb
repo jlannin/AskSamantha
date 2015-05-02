@@ -114,6 +114,71 @@ class Recipe < ActiveRecord::Base
     end
   end
 
+  def cook_helper(user)
+    missing_ingred = Hash.new()
+    my_groceries = grocery_list(user) # { Food Name : Grocery Quantity }
+    Ingredient.where('recipe_id = ?', self.id).each do |ingred|
+        if (my_groceries[ingred.food.name] == nil)
+            missing_ingred[ingred.food.name] = ingred.quantity
+        elsif (my_groceries[ingred.food.name] < ingred.quantity)
+            f = Food.find_by("name = ?","#{ingred.food.name}")
+            g = Grocery.where('user_id = ?', user.id).find_by("food_id = ?", f.id)
+            User.delete_grocery(g)
+        elsif (my_groceries[ingred.food.name] == ingred.quantity)
+            
+            f = Food.find_by("name = ?", "#{ingred.food.name}")
+            g = Grocery.where("user_id = ?", user.id).find_by("food_id = ?", f.id)
+            User.delete_grocery(g)
+        else
+            f = Food.find_by("name = ?", "#{ingred.food.name}")
+	    g = Grocery.where('user_id = ?', user.id).find_by("food_id = ?", f.id)
+	    g.update(:quantity => "#{(g.quantity - ingred.quantity)}")
+        end
+    end
+  end
+
+  def self.sort_cook(cookable)
+    zero = []
+    one = []
+    two = []
+    cookable.each do |k, v|
+      if(v.length == 0)
+        zero << {k => v}
+      end
+      if(v.length == 1)
+        one << {k => v}
+      end
+      if(v.length == 2)
+        two << {k => v}
+      end
+    end
+    zero.concat(one).concat(two)
+  end
+
+def lacking(user)
+## this method takes a recipe and a user and creates a hash with the food lacking in a fridge to make a recipe
+    lacking = Hash.new()
+    my_groceries = grocery_list(user) # returns hash of {Food name : Grocery quantity}
+    self.ingredients.each do |ingred|
+        if (my_groceries[ingred.food.name] == nil)
+            lacking[ingred.food.name] = ingred.quantity
+        elsif (my_groceries[ingred.food.name] < ingred.quantity)
+            lacking[ingred.food.name] = (ingred.quantity - my_groceries[ingred.food.name])
+        end
+    end
+    lacking
+end
+
+def grocery_list(user)
+## given a user, this method creates a hash list of groceries in a user's fridge
+## { Food Name : Grocery Quantity }
+    my_groceries = Hash.new()
+    user.groceries.each do |grocery|
+        my_groceries[grocery.food.name] = grocery.quantity
+    end
+    return my_groceries
+end
+
   private
 
   def need_at_least_one_ingredient

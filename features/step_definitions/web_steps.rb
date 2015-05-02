@@ -148,6 +148,12 @@ Then /^I should see that I can cook "(.*?)"$/ do |recipe|
   all(".cook")[index].text.should == "Cook Recipe"
 end
 
+And /^I should see that I am missing "(.*?)" in order to make "(.*?)"$/ do |missing, recipe|
+  name_arr = all(".recipe_name").map {|x| x.text}
+  index = name_arr.index(recipe)
+  all(".cook")[index].text.should == missing
+end
+
 Then /^I review "(.+)" with "(.+)"$/ do |name, rating|
     
     step %{I press "Write a Review"}

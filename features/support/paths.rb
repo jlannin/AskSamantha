@@ -27,6 +27,9 @@ module NavigationHelpers
     when /^create new review page$/
       '/reviews/new' 
 
+    when /^my fridge$/
+      '/fridge'
+
    
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:

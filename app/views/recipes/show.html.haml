@@ -52,6 +52,7 @@
 
 
   = link_to "Edit recipe details", edit_recipe_path
+  %br
   -if @user
     = link_to "Write a Review", new_recipe_review_path(@recipe)
     %br
