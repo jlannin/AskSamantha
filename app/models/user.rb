@@ -3,6 +3,9 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   has_many :reviews
   has_many :groceries
+  validate :unique_groceries
+  
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, 
          :omniauthable, :omniauth_providers => [:github]
@@ -29,16 +32,20 @@ class User < ActiveRecord::Base
     quantities = oldgrocs.delete(:groc)
     names = oldgrocs.delete(:dropdown)
     units = oldgrocs.delete(:units)
-    if(quantities != nil)
-      quantities.each do |g|
-        g[0] =~ /^grocery_(\d+)/
-        if (g[1].to_i > 0)
-          Grocery.find($1).update(:quantity => "#{g[1]}", :food_id => "#{Food.find_by('name = ?', names[g[0].to_sym].to_s).id}", :unit_id => "#{Unit.find_by('unit = ?', units[g[0].to_sym].to_s).id}")
-        else#quant is a bad number
-          Grocery.find($1).destroy #HIT THIS
+    error = self.check_updates(names)
+    if !error
+      if(quantities != nil)
+        quantities.each do |g|
+          g[0] =~ /^grocery_(\d+)/
+          if (g[1].to_i > 0)
+            Grocery.find($1).update(:quantity => "#{g[1]}", :food_id => "#{Food.find_by('name = ?', names[g[0].to_sym].to_s).id}", :unit_id => "#{Unit.find_by('unit = ?', units[g[0].to_sym].to_s).id}")
+          else#quant is a bad number
+            Grocery.find($1).destroy #HIT THIS
+          end
         end
       end
     end
+    error
   end
 
   def update_fridge_new(newgrocs)
@@ -59,4 +66,26 @@ class User < ActiveRecord::Base
     #byebug
     count
   end
+
+  def check_updates(names)
+    name_arr = names.values
+    err = false
+    if (name_arr != name_arr.uniq)
+      err = true
+      errors[:unique_groceries] << "are needed"
+    end
+    err
+  end
+
+  private
+
+  def unique_groceries
+    groc_arr = self.groceries.map do |x|
+      x.food.name
+    end
+    if (groc_arr != groc_arr.uniq)
+      errors[:unique_groceries] << "are needed"
+    end
+  end
+  
 end

@@ -67,16 +67,30 @@ class Recipe < ActiveRecord::Base
     quantities = old.delete(:ingreds)
     names = old.delete(:dropdown)
     units = old.delete(:units)
-    if(quantities != nil)
-      quantities.each do |ing|
-        ing[0] =~ /^ingredient_(\d+)/
-        if (ing[1].to_i > 0)
-          Ingredient.find($1).update(:quantity => "#{ing[1]}", :food_id => "#{Food.find_by('name = ?', names[ing[0].to_sym].to_s).id}", :unit_id => "#{Unit.find_by('unit = ?', units[ing[0].to_sym].to_s).id}")
-        else#quant is a bad number
-          Ingredient.find($1).destroy #HIT THIS
+    error = check_updates(names)
+    if !error
+      if(quantities != nil)
+        quantities.each do |ing|
+          ing[0] =~ /^ingredient_(\d+)/
+          if (ing[1].to_i > 0)
+            Ingredient.find($1).update(:quantity => "#{ing[1]}", :food_id => "#{Food.find_by('name = ?', names[ing[0].to_sym].to_s).id}", :unit_id => "#{Unit.find_by('unit = ?', units[ing[0].to_sym].to_s).id}")
+          else#quant is a bad number
+            Ingredient.find($1).destroy #HIT THIS
+          end
         end
       end
     end
+    error
+  end
+
+  def check_updates(names)
+    name_arr = names.values
+    err = false
+    if (name_arr != name_arr.uniq)
+      err = true
+      errors[:unique_ingredients] << "are needed"
+    end
+    err
   end
 
   def self.search(search)

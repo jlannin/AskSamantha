@@ -90,7 +90,14 @@ def update
   oldingreds = params.delete(:old)
   newingreds = params.delete(:new)
   @recipe = Recipe.find(params[:id])
-  @recipe.update_ingredients(oldingreds) if oldingreds
+  if oldingreds
+    error = @recipe.update_ingredients(oldingreds)
+    if error
+      flash[:notice] = "The update failed :(   "
+      flash[:notice] << @recipe.errors.full_messages.join(". ") << "."
+      redirect_to edit_recipe_path(@recipe) and return
+    end
+  end
   ingreds_added=0
   if (newingreds != nil)
     ingreds_added = @recipe.update_newingredients(newingreds)

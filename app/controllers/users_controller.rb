@@ -16,7 +16,14 @@ class UsersController < ApplicationController
   def update
     add = params.delete(:additional)
     old_grocs = params.delete(:oldgrocs)
-    @user.update_fridge(old_grocs) if old_grocs
+    if old_grocs
+      error = @user.update_fridge(old_grocs)
+      if error
+        flash[:notice] = "Fridge update failed :(  "
+        flash[:notice] << @user.errors.full_messages.join(". ") << "."
+        redirect_to edit_fridge_path and return
+      end
+    end
     new_grocs = params.delete(:newgrocs)
     new_added=0
     if (new_grocs != nil)
@@ -33,7 +40,8 @@ class UsersController < ApplicationController
         redirect_to show_fridge_path
       end
     else
-      flash[:notice] = "Fridge update failed :("
+      flash[:notice] = "Fridge update failed :(  "
+      flash[:notice] << @user.errors.full_messages.join(". ") << "."
       redirect_to edit_fridge_path
     end
   end

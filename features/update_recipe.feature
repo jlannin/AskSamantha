@@ -81,3 +81,13 @@ Feature: Update the recipe details
     Then I should see that "Honey" has a quantity of "2 teaspoons"
     And I should see that "Cereal" has a quantity of "1 cup"
     And I should see that "Milk" has a quantity of "1 liter"
+
+
+  Scenario: Update a recipe by adding a new ingredient, non unique fails!
+    When I press "Add ingredient"
+    Then I fill in "new[new_ingreds[newingredient_1]]" with "2"
+    And I select "Milk" for new ingredient "1" food
+    And I select "teaspoon" for new ingredient "1" unit
+    And I press "Update Recipe Details"
+    Then I should see "The update failed :( Unique ingredients are needed."
+    

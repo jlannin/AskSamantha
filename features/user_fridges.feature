@@ -74,7 +74,22 @@ Feature: User "fridges"
     Then I should see that "Jam" has a quantity of "1 liter"
     Then I should see that "Honey" has a quantity of "3 cups"
 
+  Scenario: Non unique foods should fail
+    When I view my fridge
+    And I press "Update fridge!"
+    Then I select "Jam" for grocery "1" food
+    Then I select "teaspoon" for grocery "1" unit
+    Then I press "Update Fridge!"
+    Then I should see "Fridge update failed :( Unique groceries are needed."
+    And I should see "Edit Fridge"
 
-
-
-
+  Scenario: Non unique add fails
+    When I view my fridge
+    And I press "Update fridge!"
+    Then I press "Add grocery"
+    Then I select "Jam" for new grocery "1" food
+    Then I select "teaspoon" for new grocery "1" unit
+    Then I fill in "newgrocs[new_grocs[newgrocery_1]]" with "10"
+    Then I press "Update Fridge!"
+    Then I should see "Fridge update failed :( Unique groceries are needed."
+    And I should see "Edit Fridge"
